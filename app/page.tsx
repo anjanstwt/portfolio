@@ -1,12 +1,12 @@
 'use client';
-import Experience from "@/components/sec/Experience";
-import Footer from "@/components/sec/Footer";
-import GithubContributions from "@/components/sec/GithubContributions";
-import Interested from "@/components/sec/Interested";
-import Overview from "@/components/sec/Overview";
-import Projects from "@/components/sec/Projects";
-import Tech from "@/components/sec/Tech";
-import Title from "@/components/sec/Title";
+import Experience from "@/components/base/Experience";
+import Footer from "@/components/base/Footer";
+import GithubContributions from "@/components/base/GithubContributions";
+import Interested from "@/components/base/Interested";
+import Overview from "@/components/base/Overview";
+import Projects from "@/components/base/Projects";
+import Tech from "@/components/base/Tech";
+import Title from "@/components/base/Title";
 import { HorizontalGap } from "@/components/ui/Gap";
 import Line from "@/components/ui/Line";
 
