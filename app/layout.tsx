@@ -71,7 +71,9 @@ export default function RootLayout({
                         `min-h-screen w-full font-sans bg-secondary-dark text-white flex flex-col items-center selection:bg-neutral-800 selection:text-white`,
                         geist.className,
                     )}>
-                        <Navbar />
+                        <Navbar
+                            data-lenis-prevent
+                        />
                         <CommandMenu />
                         <div className="w-full max-w-3xl px-6 border-x border-neutral-800 min-h-[calc(100vh-4rem)]">
                             {children}

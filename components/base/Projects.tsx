@@ -95,6 +95,7 @@ function ProjectModal({ project, onClose }: { project: ProjectType | null, onClo
                         exit={{ opacity: 0, scale: 0.95, y: "-40%", x: "-50%" }}
                         transition={{ type: "spring", stiffness: 300, damping: 30 }}
                         className="fixed left-1/2 top-1/2 z-50 w-[95vw] max-w-2xl max-h-[85vh] overflow-y-auto rounded-xl border border-neutral-800 bg-[#09090b] shadow-2xl hide-scrollbar"
+                        data-lenis-prevent
                     >
                         <div className="sticky top-0 z-10 flex items-center justify-between border-b border-neutral-800 bg-[#09090b]/80 backdrop-blur-md px-6 py-4">
                             <div className="flex items-center gap-3">
@@ -116,7 +117,7 @@ function ProjectModal({ project, onClose }: { project: ProjectType | null, onClo
                             {project.images && project.images.length > 0 && (
                                 <div className="flex flex-col gap-3">
                                     <div className="text-xs uppercase tracking-widest text-neutral-500 font-semibold">Gallery</div>
-                                    <div className="flex gap-4 overflow-x-auto pb-4 snap-x hide-scrollbar">
+                                    <div className="flex gap-4 overflow-x-auto pb-4 snap-x hide-scrollbar" data-lenis-prevent>
                                         {project.images.map((img, idx) => (
                                             <div key={idx} className="relative w-[85%] sm:w-[70%] flex-shrink-0 snap-center rounded-lg border border-neutral-800 overflow-hidden shadow-sm bg-neutral-900 aspect-video group">
                                                 <Image

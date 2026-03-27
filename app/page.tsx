@@ -28,7 +28,9 @@ export default function Page() {
                 <div id="tech">
                     <Tech />
                 </div>
-                <Interested />
+                <div id="interested">
+                    <Interested />
+                </div>
                 <Footer />
             </div>
         </div>
