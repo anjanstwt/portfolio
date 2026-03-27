@@ -1,9 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import Heading from '../ui/Heading';
 import { user } from '../data/user';
-import { HorizontalGap, VerticalGap } from '../ui/Gap';
 import { Iceland } from 'next/font/google';
 import { IconType } from 'react-icons/lib';
 import { cn } from '@/lib/utils';
@@ -55,42 +53,32 @@ export default function Overview({ className }: { className?: string }) {
         const animate = () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-            /* ===============================
-               1️⃣ DRAW PIXEL MASK
-            =============================== */
             ctx.globalCompositeOperation = 'source-over';
             ctx.fillStyle = 'white';
 
             samplesRef.current.forEach(s => {
                 ctx.globalAlpha = s.life;
-
                 s.pixels.forEach(p => {
                     ctx.fillRect(p.x, p.y, PIXEL, PIXEL);
                 });
-
                 s.life -= DECAY;
             });
 
             ctx.globalAlpha = 1;
-
             ctx.globalCompositeOperation = 'source-in';
 
-            // Image
             ctx.filter = 'grayscale(100%)';
             ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
             ctx.filter = 'none';
 
-            // Perfectly centered Core Builder text
             const text = 'Core Builder';
             ctx.font = '700 96px Iceland, sans-serif';
             ctx.textBaseline = 'middle';
 
-            // Background rectangle - you can change this color
-            ctx.fillStyle = 'red'; // Dark background
+            ctx.fillStyle = '#09090b'; // match background
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-            // Text - different color
-            ctx.fillStyle = '#ffffff'; // White text (or any color you want)
+            ctx.fillStyle = '#ffffff'; 
 
             const metrics = ctx.measureText(text);
             const x = (canvas.width - metrics.width) / 2;
@@ -141,17 +129,13 @@ export default function Overview({ className }: { className?: string }) {
     }, []);
 
     return (
-        <div 
-            className={cn(
-                "relative layout-side-border",
-                className,
-            )}
-        >
-            <Heading heading="overview" tag="Of me" />
+        <section className={cn("w-full flex flex-col gap-6", className)}>
+            <div className="-mx-6 w-[calc(100%+3rem)] border-y border-neutral-800 bg-neutral-900/40 px-6 py-2">
+                <h2 className="text-xs font-semibold uppercase tracking-widest text-neutral-400">About Me</h2>
+            </div>
 
-            {/* IMPORTANT: fixed height so canvas can center correctly */}
             <div
-                className="relative h-full overflow-hidden"
+                className="relative h-64 w-full overflow-hidden rounded border border-neutral-800 bg-neutral-900"
                 onMouseMove={(e) => {
                     const rect = e.currentTarget.getBoundingClientRect();
                     mouseRef.current = {
@@ -164,50 +148,27 @@ export default function Overview({ className }: { className?: string }) {
                     samplesRef.current = [];
                 }}
             >
-                {/* USER DATA (PAINTED LAYER → CAN BE ERASED) */}
-                <div className="relative h-full z-10 pointer-events-none bg-secondary-dark pb-5 ">
-                    <VerticalGap className="h-full absolute left-0 border-y-0 border-l-0" />
-                    <VerticalGap className="h-full absolute right-0 border-y-0 border-r-0" />
-                    <HorizontalGap className="border-x-0 border-t-0" />
-                    <HorizontalGap className="border-x-0 absolute bottom-0 border-b-0" />
-
-                    <div className="layout-double-padding flex flex-col gap-y-4 text-neutral-200">
+                <div className="absolute inset-0 z-10 pointer-events-none flex flex-col justify-center px-8 bg-black/40">
+                    <div className="flex flex-col gap-y-3 text-neutral-200 max-w-sm">
                         {user.map((u, i) => (
-                            <UserCapsule
-                                key={i}
-                                icon={u.icon}
-                                data={u.data}
-                                link={u.link}
-                            />
+                            <UserCapsule key={i} icon={u.icon} data={u.data} link={u.link} />
                         ))}
                     </div>
                 </div>
 
-                {/* CANVAS — REVEAL + ERASER */}
-                <canvas
-                    ref={canvasRef}
-                    className="
-                        absolute inset-0
-                        z-20
-                        pointer-events-none
-                    "
-                />
+                <canvas ref={canvasRef} className="absolute inset-0 z-20 pointer-events-none" />
             </div>
-        </div>
+        </section>
     );
 }
 
 function UserCapsule(u: { icon: IconType, data: string, link?: string }) {
     return (
-        <div className="flex items-center gap-x-4">
-            <div
-                className='flex justify-center items-center bg-primary-dark p-1 rounded-lg border border-secondary-dark outline outline-primary-dark '
-            >
-                <u.icon
-                    className='flex justify-center items-center '
-                />
+        <div className="flex items-center gap-x-3">
+            <div className="flex justify-center items-center bg-neutral-800/80 p-1.5 rounded border border-neutral-700/50">
+                <u.icon className="w-4 h-4 text-neutral-300" />
             </div>
-                <span>{u.data}</span>
+            <span className="text-sm text-neutral-300 font-medium drop-shadow-md">{u.data}</span>
         </div>
     )
 }

@@ -1,77 +1,49 @@
 import { cn } from "@/lib/utils";
 import { experiences } from "../data/experiences";
 import ExperienceType from "../types/experience-type";
-import Heading from "../ui/Heading";
-import { HorizontalGap, VerticalGap } from "../ui/Gap";
 
 export default function Experience({ className }: { className?: string }) {
     return (
-        <div className={cn(
-            "w-full h-full ",
-            className
-        )}
-        >
-            <Heading heading={'experiences'} tag={'I had'} />
-            <div className="w-full h-full relative flex items-center justify-between gap-4">
-                <VerticalGap className="h-full absolute border-y-0 border-l-0 " />
-                <div className="w-full flex flex-wrap gap-2">
-                    <HorizontalGap className="border-x-0 border-t-0 " />
-                    {experiences.map((exp, i) => (
-                        <>
-                            <ExperienceCard
-                                experience={exp}
-                                key={i}
-                            />
-                            {i < experiences.length - 1 && (
-                                <HorizontalGap className="border-x-0" />
-                            )}
-                        </>
-                    ))}
-                    <HorizontalGap className="border-x-0 border-b-0" />
-                </div>
-                <VerticalGap className="h-full absolute right-0 border-y-0 border-r-0 " />
+        <section className={cn("w-full flex flex-col gap-6", className)}>
+            <div className="-mx-6 w-[calc(100%+3rem)] border-y border-neutral-800 bg-neutral-900/40 px-6 py-2">
+                <h2 className="text-xs font-semibold uppercase tracking-widest text-neutral-400">Experience</h2>
             </div>
-        </div>
+            <div className="flex flex-col gap-8">
+                {experiences.map((exp, i) => (
+                    <ExperienceCard experience={exp} key={i} />
+                ))}
+            </div>
+        </section>
     );
 }
 
 function ExperienceCard({ experience }: { experience: ExperienceType }) {
     return (
-        <div className="w-full flex flex-col text-sm text-neutral-500 ">
-            <div className="flex justify-between items-center">
-                <Heading
-                    heading={experience.company}
-                    tag={experience.role}
-                    tag2={experience.dates}
-                    size={'sm'}
-                    className="px-3"
-                />
+        <div className="group relative flex flex-col gap-y-2">
+            <div className="flex flex-wrap items-baseline justify-between gap-x-2 gap-y-1">
+                <h3 className="font-medium text-neutral-200">{experience.company} <span className="text-neutral-500 font-normal">— {experience.role}</span></h3>
+                <span className="text-sm tabular-nums text-neutral-500">{experience.dates}</span>
             </div>
 
-            <div className="flex flex-col layout-double-padding">
-
-            <div className="mt-2 text-justify">
+            <p className="text-sm text-neutral-400 leading-relaxed text-justify sm:text-left">
                 {experience.description}
-            </div>
+            </p>
 
-            <div className="mt-2 flex flex-wrap gap-2">
-                {experience.tech.map((t) => (
-                    <ExperienceTechCard key={t} tech={t} />
-                ))}
-            </div>
-            </div>
+            {experience.tech && experience.tech.length > 0 && (
+                <div className="mt-2 flex flex-wrap gap-2">
+                    {experience.tech.map((t) => (
+                        <ExperienceTechCard key={t} tech={t} />
+                    ))}
+                </div>
+            )}
         </div>
     );
 }
 
-
 function ExperienceTechCard({ tech }: { tech: string }) {
     return (
-        <div className={cn(
-            "w-fit px-2 py-1 rounded-md bg-[#101010] border border-neutral-700 text-neutral-200 text-xs",
-            "cursor-pointer",
-        )}>
+        <span className="inline-flex items-center rounded bg-neutral-800/50 px-2 py-0.5 text-xs font-medium text-neutral-300 ring-1 ring-inset ring-neutral-700/50">
             {tech}
-        </div>
+        </span>
     );
 }

@@ -14,7 +14,7 @@ export default function Stacks({ stacks }: { stacks: string[] }) {
 function Stack({ tech }: { tech: string }) {
     return (
         <div className={cn(
-            "w-fit px-2 py-1 rounded-md bg-[#101010] border border-neutral-700 text-neutral-200 text-xs",
+            "w-fit px-2 py-1 rounded bg-[#101010] border border-neutral-700 text-neutral-200 text-xs",
             "cursor-pointer",
         )}>
             {tech}

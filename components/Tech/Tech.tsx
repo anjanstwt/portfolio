@@ -42,7 +42,7 @@ export const Tech = ({ ref, className }: TechProps) => {
     }
 
     return <div
-        className={`p-4 lg:p-5 bg-[#D8CFBC] rounded-xl flex flex-col gap-y-3 overflow-hidden ${className}`}
+        className={`p-4 lg:p-5 bg-[#D8CFBC] rounded flex flex-col gap-y-3 overflow-hidden ${className}`}
         ref={ref}
     >
         <div className="text-2xl w-full border-b-2 border-[#0f0f0f] pb-1 ">

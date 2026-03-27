@@ -38,7 +38,7 @@ export default function Heading({ logo, heading, tag, tag2, size = 'lg', classNa
                         alt={heading}
                         height={'25'}
                         width={'25'}
-                        className="rounded-full layout-border p-0.5"
+                        className="rounded layout-border p-0.5"
                     />
                 )}
                 <div className="flex justify-start items-baseline gap-x-1 ">

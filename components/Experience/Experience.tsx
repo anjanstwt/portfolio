@@ -88,7 +88,7 @@ export const Experience = ({ ref, className }: ExperienceProps) => {
     }
 
     return <div
-        className={`relative bg-[#D8CFBC] rounded-xl overflow-hidden p-4 2xl:p-5 flex flex-col gap-y-3 ${className} `}
+        className={`relative bg-[#D8CFBC] rounded overflow-hidden p-4 2xl:p-5 flex flex-col gap-y-3 ${className} `}
         ref={ref}
         onMouseEnter={handleActiveAnimation}
         onMouseLeave={handleDeactiveAnimation}
@@ -98,7 +98,7 @@ export const Experience = ({ ref, className }: ExperienceProps) => {
                 Experience
             </div>
             <a
-                className="flex items-center justify-center gap-x-1 py-1 px-2 transition-colors duration-200 ease-in-out cursor-pointer rounded-md hover:bg-[#ada592] "
+                className="flex items-center justify-center gap-x-1 py-1 px-2 transition-colors duration-200 ease-in-out cursor-pointer rounded hover:bg-[#ada592] "
                 href={""}
             >
                 <Gmail />
@@ -146,7 +146,7 @@ interface ScrollButtonProps {
 const ScrollButton = ({ type, onClick, ref }: ScrollButtonProps) => {
     return (
         <div
-            className="p-2 rounded-full bg-[#0f0f0f] text-[#D8CFBC] border border-[#D8CFBC] cursor-pointer opacity-0 "
+            className="p-2 rounded bg-[#0f0f0f] text-[#D8CFBC] border border-[#D8CFBC] cursor-pointer opacity-0 "
             onClick={onClick}
             ref={ref}
         >

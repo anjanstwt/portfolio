@@ -35,7 +35,7 @@ export default function Page() {
 
             {/* this is for images of the project */}
             <div className="w-full flex items-center justify-center">
-                <div className="w-full h-80 bg-neutral-900 rounded-md">
+                <div className="w-full h-80 bg-neutral-900 rounded">
 
                 </div>
             </div>

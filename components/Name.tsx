@@ -13,7 +13,7 @@ interface NameProps {
 
 export const Name = ({ ref, className }: NameProps) => {
     return <div
-        className={`bg-[#565449] rounded-xl overflow-hidden p-5 text-[#D8CFBC] flex flex-col items-end justify-between gap-y-2 ${className}`}
+        className={`bg-[#565449] rounded overflow-hidden p-5 text-[#D8CFBC] flex flex-col items-end justify-between gap-y-2 ${className}`}
         ref={ref}
     >
         <div className="w-full max-h-[75rem] flex flex-col justify-start items-end gap-y-[0.5px] ">
@@ -29,7 +29,7 @@ export const Name = ({ ref, className }: NameProps) => {
         </div>
         <div className="flex justify-end items-center gap-x-3 ">
             <a
-                className="flex items-center justify-end gap-x-2 py-2 px-3 transition-colors duration-200 ease-in-out cursor-pointer rounded-xl hover:bg-[#3d3932] "
+                className="flex items-center justify-end gap-x-2 py-2 px-3 transition-colors duration-200 ease-in-out cursor-pointer rounded hover:bg-[#3d3932] "
                 href={""}
             >
                 <GoogleMeet className="size-8 2xl:size-10" />

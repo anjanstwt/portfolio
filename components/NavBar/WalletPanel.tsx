@@ -102,7 +102,7 @@ export const WalletPanel = ({ close }: WalletPanelProps) => {
         <QueryClientProvider client={queryClient} >
           <div
             ref={walletPanelRef}
-            className="w-[700px] h-[500px] bg-[#0f0f0f] rounded-3xl overflow-hidden shadow-2xl flex border border-[#565449] opacity-0 "
+            className="w-[700px] h-[500px] bg-[#0f0f0f] rounded overflow-hidden shadow-2xl flex border border-[#565449] opacity-0 "
           >
             {/* Left Sidebar */}
             <div className="w-[240px] h-full border-r border-[#3d3932] p-5 flex flex-col gap-4">
@@ -121,7 +121,7 @@ export const WalletPanel = ({ close }: WalletPanelProps) => {
               <div className="absolute top-5 right-5">
                 <IconX
                   onClick={close}
-                  className="cursor-pointer bg-[#565449] p-1 rounded-full hover:bg-[#3d3932] transition-colors duration-200 ease-in-out"
+                  className="cursor-pointer bg-[#565449] p-1 rounded hover:bg-[#3d3932] transition-colors duration-200 ease-in-out"
                 />
               </div>
 

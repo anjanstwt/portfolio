@@ -3,6 +3,8 @@ import { Geist, Geist_Mono, DM_Serif_Display } from "next/font/google";
 import "./globals.css";
 import LenisProvider from "@/components/ui/LenisProvider";
 import { cn } from "@/lib/utils";
+import Navbar from "@/components/base/Navbar";
+import CommandMenu from "@/components/ui/CommandMenu";
 
 const dsd = DM_Serif_Display({
     weight: "400",
@@ -66,10 +68,12 @@ export default function RootLayout({
 
                 <LenisProvider>
                     <div className={cn(
-                        `h-full w-full font-sans bg-secondary-dark text-white flex justify-center select-none `,
+                        `min-h-screen w-full font-sans bg-secondary-dark text-white flex flex-col items-center selection:bg-neutral-800 selection:text-white`,
                         geist.className,
                     )}>
-                        <div className="h-full  ">
+                        <Navbar />
+                        <CommandMenu />
+                        <div className="w-full max-w-2xl px-6 py-12 md:py-20 border-x border-neutral-800 min-h-screen">
                             {children}
                         </div>
                     </div>

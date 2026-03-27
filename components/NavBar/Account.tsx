@@ -194,7 +194,7 @@ export function Account() {
 
             <div
                 ref={ContainerRef}
-                className="w-full rounded-2xl bg-[#1c1c1c] border border-[#3d3932] overflow-hidden"
+                className="w-full rounded bg-[#1c1c1c] border border-[#3d3932] overflow-hidden"
             >
                 <div
                     ref={TransitionWrapperRef}
@@ -245,7 +245,7 @@ const AccountInfo = ({ onClick, ref, address, chain, ensAvatar, ensName, balance
 
         {/* account image and address */}
         <div className='flex justify-center items-center gap-x-3'>
-            <div className="w-10 h-10 rounded-full overflow-hidden border border-[#3d3932]">
+            <div className="w-10 h-10 rounded overflow-hidden border border-[#3d3932]">
                 {ensAvatar ? (
                     <img src={ensAvatar} alt="ENS Avatar" className="w-full h-full object-cover" />
                 ) : (
@@ -256,7 +256,7 @@ const AccountInfo = ({ onClick, ref, address, chain, ensAvatar, ensName, balance
             </div>
             {address && (
                 <div
-                    className="max-w-xs px-3 py-1 rounded-md bg-[#2c2c2c] border border-[#3d3932] text-[#D8CFBC] text-sm font-mono truncate"
+                    className="max-w-xs px-3 py-1 rounded bg-[#2c2c2c] border border-[#3d3932] text-[#D8CFBC] text-sm font-mono truncate"
                     title={ensName ? `${ensName} (${address})` : address}
                 >
                     {ensName ? `${ensName} (${address})` : address}
@@ -266,20 +266,20 @@ const AccountInfo = ({ onClick, ref, address, chain, ensAvatar, ensName, balance
 
         {/* chain name */}
         <div className="w-full flex justify-start items-center gap-x-3">
-            <div className="flex items-center justify-center px-3 py-1 rounded-md bg-[#2c2c2c] border border-[#3d3932] text-[#D8CFBC] text-sm font-mono">
+            <div className="flex items-center justify-center px-3 py-1 rounded bg-[#2c2c2c] border border-[#3d3932] text-[#D8CFBC] text-sm font-mono">
                 Chain:
             </div>
-            <div className="w-full flex items-center justify-center px-3 py-1 rounded-md bg-[#2c2c2c] border border-[#3d3932] text-[#D8CFBC] text-sm font-mono">
+            <div className="w-full flex items-center justify-center px-3 py-1 rounded bg-[#2c2c2c] border border-[#3d3932] text-[#D8CFBC] text-sm font-mono">
                 {chain.name}
             </div>
         </div>
 
         {/* balance */}
         <div className="w-full flex justify-start items-center gap-x-3">
-            <div className="flex items-center justify-center px-3 py-1 rounded-md bg-[#2c2c2c] border border-[#3d3932] text-[#D8CFBC] text-sm font-mono">
+            <div className="flex items-center justify-center px-3 py-1 rounded bg-[#2c2c2c] border border-[#3d3932] text-[#D8CFBC] text-sm font-mono">
                 Balance:
             </div>
-            <div className="w-full flex items-center justify-center px-3 py-1 rounded-md bg-[#2c2c2c] border border-[#3d3932] text-[#D8CFBC] text-sm font-mono">
+            <div className="w-full flex items-center justify-center px-3 py-1 rounded bg-[#2c2c2c] border border-[#3d3932] text-[#D8CFBC] text-sm font-mono">
                 {formatUnits(balance.value, balance.decimals || 18)} {balance.symbol}
             </div>
         </div>
@@ -287,13 +287,13 @@ const AccountInfo = ({ onClick, ref, address, chain, ensAvatar, ensName, balance
         {/* action buttons */}
         <div className="w-full flex justify-center items-center gap-x-3 mt-8">
             <div
-                className="flex items-center justify-center px-5 py-1.5 rounded-md bg-[#2c2c2c] hover:bg-[#3c3c3c] transition-colors duration-200 ease-in-out border border-[#D8CFBC] text-[#D8CFBC] text-sm font-mono cursor-pointer"
+                className="flex items-center justify-center px-5 py-1.5 rounded bg-[#2c2c2c] hover:bg-[#3c3c3c] transition-colors duration-200 ease-in-out border border-[#D8CFBC] text-[#D8CFBC] text-sm font-mono cursor-pointer"
                 onClick={onClick}
             >
                 Buy me a coffee
             </div>
             <div
-                className="flex items-center justify-center px-5 py-1.5 rounded-md bg-[#fb2c3656] hover:bg-[#fb2c3675] transition-colors duration-200 ease-in-out border border-red-400 text-[#D8CFBC] text-sm font-mono cursor-pointer"
+                className="flex items-center justify-center px-5 py-1.5 rounded bg-[#fb2c3656] hover:bg-[#fb2c3675] transition-colors duration-200 ease-in-out border border-red-400 text-[#D8CFBC] text-sm font-mono cursor-pointer"
                 onClick={disconnect}
             >
                 Disconnect

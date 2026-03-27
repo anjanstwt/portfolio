@@ -6,13 +6,11 @@
 }
 
 .layout-width {
-    width: 50vw; 
+    width: 100%;
+    max-width: 48rem; /* max-w-2xl */
+    margin: 0 auto;
 }
 
-.layout-side-border {
-    border-width: 0px 1px 0px 1px;
-    border-color: #1C1C1E;
-}
 
 .layout-bottom-border {
     border-bottom: 1px solid #1C1C1E;

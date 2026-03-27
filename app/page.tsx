@@ -1,4 +1,5 @@
 'use client';
+
 import Experience from "@/components/base/Experience";
 import Footer from "@/components/base/Footer";
 import GithubContributions from "@/components/base/GithubContributions";
@@ -7,32 +8,32 @@ import Overview from "@/components/base/Overview";
 import Projects from "@/components/base/Projects";
 import Tech from "@/components/base/Tech";
 import Title from "@/components/base/Title";
-import { HorizontalGap } from "@/components/ui/Gap";
-import Line from "@/components/ui/Line";
+import ThickSeparator from "@/components/ui/ThickSeparator";
 
 export default function Page() {
-
     return (
-        <div className="w-full flex flex-col items-center ">
-            <Line />
-            <Title className="layout-width layout-side-border layout-padding " />
-            <HorizontalGap />
-            <GithubContributions className="layout-width layout-side-border layout-padding " />
-            <Line />
-            <Overview className="layout-width layout-side-border " />
-            <Line />
-            <Experience className="layout-width layout-side-border " />
-            <Line />
-            <Projects className="layout-width layout-side-border " />
-            <Line />
-            <Tech className="layout-width layout-side-border " />
-            <Line />
-            <Interested className="layout-width layout-side-border layout-padding " />
-            <HorizontalGap />
-            <Footer className="layout-width layout-side-border layout-padding " />
-            <Line />
-            {/* <DustParticles particleColor={0xfdf9f0} /> */}
+        <div className="flex flex-col gap-y-16 md:gap-y-24 pb-20">
+            <Title />
+            <ThickSeparator />
+            <GithubContributions />
+            <ThickSeparator />
+            <div id="overview">
+                <Overview />
+            </div>
+            <ThickSeparator />
+            <div id="experience">
+                <Experience />
+            </div>
+            <ThickSeparator />
+            <div id="projects">
+                <Projects />
+            </div>
+            <ThickSeparator />
+            <div id="tech">
+                <Tech />
+            </div>
+            <Interested />
+            <Footer />
         </div>
     );
-
 }

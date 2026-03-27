@@ -2,8 +2,6 @@
 
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import Heading from "../ui/Heading";
-import { HorizontalGap, VerticalGap } from "../ui/Gap";
 
 type TechItem = {
     logo: string;
@@ -27,58 +25,26 @@ const techStack: TechItem[] = [
     { logo: "/tech/git.png", text: "git", value: 9 },
 ];
 
-const techColors: Record<string, string> = {
-    typescript: "#3178c6",
-    rust: "#dea584",
-    solana: "#9945ff",
-    docker: "#2496ed",
-    git: "#f14e32",
-};
-
-const TECH_CHART_KEYS = [
-    "typescript",
-    "rust",
-    "solana",
-    "docker",
-    "git",
-] as const;
-
 export default function Tech({ className }: { className?: string }) {
     return (
-        <div className={cn(
-            "w-full text-neutral-400 flex flex-col ",
-            className
-        )}
-        >
-            <Heading heading={'stack'} tag={'I generally be with'} />
-            <div className="relative flex flex-col gap-y-0">
-                <VerticalGap className="h-full absolute left-0 top-0 border-y-0 border-l-0 " />
-                <HorizontalGap className="border-x-0 border-t-0 " />
-                <div className="flex items-center justify-between gap-4">
-                    <div className="w-full flex flex-wrap gap-2 layout-double-padding">
-                        {techStack.map((t) => (
-                            <TechComponent key={t.text} logo={t.logo} text={t.text} />
-                        ))}
-                    </div>
-                    {/* <TechChart /> */}
-                </div>
-                <VerticalGap className="h-full absolute right-0 top-0 border-y-0 border-r-0 " />
-                <HorizontalGap className="border-x-0 border-b-0 " />
+        <section className={cn("w-full flex flex-col gap-6", className)}>
+            <div className="-mx-6 w-[calc(100%+3rem)] border-y border-neutral-800 bg-neutral-900/40 px-6 py-2">
+                <h2 className="text-xs font-semibold uppercase tracking-widest text-neutral-400">Tech Stack</h2>
             </div>
-        </div>
+            <div className="flex flex-wrap gap-2">
+                {techStack.map((t) => (
+                    <TechComponent key={t.text} logo={t.logo} text={t.text} />
+                ))}
+            </div>
+        </section>
     );
 }
 
 function TechComponent({ logo, text }: { logo: string; text: string }) {
     return (
-        <div
-            className={cn(
-                "w-fit flex items-center gap-x-1 px-3 py-1.5 rounded-md bg-[#101010] border border-neutral-700",
-                "cursor-pointer",
-            )}
-        >
-            <Image src={logo} alt={text} width={16} height={16} />
-            <span className="text-xs text-white">{text}</span>
+        <div className="flex items-center gap-x-2 px-3 py-1.5 rounded bg-neutral-900 border border-neutral-800 hover:bg-neutral-800 hover:border-neutral-700 transition-colors cursor-pointer group">
+            <Image src={logo} alt={text} width={16} height={16} className="opacity-80 group-hover:opacity-100 transition-opacity" />
+            <span className="text-xs font-medium text-neutral-300 group-hover:text-white transition-colors">{text}</span>
         </div>
     );
 }

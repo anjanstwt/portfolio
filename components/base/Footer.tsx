@@ -8,14 +8,13 @@ import { cn } from "@/lib/utils";
 
 export default function Footer({ className }: { className?: string }) {
     return (
-        <div className={cn(
-            "w-full flex justify-between items-center text-sm text-neutral-500",
+        <footer className={cn(
+            "w-full flex flex-col sm:flex-row justify-between items-center sm:items-end gap-6 pt-8 pb-4 border-t border-neutral-800 text-sm text-neutral-500",
             className,
-            )}
-            >
-            <div>&copy; 2025 anjan</div>
+        )}>
+            <div>&copy; {new Date().getFullYear()} Anjan Suman</div>
             <SocialLinks />
-        </div>
+        </footer>
     );
 }
 

@@ -38,7 +38,7 @@ const ProjectCardLeft = ({ name, description, img, skills, github, live, classNa
 
         {/* image and optional links */}
         <div className="flex flex-col justify-around items-start gap-y-2 ">
-            <div className="relative w-40 2xl:w-44 h-24 2xl:h-28 rounded-lg overflow-hidden bg-[#50130E] flex-shrink-0">
+            <div className="relative w-40 2xl:w-44 h-24 2xl:h-28 rounded overflow-hidden bg-[#50130E] flex-shrink-0">
                 {img}
             </div>
             <div className="flex 2xl:hidden justify-center items-center gap-x-3 ">
@@ -158,7 +158,7 @@ const ProjectCardRight = ({ name, description, img, skills, github, live, classN
 
         {/* image and optional links */}
         <div className="flex flex-col justify-around items-end gap-y-2 ">
-            <div className="relative w-40 2xl:w-44 h-24 2xl:h-28 rounded-lg overflow-hidden bg-[#50130E] flex-shrink-0">
+            <div className="relative w-40 2xl:w-44 h-24 2xl:h-28 rounded overflow-hidden bg-[#50130E] flex-shrink-0">
                 {img}
             </div>
             <div className="flex 2xl:hidden justify-center items-center gap-x-3 ">
@@ -188,7 +188,7 @@ const ProjectCardRight = ({ name, description, img, skills, github, live, classN
 }
 
 const Capsule = ({ name }: { name: string }) => {
-    return <div className={`px-2 py-1 rounded-full bg-[#3d3932] text-[10px] 2xl:text-xs font-light text-[#D8CFBC] ${roboto.className} `}>
+    return <div className={`px-2 py-1 rounded bg-[#3d3932] text-[10px] 2xl:text-xs font-light text-[#D8CFBC] ${roboto.className} `}>
         {name}
     </div>
 }

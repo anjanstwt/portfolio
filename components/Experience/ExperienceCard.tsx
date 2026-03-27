@@ -39,7 +39,7 @@ export const ExperienceCard = ({ company, className }: ExperienceCardProps) => {
             <a
                 target="_blank"
                 href={experience?.web}
-                className="w-40 2xl:w-44 h-[104px] 2xl:h-30 relative flex justify-center items-center rounded-lg overflow-hidden bg-[#50130E] "
+                className="w-40 2xl:w-44 h-[104px] 2xl:h-30 relative flex justify-center items-center rounded overflow-hidden bg-[#50130E] "
             >
                 <Image src={wallpaper_heaven} alt={"Wallpaper-Heaven"} width={100} className="object-cover " unoptimized />
                 <div className="absolute right-0 top-0 p-1 bg-[#0f0f0f] rounded-bl-lg rounded-tr-lg ">
