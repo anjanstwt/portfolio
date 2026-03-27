@@ -8,6 +8,11 @@
     --color-secondary-light: #09090B;
 }
 
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
 .custom-resizer::-webkit-resizer {
     border-right: 1px solid gray;
     border-bottom: 1px solid gray;
@@ -31,4 +36,13 @@
     --breakpoint-md2: 853px;
     --breakpoint-md3: 930px;
     --breakpoint-xl2: 1354px;
+}
+
+/* Hide scrollbars globally */
+* {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+}
+*::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
 }

@@ -9,6 +9,39 @@ import { experiences } from '../data/experiences';
 import { details } from '../data/details';
 import { Logos } from '../Logos/Logos';
 import Image from 'next/image';
+import { cn } from '@/lib/utils';
+
+const navigationItems = [
+    {
+        label: "Overview",
+        icon: User,
+        action: () => window.scrollTo({ top: 0, behavior: "smooth" }),
+    },
+    {
+        label: "Experience",
+        icon: Map,
+        action: () =>
+            document.getElementById("experience")?.scrollIntoView({ behavior: "smooth" }),
+    },
+    {
+        label: "Projects",
+        icon: Code,
+        action: () =>
+            document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" }),
+    },
+    {
+        label: "Tech Stack",
+        icon: Cpu,
+        action: () =>
+            document.getElementById("tech")?.scrollIntoView({ behavior: "smooth" }),
+    },
+    {
+        label: "Contact",
+        icon: MessageSquare,
+        action: () =>
+            document.getElementById("interested")?.scrollIntoView({ behavior: "smooth" }),
+    },
+];
 
 export default function CommandMenu() {
     const [open, setOpen] = useState(false);
@@ -21,10 +54,13 @@ export default function CommandMenu() {
                 e.preventDefault();
                 setOpen((open) => !open);
             }
+            if (e.key === 'Escape') {
+                setOpen(false);
+            }
         };
 
-        document.addEventListener('keydown', down);
-        return () => document.removeEventListener('keydown', down);
+        document.addEventListener('keydown', down, true);
+        return () => document.removeEventListener('keydown', down, true);
     }, []);
 
     // Also expose a global method or custom event to open it from Navbar
@@ -44,10 +80,15 @@ export default function CommandMenu() {
     return (
         <div className="fixed inset-0 z-[100] flex items-start justify-center pt-[15vh] sm:pt-[20vh]">
             <div className="fixed inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setOpen(false)} />
-            <div className="relative z-10 w-full max-w-lg overflow-hidden rounded-xl border border-neutral-800 bg-[#09090b] shadow-2xl animate-in fade-in zoom-in-95 duration-200">
+            <div className="relative z-10 w-full max-w-lg overflow-hidden rounded-[6px] border border-neutral-800 bg-[#09090b] shadow-2xl animate-in fade-in zoom-in-95 duration-200">
                 <Command
                     className="flex h-full w-full flex-col bg-transparent text-neutral-100"
                     loop
+                    onKeyDown={(e) => {
+                        if (e.key === 'Escape') {
+                            setOpen(false);
+                        }
+                    }}
                 >
                     <div className="flex items-center border-b border-neutral-800 px-3 opacity-90">
                         <Search className="mr-2 h-4 w-4 shrink-0 text-neutral-500" />
@@ -66,55 +107,44 @@ export default function CommandMenu() {
                         </button>
                     </div>
 
-                    <Command.List className="max-h-[350px] overflow-y-auto overflow-x-hidden p-2 hide-scrollbar overscroll-contain" data-lenis-prevent>
+                    <Command.List className="max-h-[350px] overflow-y-auto overflow-x-hidden hide-scrollbar overscroll-contain" data-lenis-prevent>
                         <Command.Empty className="py-6 text-center text-sm text-neutral-500">
                             No results found.
                         </Command.Empty>
-                        <Command.Group heading="Navigation" className="text-xs font-medium text-neutral-500 [&_[cmdk-list]]:mt-2">
-                            <Command.Item
-                                onSelect={() => runCommand(() => window.scrollTo({ top: 0, behavior: 'smooth' }))}
-                                className="relative flex cursor-pointer select-none items-center rounded px-2 py-2.5 text-sm outline-none aria-selected:bg-white/5 aria-selected:text-white"
-                            >
-                                <User className="mr-2 h-4 w-4 opacity-70" />
-                                <span>Overview</span>
-                            </Command.Item>
-                            <Command.Item
-                                onSelect={() => runCommand(() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' }))}
-                                className="relative flex cursor-pointer select-none items-center rounded px-2 py-2.5 text-sm outline-none aria-selected:bg-white/5 aria-selected:text-white"
-                            >
-                                <Map className="mr-2 h-4 w-4 opacity-70" />
-                                <span>Experience</span>
-                            </Command.Item>
-                            <Command.Item
-                                onSelect={() => runCommand(() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' }))}
-                                className="relative flex cursor-pointer select-none items-center rounded px-2 py-2.5 text-sm outline-none aria-selected:bg-white/5 aria-selected:text-white"
-                            >
-                                <Code className="mr-2 h-4 w-4 opacity-70" />
-                                <span>Projects</span>
-                            </Command.Item>
-                            <Command.Item
-                                onSelect={() => runCommand(() => document.getElementById('tech')?.scrollIntoView({ behavior: 'smooth' }))}
-                                className="relative flex cursor-pointer select-none items-center rounded px-2 py-2.5 text-sm outline-none aria-selected:bg-white/5 aria-selected:text-white"
-                            >
-                                <Cpu className="mr-2 h-4 w-4 opacity-70" />
-                                <span>Tech Stack</span>
-                            </Command.Item>
-                            <Command.Item
-                                onSelect={() => runCommand(() => document.getElementById('interested')?.scrollIntoView({ behavior: 'smooth' }))}
-                                className="relative flex cursor-pointer select-none items-center rounded px-2 py-2.5 text-sm outline-none aria-selected:bg-white/5 aria-selected:text-white"
-                            >
-                                <MessageSquare className="mr-2 h-4 w-4 opacity-70" />
-                                <span>Contact</span>
-                            </Command.Item>
+                        <Command.Group
+                            heading="Navigation"
+                            className={cn("text-xs font-medium text-neutral-500 ",
+                                "[&_[cmdk-group-heading]]:px-4 ",
+                                "[&_[cmdk-group-heading]]:py-2 ",
+                                "[&_[cmdk-group-heading]]:border-y ",
+                                "[&_[cmdk-group-heading]]:border-neutral-800 ",
+                                "[&_[cmdk-list]]:px-2 ",
+                                "[&_[cmdk-list]]:py-2",
+                            )}
+                        >
+                            {navigationItems.map((item) => {
+                                const Icon = item.icon;
+
+                                return (
+                                    <Command.Item
+                                        key={item.label}
+                                        onSelect={() => runCommand(item.action)}
+                                        className="relative flex cursor-pointer select-none items-center px-2 py-2.5 text-sm outline-none aria-selected:bg-white/5 aria-selected:text-white"
+                                    >
+                                        <Icon className="mr-2 h-4 w-4 opacity-70" />
+                                        <span>{item.label}</span>
+                                    </Command.Item>
+                                );
+                            })}
                         </Command.Group>
-                        <Command.Separator className="my-1 h-px bg-neutral-800" />
-                        <Command.Group heading="Projects" className="text-xs font-medium text-neutral-500 [&_[cmdk-list]]:mt-2">
+
+                        <Command.Group heading="Projects" className="text-xs font-medium text-neutral-500 [&_[cmdk-group-heading]]:px-4 [&_[cmdk-group-heading]]:py-2 [&_[cmdk-group-heading]]:border-y [&_[cmdk-group-heading]]:border-neutral-800 [&_[cmdk-list]]:px-2 [&_[cmdk-list]]:py-2">
                             {projects.map((project, idx) => (
                                 <Command.Item
                                     key={idx}
                                     value={project.title}
                                     onSelect={() => runCommand(() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' }))}
-                                    className="relative flex cursor-pointer select-none items-center rounded px-2 py-2.5 text-sm outline-none aria-selected:bg-white/5 aria-selected:text-white"
+                                    className="relative flex cursor-pointer select-none items-center px-2 py-2.5 text-sm outline-none aria-selected:bg-white/5 aria-selected:text-white"
                                 >
                                     {project.logo ? (
                                         <div className="mr-2 h-4 w-4 opacity-80 flex items-center justify-center">
@@ -127,23 +157,23 @@ export default function CommandMenu() {
                                 </Command.Item>
                             ))}
                         </Command.Group>
-                        <Command.Separator className="my-1 h-px bg-neutral-800" />
-                        <Command.Group heading="Experience" className="text-xs font-medium text-neutral-500 [&_[cmdk-list]]:mt-2">
+
+                        <Command.Group heading="Experience" className="text-xs font-medium text-neutral-500 [&_[cmdk-group-heading]]:px-4 [&_[cmdk-group-heading]]:py-2 [&_[cmdk-group-heading]]:border-y [&_[cmdk-group-heading]]:border-neutral-800 [&_[cmdk-list]]:px-2 [&_[cmdk-list]]:py-2">
                             {experiences.map((exp, idx) => (
                                 <Command.Item
                                     key={idx}
                                     value={exp.company}
                                     onSelect={() => runCommand(() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' }))}
-                                    className="relative flex cursor-pointer select-none items-center rounded px-2 py-2.5 text-sm outline-none aria-selected:bg-white/5 aria-selected:text-white"
+                                    className="relative flex cursor-pointer select-none items-center px-2 py-2.5 text-sm outline-none aria-selected:bg-white/5 aria-selected:text-white"
                                 >
                                     <Map className="mr-2 h-4 w-4 opacity-70" />
                                     <span className="capitalize">{exp.company}</span>
                                 </Command.Item>
                             ))}
                         </Command.Group>
-                        <Command.Separator className="my-1 h-px bg-neutral-800" />
+
                         {search.length > 0 && (
-                            <Command.Group heading="Tech Stack" className="text-xs font-medium text-neutral-500 [&_[cmdk-list]]:mt-2">
+                            <Command.Group heading="Tech Stack" className="text-xs font-medium text-neutral-500 [&_[cmdk-group-heading]]:px-4 [&_[cmdk-group-heading]]:py-2 [&_[cmdk-group-heading]]:border-y [&_[cmdk-group-heading]]:border-neutral-800 [&_[cmdk-list]]:px-2 [&_[cmdk-list]]:py-2">
                                 {Logos.map((tech, idx) => (
                                     <Command.Item
                                         key={`tech-${idx}`}
@@ -166,8 +196,8 @@ export default function CommandMenu() {
                                 ))}
                             </Command.Group>
                         )}
-                        <Command.Separator className="my-1 h-px bg-neutral-800" />
-                        <Command.Group heading="Socials & Links" className="text-xs font-medium text-neutral-500 [&_[cmdk-list]]:mt-2">
+
+                        <Command.Group heading="Socials & Links" className="text-xs font-medium text-neutral-500 [&_[cmdk-group-heading]]:px-4 [&_[cmdk-group-heading]]:py-2 [&_[cmdk-group-heading]]:border-y [&_[cmdk-group-heading]]:border-neutral-800 [&_[cmdk-list]]:px-2 [&_[cmdk-list]]:py-2">
                             {details.map((detail, idx) => {
                                 const Icon = detail.logo;
                                 return (
@@ -175,7 +205,7 @@ export default function CommandMenu() {
                                         key={idx}
                                         value={detail.label}
                                         onSelect={() => runCommand(() => window.open(detail.link, '_blank'))}
-                                        className="relative flex cursor-pointer select-none items-center rounded px-2 py-2.5 text-sm outline-none aria-selected:bg-white/5 aria-selected:text-white"
+                                        className="relative flex cursor-pointer select-none items-center px-2 py-2.5 text-sm outline-none aria-selected:bg-white/5 aria-selected:text-white"
                                     >
                                         <Icon className="mr-2 h-4 w-4 opacity-70" />
                                         <span className="capitalize">{detail.label.toLowerCase()}</span>

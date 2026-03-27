@@ -132,7 +132,7 @@ export default function Overview({ className }: { className?: string }) {
 
     return (
         <section className={cn("w-full flex flex-col gap-4", className)}>
-            <SectionHeading title="About Me" />
+            <SectionHeading title="Overview" extra='of me' />
 
             <div
                 className="relative h-64 w-full overflow-hidden"

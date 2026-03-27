@@ -9,42 +9,47 @@ type TechItem = {
     value: number;
 };
 
-const techStack: TechItem[] = [
-    { logo: "/tech/typescript.png", text: "typescript", value: 15 },
-    { logo: "/tech/rust.png", text: "rust", value: 3 },
-    { logo: "/tech/solana.png", text: "solana", value: 6 },
-    { logo: '/tech/anchor.png', text: 'anchor', value: 6 },
-    { logo: "/tech/nextjs.png", text: "next.js", value: 10 },
-    { logo: "/tech/nodejs.png", text: "node.js", value: 10 },
-    { logo: "/tech/prisma.png", text: "prisma", value: 7 },
-    { logo: "/tech/postgresql.png", text: "postgresql", value: 10 },
-    { logo: "/tech/websocket.png", text: "websocket", value: 6 },
-    { logo: "/tech/docker.png", text: "docker", value: 10 },
-    { logo: "/tech/redis.png", text: "redis", value: 8 },
-    { logo: "/tech/kubernetes.png", text: "kubernetes", value: 4 },
-    { logo: "/tech/git.png", text: "git", value: 9 },
+import { Logos } from "../Logos/Logos";
+
+// Selected tech for the main section
+const SELECTED_TECH = [
+    "typescript", "rust", "solana", "anchor", "react.js", "next.js", "node.js", "express.js",
+    "prisma", "postgresql", "websocket", "docker", "redis", "kubernetes", "git"
 ];
+
+const techStack = SELECTED_TECH.map(name => {
+    const found = Logos.find(l => l.name.toLowerCase() === name.toLowerCase());
+    return {
+        logo: typeof found?.url === 'string' ? found.url : '',
+        icon: typeof found?.url !== 'string' ? found?.url : null,
+        text: name,
+    };
+});
 
 import SectionHeading from "../ui/SectionHeading";
 
 export default function Tech({ className }: { className?: string }) {
     return (
         <section className={cn("w-full flex flex-col gap-4", className)}>
-            <SectionHeading title="Tech Stack" />
+            <SectionHeading title="Stack" extra="I generally be with" />
             <div className="flex flex-wrap gap-2">
                 {techStack.map((t) => (
-                    <TechComponent key={t.text} logo={t.logo} text={t.text} />
+                    <TechComponent key={t.text} logo={t.logo} icon={t.icon} text={t.text} />
                 ))}
             </div>
         </section>
     );
 }
 
-function TechComponent({ logo, text }: { logo: string; text: string }) {
+function TechComponent({ logo, icon, text }: { logo: string; icon: React.ReactNode; text: string }) {
     return (
-        <div className="flex items-center gap-x-2 px-3 py-1.5 rounded bg-neutral-900 border border-neutral-800 hover:bg-neutral-800 hover:border-neutral-700 transition-colors cursor-pointer group">
-            <Image src={logo} alt={text} width={16} height={16} className="opacity-80 group-hover:opacity-100 transition-opacity" />
-            <span className="text-xs font-medium text-neutral-300 group-hover:text-white transition-colors">{text}</span>
+        <div className="flex items-center gap-x-2 px-3 py-1.5 rounded-md bg-neutral-900 border border-neutral-800 hover:bg-neutral-800 hover:border-neutral-700 transition-colors cursor-pointer group">
+            {logo ? (
+                <Image src={logo} alt={text} width={16} height={16} className="w-4 h-4 opacity-90 group-hover:opacity-100 transition-opacity" unoptimized />
+            ) : icon ? (
+                <div className="w-4 h-4 opacity-90 group-hover:opacity-100 transition-opacity flex items-center justify-center">{icon}</div>
+            ) : null}
+            <span className="text-xs font-medium text-neutral-300 group-hover:text-white transition-colors capitalize">{text}</span>
         </div>
     );
 }

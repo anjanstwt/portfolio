@@ -6,7 +6,7 @@ import SectionHeading from "../ui/SectionHeading";
 export default function Experience({ className }: { className?: string }) {
     return (
         <section className={cn("w-full flex flex-col gap-4", className)}>
-            <SectionHeading title="Experience" />
+            <SectionHeading title="Experience" extra="I have" />
             <div className="flex flex-col gap-8">
                 {experiences.map((exp, i) => (
                     <ExperienceCard experience={exp} key={i} />

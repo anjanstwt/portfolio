@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { projects } from "../data/projects";
 import ProjectType from "../types/project-type";
@@ -11,13 +11,14 @@ import { X, ExternalLink, Maximize2 } from "lucide-react";
 import { BsTwitterX } from "react-icons/bs";
 import { IoLogoGithub } from "react-icons/io";
 import Image from "next/image";
+import { FaWifi } from "react-icons/fa";
 
 export default function Projects({ className }: { className?: string }) {
     const [selectedProject, setSelectedProject] = useState<ProjectType | null>(null);
 
     return (
-        <section className={cn("w-full flex flex-col gap-4 relative", className)}>
-            <SectionHeading title="Projects" />
+        <section className={cn("w-full flex flex-col relative", className)}>
+            <SectionHeading title="Projects" extra="I've built" />
             <div className="flex flex-col">
                 {projects.map((project, i) => (
                     <ProjectCard project={project} key={i} onClick={() => setSelectedProject(project)} />
@@ -31,7 +32,7 @@ export default function Projects({ className }: { className?: string }) {
 
 function ProjectCard({ project, onClick }: { project: ProjectType, onClick: () => void }) {
     return (
-        <div onClick={onClick} className="group flex flex-col justify-between gap-y-3 py-6 border-b border-neutral-800 last:border-0 hover:bg-neutral-900/40 -mx-4 px-4 transition-colors cursor-pointer">
+        <div onClick={onClick} className="group flex flex-col justify-between gap-y-3 py-6 border-b border-neutral-800 last:border-0 hover:bg-neutral-900/40 -mx-6 px-6 transition-colors cursor-pointer">
             <div className="flex flex-col gap-2">
                 <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
@@ -78,6 +79,17 @@ function ProjectCard({ project, onClick }: { project: ProjectType, onClick: () =
 function ProjectModal({ project, onClose }: { project: ProjectType | null, onClose: () => void }) {
     const [fullscreenImage, setFullscreenImage] = useState<string | null>(null);
 
+    useEffect(() => {
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') {
+                if (fullscreenImage) setFullscreenImage(null);
+                else onClose();
+            }
+        };
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, [onClose, fullscreenImage]);
+
     return (
         <AnimatePresence>
             {project && (
@@ -102,9 +114,42 @@ function ProjectModal({ project, onClose }: { project: ProjectType | null, onClo
                                 {project.logo && (
                                     <Image src={project.logo} alt={project.title} width={24} height={24} className="w-6 h-6 rounded-sm object-cover bg-white/10" unoptimized />
                                 )}
-                                <h2 className="text-lg font-semibold text-white">{project.title}</h2>
-                                {project.isPrivate && (
-                                    <span className="px-2 py-0.5 rounded text-[10px] font-medium bg-neutral-900 border border-neutral-800 text-neutral-400">Private</span>
+                                <h2 className="text-lg font-semibold text-white capitalize">{project.title}</h2>
+                                {project.live && project.live !== 'https://' && (
+                                    <a
+                                        href={project.live}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        onClick={(e) => e.stopPropagation()}
+                                        className="flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-medium bg-neutral-900 border border-neutral-800 text-neutral-400 hover:text-white hover:border-neutral-600 transition-colors"
+                                    >
+                                        <FaWifi className="w-3 h-3" />
+                                        live
+                                    </a>
+                                )}
+                                {project.repo && (
+                                    <a
+                                        href={project.isPrivate ? "#" : project.repo}
+                                        target={project.isPrivate ? "" : "_blank"}
+                                        rel="noopener noreferrer"
+                                        onClick={(e) => e.stopPropagation()}
+                                        className="flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-medium bg-neutral-900 border border-neutral-800 text-neutral-400 hover:text-white hover:border-neutral-600 transition-colors"
+                                    >
+                                        <IoLogoGithub className="w-3 h-3" />
+                                        {project.isPrivate ? "private" : "open source"}
+                                    </a>
+                                )}
+                                {project.x && (
+                                    <a
+                                        href={project.x}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        onClick={(e) => e.stopPropagation()}
+                                        className="flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-medium bg-neutral-900 border border-neutral-800 text-neutral-400 hover:text-white hover:border-neutral-600 transition-colors"
+                                    >
+                                        <BsTwitterX className="w-2 h-2" />
+                                        handle
+                                    </a>
                                 )}
                             </div>
                             <button onClick={onClose} className="p-1 rounded-md text-neutral-400 hover:text-white hover:bg-neutral-800 transition-colors">
@@ -168,25 +213,6 @@ function ProjectModal({ project, onClose }: { project: ProjectType | null, onClo
                                         )
                                     })}
                                 </div>
-                            </div>
-
-                            {/* Links */}
-                            <div className="flex flex-wrap gap-4 pt-2 border-t border-neutral-800/50 mt-2">
-                                {project.live && (
-                                    <a href={project.live} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm text-neutral-200 hover:text-white transition-colors p-2 -ml-2 rounded hover:bg-neutral-900 font-medium">
-                                        <ExternalLink className="w-4 h-4" /> Live Demo
-                                    </a>
-                                )}
-                                {project.repo && (
-                                    <a href={project.repo} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm text-neutral-200 hover:text-white transition-colors p-2 -ml-2 rounded hover:bg-neutral-900 font-medium">
-                                        <IoLogoGithub className="w-4 h-4" /> Source Code
-                                    </a>
-                                )}
-                                {project.x && (
-                                    <a href={project.x} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm text-neutral-200 hover:text-white transition-colors p-2 -ml-2 rounded hover:bg-neutral-900 font-medium">
-                                        <BsTwitterX className="w-3.5 h-3.5" /> Twitter Updates
-                                    </a>
-                                )}
                             </div>
                         </div>
                     </motion.div>
