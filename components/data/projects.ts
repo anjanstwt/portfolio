@@ -3,10 +3,10 @@ import ProjectType from "../types/project-type";
 export const projects: ProjectType[] = [
     {
         title: 'winterfell',
-        logo: '',
+        logo: '/projects/winterfell/logo.png',
         year: '2025',
         description: 'an anchor solana smart contract generator with features like generating streams, building, testing, deploying, seemlessly with the real-time logs.',
-        images: [],
+        images: ['/projects/winterfell/page1.png', '/projects/winterfell/page2.png', '/projects/winterfell/page3.png', '/projects/winterfell/page4.png'],
         tech: ['typescript', 'next.js', 'node.js', 'express.js', 'prisma', 'postgresql', 'websocket', 'docker', 'redis-queues', 'redis-pub-subs', 'kubernetes', 'llm', 'aws', 'razorpay', 'turnstile'],
         live: 'https://winterfell.dev',
         repo: 'https://github.com/bottle-nex/winterfell',

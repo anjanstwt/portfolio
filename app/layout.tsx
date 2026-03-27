@@ -73,7 +73,7 @@ export default function RootLayout({
                     )}>
                         <Navbar />
                         <CommandMenu />
-                        <div className="w-full max-w-2xl px-6 py-12 md:py-20 border-x border-neutral-800 min-h-screen">
+                        <div className="w-full max-w-3xl px-6 border-x border-neutral-800 min-h-[calc(100vh-4rem)]">
                             {children}
                         </div>
                     </div>

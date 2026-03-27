@@ -8,32 +8,29 @@ import Overview from "@/components/base/Overview";
 import Projects from "@/components/base/Projects";
 import Tech from "@/components/base/Tech";
 import Title from "@/components/base/Title";
-import ThickSeparator from "@/components/ui/ThickSeparator";
 
 export default function Page() {
     return (
-        <div className="flex flex-col gap-y-16 md:gap-y-24 pb-20">
+        <div className="flex flex-col pb-16">
             <Title />
-            <ThickSeparator />
             <GithubContributions />
-            <ThickSeparator />
-            <div id="overview">
-                <Overview />
+            
+            <div className="flex flex-col gap-y-10 md:gap-y-12 mt-12 w-full">
+                <div id="overview">
+                    <Overview />
+                </div>
+                <div id="experience">
+                    <Experience />
+                </div>
+                <div id="projects">
+                    <Projects />
+                </div>
+                <div id="tech">
+                    <Tech />
+                </div>
+                <Interested />
+                <Footer />
             </div>
-            <ThickSeparator />
-            <div id="experience">
-                <Experience />
-            </div>
-            <ThickSeparator />
-            <div id="projects">
-                <Projects />
-            </div>
-            <ThickSeparator />
-            <div id="tech">
-                <Tech />
-            </div>
-            <Interested />
-            <Footer />
         </div>
     );
 }

@@ -5,7 +5,7 @@ import { Search } from 'lucide-react';
 export default function Navbar() {
     return (
         <header className="sticky top-0 z-40 w-full bg-secondary-dark/80 backdrop-blur-md border-b border-neutral-800">
-            <div className="mx-auto w-full max-w-2xl px-6 h-16 flex items-center justify-between border-x border-neutral-800">
+            <div className="mx-auto w-full max-w-3xl px-6 h-16 flex items-center justify-between border-x border-neutral-800">
                 <div className="flex items-center gap-3 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                     <div className="w-8 h-8 rounded bg-neutral-800 flex items-center justify-center text-sm font-semibold border border-neutral-700">
                         A

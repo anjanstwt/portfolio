@@ -25,12 +25,12 @@ const techStack: TechItem[] = [
     { logo: "/tech/git.png", text: "git", value: 9 },
 ];
 
+import SectionHeading from "../ui/SectionHeading";
+
 export default function Tech({ className }: { className?: string }) {
     return (
-        <section className={cn("w-full flex flex-col gap-6", className)}>
-            <div className="-mx-6 w-[calc(100%+3rem)] border-y border-neutral-800 bg-neutral-900/40 px-6 py-2">
-                <h2 className="text-xs font-semibold uppercase tracking-widest text-neutral-400">Tech Stack</h2>
-            </div>
+        <section className={cn("w-full flex flex-col gap-4", className)}>
+            <SectionHeading title="Tech Stack" />
             <div className="flex flex-wrap gap-2">
                 {techStack.map((t) => (
                     <TechComponent key={t.text} logo={t.logo} text={t.text} />

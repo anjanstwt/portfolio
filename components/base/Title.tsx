@@ -5,8 +5,8 @@ import { cn } from "@/lib/utils";
 
 export default function Title({ className }: { className?: string }) {
     return (
-        <section className={cn("w-full flex items-center justify-between pt-8", className)}>
-            <div className="flex flex-col gap-2">
+        <section className={cn("w-[calc(100%+3rem)] -mx-6 px-6 pt-12 pb-10 border-b border-neutral-800 flex items-center justify-between", className)}>
+            <div className="flex flex-col gap-3">
                 <div className="text-white text-3xl font-semibold flex items-center gap-x-2 tracking-tight">
                     <h1>Anjan Suman</h1>
                     <div className="flex items-center text-blue-400">
