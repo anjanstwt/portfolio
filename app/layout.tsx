@@ -75,7 +75,7 @@ export default function RootLayout({
                             data-lenis-prevent
                         />
                         <CommandMenu />
-                        <div className="w-full max-w-3xl px-6 border-x border-neutral-800 min-h-[calc(100vh-4rem)]">
+                        <div className="w-full max-w-3xl px-4 sm:px-6 border-x border-neutral-800 min-h-[calc(100vh-4rem)]">
                             {children}
                         </div>
                     </div>

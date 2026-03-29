@@ -15,7 +15,7 @@ export default function Page() {
             <Title />
             <GithubContributions />
             
-            <div className="flex flex-col gap-y-10 md:gap-y-12 mt-12 w-full">
+            <div className="flex flex-col gap-y-8 sm:gap-y-12 mt-8 sm:mt-12 w-full">
                 <div id="overview">
                     <Overview />
                 </div>

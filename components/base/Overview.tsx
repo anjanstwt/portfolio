@@ -74,7 +74,8 @@ export default function Overview({ className }: { className?: string }) {
             ctx.filter = 'none';
 
             const text = 'Core Builder';
-            ctx.font = '700 96px Iceland, sans-serif';
+            const fontSize = Math.min(96, canvas.width / 6); // Responsive font size
+            ctx.font = `700 ${fontSize}px Iceland, sans-serif`;
             ctx.textBaseline = 'middle';
 
             ctx.fillStyle = '#09090b'; // match background
@@ -135,7 +136,7 @@ export default function Overview({ className }: { className?: string }) {
             <SectionHeading title="Overview" extra='of me' />
 
             <div
-                className="relative h-64 w-full overflow-hidden"
+                className="relative h-64 w-full overflow-hidden rounded-lg border border-neutral-800"
                 onMouseMove={(e) => {
                     const rect = e.currentTarget.getBoundingClientRect();
                     mouseRef.current = {
@@ -148,7 +149,7 @@ export default function Overview({ className }: { className?: string }) {
                     samplesRef.current = [];
                 }}
             >
-                <div className="absolute inset-0 z-10 pointer-events-none flex flex-col justify-center px-8 bg-black/40">
+                <div className="absolute inset-0 z-10 pointer-events-none flex flex-col justify-center px-6 sm:px-8 bg-black/40">
                     <div className="flex flex-col gap-y-3 text-neutral-200 max-w-sm">
                         {user.map((u, i) => (
                             <UserCapsule key={i} icon={u.icon} data={u.data} link={u.link} />

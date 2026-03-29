@@ -4,10 +4,10 @@ import { GitHubCalendar } from "react-github-calendar";
 export default function GithubContributions({ className }: { className?: string }) {
     return (
         <div className={cn(
-            "w-[calc(100%+3rem)] -mx-6 py-8 border-b border-neutral-800 flex justify-center items-center text-neutral-300",
+            "w-[calc(100%+2rem)] sm:w-[calc(100%+3rem)] -mx-4 sm:-mx-6 py-8 border-b border-neutral-800 flex justify-center items-center text-neutral-300",
             className
         )}>
-            <div className="w-full overflow-x-auto px-6 hide-scrollbar flex justify-center">
+            <div className="w-full overflow-x-auto px-4 sm:px-6 hide-scrollbar flex justify-center">
                 <GitHubCalendar
                     username={'anjanstwt'}
                     blockSize={9}

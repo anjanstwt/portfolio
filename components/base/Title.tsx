@@ -5,9 +5,9 @@ import { cn } from "@/lib/utils";
 
 export default function Title({ className }: { className?: string }) {
     return (
-        <section className={cn("w-[calc(100%+3rem)] -mx-6 px-6 pt-12 pb-10 border-b border-neutral-800 flex items-center justify-between", className)}>
-            <div className="flex flex-col gap-3">
-                <div className="text-white text-3xl font-semibold flex items-center gap-x-2 tracking-tight">
+        <section className={cn("w-[calc(100%+2rem)] sm:w-[calc(100%+3rem)] -mx-4 sm:-mx-6 px-4 sm:px-6 pt-12 pb-10 border-b border-neutral-800 flex items-center justify-between transition-all", className)}>
+            <div className="flex flex-col gap-2 sm:gap-3">
+                <div className="text-white text-2xl sm:text-3xl font-semibold flex items-center gap-x-2 tracking-tight">
                     <h1>Anjan Suman</h1>
                     <div className="flex items-center text-blue-400">
                         <BlueTick size={20} />
@@ -20,7 +20,7 @@ export default function Title({ className }: { className?: string }) {
                 alt={'Profile'}
                 width={80}
                 height={80}
-                className="rounded shadow-lg border border-neutral-800 object-cover"
+                className="rounded shadow-lg border border-neutral-800 object-cover w-16 h-16 sm:w-20 sm:h-20"
             />
         </section>
     );

@@ -43,7 +43,7 @@ export const details: DetailsType[] = [
     {
         type: DetailType.RESUME,
         logo: FaFileLines,
-        link: "https://drive.google.com/file/d/1Ob9gU4n7ijha1h9E0EkYd64bvLzK0ceX/view?usp=drive_link",
+        link: "https://drive.google.com/file/d/1Xy5XBI6Uzfof4Ok88rIVUZsnCPF2NtB4/view?usp=sharing",
         tooltip: "resume",
         label: "RESUME",
     }

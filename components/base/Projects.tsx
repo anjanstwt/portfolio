@@ -32,7 +32,7 @@ export default function Projects({ className }: { className?: string }) {
 
 function ProjectCard({ project, onClick }: { project: ProjectType, onClick: () => void }) {
     return (
-        <div onClick={onClick} className="group flex flex-col justify-between gap-y-3 py-6 border-b border-neutral-800 last:border-0 hover:bg-neutral-900/40 -mx-6 px-6 transition-colors cursor-pointer">
+        <div onClick={onClick} className="group flex flex-col justify-between gap-y-3 py-6 border-b border-neutral-800 last:border-0 hover:bg-neutral-900/40 -mx-4 sm:-mx-6 px-4 sm:px-6 transition-colors cursor-pointer">
             <div className="flex flex-col gap-2">
                 <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
