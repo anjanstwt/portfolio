@@ -5,9 +5,9 @@ import { cn } from "@/lib/utils";
 
 export default function Title({ className }: { className?: string }) {
     return (
-        <section className={cn("w-[calc(100%+2rem)] sm:w-[calc(100%+3rem)] -mx-4 sm:-mx-6 px-4 sm:px-6 pt-12 pb-10 border-b border-neutral-800 flex items-center justify-between transition-all", className)}>
+        <section className={cn("w-[calc(100%+2rem)] sm:w-[calc(100%+3rem)] -mx-4 sm:-mx-6 px-4 sm:px-6 pt-12 pb-10 border-b border-neutral-200 dark:border-neutral-800 flex items-center justify-between transition-all", className)}>
             <div className="flex flex-col gap-2 sm:gap-3">
-                <div className="text-white text-2xl sm:text-3xl font-semibold flex items-center gap-x-2 tracking-tight">
+                <div className="text-neutral-900 dark:text-white text-2xl sm:text-3xl font-semibold flex items-center gap-x-2 tracking-tight">
                     <h1>Anjan Suman</h1>
                     <div className="flex items-center text-blue-400">
                         <BlueTick size={20} />
@@ -20,7 +20,7 @@ export default function Title({ className }: { className?: string }) {
                 alt={'Profile'}
                 width={80}
                 height={80}
-                className="rounded shadow-lg border border-neutral-800 object-cover w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 ml-4"
+                className="rounded shadow-lg border border-neutral-200 dark:border-neutral-800 object-cover w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 ml-4"
             />
         </section>
     );
@@ -35,13 +35,13 @@ function Contacts() {
     ];
 
     return (
-        <div className="text-sm font-medium text-neutral-400 flex flex-wrap gap-x-4 gap-y-2 mt-1">
+        <div className="text-sm font-medium text-neutral-500 dark:text-neutral-400 flex flex-wrap gap-x-4 gap-y-2 mt-1">
             {data.map((entry, i) => (
                 <ToolTipComponent content={entry.tooltip} key={i}>
                     <a
                         target="_blank"
                         href={entry.link}
-                        className="cursor-pointer hover:text-neutral-100 transition-colors lowercase"
+                        className="cursor-pointer hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors lowercase"
                     >
                         {entry.title}
                     </a>

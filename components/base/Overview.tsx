@@ -78,10 +78,11 @@ export default function Overview({ className }: { className?: string }) {
             ctx.font = `700 ${fontSize}px Iceland, sans-serif`;
             ctx.textBaseline = 'middle';
 
-            ctx.fillStyle = '#09090b'; // match background
+            const isDark = document.documentElement.classList.contains('dark');
+            ctx.fillStyle = isDark ? '#09090b' : '#fafafa'; // match background
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-            ctx.fillStyle = '#ffffff'; 
+            ctx.fillStyle = isDark ? '#ffffff' : '#171717'; 
 
             const metrics = ctx.measureText(text);
             const x = (canvas.width - metrics.width) / 2;
@@ -136,7 +137,7 @@ export default function Overview({ className }: { className?: string }) {
             <SectionHeading title="Overview" extra='of me' />
 
             <div
-                className="relative h-64 w-full overflow-hidden rounded-lg border border-neutral-800"
+                className="relative h-64 w-full overflow-hidden rounded-lg border border-neutral-200 dark:border-neutral-800"
                 onMouseMove={(e) => {
                     const rect = e.currentTarget.getBoundingClientRect();
                     mouseRef.current = {

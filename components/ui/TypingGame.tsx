@@ -224,12 +224,12 @@ export default function TypingGame({ open, onClose }: { open: boolean; onClose: 
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -6 }}
                 transition={{ duration: 0.18, ease: 'easeOut' }}
-                className="relative z-10 w-full max-w-2xl rounded-[6px] border border-neutral-800 bg-[#09090b] shadow-2xl"
+                className="relative z-10 w-full max-w-2xl rounded-[6px] border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#09090b] shadow-2xl"
                 onClick={e => e.stopPropagation()}
                 data-lenis-prevent
             >
                 {/* Header */}
-                <div className="flex items-center justify-between border-b border-neutral-800 px-5 py-3">
+                <div className="flex items-center justify-between border-b border-neutral-200 dark:border-neutral-800 px-5 py-3">
                     <div className="flex items-center gap-3">
                         <span className="text-xs font-semibold text-neutral-500 uppercase tracking-widest">type</span>
                         <div className="flex items-center gap-1">
@@ -238,8 +238,8 @@ export default function TypingGame({ open, onClose }: { open: boolean; onClose: 
                                     key={t}
                                     onClick={() => handleTimeChange(t)}
                                     className={`px-2 py-0.5 rounded text-[11px] font-medium transition-colors ${timeLimit === t
-                                        ? 'text-white border border-neutral-700 bg-neutral-800'
-                                        : 'text-neutral-600 hover:text-neutral-400 border border-transparent'
+                                        ? 'text-neutral-900 dark:text-white border border-neutral-300 dark:border-neutral-700 bg-neutral-100 dark:bg-neutral-800'
+                                        : 'text-neutral-500 dark:text-neutral-600 hover:text-neutral-900 dark:hover:text-neutral-400 border border-transparent'
                                         }`}
                                 >
                                     {t}s
@@ -258,7 +258,7 @@ export default function TypingGame({ open, onClose }: { open: boolean; onClose: 
                 </div>
 
                 {/* Stats bar */}
-                <div className="flex items-center gap-5 px-5 py-2.5 border-b border-neutral-800/50">
+                <div className="flex items-center gap-5 px-5 py-2.5 border-b border-neutral-200 dark:border-neutral-800/50">
                     <div className="flex items-center gap-1.5">
                         <Timer className="w-3 h-3 text-neutral-600" />
                         <span className={`font-mono text-sm font-semibold tabular-nums transition-colors ${timeLeft <= 5 ? 'text-red-400' : timeLeft <= 10 ? 'text-yellow-400/80' : 'text-neutral-300'}`}>
@@ -270,17 +270,17 @@ export default function TypingGame({ open, onClose }: { open: boolean; onClose: 
                             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex items-center gap-5">
                                 <div className="flex items-center gap-1.5">
                                     <span className="text-[10px] text-neutral-600 uppercase tracking-wider">wpm</span>
-                                    <span className="font-mono text-sm font-semibold text-neutral-300">{liveWpm}</span>
+                                    <span className="font-mono text-sm font-semibold text-neutral-900 dark:text-neutral-300">{liveWpm}</span>
                                 </div>
                                 <div className="flex items-center gap-1.5">
-                                    <span className="text-[10px] text-neutral-600 uppercase tracking-wider">acc</span>
-                                    <span className="font-mono text-sm font-semibold text-neutral-300">{liveAccuracy}%</span>
+                                    <span className="text-[10px] text-neutral-500 dark:text-neutral-600 uppercase tracking-wider">acc</span>
+                                    <span className="font-mono text-sm font-semibold text-neutral-900 dark:text-neutral-300">{liveAccuracy}%</span>
                                 </div>
                             </motion.div>
                         )}
                     </AnimatePresence>
                     {/* Progress bar */}
-                    <div className="ml-auto h-0.5 w-32 rounded-full bg-neutral-800 overflow-hidden">
+                    <div className="ml-auto h-0.5 w-32 rounded-full bg-neutral-200 dark:bg-neutral-800 overflow-hidden">
                         <motion.div
                             className="h-full bg-neutral-500 rounded-full"
                             animate={{ width: `${(timeLeft / timeLimit) * 100}%` }}
@@ -304,7 +304,7 @@ export default function TypingGame({ open, onClose }: { open: boolean; onClose: 
                                 <p className="text-[10px] uppercase tracking-widest text-neutral-600">Results</p>
                                 <div className="flex items-end gap-12">
                                     <div className="text-center">
-                                        <p className="font-mono text-5xl font-bold text-white tabular-nums">{wpm}</p>
+                                        <p className="font-mono text-5xl font-bold text-neutral-900 dark:text-white tabular-nums">{wpm}</p>
                                         <p className="text-[10px] text-neutral-600 mt-1.5 uppercase tracking-widest">wpm</p>
                                     </div>
                                     <div className="text-center">
@@ -314,7 +314,7 @@ export default function TypingGame({ open, onClose }: { open: boolean; onClose: 
                                 </div>
                                 <button
                                     onClick={() => reset()}
-                                    className="flex items-center gap-2 mt-1 px-4 py-2 rounded-[4px] border border-neutral-800 text-xs text-neutral-500 hover:text-white hover:border-neutral-600 transition-colors"
+                                    className="flex items-center gap-2 mt-1 px-4 py-2 rounded-[4px] border border-neutral-200 dark:border-neutral-800 text-xs text-neutral-600 dark:text-neutral-500 hover:text-neutral-900 dark:hover:text-white hover:border-neutral-300 dark:hover:border-neutral-600 transition-colors"
                                 >
                                     <RotateCcw className="w-3 h-3" />
                                     try again
@@ -361,17 +361,17 @@ export default function TypingGame({ open, onClose }: { open: boolean; onClose: 
                                                     className="relative"
                                                 >
                                                     {isCursor && (
-                                                        <span className="absolute -left-px top-0.5 bottom-0.5 w-0.5 bg-neutral-300 rounded-full animate-[blink_1s_step-end_infinite]" />
+                                                        <span className="absolute -left-px top-0.5 bottom-0.5 w-0.5 bg-neutral-900 dark:bg-neutral-300 rounded-full animate-[blink_1s_step-end_infinite]" />
                                                     )}
                                                     <span
                                                         className={
                                                             c.state === 'correct'
-                                                                ? 'text-neutral-200'
+                                                                ? 'text-neutral-900 dark:text-neutral-200'
                                                                 : c.state === 'incorrect'
                                                                     ? c.char === ' '
-                                                                        ? 'bg-red-400/30 text-red-400'
-                                                                        : 'text-red-400'
-                                                                    : 'text-neutral-600'
+                                                                        ? 'bg-red-400/30 text-red-500 dark:text-red-400'
+                                                                        : 'text-red-500 dark:text-red-400'
+                                                                    : 'text-neutral-400 dark:text-neutral-600'
                                                         }
                                                     >
                                                         {c.char}

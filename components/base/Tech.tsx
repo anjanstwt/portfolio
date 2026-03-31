@@ -43,13 +43,13 @@ export default function Tech({ className }: { className?: string }) {
 
 function TechComponent({ logo, icon, text }: { logo: string; icon: React.ReactNode; text: string }) {
     return (
-        <div className="flex items-center gap-x-2 px-3 py-1.5 rounded-md bg-neutral-900 border border-neutral-800 hover:bg-neutral-800 hover:border-neutral-700 transition-colors cursor-pointer group">
+        <div className="flex items-center gap-x-2 px-3 py-1.5 rounded-md bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-800 hover:border-neutral-300 dark:hover:border-neutral-700 transition-colors cursor-pointer group">
             {logo ? (
-                <Image src={logo} alt={text} width={16} height={16} className="w-4 h-4 opacity-90 group-hover:opacity-100 transition-opacity" unoptimized />
+                <Image src={logo} alt={text} width={16} height={16} className="w-4 h-4 opacity-70 dark:opacity-90 group-hover:opacity-100 transition-opacity" unoptimized />
             ) : icon ? (
                 <div className="w-4 h-4 opacity-90 group-hover:opacity-100 transition-opacity flex items-center justify-center">{icon}</div>
             ) : null}
-            <span className="text-xs font-medium text-neutral-300 group-hover:text-white transition-colors capitalize">{text}</span>
+            <span className="text-xs font-medium text-neutral-700 dark:text-neutral-300 group-hover:text-neutral-900 dark:group-hover:text-white transition-colors capitalize">{text}</span>
         </div>
     );
 }

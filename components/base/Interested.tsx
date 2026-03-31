@@ -11,7 +11,7 @@ export default function Interested({ className }: { className?: string }) {
         <section className={cn("flex flex-col gap-y-4 pt-4", className)}>
             <SectionHeading title="Let's Connect" />
             <div className="flex flex-col gap-4 mt-2">
-                <p className="text-sm text-neutral-400 leading-relaxed max-w-xl">
+                <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-xl">
                     If you&apos;re interested in collaborating and building some cool things,
                     feel free to drop me a message on{" "}
                     {twitter && (
@@ -19,7 +19,7 @@ export default function Interested({ className }: { className?: string }) {
                             href={twitter.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1.5 font-medium text-neutral-300 hover:text-white transition-colors"
+                            className="inline-flex items-center gap-1.5 font-medium text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white transition-colors"
                         >
                             <twitter.logo className="size-3" /> {twitter.label}
                         </a>
@@ -43,7 +43,7 @@ export default function Interested({ className }: { className?: string }) {
                 <a
                     target="_blank"
                     href="https://x.com/AnjanSuman8"
-                    className="font-medium hover:text-neutral-300 transition-colors"
+                    className="font-medium hover:text-neutral-900 dark:hover:text-neutral-300 transition-colors"
                 >
                     anjan
                 </a>

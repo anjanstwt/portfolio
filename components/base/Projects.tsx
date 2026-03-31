@@ -32,20 +32,20 @@ export default function Projects({ className }: { className?: string }) {
 
 function ProjectCard({ project, onClick }: { project: ProjectType, onClick: () => void }) {
     return (
-        <div onClick={onClick} className="group flex flex-col justify-between gap-y-3 py-6 border-b border-neutral-800 last:border-0 hover:bg-neutral-900/40 -mx-4 sm:-mx-6 px-4 sm:px-6 transition-colors cursor-pointer">
+        <div onClick={onClick} className="group flex flex-col justify-between gap-y-3 py-6 border-b border-neutral-200 dark:border-neutral-800 last:border-0 hover:bg-neutral-100 dark:hover:bg-neutral-900/40 -mx-4 sm:-mx-6 px-4 sm:px-6 transition-colors cursor-pointer">
             <div className="flex flex-col gap-2">
                 <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                         {project.logo && (
-                            <Image src={project.logo} alt={project.title} width={20} height={20} className="w-5 h-5 rounded-sm object-cover bg-white/10" unoptimized />
+                            <Image src={project.logo} alt={project.title} width={20} height={20} className="w-5 h-5 rounded-sm object-cover bg-neutral-900/10 dark:bg-white/10" unoptimized />
                         )}
-                        <h3 className="font-semibold text-neutral-100 group-hover:text-white transition-colors">
+                        <h3 className="font-semibold text-neutral-900 dark:text-neutral-100 group-hover:text-black dark:group-hover:text-white transition-colors">
                             {project.title}
                         </h3>
                     </div>
-                    <span className="text-sm text-neutral-400 font-medium">{project.year}</span>
+                    <span className="text-sm text-neutral-500 dark:text-neutral-400 font-medium">{project.year}</span>
                 </div>
-                <p className="text-sm text-neutral-300 leading-relaxed line-clamp-2">
+                <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed line-clamp-2">
                     {project.description}
                 </p>
 
@@ -55,20 +55,20 @@ function ProjectCard({ project, onClick }: { project: ProjectType, onClick: () =
                         const logoObj = Logos.find(l => l.name.toLowerCase() === searchStr || l.name.toLowerCase().startsWith(searchStr.split(' ')[0]) || l.name.toLowerCase().includes(t.toLowerCase()));
 
                         return (
-                            <div key={t} className="flex items-center gap-x-1.5 px-2 py-1 rounded bg-neutral-900/50 border border-neutral-800">
+                            <div key={t} className="flex items-center gap-x-1.5 px-2 py-1 rounded bg-neutral-100 dark:bg-neutral-900/50 border border-neutral-200 dark:border-neutral-800">
                                 {logoObj && typeof logoObj.url === 'string' ? (
                                     <Image src={logoObj.url} alt={t} width={14} height={14} className="w-3.5 h-3.5 opacity-90" unoptimized />
                                 ) : logoObj && typeof logoObj.url !== 'string' ? (
                                     <div className="w-3.5 h-3.5 opacity-90">{logoObj.url}</div>
                                 ) : null}
-                                <span className="text-[10px] text-neutral-300 font-medium lowercase">{t}</span>
+                                <span className="text-[10px] text-neutral-600 dark:text-neutral-300 font-medium lowercase">{t}</span>
                             </div>
                         )
                     })}
                 </div>
             </div>
             {project.live && (
-                <div className="text-xs text-neutral-400 group-hover:text-neutral-300 mt-1 inline-flex items-center font-medium">
+                <div className="text-xs text-neutral-500 dark:text-neutral-400 group-hover:text-neutral-900 dark:group-hover:text-neutral-300 mt-1 inline-flex items-center font-medium">
                     View Details <span className="ml-1 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
                 </div>
             )}
@@ -99,29 +99,29 @@ function ProjectModal({ project, onClose }: { project: ProjectType | null, onClo
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         onClick={onClose}
-                        className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm"
+                        className="fixed inset-0 z-50 bg-black/20 dark:bg-black/60 backdrop-blur-sm"
                     />
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95, y: "-40%", x: "-50%" }}
                         animate={{ opacity: 1, scale: 1, y: "-50%", x: "-50%" }}
                         exit={{ opacity: 0, scale: 0.95, y: "-40%", x: "-50%" }}
                         transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                        className="fixed left-1/2 top-1/2 z-50 w-[95vw] max-w-2xl max-h-[85vh] overflow-y-auto rounded-xl border border-neutral-800 bg-[#09090b] shadow-2xl hide-scrollbar"
+                        className="fixed left-1/2 top-1/2 z-50 w-[95vw] max-w-2xl max-h-[85vh] overflow-y-auto rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#09090b] shadow-2xl hide-scrollbar"
                         data-lenis-prevent
                     >
-                        <div className="sticky top-0 z-10 flex items-start sm:items-center justify-between border-b border-neutral-800 bg-[#09090b]/80 backdrop-blur-md px-4 sm:px-6 py-4 gap-4">
+                        <div className="sticky top-0 z-10 flex items-start sm:items-center justify-between border-b border-neutral-200 dark:border-neutral-800 bg-white/80 dark:bg-[#09090b]/80 backdrop-blur-md px-4 sm:px-6 py-4 gap-4">
                             <div className="flex flex-wrap items-center gap-2 sm:gap-3">
                                 {project.logo && (
-                                    <Image src={project.logo} alt={project.title} width={24} height={24} className="w-6 h-6 rounded-sm object-cover bg-white/10" unoptimized />
+                                    <Image src={project.logo} alt={project.title} width={24} height={24} className="w-6 h-6 rounded-sm object-cover bg-neutral-900/10 dark:bg-white/10" unoptimized />
                                 )}
-                                <h2 className="text-lg font-semibold text-white capitalize">{project.title}</h2>
+                                <h2 className="text-lg font-semibold text-neutral-900 dark:text-white capitalize">{project.title}</h2>
                                 {project.live && project.live !== 'https://' && (
                                     <a
                                         href={project.live}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         onClick={(e) => e.stopPropagation()}
-                                        className="flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-medium bg-neutral-900 border border-neutral-800 text-neutral-400 hover:text-white hover:border-neutral-600 transition-colors"
+                                        className="flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-medium bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:border-neutral-400 dark:hover:border-neutral-600 transition-colors"
                                     >
                                         <FaWifi className="w-3 h-3" />
                                         live
@@ -133,7 +133,7 @@ function ProjectModal({ project, onClose }: { project: ProjectType | null, onClo
                                         target={project.isPrivate ? "" : "_blank"}
                                         rel="noopener noreferrer"
                                         onClick={(e) => e.stopPropagation()}
-                                        className="flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-medium bg-neutral-900 border border-neutral-800 text-neutral-400 hover:text-white hover:border-neutral-600 transition-colors"
+                                        className="flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-medium bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:border-neutral-400 dark:hover:border-neutral-600 transition-colors"
                                     >
                                         <IoLogoGithub className="w-3 h-3" />
                                         {project.isPrivate ? "private" : "open source"}
@@ -145,14 +145,14 @@ function ProjectModal({ project, onClose }: { project: ProjectType | null, onClo
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         onClick={(e) => e.stopPropagation()}
-                                        className="flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-medium bg-neutral-900 border border-neutral-800 text-neutral-400 hover:text-white hover:border-neutral-600 transition-colors"
+                                        className="flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-medium bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:border-neutral-400 dark:hover:border-neutral-600 transition-colors"
                                     >
                                         <BsTwitterX className="w-2 h-2" />
                                         handle
                                     </a>
                                 )}
                             </div>
-                            <button onClick={onClose} className="p-1 rounded-md text-neutral-400 hover:text-white hover:bg-neutral-800 transition-colors flex-shrink-0 mt-0.5 sm:mt-0">
+                            <button onClick={onClose} className="p-1 rounded-md text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors flex-shrink-0 mt-0.5 sm:mt-0">
                                 <X className="w-5 h-5" />
                             </button>
                         </div>
@@ -164,7 +164,7 @@ function ProjectModal({ project, onClose }: { project: ProjectType | null, onClo
                                     <div className="text-xs uppercase tracking-widest text-neutral-500 font-semibold">Gallery</div>
                                     <div className="flex gap-4 overflow-x-auto pb-4 snap-x hide-scrollbar" data-lenis-prevent>
                                         {project.images.map((img, idx) => (
-                                            <div key={idx} className="relative w-full sm:w-[70%] flex-shrink-0 snap-center rounded-lg border border-neutral-800 overflow-hidden shadow-sm bg-neutral-900 aspect-video group">
+                                            <div key={idx} className="relative w-full sm:w-[70%] flex-shrink-0 snap-center rounded-lg border border-neutral-200 dark:border-neutral-800 overflow-hidden shadow-sm bg-neutral-100 dark:bg-neutral-900 aspect-video group">
                                                 <Image
                                                     src={img}
                                                     alt={`${project.title} - image ${idx + 1}`}
@@ -188,7 +188,7 @@ function ProjectModal({ project, onClose }: { project: ProjectType | null, onClo
                             {/* Details */}
                             <div className="flex flex-col gap-3">
                                 <div className="text-xs uppercase tracking-widest text-neutral-500 font-semibold">About</div>
-                                <p className="text-sm text-neutral-300 leading-relaxed">
+                                <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
                                     {project.description}
                                 </p>
                             </div>
@@ -202,13 +202,13 @@ function ProjectModal({ project, onClose }: { project: ProjectType | null, onClo
                                         const logoObj = Logos.find(l => l.name.toLowerCase() === searchStr || l.name.toLowerCase().startsWith(searchStr.split(' ')[0]) || l.name.toLowerCase().includes(t.toLowerCase()));
 
                                         return (
-                                            <div key={t} className="flex items-center gap-x-2 px-3 py-1.5 rounded-md bg-neutral-900 border border-neutral-800">
+                                            <div key={t} className="flex items-center gap-x-2 px-3 py-1.5 rounded-md bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800">
                                                 {logoObj && typeof logoObj.url === 'string' ? (
                                                     <Image src={logoObj.url} alt={t} width={16} height={16} className="w-4 h-4 opacity-90" unoptimized />
                                                 ) : logoObj && typeof logoObj.url !== 'string' ? (
                                                     <div className="w-4 h-4 opacity-90">{logoObj.url}</div>
                                                 ) : null}
-                                                <span className="text-xs text-neutral-200 font-medium capitalize">{t}</span>
+                                                <span className="text-xs text-neutral-700 dark:text-neutral-200 font-medium capitalize">{t}</span>
                                             </div>
                                         )
                                     })}

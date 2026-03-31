@@ -5,6 +5,7 @@ import LenisProvider from "@/components/ui/LenisProvider";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/base/Navbar";
 import CommandMenu from "@/components/ui/CommandMenu";
+import { ThemeProvider } from "@/components/ui/ThemeProvider";
 
 const dsd = DM_Serif_Display({
     weight: "400",
@@ -61,25 +62,26 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
+        <html lang="en" suppressHydrationWarning>
             <body
-                className={`${geistSans.variable} ${geistMono.variable} ${dsd.className} antialiased`}
+                className={`${geistSans.variable} ${geistMono.variable} ${dsd.className} antialiased bg-neutral-50 dark:bg-[#09090b] text-neutral-900 dark:text-white transition-colors`}
             >
-
-                <LenisProvider>
-                    <div className={cn(
-                        `min-h-screen w-full font-sans bg-secondary-dark text-white flex flex-col items-center selection:bg-neutral-800 selection:text-white overflow-x-hidden`,
-                        geist.className,
-                    )}>
+                <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+                    <LenisProvider>
+                        <div className={cn(
+                            `min-h-screen w-full font-sans flex flex-col items-center selection:bg-neutral-200 selection:text-neutral-900 dark:selection:bg-neutral-800 dark:selection:text-white overflow-x-hidden`,
+                            geist.className,
+                        )}>
                         <Navbar
                             data-lenis-prevent
                         />
                         <CommandMenu />
-                        <div className="w-full max-w-3xl px-4 sm:px-6 border-x border-neutral-800 min-h-[calc(100vh-4rem)]">
+                        <div className="w-full max-w-3xl px-4 sm:px-6 border-x border-neutral-200 dark:border-neutral-800 min-h-[calc(100vh-4rem)]">
                             {children}
                         </div>
                     </div>
                 </LenisProvider>
+                </ThemeProvider>
             </body>
         </html>
     );
