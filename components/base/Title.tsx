@@ -20,7 +20,7 @@ export default function Title({ className }: { className?: string }) {
                 alt={'Profile'}
                 width={80}
                 height={80}
-                className="rounded shadow-lg border border-neutral-800 object-cover w-16 h-16 sm:w-20 sm:h-20"
+                className="rounded shadow-lg border border-neutral-800 object-cover w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 ml-4"
             />
         </section>
     );
@@ -35,13 +35,13 @@ function Contacts() {
     ];
 
     return (
-        <div className="text-sm font-medium text-neutral-400 flex gap-x-4 mt-1">
+        <div className="text-sm font-medium text-neutral-400 flex flex-wrap gap-x-4 gap-y-2 mt-1">
             {data.map((entry, i) => (
                 <ToolTipComponent content={entry.tooltip} key={i}>
                     <a
                         target="_blank"
                         href={entry.link}
-                        className="cursor-pointer hover:text-neutral-100 transition-colors"
+                        className="cursor-pointer hover:text-neutral-100 transition-colors lowercase"
                     >
                         {entry.title}
                     </a>

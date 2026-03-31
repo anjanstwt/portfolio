@@ -109,8 +109,8 @@ function ProjectModal({ project, onClose }: { project: ProjectType | null, onClo
                         className="fixed left-1/2 top-1/2 z-50 w-[95vw] max-w-2xl max-h-[85vh] overflow-y-auto rounded-xl border border-neutral-800 bg-[#09090b] shadow-2xl hide-scrollbar"
                         data-lenis-prevent
                     >
-                        <div className="sticky top-0 z-10 flex items-center justify-between border-b border-neutral-800 bg-[#09090b]/80 backdrop-blur-md px-6 py-4">
-                            <div className="flex items-center gap-3">
+                        <div className="sticky top-0 z-10 flex items-start sm:items-center justify-between border-b border-neutral-800 bg-[#09090b]/80 backdrop-blur-md px-4 sm:px-6 py-4 gap-4">
+                            <div className="flex flex-wrap items-center gap-2 sm:gap-3">
                                 {project.logo && (
                                     <Image src={project.logo} alt={project.title} width={24} height={24} className="w-6 h-6 rounded-sm object-cover bg-white/10" unoptimized />
                                 )}
@@ -152,7 +152,7 @@ function ProjectModal({ project, onClose }: { project: ProjectType | null, onClo
                                     </a>
                                 )}
                             </div>
-                            <button onClick={onClose} className="p-1 rounded-md text-neutral-400 hover:text-white hover:bg-neutral-800 transition-colors">
+                            <button onClick={onClose} className="p-1 rounded-md text-neutral-400 hover:text-white hover:bg-neutral-800 transition-colors flex-shrink-0 mt-0.5 sm:mt-0">
                                 <X className="w-5 h-5" />
                             </button>
                         </div>
@@ -164,7 +164,7 @@ function ProjectModal({ project, onClose }: { project: ProjectType | null, onClo
                                     <div className="text-xs uppercase tracking-widest text-neutral-500 font-semibold">Gallery</div>
                                     <div className="flex gap-4 overflow-x-auto pb-4 snap-x hide-scrollbar" data-lenis-prevent>
                                         {project.images.map((img, idx) => (
-                                            <div key={idx} className="relative w-[85%] sm:w-[70%] flex-shrink-0 snap-center rounded-lg border border-neutral-800 overflow-hidden shadow-sm bg-neutral-900 aspect-video group">
+                                            <div key={idx} className="relative w-full sm:w-[70%] flex-shrink-0 snap-center rounded-lg border border-neutral-800 overflow-hidden shadow-sm bg-neutral-900 aspect-video group">
                                                 <Image
                                                     src={img}
                                                     alt={`${project.title} - image ${idx + 1}`}

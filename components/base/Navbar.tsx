@@ -12,14 +12,14 @@ export default function Navbar() {
         <>
             <header className="sticky top-0 z-40 w-full bg-secondary-dark/80 backdrop-blur-md border-b border-neutral-800">
                 <div className="mx-auto w-full max-w-3xl px-4 sm:px-6 h-16 flex items-center justify-between border-x border-neutral-800">
-                    <div className="flex items-center gap-3 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-                        <div className="w-8 h-8 rounded bg-neutral-800 flex items-center justify-center text-sm font-semibold border border-neutral-700">
+                    <div className="flex items-center gap-3 cursor-pointer overflow-hidden" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                        <div className="w-8 h-8 rounded bg-neutral-800 flex items-center justify-center text-sm font-semibold border border-neutral-700 flex-shrink-0">
                             A
                         </div>
-                        <span className="font-medium text-sm text-neutral-200">Anjan Suman</span>
+                        <span className="font-medium text-sm text-neutral-200 truncate">Anjan Suman</span>
                     </div>
 
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-2 flex-shrink-0 pl-4">
                         {/* Typing game button */}
                         <button
                             onClick={() => setTypingOpen(true)}

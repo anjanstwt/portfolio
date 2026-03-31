@@ -68,7 +68,7 @@ export default function RootLayout({
 
                 <LenisProvider>
                     <div className={cn(
-                        `min-h-screen w-full font-sans bg-secondary-dark text-white flex flex-col items-center selection:bg-neutral-800 selection:text-white`,
+                        `min-h-screen w-full font-sans bg-secondary-dark text-white flex flex-col items-center selection:bg-neutral-800 selection:text-white overflow-x-hidden`,
                         geist.className,
                     )}>
                         <Navbar
