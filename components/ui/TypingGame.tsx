@@ -15,14 +15,13 @@ const FALLBACKS = [
 
 async function fetchLongText(): Promise<string> {
     try {
-        const requests = Array.from({ length: 5 }, () =>
-            fetch('https://api.quotable.io/quotes/random?minLength=100&maxLength=220').then(r => r.json())
-        );
-        const results = await Promise.all(requests);
-        const quotes = results
-            .map((d: unknown) => (Array.isArray(d) && (d[0] as { content?: string })?.content) || '')
-            .filter(Boolean);
-        if (quotes.length > 0) return quotes.join(' ');
+        const response = await fetch('https://dummyjson.com/quotes/random/10');
+        const data = await response.json();
+        
+        if (Array.isArray(data)) {
+            const quotes = data.map((d: { quote?: string }) => d.quote).filter(Boolean);
+            if (quotes.length > 0) return quotes.join(' ');
+        }
         throw new Error('empty');
     } catch {
         return FALLBACKS.slice(0, 3).join(' ');
