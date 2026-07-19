@@ -1,0 +1,1610 @@
+{
+  "lockfileVersion": 1,
+  "configVersion": 0,
+  "workspaces": {
+    "": {
+      "name": "portfolio",
+      "dependencies": {
+        "@radix-ui/react-tooltip": "^1.2.8",
+        "@tabler/icons-react": "^3.34.0",
+        "@tanstack/react-query": "^5.81.2",
+        "axios": "^1.10.0",
+        "clsx": "^2.1.1",
+        "cmdk": "^1.1.1",
+        "framer-motion": "^12.38.0",
+        "gsap": "^3.13.0",
+        "lenis": "^1.3.15",
+        "lucide-react": "^1.7.0",
+        "motion": "^12.42.2",
+        "next": "16.1.1",
+        "next-themes": "^0.4.6",
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0",
+        "react-github-calendar": "^5.0.0",
+        "react-hot-toast": "^2.5.2",
+        "react-icons": "^5.5.0",
+        "react-minimal-pie-chart": "^9.1.2",
+        "recharts": "^3.5.1",
+        "tailwind-merge": "^3.4.0",
+        "three": "^0.181.2",
+        "viem": "^2.31.4",
+        "wagmi": "^2.15.6",
+        "zustand": "^5.0.6",
+      },
+      "devDependencies": {
+        "@tailwindcss/postcss": "^4",
+        "@types/node": "^20",
+        "@types/react": "^19",
+        "@types/react-dom": "^19",
+        "@types/three": "^0.181.0",
+        "tailwindcss": "^4",
+        "typescript": "^5",
+      },
+    },
+  },
+  "packages": {
+    "@adraffy/ens-normalize": ["@adraffy/ens-normalize@https://registry.npmjs.org/@adraffy/ens-normalize/-/ens-normalize-1.11.1.tgz", {}],
+
+    "@alloc/quick-lru": ["@alloc/quick-lru@https://registry.npmjs.org/@alloc/quick-lru/-/quick-lru-5.2.0.tgz", {}],
+
+    "@babel/runtime": ["@babel/runtime@https://registry.npmjs.org/@babel/runtime/-/runtime-7.28.4.tgz", {}],
+
+    "@base-org/account": ["@base-org/account@https://registry.npmjs.org/@base-org/account/-/account-2.4.0.tgz", { "dependencies": { "@coinbase/cdp-sdk": "^1.0.0", "@noble/hashes": "1.4.0", "clsx": "1.2.1", "eventemitter3": "5.0.1", "idb-keyval": "6.2.1", "ox": "0.6.9", "preact": "10.24.2", "viem": "^2.31.7", "zustand": "5.0.3" } }],
+
+    "@coinbase/cdp-sdk": ["@coinbase/cdp-sdk@https://registry.npmjs.org/@coinbase/cdp-sdk/-/cdp-sdk-1.40.1.tgz", { "dependencies": { "@solana-program/system": "^0.8.0", "@solana-program/token": "^0.6.0", "@solana/kit": "^3.0.3", "@solana/web3.js": "^1.98.1", "abitype": "1.0.6", "axios": "^1.12.2", "axios-retry": "^4.5.0", "jose": "^6.0.8", "md5": "^2.3.0", "uncrypto": "^0.1.3", "viem": "^2.21.26", "zod": "^3.24.4" } }],
+
+    "@coinbase/wallet-sdk": ["@coinbase/wallet-sdk@https://registry.npmjs.org/@coinbase/wallet-sdk/-/wallet-sdk-4.3.6.tgz", { "dependencies": { "@noble/hashes": "1.4.0", "clsx": "1.2.1", "eventemitter3": "5.0.1", "idb-keyval": "6.2.1", "ox": "0.6.9", "preact": "10.24.2", "viem": "^2.27.2", "zustand": "5.0.3" } }],
+
+    "@dimforge/rapier3d-compat": ["@dimforge/rapier3d-compat@https://registry.npmjs.org/@dimforge/rapier3d-compat/-/rapier3d-compat-0.12.0.tgz", {}],
+
+    "@ecies/ciphers": ["@ecies/ciphers@https://registry.npmjs.org/@ecies/ciphers/-/ciphers-0.2.5.tgz", {}],
+
+    "@emnapi/core": ["@emnapi/core@1.11.2", "", { "dependencies": { "@emnapi/wasi-threads": "1.2.2", "tslib": "^2.4.0" } }, "sha512-TC8MkTuZUtcTSiFeuC0ksCh9QIJ5+F21MvZ4Wn4ORfYaFJ/0dsiudv5tVkejgwZlwQ39jL9WWDe2lz8x0WglOA=="],
+
+    "@emnapi/runtime": ["@emnapi/runtime@1.11.2", "", { "dependencies": { "tslib": "^2.4.0" } }, "sha512-kyOl3X0DuTiT1h2ft8r2fYO8JYtU9a9Xis/zBSiGArNaagCOWx90N1k2wxp18czFDH+OgcWGb5ZP/XMt3dcyPA=="],
+
+    "@emnapi/wasi-threads": ["@emnapi/wasi-threads@1.2.2", "", { "dependencies": { "tslib": "^2.4.0" } }, "sha512-c95qOXkHdydNKhscBTebqEC1CVAZpyqOfVfBzQ1qgzyl3gfeldUjIggDbIZgDKsHLgnsM+igH7TJ/eAasaVuMA=="],
+
+    "@ethereumjs/common": ["@ethereumjs/common@https://registry.npmjs.org/@ethereumjs/common/-/common-3.2.0.tgz", { "dependencies": { "@ethereumjs/util": "^8.1.0", "crc-32": "^1.2.0" } }],
+
+    "@ethereumjs/rlp": ["@ethereumjs/rlp@https://registry.npmjs.org/@ethereumjs/rlp/-/rlp-4.0.1.tgz", {}],
+
+    "@ethereumjs/tx": ["@ethereumjs/tx@https://registry.npmjs.org/@ethereumjs/tx/-/tx-4.2.0.tgz", { "dependencies": { "@ethereumjs/common": "^3.2.0", "@ethereumjs/rlp": "^4.0.1", "@ethereumjs/util": "^8.1.0", "ethereum-cryptography": "^2.0.0" } }],
+
+    "@ethereumjs/util": ["@ethereumjs/util@https://registry.npmjs.org/@ethereumjs/util/-/util-8.1.0.tgz", { "dependencies": { "@ethereumjs/rlp": "^4.0.1", "ethereum-cryptography": "^2.0.0", "micro-ftch": "^0.3.1" } }],
+
+    "@floating-ui/core": ["@floating-ui/core@https://registry.npmjs.org/@floating-ui/core/-/core-1.7.3.tgz", { "dependencies": { "@floating-ui/utils": "^0.2.10" } }],
+
+    "@floating-ui/dom": ["@floating-ui/dom@https://registry.npmjs.org/@floating-ui/dom/-/dom-1.7.4.tgz", { "dependencies": { "@floating-ui/core": "^1.7.3", "@floating-ui/utils": "^0.2.10" } }],
+
+    "@floating-ui/react": ["@floating-ui/react@https://registry.npmjs.org/@floating-ui/react/-/react-0.27.16.tgz", { "dependencies": { "@floating-ui/react-dom": "^2.1.6", "@floating-ui/utils": "^0.2.10", "tabbable": "^6.0.0" } }],
+
+    "@floating-ui/react-dom": ["@floating-ui/react-dom@https://registry.npmjs.org/@floating-ui/react-dom/-/react-dom-2.1.6.tgz", { "dependencies": { "@floating-ui/dom": "^1.7.4" } }],
+
+    "@floating-ui/utils": ["@floating-ui/utils@https://registry.npmjs.org/@floating-ui/utils/-/utils-0.2.10.tgz", {}],
+
+    "@gemini-wallet/core": ["@gemini-wallet/core@https://registry.npmjs.org/@gemini-wallet/core/-/core-0.3.2.tgz", { "dependencies": { "@metamask/rpc-errors": "7.0.2", "eventemitter3": "5.0.1" } }],
+
+    "@img/colour": ["@img/colour@https://registry.npmjs.org/@img/colour/-/colour-1.0.0.tgz", {}],
+
+    "@img/sharp-darwin-arm64": ["@img/sharp-darwin-arm64@https://registry.npmjs.org/@img/sharp-darwin-arm64/-/sharp-darwin-arm64-0.34.5.tgz", { "optionalDependencies": { "@img/sharp-libvips-darwin-arm64": "1.2.4" } }],
+
+    "@img/sharp-darwin-x64": ["@img/sharp-darwin-x64@0.34.5", "", { "optionalDependencies": { "@img/sharp-libvips-darwin-x64": "1.2.4" }, "os": "darwin", "cpu": "x64" }, "sha512-YNEFAF/4KQ/PeW0N+r+aVVsoIY0/qxxikF2SWdp+NRkmMB7y9LBZAVqQ4yhGCm/H3H270OSykqmQMKLBhBJDEw=="],
+
+    "@img/sharp-libvips-darwin-arm64": ["@img/sharp-libvips-darwin-arm64@https://registry.npmjs.org/@img/sharp-libvips-darwin-arm64/-/sharp-libvips-darwin-arm64-1.2.4.tgz", {}],
+
+    "@img/sharp-libvips-darwin-x64": ["@img/sharp-libvips-darwin-x64@1.2.4", "", { "os": "darwin", "cpu": "x64" }, "sha512-1IOd5xfVhlGwX+zXv2N93k0yMONvUlANylbJw1eTah8K/Jtpi15KC+WSiaX/nBmbm2HxRM1gZ0nSdjSsrZbGKg=="],
+
+    "@img/sharp-libvips-linux-arm": ["@img/sharp-libvips-linux-arm@1.2.4", "", { "os": "linux", "cpu": "arm" }, "sha512-bFI7xcKFELdiNCVov8e44Ia4u2byA+l3XtsAj+Q8tfCwO6BQ8iDojYdvoPMqsKDkuoOo+X6HZA0s0q11ANMQ8A=="],
+
+    "@img/sharp-libvips-linux-arm64": ["@img/sharp-libvips-linux-arm64@1.2.4", "", { "os": "linux", "cpu": "arm64" }, "sha512-excjX8DfsIcJ10x1Kzr4RcWe1edC9PquDRRPx3YVCvQv+U5p7Yin2s32ftzikXojb1PIFc/9Mt28/y+iRklkrw=="],
+
+    "@img/sharp-libvips-linux-ppc64": ["@img/sharp-libvips-linux-ppc64@1.2.4", "", { "os": "linux", "cpu": "ppc64" }, "sha512-FMuvGijLDYG6lW+b/UvyilUWu5Ayu+3r2d1S8notiGCIyYU/76eig1UfMmkZ7vwgOrzKzlQbFSuQfgm7GYUPpA=="],
+
+    "@img/sharp-libvips-linux-riscv64": ["@img/sharp-libvips-linux-riscv64@1.2.4", "", { "os": "linux", "cpu": "none" }, "sha512-oVDbcR4zUC0ce82teubSm+x6ETixtKZBh/qbREIOcI3cULzDyb18Sr/Wcyx7NRQeQzOiHTNbZFF1UwPS2scyGA=="],
+
+    "@img/sharp-libvips-linux-s390x": ["@img/sharp-libvips-linux-s390x@1.2.4", "", { "os": "linux", "cpu": "s390x" }, "sha512-qmp9VrzgPgMoGZyPvrQHqk02uyjA0/QrTO26Tqk6l4ZV0MPWIW6LTkqOIov+J1yEu7MbFQaDpwdwJKhbJvuRxQ=="],
+
+    "@img/sharp-libvips-linux-x64": ["@img/sharp-libvips-linux-x64@1.2.4", "", { "os": "linux", "cpu": "x64" }, "sha512-tJxiiLsmHc9Ax1bz3oaOYBURTXGIRDODBqhveVHonrHJ9/+k89qbLl0bcJns+e4t4rvaNBxaEZsFtSfAdquPrw=="],
+
+    "@img/sharp-libvips-linuxmusl-arm64": ["@img/sharp-libvips-linuxmusl-arm64@1.2.4", "", { "os": "linux", "cpu": "arm64" }, "sha512-FVQHuwx1IIuNow9QAbYUzJ+En8KcVm9Lk5+uGUQJHaZmMECZmOlix9HnH7n1TRkXMS0pGxIJokIVB9SuqZGGXw=="],
+
+    "@img/sharp-libvips-linuxmusl-x64": ["@img/sharp-libvips-linuxmusl-x64@1.2.4", "", { "os": "linux", "cpu": "x64" }, "sha512-+LpyBk7L44ZIXwz/VYfglaX/okxezESc6UxDSoyo2Ks6Jxc4Y7sGjpgU9s4PMgqgjj1gZCylTieNamqA1MF7Dg=="],
+
+    "@img/sharp-linux-arm": ["@img/sharp-linux-arm@0.34.5", "", { "optionalDependencies": { "@img/sharp-libvips-linux-arm": "1.2.4" }, "os": "linux", "cpu": "arm" }, "sha512-9dLqsvwtg1uuXBGZKsxem9595+ujv0sJ6Vi8wcTANSFpwV/GONat5eCkzQo/1O6zRIkh0m/8+5BjrRr7jDUSZw=="],
+
+    "@img/sharp-linux-arm64": ["@img/sharp-linux-arm64@0.34.5", "", { "optionalDependencies": { "@img/sharp-libvips-linux-arm64": "1.2.4" }, "os": "linux", "cpu": "arm64" }, "sha512-bKQzaJRY/bkPOXyKx5EVup7qkaojECG6NLYswgktOZjaXecSAeCWiZwwiFf3/Y+O1HrauiE3FVsGxFg8c24rZg=="],
+
+    "@img/sharp-linux-ppc64": ["@img/sharp-linux-ppc64@0.34.5", "", { "optionalDependencies": { "@img/sharp-libvips-linux-ppc64": "1.2.4" }, "os": "linux", "cpu": "ppc64" }, "sha512-7zznwNaqW6YtsfrGGDA6BRkISKAAE1Jo0QdpNYXNMHu2+0dTrPflTLNkpc8l7MUP5M16ZJcUvysVWWrMefZquA=="],
+
+    "@img/sharp-linux-riscv64": ["@img/sharp-linux-riscv64@0.34.5", "", { "optionalDependencies": { "@img/sharp-libvips-linux-riscv64": "1.2.4" }, "os": "linux", "cpu": "none" }, "sha512-51gJuLPTKa7piYPaVs8GmByo7/U7/7TZOq+cnXJIHZKavIRHAP77e3N2HEl3dgiqdD/w0yUfiJnII77PuDDFdw=="],
+
+    "@img/sharp-linux-s390x": ["@img/sharp-linux-s390x@0.34.5", "", { "optionalDependencies": { "@img/sharp-libvips-linux-s390x": "1.2.4" }, "os": "linux", "cpu": "s390x" }, "sha512-nQtCk0PdKfho3eC5MrbQoigJ2gd1CgddUMkabUj+rBevs8tZ2cULOx46E7oyX+04WGfABgIwmMC0VqieTiR4jg=="],
+
+    "@img/sharp-linux-x64": ["@img/sharp-linux-x64@0.34.5", "", { "optionalDependencies": { "@img/sharp-libvips-linux-x64": "1.2.4" }, "os": "linux", "cpu": "x64" }, "sha512-MEzd8HPKxVxVenwAa+JRPwEC7QFjoPWuS5NZnBt6B3pu7EG2Ge0id1oLHZpPJdn3OQK+BQDiw9zStiHBTJQQQQ=="],
+
+    "@img/sharp-linuxmusl-arm64": ["@img/sharp-linuxmusl-arm64@0.34.5", "", { "optionalDependencies": { "@img/sharp-libvips-linuxmusl-arm64": "1.2.4" }, "os": "linux", "cpu": "arm64" }, "sha512-fprJR6GtRsMt6Kyfq44IsChVZeGN97gTD331weR1ex1c1rypDEABN6Tm2xa1wE6lYb5DdEnk03NZPqA7Id21yg=="],
+
+    "@img/sharp-linuxmusl-x64": ["@img/sharp-linuxmusl-x64@0.34.5", "", { "optionalDependencies": { "@img/sharp-libvips-linuxmusl-x64": "1.2.4" }, "os": "linux", "cpu": "x64" }, "sha512-Jg8wNT1MUzIvhBFxViqrEhWDGzqymo3sV7z7ZsaWbZNDLXRJZoRGrjulp60YYtV4wfY8VIKcWidjojlLcWrd8Q=="],
+
+    "@img/sharp-wasm32": ["@img/sharp-wasm32@0.34.5", "", { "dependencies": { "@emnapi/runtime": "^1.7.0" }, "cpu": "none" }, "sha512-OdWTEiVkY2PHwqkbBI8frFxQQFekHaSSkUIJkwzclWZe64O1X4UlUjqqqLaPbUpMOQk6FBu/HtlGXNblIs0huw=="],
+
+    "@img/sharp-win32-arm64": ["@img/sharp-win32-arm64@0.34.5", "", { "os": "win32", "cpu": "arm64" }, "sha512-WQ3AgWCWYSb2yt+IG8mnC6Jdk9Whs7O0gxphblsLvdhSpSTtmu69ZG1Gkb6NuvxsNACwiPV6cNSZNzt0KPsw7g=="],
+
+    "@img/sharp-win32-ia32": ["@img/sharp-win32-ia32@0.34.5", "", { "os": "win32", "cpu": "ia32" }, "sha512-FV9m/7NmeCmSHDD5j4+4pNI8Cp3aW+JvLoXcTUo0IqyjSfAZJ8dIUmijx1qaJsIiU+Hosw6xM5KijAWRJCSgNg=="],
+
+    "@img/sharp-win32-x64": ["@img/sharp-win32-x64@0.34.5", "", { "os": "win32", "cpu": "x64" }, "sha512-+29YMsqY2/9eFEiW93eqWnuLcWcufowXewwSNIT6UwZdUUCrM3oFjMWH/Z6/TMmb4hlFenmfAVbpWeup2jryCw=="],
+
+    "@jridgewell/gen-mapping": ["@jridgewell/gen-mapping@https://registry.npmjs.org/@jridgewell/gen-mapping/-/gen-mapping-0.3.13.tgz", { "dependencies": { "@jridgewell/sourcemap-codec": "^1.5.0", "@jridgewell/trace-mapping": "^0.3.24" } }],
+
+    "@jridgewell/remapping": ["@jridgewell/remapping@https://registry.npmjs.org/@jridgewell/remapping/-/remapping-2.3.5.tgz", { "dependencies": { "@jridgewell/gen-mapping": "^0.3.5", "@jridgewell/trace-mapping": "^0.3.24" } }],
+
+    "@jridgewell/resolve-uri": ["@jridgewell/resolve-uri@https://registry.npmjs.org/@jridgewell/resolve-uri/-/resolve-uri-3.1.2.tgz", {}],
+
+    "@jridgewell/sourcemap-codec": ["@jridgewell/sourcemap-codec@https://registry.npmjs.org/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.5.5.tgz", {}],
+
+    "@jridgewell/trace-mapping": ["@jridgewell/trace-mapping@https://registry.npmjs.org/@jridgewell/trace-mapping/-/trace-mapping-0.3.31.tgz", { "dependencies": { "@jridgewell/resolve-uri": "^3.1.0", "@jridgewell/sourcemap-codec": "^1.4.14" } }],
+
+    "@lit-labs/ssr-dom-shim": ["@lit-labs/ssr-dom-shim@https://registry.npmjs.org/@lit-labs/ssr-dom-shim/-/ssr-dom-shim-1.5.0.tgz", {}],
+
+    "@lit/reactive-element": ["@lit/reactive-element@https://registry.npmjs.org/@lit/reactive-element/-/reactive-element-2.1.2.tgz", { "dependencies": { "@lit-labs/ssr-dom-shim": "^1.5.0" } }],
+
+    "@metamask/eth-json-rpc-provider": ["@metamask/eth-json-rpc-provider@https://registry.npmjs.org/@metamask/eth-json-rpc-provider/-/eth-json-rpc-provider-1.0.1.tgz", { "dependencies": { "@metamask/json-rpc-engine": "^7.0.0", "@metamask/safe-event-emitter": "^3.0.0", "@metamask/utils": "^5.0.1" } }],
+
+    "@metamask/json-rpc-engine": ["@metamask/json-rpc-engine@https://registry.npmjs.org/@metamask/json-rpc-engine/-/json-rpc-engine-8.0.2.tgz", { "dependencies": { "@metamask/rpc-errors": "^6.2.1", "@metamask/safe-event-emitter": "^3.0.0", "@metamask/utils": "^8.3.0" } }],
+
+    "@metamask/json-rpc-middleware-stream": ["@metamask/json-rpc-middleware-stream@https://registry.npmjs.org/@metamask/json-rpc-middleware-stream/-/json-rpc-middleware-stream-7.0.2.tgz", { "dependencies": { "@metamask/json-rpc-engine": "^8.0.2", "@metamask/safe-event-emitter": "^3.0.0", "@metamask/utils": "^8.3.0", "readable-stream": "^3.6.2" } }],
+
+    "@metamask/object-multiplex": ["@metamask/object-multiplex@https://registry.npmjs.org/@metamask/object-multiplex/-/object-multiplex-2.1.0.tgz", { "dependencies": { "once": "^1.4.0", "readable-stream": "^3.6.2" } }],
+
+    "@metamask/onboarding": ["@metamask/onboarding@https://registry.npmjs.org/@metamask/onboarding/-/onboarding-1.0.1.tgz", { "dependencies": { "bowser": "^2.9.0" } }],
+
+    "@metamask/providers": ["@metamask/providers@https://registry.npmjs.org/@metamask/providers/-/providers-16.1.0.tgz", { "dependencies": { "@metamask/json-rpc-engine": "^8.0.1", "@metamask/json-rpc-middleware-stream": "^7.0.1", "@metamask/object-multiplex": "^2.0.0", "@metamask/rpc-errors": "^6.2.1", "@metamask/safe-event-emitter": "^3.1.1", "@metamask/utils": "^8.3.0", "detect-browser": "^5.2.0", "extension-port-stream": "^3.0.0", "fast-deep-equal": "^3.1.3", "is-stream": "^2.0.0", "readable-stream": "^3.6.2", "webextension-polyfill": "^0.10.0" } }],
+
+    "@metamask/rpc-errors": ["@metamask/rpc-errors@https://registry.npmjs.org/@metamask/rpc-errors/-/rpc-errors-7.0.2.tgz", { "dependencies": { "@metamask/utils": "^11.0.1", "fast-safe-stringify": "^2.0.6" } }],
+
+    "@metamask/safe-event-emitter": ["@metamask/safe-event-emitter@https://registry.npmjs.org/@metamask/safe-event-emitter/-/safe-event-emitter-3.1.2.tgz", {}],
+
+    "@metamask/sdk": ["@metamask/sdk@https://registry.npmjs.org/@metamask/sdk/-/sdk-0.33.1.tgz", { "dependencies": { "@babel/runtime": "^7.26.0", "@metamask/onboarding": "^1.0.1", "@metamask/providers": "16.1.0", "@metamask/sdk-analytics": "0.0.5", "@metamask/sdk-communication-layer": "0.33.1", "@metamask/sdk-install-modal-web": "0.32.1", "@paulmillr/qr": "^0.2.1", "bowser": "^2.9.0", "cross-fetch": "^4.0.0", "debug": "4.3.4", "eciesjs": "^0.4.11", "eth-rpc-errors": "^4.0.3", "eventemitter2": "^6.4.9", "obj-multiplex": "^1.0.0", "pump": "^3.0.0", "readable-stream": "^3.6.2", "socket.io-client": "^4.5.1", "tslib": "^2.6.0", "util": "^0.12.4", "uuid": "^8.3.2" } }],
+
+    "@metamask/sdk-analytics": ["@metamask/sdk-analytics@https://registry.npmjs.org/@metamask/sdk-analytics/-/sdk-analytics-0.0.5.tgz", { "dependencies": { "openapi-fetch": "^0.13.5" } }],
+
+    "@metamask/sdk-communication-layer": ["@metamask/sdk-communication-layer@https://registry.npmjs.org/@metamask/sdk-communication-layer/-/sdk-communication-layer-0.33.1.tgz", { "dependencies": { "@metamask/sdk-analytics": "0.0.5", "bufferutil": "^4.0.8", "date-fns": "^2.29.3", "debug": "4.3.4", "utf-8-validate": "^5.0.2", "uuid": "^8.3.2" } }],
+
+    "@metamask/sdk-install-modal-web": ["@metamask/sdk-install-modal-web@https://registry.npmjs.org/@metamask/sdk-install-modal-web/-/sdk-install-modal-web-0.32.1.tgz", { "dependencies": { "@paulmillr/qr": "^0.2.1" } }],
+
+    "@metamask/superstruct": ["@metamask/superstruct@https://registry.npmjs.org/@metamask/superstruct/-/superstruct-3.2.1.tgz", {}],
+
+    "@metamask/utils": ["@metamask/utils@https://registry.npmjs.org/@metamask/utils/-/utils-11.9.0.tgz", { "dependencies": { "@ethereumjs/tx": "^4.2.0", "@metamask/superstruct": "^3.1.0", "@noble/hashes": "^1.3.1", "@scure/base": "^1.1.3", "@types/debug": "^4.1.7", "@types/lodash": "^4.17.20", "debug": "^4.3.4", "lodash": "^4.17.21", "pony-cause": "^2.1.10", "semver": "^7.5.4", "uuid": "^9.0.1" } }],
+
+    "@napi-rs/wasm-runtime": ["@napi-rs/wasm-runtime@1.1.6", "", { "dependencies": { "@tybys/wasm-util": "^0.10.3" } }, "sha512-ZLv/JdUfkvOy9eCnnBaGfiO+XimbjebAeO+MRQqD/B+FR1tnRN0tpKSJHRbE8sFfS6aqsXZ67TQjfwfsxULVbg=="],
+
+    "@next/env": ["@next/env@https://registry.npmjs.org/@next/env/-/env-16.1.1.tgz", {}],
+
+    "@next/swc-darwin-arm64": ["@next/swc-darwin-arm64@https://registry.npmjs.org/@next/swc-darwin-arm64/-/swc-darwin-arm64-16.1.1.tgz", {}],
+
+    "@next/swc-darwin-x64": ["@next/swc-darwin-x64@16.1.1", "", { "os": "darwin", "cpu": "x64" }, "sha512-hbyKtrDGUkgkyQi1m1IyD3q4I/3m9ngr+V93z4oKHrPcmxwNL5iMWORvLSGAf2YujL+6HxgVvZuCYZfLfb4bGw=="],
+
+    "@next/swc-linux-arm64-gnu": ["@next/swc-linux-arm64-gnu@16.1.1", "", { "os": "linux", "cpu": "arm64" }, "sha512-/fvHet+EYckFvRLQ0jPHJCUI5/B56+2DpI1xDSvi80r/3Ez+Eaa2Yq4tJcRTaB1kqj/HrYKn8Yplm9bNoMJpwQ=="],
+
+    "@next/swc-linux-arm64-musl": ["@next/swc-linux-arm64-musl@16.1.1", "", { "os": "linux", "cpu": "arm64" }, "sha512-MFHrgL4TXNQbBPzkKKur4Fb5ICEJa87HM7fczFs2+HWblM7mMLdco3dvyTI+QmLBU9xgns/EeeINSZD6Ar+oLg=="],
+
+    "@next/swc-linux-x64-gnu": ["@next/swc-linux-x64-gnu@16.1.1", "", { "os": "linux", "cpu": "x64" }, "sha512-20bYDfgOQAPUkkKBnyP9PTuHiJGM7HzNBbuqmD0jiFVZ0aOldz+VnJhbxzjcSabYsnNjMPsE0cyzEudpYxsrUQ=="],
+
+    "@next/swc-linux-x64-musl": ["@next/swc-linux-x64-musl@16.1.1", "", { "os": "linux", "cpu": "x64" }, "sha512-9pRbK3M4asAHQRkwaXwu601oPZHghuSC8IXNENgbBSyImHv/zY4K5udBusgdHkvJ/Tcr96jJwQYOll0qU8+fPA=="],
+
+    "@next/swc-win32-arm64-msvc": ["@next/swc-win32-arm64-msvc@16.1.1", "", { "os": "win32", "cpu": "arm64" }, "sha512-bdfQkggaLgnmYrFkSQfsHfOhk/mCYmjnrbRCGgkMcoOBZ4n+TRRSLmT/CU5SATzlBJ9TpioUyBW/vWFXTqQRiA=="],
+
+    "@next/swc-win32-x64-msvc": ["@next/swc-win32-x64-msvc@16.1.1", "", { "os": "win32", "cpu": "x64" }, "sha512-Ncwbw2WJ57Al5OX0k4chM68DKhEPlrXBaSXDCi2kPi5f4d8b3ejr3RRJGfKBLrn2YJL5ezNS7w2TZLHSti8CMw=="],
+
+    "@noble/ciphers": ["@noble/ciphers@https://registry.npmjs.org/@noble/ciphers/-/ciphers-1.3.0.tgz", {}],
+
+    "@noble/curves": ["@noble/curves@https://registry.npmjs.org/@noble/curves/-/curves-1.9.1.tgz", { "dependencies": { "@noble/hashes": "1.8.0" } }],
+
+    "@noble/hashes": ["@noble/hashes@https://registry.npmjs.org/@noble/hashes/-/hashes-1.8.0.tgz", {}],
+
+    "@paulmillr/qr": ["@paulmillr/qr@https://registry.npmjs.org/@paulmillr/qr/-/qr-0.2.1.tgz", {}],
+
+    "@radix-ui/primitive": ["@radix-ui/primitive@https://registry.npmjs.org/@radix-ui/primitive/-/primitive-1.1.3.tgz", {}],
+
+    "@radix-ui/react-arrow": ["@radix-ui/react-arrow@https://registry.npmjs.org/@radix-ui/react-arrow/-/react-arrow-1.1.7.tgz", { "dependencies": { "@radix-ui/react-primitive": "2.1.3" } }],
+
+    "@radix-ui/react-compose-refs": ["@radix-ui/react-compose-refs@https://registry.npmjs.org/@radix-ui/react-compose-refs/-/react-compose-refs-1.1.2.tgz", {}],
+
+    "@radix-ui/react-context": ["@radix-ui/react-context@https://registry.npmjs.org/@radix-ui/react-context/-/react-context-1.1.2.tgz", {}],
+
+    "@radix-ui/react-dialog": ["@radix-ui/react-dialog@https://registry.npmjs.org/@radix-ui/react-dialog/-/react-dialog-1.1.15.tgz", { "dependencies": { "@radix-ui/primitive": "1.1.3", "@radix-ui/react-compose-refs": "1.1.2", "@radix-ui/react-context": "1.1.2", "@radix-ui/react-dismissable-layer": "1.1.11", "@radix-ui/react-focus-guards": "1.1.3", "@radix-ui/react-focus-scope": "1.1.7", "@radix-ui/react-id": "1.1.1", "@radix-ui/react-portal": "1.1.9", "@radix-ui/react-presence": "1.1.5", "@radix-ui/react-primitive": "2.1.3", "@radix-ui/react-slot": "1.2.3", "@radix-ui/react-use-controllable-state": "1.2.2", "aria-hidden": "^1.2.4", "react-remove-scroll": "^2.6.3" } }],
+
+    "@radix-ui/react-dismissable-layer": ["@radix-ui/react-dismissable-layer@https://registry.npmjs.org/@radix-ui/react-dismissable-layer/-/react-dismissable-layer-1.1.11.tgz", { "dependencies": { "@radix-ui/primitive": "1.1.3", "@radix-ui/react-compose-refs": "1.1.2", "@radix-ui/react-primitive": "2.1.3", "@radix-ui/react-use-callback-ref": "1.1.1", "@radix-ui/react-use-escape-keydown": "1.1.1" } }],
+
+    "@radix-ui/react-focus-guards": ["@radix-ui/react-focus-guards@https://registry.npmjs.org/@radix-ui/react-focus-guards/-/react-focus-guards-1.1.3.tgz", {}],
+
+    "@radix-ui/react-focus-scope": ["@radix-ui/react-focus-scope@https://registry.npmjs.org/@radix-ui/react-focus-scope/-/react-focus-scope-1.1.7.tgz", { "dependencies": { "@radix-ui/react-compose-refs": "1.1.2", "@radix-ui/react-primitive": "2.1.3", "@radix-ui/react-use-callback-ref": "1.1.1" } }],
+
+    "@radix-ui/react-id": ["@radix-ui/react-id@https://registry.npmjs.org/@radix-ui/react-id/-/react-id-1.1.1.tgz", { "dependencies": { "@radix-ui/react-use-layout-effect": "1.1.1" } }],
+
+    "@radix-ui/react-popper": ["@radix-ui/react-popper@https://registry.npmjs.org/@radix-ui/react-popper/-/react-popper-1.2.8.tgz", { "dependencies": { "@floating-ui/react-dom": "^2.0.0", "@radix-ui/react-arrow": "1.1.7", "@radix-ui/react-compose-refs": "1.1.2", "@radix-ui/react-context": "1.1.2", "@radix-ui/react-primitive": "2.1.3", "@radix-ui/react-use-callback-ref": "1.1.1", "@radix-ui/react-use-layout-effect": "1.1.1", "@radix-ui/react-use-rect": "1.1.1", "@radix-ui/react-use-size": "1.1.1", "@radix-ui/rect": "1.1.1" } }],
+
+    "@radix-ui/react-portal": ["@radix-ui/react-portal@https://registry.npmjs.org/@radix-ui/react-portal/-/react-portal-1.1.9.tgz", { "dependencies": { "@radix-ui/react-primitive": "2.1.3", "@radix-ui/react-use-layout-effect": "1.1.1" } }],
+
+    "@radix-ui/react-presence": ["@radix-ui/react-presence@https://registry.npmjs.org/@radix-ui/react-presence/-/react-presence-1.1.5.tgz", { "dependencies": { "@radix-ui/react-compose-refs": "1.1.2", "@radix-ui/react-use-layout-effect": "1.1.1" } }],
+
+    "@radix-ui/react-primitive": ["@radix-ui/react-primitive@https://registry.npmjs.org/@radix-ui/react-primitive/-/react-primitive-2.1.3.tgz", { "dependencies": { "@radix-ui/react-slot": "1.2.3" } }],
+
+    "@radix-ui/react-slot": ["@radix-ui/react-slot@https://registry.npmjs.org/@radix-ui/react-slot/-/react-slot-1.2.3.tgz", { "dependencies": { "@radix-ui/react-compose-refs": "1.1.2" } }],
+
+    "@radix-ui/react-tooltip": ["@radix-ui/react-tooltip@https://registry.npmjs.org/@radix-ui/react-tooltip/-/react-tooltip-1.2.8.tgz", { "dependencies": { "@radix-ui/primitive": "1.1.3", "@radix-ui/react-compose-refs": "1.1.2", "@radix-ui/react-context": "1.1.2", "@radix-ui/react-dismissable-layer": "1.1.11", "@radix-ui/react-id": "1.1.1", "@radix-ui/react-popper": "1.2.8", "@radix-ui/react-portal": "1.1.9", "@radix-ui/react-presence": "1.1.5", "@radix-ui/react-primitive": "2.1.3", "@radix-ui/react-slot": "1.2.3", "@radix-ui/react-use-controllable-state": "1.2.2", "@radix-ui/react-visually-hidden": "1.2.3" } }],
+
+    "@radix-ui/react-use-callback-ref": ["@radix-ui/react-use-callback-ref@https://registry.npmjs.org/@radix-ui/react-use-callback-ref/-/react-use-callback-ref-1.1.1.tgz", {}],
+
+    "@radix-ui/react-use-controllable-state": ["@radix-ui/react-use-controllable-state@https://registry.npmjs.org/@radix-ui/react-use-controllable-state/-/react-use-controllable-state-1.2.2.tgz", { "dependencies": { "@radix-ui/react-use-effect-event": "0.0.2", "@radix-ui/react-use-layout-effect": "1.1.1" } }],
+
+    "@radix-ui/react-use-effect-event": ["@radix-ui/react-use-effect-event@https://registry.npmjs.org/@radix-ui/react-use-effect-event/-/react-use-effect-event-0.0.2.tgz", { "dependencies": { "@radix-ui/react-use-layout-effect": "1.1.1" } }],
+
+    "@radix-ui/react-use-escape-keydown": ["@radix-ui/react-use-escape-keydown@https://registry.npmjs.org/@radix-ui/react-use-escape-keydown/-/react-use-escape-keydown-1.1.1.tgz", { "dependencies": { "@radix-ui/react-use-callback-ref": "1.1.1" } }],
+
+    "@radix-ui/react-use-layout-effect": ["@radix-ui/react-use-layout-effect@https://registry.npmjs.org/@radix-ui/react-use-layout-effect/-/react-use-layout-effect-1.1.1.tgz", {}],
+
+    "@radix-ui/react-use-rect": ["@radix-ui/react-use-rect@https://registry.npmjs.org/@radix-ui/react-use-rect/-/react-use-rect-1.1.1.tgz", { "dependencies": { "@radix-ui/rect": "1.1.1" } }],
+
+    "@radix-ui/react-use-size": ["@radix-ui/react-use-size@https://registry.npmjs.org/@radix-ui/react-use-size/-/react-use-size-1.1.1.tgz", { "dependencies": { "@radix-ui/react-use-layout-effect": "1.1.1" } }],
+
+    "@radix-ui/react-visually-hidden": ["@radix-ui/react-visually-hidden@https://registry.npmjs.org/@radix-ui/react-visually-hidden/-/react-visually-hidden-1.2.3.tgz", { "dependencies": { "@radix-ui/react-primitive": "2.1.3" } }],
+
+    "@radix-ui/rect": ["@radix-ui/rect@https://registry.npmjs.org/@radix-ui/rect/-/rect-1.1.1.tgz", {}],
+
+    "@reduxjs/toolkit": ["@reduxjs/toolkit@https://registry.npmjs.org/@reduxjs/toolkit/-/toolkit-2.11.2.tgz", { "dependencies": { "@standard-schema/spec": "^1.0.0", "@standard-schema/utils": "^0.3.0", "immer": "^11.0.0", "redux": "^5.0.1", "redux-thunk": "^3.1.0", "reselect": "^5.1.0" } }],
+
+    "@reown/appkit": ["@reown/appkit@https://registry.npmjs.org/@reown/appkit/-/appkit-1.7.8.tgz", { "dependencies": { "@reown/appkit-common": "1.7.8", "@reown/appkit-controllers": "1.7.8", "@reown/appkit-pay": "1.7.8", "@reown/appkit-polyfills": "1.7.8", "@reown/appkit-scaffold-ui": "1.7.8", "@reown/appkit-ui": "1.7.8", "@reown/appkit-utils": "1.7.8", "@reown/appkit-wallet": "1.7.8", "@walletconnect/types": "2.21.0", "@walletconnect/universal-provider": "2.21.0", "bs58": "6.0.0", "valtio": "1.13.2", "viem": ">=2.29.0" } }],
+
+    "@reown/appkit-common": ["@reown/appkit-common@https://registry.npmjs.org/@reown/appkit-common/-/appkit-common-1.7.8.tgz", { "dependencies": { "big.js": "6.2.2", "dayjs": "1.11.13", "viem": ">=2.29.0" } }],
+
+    "@reown/appkit-controllers": ["@reown/appkit-controllers@https://registry.npmjs.org/@reown/appkit-controllers/-/appkit-controllers-1.7.8.tgz", { "dependencies": { "@reown/appkit-common": "1.7.8", "@reown/appkit-wallet": "1.7.8", "@walletconnect/universal-provider": "2.21.0", "valtio": "1.13.2", "viem": ">=2.29.0" } }],
+
+    "@reown/appkit-pay": ["@reown/appkit-pay@https://registry.npmjs.org/@reown/appkit-pay/-/appkit-pay-1.7.8.tgz", { "dependencies": { "@reown/appkit-common": "1.7.8", "@reown/appkit-controllers": "1.7.8", "@reown/appkit-ui": "1.7.8", "@reown/appkit-utils": "1.7.8", "lit": "3.3.0", "valtio": "1.13.2" } }],
+
+    "@reown/appkit-polyfills": ["@reown/appkit-polyfills@https://registry.npmjs.org/@reown/appkit-polyfills/-/appkit-polyfills-1.7.8.tgz", { "dependencies": { "buffer": "6.0.3" } }],
+
+    "@reown/appkit-scaffold-ui": ["@reown/appkit-scaffold-ui@https://registry.npmjs.org/@reown/appkit-scaffold-ui/-/appkit-scaffold-ui-1.7.8.tgz", { "dependencies": { "@reown/appkit-common": "1.7.8", "@reown/appkit-controllers": "1.7.8", "@reown/appkit-ui": "1.7.8", "@reown/appkit-utils": "1.7.8", "@reown/appkit-wallet": "1.7.8", "lit": "3.3.0" } }],
+
+    "@reown/appkit-ui": ["@reown/appkit-ui@https://registry.npmjs.org/@reown/appkit-ui/-/appkit-ui-1.7.8.tgz", { "dependencies": { "@reown/appkit-common": "1.7.8", "@reown/appkit-controllers": "1.7.8", "@reown/appkit-wallet": "1.7.8", "lit": "3.3.0", "qrcode": "1.5.3" } }],
+
+    "@reown/appkit-utils": ["@reown/appkit-utils@https://registry.npmjs.org/@reown/appkit-utils/-/appkit-utils-1.7.8.tgz", { "dependencies": { "@reown/appkit-common": "1.7.8", "@reown/appkit-controllers": "1.7.8", "@reown/appkit-polyfills": "1.7.8", "@reown/appkit-wallet": "1.7.8", "@walletconnect/logger": "2.1.2", "@walletconnect/universal-provider": "2.21.0", "valtio": "1.13.2", "viem": ">=2.29.0" } }],
+
+    "@reown/appkit-wallet": ["@reown/appkit-wallet@https://registry.npmjs.org/@reown/appkit-wallet/-/appkit-wallet-1.7.8.tgz", { "dependencies": { "@reown/appkit-common": "1.7.8", "@reown/appkit-polyfills": "1.7.8", "@walletconnect/logger": "2.1.2", "zod": "3.22.4" } }],
+
+    "@safe-global/safe-apps-provider": ["@safe-global/safe-apps-provider@https://registry.npmjs.org/@safe-global/safe-apps-provider/-/safe-apps-provider-0.18.6.tgz", { "dependencies": { "@safe-global/safe-apps-sdk": "^9.1.0", "events": "^3.3.0" } }],
+
+    "@safe-global/safe-apps-sdk": ["@safe-global/safe-apps-sdk@https://registry.npmjs.org/@safe-global/safe-apps-sdk/-/safe-apps-sdk-9.1.0.tgz", { "dependencies": { "@safe-global/safe-gateway-typescript-sdk": "^3.5.3", "viem": "^2.1.1" } }],
+
+    "@safe-global/safe-gateway-typescript-sdk": ["@safe-global/safe-gateway-typescript-sdk@https://registry.npmjs.org/@safe-global/safe-gateway-typescript-sdk/-/safe-gateway-typescript-sdk-3.23.1.tgz", {}],
+
+    "@scure/base": ["@scure/base@https://registry.npmjs.org/@scure/base/-/base-1.2.6.tgz", {}],
+
+    "@scure/bip32": ["@scure/bip32@https://registry.npmjs.org/@scure/bip32/-/bip32-1.7.0.tgz", { "dependencies": { "@noble/curves": "~1.9.0", "@noble/hashes": "~1.8.0", "@scure/base": "~1.2.5" } }],
+
+    "@scure/bip39": ["@scure/bip39@https://registry.npmjs.org/@scure/bip39/-/bip39-1.6.0.tgz", { "dependencies": { "@noble/hashes": "~1.8.0", "@scure/base": "~1.2.5" } }],
+
+    "@socket.io/component-emitter": ["@socket.io/component-emitter@https://registry.npmjs.org/@socket.io/component-emitter/-/component-emitter-3.1.2.tgz", {}],
+
+    "@solana-program/system": ["@solana-program/system@https://registry.npmjs.org/@solana-program/system/-/system-0.8.1.tgz", {}],
+
+    "@solana-program/token": ["@solana-program/token@https://registry.npmjs.org/@solana-program/token/-/token-0.6.0.tgz", {}],
+
+    "@solana/accounts": ["@solana/accounts@https://registry.npmjs.org/@solana/accounts/-/accounts-3.0.3.tgz", { "dependencies": { "@solana/addresses": "3.0.3", "@solana/codecs-core": "3.0.3", "@solana/codecs-strings": "3.0.3", "@solana/errors": "3.0.3", "@solana/rpc-spec": "3.0.3", "@solana/rpc-types": "3.0.3" } }],
+
+    "@solana/addresses": ["@solana/addresses@https://registry.npmjs.org/@solana/addresses/-/addresses-3.0.3.tgz", { "dependencies": { "@solana/assertions": "3.0.3", "@solana/codecs-core": "3.0.3", "@solana/codecs-strings": "3.0.3", "@solana/errors": "3.0.3", "@solana/nominal-types": "3.0.3" } }],
+
+    "@solana/assertions": ["@solana/assertions@https://registry.npmjs.org/@solana/assertions/-/assertions-3.0.3.tgz", { "dependencies": { "@solana/errors": "3.0.3" } }],
+
+    "@solana/buffer-layout": ["@solana/buffer-layout@https://registry.npmjs.org/@solana/buffer-layout/-/buffer-layout-4.0.1.tgz", { "dependencies": { "buffer": "~6.0.3" } }],
+
+    "@solana/codecs": ["@solana/codecs@https://registry.npmjs.org/@solana/codecs/-/codecs-3.0.3.tgz", { "dependencies": { "@solana/codecs-core": "3.0.3", "@solana/codecs-data-structures": "3.0.3", "@solana/codecs-numbers": "3.0.3", "@solana/codecs-strings": "3.0.3", "@solana/options": "3.0.3" } }],
+
+    "@solana/codecs-core": ["@solana/codecs-core@https://registry.npmjs.org/@solana/codecs-core/-/codecs-core-3.0.3.tgz", { "dependencies": { "@solana/errors": "3.0.3" } }],
+
+    "@solana/codecs-data-structures": ["@solana/codecs-data-structures@https://registry.npmjs.org/@solana/codecs-data-structures/-/codecs-data-structures-3.0.3.tgz", { "dependencies": { "@solana/codecs-core": "3.0.3", "@solana/codecs-numbers": "3.0.3", "@solana/errors": "3.0.3" } }],
+
+    "@solana/codecs-numbers": ["@solana/codecs-numbers@https://registry.npmjs.org/@solana/codecs-numbers/-/codecs-numbers-2.3.0.tgz", { "dependencies": { "@solana/codecs-core": "2.3.0", "@solana/errors": "2.3.0" } }],
+
+    "@solana/codecs-strings": ["@solana/codecs-strings@https://registry.npmjs.org/@solana/codecs-strings/-/codecs-strings-3.0.3.tgz", { "dependencies": { "@solana/codecs-core": "3.0.3", "@solana/codecs-numbers": "3.0.3", "@solana/errors": "3.0.3" } }],
+
+    "@solana/errors": ["@solana/errors@https://registry.npmjs.org/@solana/errors/-/errors-3.0.3.tgz", { "dependencies": { "chalk": "5.6.2", "commander": "14.0.0" } }],
+
+    "@solana/fast-stable-stringify": ["@solana/fast-stable-stringify@https://registry.npmjs.org/@solana/fast-stable-stringify/-/fast-stable-stringify-3.0.3.tgz", {}],
+
+    "@solana/functional": ["@solana/functional@https://registry.npmjs.org/@solana/functional/-/functional-3.0.3.tgz", {}],
+
+    "@solana/instruction-plans": ["@solana/instruction-plans@https://registry.npmjs.org/@solana/instruction-plans/-/instruction-plans-3.0.3.tgz", { "dependencies": { "@solana/errors": "3.0.3", "@solana/instructions": "3.0.3", "@solana/promises": "3.0.3", "@solana/transaction-messages": "3.0.3", "@solana/transactions": "3.0.3" } }],
+
+    "@solana/instructions": ["@solana/instructions@https://registry.npmjs.org/@solana/instructions/-/instructions-3.0.3.tgz", { "dependencies": { "@solana/codecs-core": "3.0.3", "@solana/errors": "3.0.3" } }],
+
+    "@solana/keys": ["@solana/keys@https://registry.npmjs.org/@solana/keys/-/keys-3.0.3.tgz", { "dependencies": { "@solana/assertions": "3.0.3", "@solana/codecs-core": "3.0.3", "@solana/codecs-strings": "3.0.3", "@solana/errors": "3.0.3", "@solana/nominal-types": "3.0.3" } }],
+
+    "@solana/kit": ["@solana/kit@https://registry.npmjs.org/@solana/kit/-/kit-3.0.3.tgz", { "dependencies": { "@solana/accounts": "3.0.3", "@solana/addresses": "3.0.3", "@solana/codecs": "3.0.3", "@solana/errors": "3.0.3", "@solana/functional": "3.0.3", "@solana/instruction-plans": "3.0.3", "@solana/instructions": "3.0.3", "@solana/keys": "3.0.3", "@solana/programs": "3.0.3", "@solana/rpc": "3.0.3", "@solana/rpc-parsed-types": "3.0.3", "@solana/rpc-spec-types": "3.0.3", "@solana/rpc-subscriptions": "3.0.3", "@solana/rpc-types": "3.0.3", "@solana/signers": "3.0.3", "@solana/sysvars": "3.0.3", "@solana/transaction-confirmation": "3.0.3", "@solana/transaction-messages": "3.0.3", "@solana/transactions": "3.0.3" } }],
+
+    "@solana/nominal-types": ["@solana/nominal-types@https://registry.npmjs.org/@solana/nominal-types/-/nominal-types-3.0.3.tgz", {}],
+
+    "@solana/options": ["@solana/options@https://registry.npmjs.org/@solana/options/-/options-3.0.3.tgz", { "dependencies": { "@solana/codecs-core": "3.0.3", "@solana/codecs-data-structures": "3.0.3", "@solana/codecs-numbers": "3.0.3", "@solana/codecs-strings": "3.0.3", "@solana/errors": "3.0.3" } }],
+
+    "@solana/programs": ["@solana/programs@https://registry.npmjs.org/@solana/programs/-/programs-3.0.3.tgz", { "dependencies": { "@solana/addresses": "3.0.3", "@solana/errors": "3.0.3" } }],
+
+    "@solana/promises": ["@solana/promises@https://registry.npmjs.org/@solana/promises/-/promises-3.0.3.tgz", {}],
+
+    "@solana/rpc": ["@solana/rpc@https://registry.npmjs.org/@solana/rpc/-/rpc-3.0.3.tgz", { "dependencies": { "@solana/errors": "3.0.3", "@solana/fast-stable-stringify": "3.0.3", "@solana/functional": "3.0.3", "@solana/rpc-api": "3.0.3", "@solana/rpc-spec": "3.0.3", "@solana/rpc-spec-types": "3.0.3", "@solana/rpc-transformers": "3.0.3", "@solana/rpc-transport-http": "3.0.3", "@solana/rpc-types": "3.0.3" } }],
+
+    "@solana/rpc-api": ["@solana/rpc-api@https://registry.npmjs.org/@solana/rpc-api/-/rpc-api-3.0.3.tgz", { "dependencies": { "@solana/addresses": "3.0.3", "@solana/codecs-core": "3.0.3", "@solana/codecs-strings": "3.0.3", "@solana/errors": "3.0.3", "@solana/keys": "3.0.3", "@solana/rpc-parsed-types": "3.0.3", "@solana/rpc-spec": "3.0.3", "@solana/rpc-transformers": "3.0.3", "@solana/rpc-types": "3.0.3", "@solana/transaction-messages": "3.0.3", "@solana/transactions": "3.0.3" } }],
+
+    "@solana/rpc-parsed-types": ["@solana/rpc-parsed-types@https://registry.npmjs.org/@solana/rpc-parsed-types/-/rpc-parsed-types-3.0.3.tgz", {}],
+
+    "@solana/rpc-spec": ["@solana/rpc-spec@https://registry.npmjs.org/@solana/rpc-spec/-/rpc-spec-3.0.3.tgz", { "dependencies": { "@solana/errors": "3.0.3", "@solana/rpc-spec-types": "3.0.3" } }],
+
+    "@solana/rpc-spec-types": ["@solana/rpc-spec-types@https://registry.npmjs.org/@solana/rpc-spec-types/-/rpc-spec-types-3.0.3.tgz", {}],
+
+    "@solana/rpc-subscriptions": ["@solana/rpc-subscriptions@https://registry.npmjs.org/@solana/rpc-subscriptions/-/rpc-subscriptions-3.0.3.tgz", { "dependencies": { "@solana/errors": "3.0.3", "@solana/fast-stable-stringify": "3.0.3", "@solana/functional": "3.0.3", "@solana/promises": "3.0.3", "@solana/rpc-spec-types": "3.0.3", "@solana/rpc-subscriptions-api": "3.0.3", "@solana/rpc-subscriptions-channel-websocket": "3.0.3", "@solana/rpc-subscriptions-spec": "3.0.3", "@solana/rpc-transformers": "3.0.3", "@solana/rpc-types": "3.0.3", "@solana/subscribable": "3.0.3" } }],
+
+    "@solana/rpc-subscriptions-api": ["@solana/rpc-subscriptions-api@https://registry.npmjs.org/@solana/rpc-subscriptions-api/-/rpc-subscriptions-api-3.0.3.tgz", { "dependencies": { "@solana/addresses": "3.0.3", "@solana/keys": "3.0.3", "@solana/rpc-subscriptions-spec": "3.0.3", "@solana/rpc-transformers": "3.0.3", "@solana/rpc-types": "3.0.3", "@solana/transaction-messages": "3.0.3", "@solana/transactions": "3.0.3" } }],
+
+    "@solana/rpc-subscriptions-channel-websocket": ["@solana/rpc-subscriptions-channel-websocket@https://registry.npmjs.org/@solana/rpc-subscriptions-channel-websocket/-/rpc-subscriptions-channel-websocket-3.0.3.tgz", { "dependencies": { "@solana/errors": "3.0.3", "@solana/functional": "3.0.3", "@solana/rpc-subscriptions-spec": "3.0.3", "@solana/subscribable": "3.0.3" } }],
+
+    "@solana/rpc-subscriptions-spec": ["@solana/rpc-subscriptions-spec@https://registry.npmjs.org/@solana/rpc-subscriptions-spec/-/rpc-subscriptions-spec-3.0.3.tgz", { "dependencies": { "@solana/errors": "3.0.3", "@solana/promises": "3.0.3", "@solana/rpc-spec-types": "3.0.3", "@solana/subscribable": "3.0.3" } }],
+
+    "@solana/rpc-transformers": ["@solana/rpc-transformers@https://registry.npmjs.org/@solana/rpc-transformers/-/rpc-transformers-3.0.3.tgz", { "dependencies": { "@solana/errors": "3.0.3", "@solana/functional": "3.0.3", "@solana/nominal-types": "3.0.3", "@solana/rpc-spec-types": "3.0.3", "@solana/rpc-types": "3.0.3" } }],
+
+    "@solana/rpc-transport-http": ["@solana/rpc-transport-http@https://registry.npmjs.org/@solana/rpc-transport-http/-/rpc-transport-http-3.0.3.tgz", { "dependencies": { "@solana/errors": "3.0.3", "@solana/rpc-spec": "3.0.3", "@solana/rpc-spec-types": "3.0.3", "undici-types": "^7.15.0" } }],
+
+    "@solana/rpc-types": ["@solana/rpc-types@https://registry.npmjs.org/@solana/rpc-types/-/rpc-types-3.0.3.tgz", { "dependencies": { "@solana/addresses": "3.0.3", "@solana/codecs-core": "3.0.3", "@solana/codecs-numbers": "3.0.3", "@solana/codecs-strings": "3.0.3", "@solana/errors": "3.0.3", "@solana/nominal-types": "3.0.3" } }],
+
+    "@solana/signers": ["@solana/signers@https://registry.npmjs.org/@solana/signers/-/signers-3.0.3.tgz", { "dependencies": { "@solana/addresses": "3.0.3", "@solana/codecs-core": "3.0.3", "@solana/errors": "3.0.3", "@solana/instructions": "3.0.3", "@solana/keys": "3.0.3", "@solana/nominal-types": "3.0.3", "@solana/transaction-messages": "3.0.3", "@solana/transactions": "3.0.3" } }],
+
+    "@solana/subscribable": ["@solana/subscribable@https://registry.npmjs.org/@solana/subscribable/-/subscribable-3.0.3.tgz", { "dependencies": { "@solana/errors": "3.0.3" } }],
+
+    "@solana/sysvars": ["@solana/sysvars@https://registry.npmjs.org/@solana/sysvars/-/sysvars-3.0.3.tgz", { "dependencies": { "@solana/accounts": "3.0.3", "@solana/codecs": "3.0.3", "@solana/errors": "3.0.3", "@solana/rpc-types": "3.0.3" } }],
+
+    "@solana/transaction-confirmation": ["@solana/transaction-confirmation@https://registry.npmjs.org/@solana/transaction-confirmation/-/transaction-confirmation-3.0.3.tgz", { "dependencies": { "@solana/addresses": "3.0.3", "@solana/codecs-strings": "3.0.3", "@solana/errors": "3.0.3", "@solana/keys": "3.0.3", "@solana/promises": "3.0.3", "@solana/rpc": "3.0.3", "@solana/rpc-subscriptions": "3.0.3", "@solana/rpc-types": "3.0.3", "@solana/transaction-messages": "3.0.3", "@solana/transactions": "3.0.3" } }],
+
+    "@solana/transaction-messages": ["@solana/transaction-messages@https://registry.npmjs.org/@solana/transaction-messages/-/transaction-messages-3.0.3.tgz", { "dependencies": { "@solana/addresses": "3.0.3", "@solana/codecs-core": "3.0.3", "@solana/codecs-data-structures": "3.0.3", "@solana/codecs-numbers": "3.0.3", "@solana/errors": "3.0.3", "@solana/functional": "3.0.3", "@solana/instructions": "3.0.3", "@solana/nominal-types": "3.0.3", "@solana/rpc-types": "3.0.3" } }],
+
+    "@solana/transactions": ["@solana/transactions@https://registry.npmjs.org/@solana/transactions/-/transactions-3.0.3.tgz", { "dependencies": { "@solana/addresses": "3.0.3", "@solana/codecs-core": "3.0.3", "@solana/codecs-data-structures": "3.0.3", "@solana/codecs-numbers": "3.0.3", "@solana/codecs-strings": "3.0.3", "@solana/errors": "3.0.3", "@solana/functional": "3.0.3", "@solana/instructions": "3.0.3", "@solana/keys": "3.0.3", "@solana/nominal-types": "3.0.3", "@solana/rpc-types": "3.0.3", "@solana/transaction-messages": "3.0.3" } }],
+
+    "@solana/web3.js": ["@solana/web3.js@https://registry.npmjs.org/@solana/web3.js/-/web3.js-1.98.4.tgz", { "dependencies": { "@babel/runtime": "^7.25.0", "@noble/curves": "^1.4.2", "@noble/hashes": "^1.4.0", "@solana/buffer-layout": "^4.0.1", "@solana/codecs-numbers": "^2.1.0", "agentkeepalive": "^4.5.0", "bn.js": "^5.2.1", "borsh": "^0.7.0", "bs58": "^4.0.1", "buffer": "6.0.3", "fast-stable-stringify": "^1.0.0", "jayson": "^4.1.1", "node-fetch": "^2.7.0", "rpc-websockets": "^9.0.2", "superstruct": "^2.0.2" } }],
+
+    "@standard-schema/spec": ["@standard-schema/spec@https://registry.npmjs.org/@standard-schema/spec/-/spec-1.1.0.tgz", {}],
+
+    "@standard-schema/utils": ["@standard-schema/utils@https://registry.npmjs.org/@standard-schema/utils/-/utils-0.3.0.tgz", {}],
+
+    "@swc/helpers": ["@swc/helpers@https://registry.npmjs.org/@swc/helpers/-/helpers-0.5.15.tgz", { "dependencies": { "tslib": "^2.8.0" } }],
+
+    "@tabler/icons": ["@tabler/icons@https://registry.npmjs.org/@tabler/icons/-/icons-3.36.0.tgz", {}],
+
+    "@tabler/icons-react": ["@tabler/icons-react@https://registry.npmjs.org/@tabler/icons-react/-/icons-react-3.36.0.tgz", { "dependencies": { "@tabler/icons": "3.36.0" } }],
+
+    "@tailwindcss/node": ["@tailwindcss/node@https://registry.npmjs.org/@tailwindcss/node/-/node-4.1.18.tgz", { "dependencies": { "@jridgewell/remapping": "^2.3.4", "enhanced-resolve": "^5.18.3", "jiti": "^2.6.1", "lightningcss": "1.30.2", "magic-string": "^0.30.21", "source-map-js": "^1.2.1", "tailwindcss": "4.1.18" } }],
+
+    "@tailwindcss/oxide": ["@tailwindcss/oxide@https://registry.npmjs.org/@tailwindcss/oxide/-/oxide-4.1.18.tgz", { "optionalDependencies": { "@tailwindcss/oxide-android-arm64": "4.1.18", "@tailwindcss/oxide-darwin-arm64": "4.1.18", "@tailwindcss/oxide-darwin-x64": "4.1.18", "@tailwindcss/oxide-freebsd-x64": "4.1.18", "@tailwindcss/oxide-linux-arm-gnueabihf": "4.1.18", "@tailwindcss/oxide-linux-arm64-gnu": "4.1.18", "@tailwindcss/oxide-linux-arm64-musl": "4.1.18", "@tailwindcss/oxide-linux-x64-gnu": "4.1.18", "@tailwindcss/oxide-linux-x64-musl": "4.1.18", "@tailwindcss/oxide-wasm32-wasi": "4.1.18", "@tailwindcss/oxide-win32-arm64-msvc": "4.1.18", "@tailwindcss/oxide-win32-x64-msvc": "4.1.18" } }],
+
+    "@tailwindcss/oxide-android-arm64": ["@tailwindcss/oxide-android-arm64@4.1.18", "", { "os": "android", "cpu": "arm64" }, "sha512-dJHz7+Ugr9U/diKJA0W6N/6/cjI+ZTAoxPf9Iz9BFRF2GzEX8IvXxFIi/dZBloVJX/MZGvRuFA9rqwdiIEZQ0Q=="],
+
+    "@tailwindcss/oxide-darwin-arm64": ["@tailwindcss/oxide-darwin-arm64@https://registry.npmjs.org/@tailwindcss/oxide-darwin-arm64/-/oxide-darwin-arm64-4.1.18.tgz", {}],
+
+    "@tailwindcss/oxide-darwin-x64": ["@tailwindcss/oxide-darwin-x64@4.1.18", "", { "os": "darwin", "cpu": "x64" }, "sha512-FL5oxr2xQsFrc3X9o1fjHKBYBMD1QZNyc1Xzw/h5Qu4XnEBi3dZn96HcHm41c/euGV+GRiXFfh2hUCyKi/e+yw=="],
+
+    "@tailwindcss/oxide-freebsd-x64": ["@tailwindcss/oxide-freebsd-x64@4.1.18", "", { "os": "freebsd", "cpu": "x64" }, "sha512-Fj+RHgu5bDodmV1dM9yAxlfJwkkWvLiRjbhuO2LEtwtlYlBgiAT4x/j5wQr1tC3SANAgD+0YcmWVrj8R9trVMA=="],
+
+    "@tailwindcss/oxide-linux-arm-gnueabihf": ["@tailwindcss/oxide-linux-arm-gnueabihf@4.1.18", "", { "os": "linux", "cpu": "arm" }, "sha512-Fp+Wzk/Ws4dZn+LV2Nqx3IilnhH51YZoRaYHQsVq3RQvEl+71VGKFpkfHrLM/Li+kt5c0DJe/bHXK1eHgDmdiA=="],
+
+    "@tailwindcss/oxide-linux-arm64-gnu": ["@tailwindcss/oxide-linux-arm64-gnu@4.1.18", "", { "os": "linux", "cpu": "arm64" }, "sha512-S0n3jboLysNbh55Vrt7pk9wgpyTTPD0fdQeh7wQfMqLPM/Hrxi+dVsLsPrycQjGKEQk85Kgbx+6+QnYNiHalnw=="],
+
+    "@tailwindcss/oxide-linux-arm64-musl": ["@tailwindcss/oxide-linux-arm64-musl@4.1.18", "", { "os": "linux", "cpu": "arm64" }, "sha512-1px92582HkPQlaaCkdRcio71p8bc8i/ap5807tPRDK/uw953cauQBT8c5tVGkOwrHMfc2Yh6UuxaH4vtTjGvHg=="],
+
+    "@tailwindcss/oxide-linux-x64-gnu": ["@tailwindcss/oxide-linux-x64-gnu@4.1.18", "", { "os": "linux", "cpu": "x64" }, "sha512-v3gyT0ivkfBLoZGF9LyHmts0Isc8jHZyVcbzio6Wpzifg/+5ZJpDiRiUhDLkcr7f/r38SWNe7ucxmGW3j3Kb/g=="],
+
+    "@tailwindcss/oxide-linux-x64-musl": ["@tailwindcss/oxide-linux-x64-musl@4.1.18", "", { "os": "linux", "cpu": "x64" }, "sha512-bhJ2y2OQNlcRwwgOAGMY0xTFStt4/wyU6pvI6LSuZpRgKQwxTec0/3Scu91O8ir7qCR3AuepQKLU/kX99FouqQ=="],
+
+    "@tailwindcss/oxide-wasm32-wasi": ["@tailwindcss/oxide-wasm32-wasi@4.1.18", "", { "dependencies": { "@emnapi/core": "^1.7.1", "@emnapi/runtime": "^1.7.1", "@emnapi/wasi-threads": "^1.1.0", "@napi-rs/wasm-runtime": "^1.1.0", "@tybys/wasm-util": "^0.10.1", "tslib": "^2.4.0" }, "cpu": "none" }, "sha512-LffYTvPjODiP6PT16oNeUQJzNVyJl1cjIebq/rWWBF+3eDst5JGEFSc5cWxyRCJ0Mxl+KyIkqRxk1XPEs9x8TA=="],
+
+    "@tailwindcss/oxide-win32-arm64-msvc": ["@tailwindcss/oxide-win32-arm64-msvc@4.1.18", "", { "os": "win32", "cpu": "arm64" }, "sha512-HjSA7mr9HmC8fu6bdsZvZ+dhjyGCLdotjVOgLA2vEqxEBZaQo9YTX4kwgEvPCpRh8o4uWc4J/wEoFzhEmjvPbA=="],
+
+    "@tailwindcss/oxide-win32-x64-msvc": ["@tailwindcss/oxide-win32-x64-msvc@4.1.18", "", { "os": "win32", "cpu": "x64" }, "sha512-bJWbyYpUlqamC8dpR7pfjA0I7vdF6t5VpUGMWRkXVE3AXgIZjYUYAK7II1GNaxR8J1SSrSrppRar8G++JekE3Q=="],
+
+    "@tailwindcss/postcss": ["@tailwindcss/postcss@https://registry.npmjs.org/@tailwindcss/postcss/-/postcss-4.1.18.tgz", { "dependencies": { "@alloc/quick-lru": "^5.2.0", "@tailwindcss/node": "4.1.18", "@tailwindcss/oxide": "4.1.18", "postcss": "^8.4.41", "tailwindcss": "4.1.18" } }],
+
+    "@tanstack/query-core": ["@tanstack/query-core@https://registry.npmjs.org/@tanstack/query-core/-/query-core-5.90.16.tgz", {}],
+
+    "@tanstack/react-query": ["@tanstack/react-query@https://registry.npmjs.org/@tanstack/react-query/-/react-query-5.90.16.tgz", { "dependencies": { "@tanstack/query-core": "5.90.16" } }],
+
+    "@tweenjs/tween.js": ["@tweenjs/tween.js@https://registry.npmjs.org/@tweenjs/tween.js/-/tween.js-23.1.3.tgz", {}],
+
+    "@tybys/wasm-util": ["@tybys/wasm-util@0.10.3", "", { "dependencies": { "tslib": "^2.4.0" } }, "sha512-F3fo1MYrRJYL3zER0OUOmkutjr1Vp23m7OsSgp7nq4SP6OqX6C/56XFIPAl5bt3zaBRjmW7SGz3u/6LwFpYcOg=="],
+
+    "@types/connect": ["@types/connect@https://registry.npmjs.org/@types/connect/-/connect-3.4.38.tgz", { "dependencies": { "@types/node": "*" } }],
+
+    "@types/d3-array": ["@types/d3-array@https://registry.npmjs.org/@types/d3-array/-/d3-array-3.2.2.tgz", {}],
+
+    "@types/d3-color": ["@types/d3-color@https://registry.npmjs.org/@types/d3-color/-/d3-color-3.1.3.tgz", {}],
+
+    "@types/d3-ease": ["@types/d3-ease@https://registry.npmjs.org/@types/d3-ease/-/d3-ease-3.0.2.tgz", {}],
+
+    "@types/d3-interpolate": ["@types/d3-interpolate@https://registry.npmjs.org/@types/d3-interpolate/-/d3-interpolate-3.0.4.tgz", { "dependencies": { "@types/d3-color": "*" } }],
+
+    "@types/d3-path": ["@types/d3-path@https://registry.npmjs.org/@types/d3-path/-/d3-path-3.1.1.tgz", {}],
+
+    "@types/d3-scale": ["@types/d3-scale@https://registry.npmjs.org/@types/d3-scale/-/d3-scale-4.0.9.tgz", { "dependencies": { "@types/d3-time": "*" } }],
+
+    "@types/d3-shape": ["@types/d3-shape@https://registry.npmjs.org/@types/d3-shape/-/d3-shape-3.1.7.tgz", { "dependencies": { "@types/d3-path": "*" } }],
+
+    "@types/d3-time": ["@types/d3-time@https://registry.npmjs.org/@types/d3-time/-/d3-time-3.0.4.tgz", {}],
+
+    "@types/d3-timer": ["@types/d3-timer@https://registry.npmjs.org/@types/d3-timer/-/d3-timer-3.0.2.tgz", {}],
+
+    "@types/debug": ["@types/debug@https://registry.npmjs.org/@types/debug/-/debug-4.1.12.tgz", { "dependencies": { "@types/ms": "*" } }],
+
+    "@types/lodash": ["@types/lodash@https://registry.npmjs.org/@types/lodash/-/lodash-4.17.21.tgz", {}],
+
+    "@types/ms": ["@types/ms@https://registry.npmjs.org/@types/ms/-/ms-2.1.0.tgz", {}],
+
+    "@types/node": ["@types/node@https://registry.npmjs.org/@types/node/-/node-20.19.27.tgz", { "dependencies": { "undici-types": "~6.21.0" } }],
+
+    "@types/react": ["@types/react@https://registry.npmjs.org/@types/react/-/react-19.2.7.tgz", { "dependencies": { "csstype": "^3.2.2" } }],
+
+    "@types/react-dom": ["@types/react-dom@https://registry.npmjs.org/@types/react-dom/-/react-dom-19.2.3.tgz", {}],
+
+    "@types/stats.js": ["@types/stats.js@https://registry.npmjs.org/@types/stats.js/-/stats.js-0.17.4.tgz", {}],
+
+    "@types/three": ["@types/three@https://registry.npmjs.org/@types/three/-/three-0.181.0.tgz", { "dependencies": { "@dimforge/rapier3d-compat": "~0.12.0", "@tweenjs/tween.js": "~23.1.3", "@types/stats.js": "*", "@types/webxr": "*", "@webgpu/types": "*", "fflate": "~0.8.2", "meshoptimizer": "~0.22.0" } }],
+
+    "@types/trusted-types": ["@types/trusted-types@https://registry.npmjs.org/@types/trusted-types/-/trusted-types-2.0.7.tgz", {}],
+
+    "@types/use-sync-external-store": ["@types/use-sync-external-store@https://registry.npmjs.org/@types/use-sync-external-store/-/use-sync-external-store-0.0.6.tgz", {}],
+
+    "@types/uuid": ["@types/uuid@https://registry.npmjs.org/@types/uuid/-/uuid-8.3.4.tgz", {}],
+
+    "@types/webxr": ["@types/webxr@https://registry.npmjs.org/@types/webxr/-/webxr-0.5.24.tgz", {}],
+
+    "@types/ws": ["@types/ws@https://registry.npmjs.org/@types/ws/-/ws-7.4.7.tgz", { "dependencies": { "@types/node": "*" } }],
+
+    "@wagmi/connectors": ["@wagmi/connectors@https://registry.npmjs.org/@wagmi/connectors/-/connectors-6.2.0.tgz", { "dependencies": { "@base-org/account": "2.4.0", "@coinbase/wallet-sdk": "4.3.6", "@gemini-wallet/core": "0.3.2", "@metamask/sdk": "0.33.1", "@safe-global/safe-apps-provider": "0.18.6", "@safe-global/safe-apps-sdk": "9.1.0", "@walletconnect/ethereum-provider": "2.21.1", "cbw-sdk": "npm:@coinbase/wallet-sdk@3.9.3", "porto": "0.2.35" } }],
+
+    "@wagmi/core": ["@wagmi/core@https://registry.npmjs.org/@wagmi/core/-/core-2.22.1.tgz", { "dependencies": { "eventemitter3": "5.0.1", "mipd": "0.0.7", "zustand": "5.0.0" } }],
+
+    "@walletconnect/core": ["@walletconnect/core@https://registry.npmjs.org/@walletconnect/core/-/core-2.21.1.tgz", { "dependencies": { "@walletconnect/heartbeat": "1.2.2", "@walletconnect/jsonrpc-provider": "1.0.14", "@walletconnect/jsonrpc-types": "1.0.4", "@walletconnect/jsonrpc-utils": "1.0.8", "@walletconnect/jsonrpc-ws-connection": "1.0.16", "@walletconnect/keyvaluestorage": "1.1.1", "@walletconnect/logger": "2.1.2", "@walletconnect/relay-api": "1.0.11", "@walletconnect/relay-auth": "1.1.0", "@walletconnect/safe-json": "1.0.2", "@walletconnect/time": "1.0.2", "@walletconnect/types": "2.21.1", "@walletconnect/utils": "2.21.1", "@walletconnect/window-getters": "1.0.1", "es-toolkit": "1.33.0", "events": "3.3.0", "uint8arrays": "3.1.0" } }],
+
+    "@walletconnect/environment": ["@walletconnect/environment@https://registry.npmjs.org/@walletconnect/environment/-/environment-1.0.1.tgz", { "dependencies": { "tslib": "1.14.1" } }],
+
+    "@walletconnect/ethereum-provider": ["@walletconnect/ethereum-provider@https://registry.npmjs.org/@walletconnect/ethereum-provider/-/ethereum-provider-2.21.1.tgz", { "dependencies": { "@reown/appkit": "1.7.8", "@walletconnect/jsonrpc-http-connection": "1.0.8", "@walletconnect/jsonrpc-provider": "1.0.14", "@walletconnect/jsonrpc-types": "1.0.4", "@walletconnect/jsonrpc-utils": "1.0.8", "@walletconnect/keyvaluestorage": "1.1.1", "@walletconnect/sign-client": "2.21.1", "@walletconnect/types": "2.21.1", "@walletconnect/universal-provider": "2.21.1", "@walletconnect/utils": "2.21.1", "events": "3.3.0" } }],
+
+    "@walletconnect/events": ["@walletconnect/events@https://registry.npmjs.org/@walletconnect/events/-/events-1.0.1.tgz", { "dependencies": { "keyvaluestorage-interface": "^1.0.0", "tslib": "1.14.1" } }],
+
+    "@walletconnect/heartbeat": ["@walletconnect/heartbeat@https://registry.npmjs.org/@walletconnect/heartbeat/-/heartbeat-1.2.2.tgz", { "dependencies": { "@walletconnect/events": "^1.0.1", "@walletconnect/time": "^1.0.2", "events": "^3.3.0" } }],
+
+    "@walletconnect/jsonrpc-http-connection": ["@walletconnect/jsonrpc-http-connection@https://registry.npmjs.org/@walletconnect/jsonrpc-http-connection/-/jsonrpc-http-connection-1.0.8.tgz", { "dependencies": { "@walletconnect/jsonrpc-utils": "^1.0.6", "@walletconnect/safe-json": "^1.0.1", "cross-fetch": "^3.1.4", "events": "^3.3.0" } }],
+
+    "@walletconnect/jsonrpc-provider": ["@walletconnect/jsonrpc-provider@https://registry.npmjs.org/@walletconnect/jsonrpc-provider/-/jsonrpc-provider-1.0.14.tgz", { "dependencies": { "@walletconnect/jsonrpc-utils": "^1.0.8", "@walletconnect/safe-json": "^1.0.2", "events": "^3.3.0" } }],
+
+    "@walletconnect/jsonrpc-types": ["@walletconnect/jsonrpc-types@https://registry.npmjs.org/@walletconnect/jsonrpc-types/-/jsonrpc-types-1.0.4.tgz", { "dependencies": { "events": "^3.3.0", "keyvaluestorage-interface": "^1.0.0" } }],
+
+    "@walletconnect/jsonrpc-utils": ["@walletconnect/jsonrpc-utils@https://registry.npmjs.org/@walletconnect/jsonrpc-utils/-/jsonrpc-utils-1.0.8.tgz", { "dependencies": { "@walletconnect/environment": "^1.0.1", "@walletconnect/jsonrpc-types": "^1.0.3", "tslib": "1.14.1" } }],
+
+    "@walletconnect/jsonrpc-ws-connection": ["@walletconnect/jsonrpc-ws-connection@https://registry.npmjs.org/@walletconnect/jsonrpc-ws-connection/-/jsonrpc-ws-connection-1.0.16.tgz", { "dependencies": { "@walletconnect/jsonrpc-utils": "^1.0.6", "@walletconnect/safe-json": "^1.0.2", "events": "^3.3.0", "ws": "^7.5.1" } }],
+
+    "@walletconnect/keyvaluestorage": ["@walletconnect/keyvaluestorage@https://registry.npmjs.org/@walletconnect/keyvaluestorage/-/keyvaluestorage-1.1.1.tgz", { "dependencies": { "@walletconnect/safe-json": "^1.0.1", "idb-keyval": "^6.2.1", "unstorage": "^1.9.0" } }],
+
+    "@walletconnect/logger": ["@walletconnect/logger@https://registry.npmjs.org/@walletconnect/logger/-/logger-2.1.2.tgz", { "dependencies": { "@walletconnect/safe-json": "^1.0.2", "pino": "7.11.0" } }],
+
+    "@walletconnect/relay-api": ["@walletconnect/relay-api@https://registry.npmjs.org/@walletconnect/relay-api/-/relay-api-1.0.11.tgz", { "dependencies": { "@walletconnect/jsonrpc-types": "^1.0.2" } }],
+
+    "@walletconnect/relay-auth": ["@walletconnect/relay-auth@https://registry.npmjs.org/@walletconnect/relay-auth/-/relay-auth-1.1.0.tgz", { "dependencies": { "@noble/curves": "1.8.0", "@noble/hashes": "1.7.0", "@walletconnect/safe-json": "^1.0.1", "@walletconnect/time": "^1.0.2", "uint8arrays": "^3.0.0" } }],
+
+    "@walletconnect/safe-json": ["@walletconnect/safe-json@https://registry.npmjs.org/@walletconnect/safe-json/-/safe-json-1.0.2.tgz", { "dependencies": { "tslib": "1.14.1" } }],
+
+    "@walletconnect/sign-client": ["@walletconnect/sign-client@https://registry.npmjs.org/@walletconnect/sign-client/-/sign-client-2.21.1.tgz", { "dependencies": { "@walletconnect/core": "2.21.1", "@walletconnect/events": "1.0.1", "@walletconnect/heartbeat": "1.2.2", "@walletconnect/jsonrpc-utils": "1.0.8", "@walletconnect/logger": "2.1.2", "@walletconnect/time": "1.0.2", "@walletconnect/types": "2.21.1", "@walletconnect/utils": "2.21.1", "events": "3.3.0" } }],
+
+    "@walletconnect/time": ["@walletconnect/time@https://registry.npmjs.org/@walletconnect/time/-/time-1.0.2.tgz", { "dependencies": { "tslib": "1.14.1" } }],
+
+    "@walletconnect/types": ["@walletconnect/types@https://registry.npmjs.org/@walletconnect/types/-/types-2.21.1.tgz", { "dependencies": { "@walletconnect/events": "1.0.1", "@walletconnect/heartbeat": "1.2.2", "@walletconnect/jsonrpc-types": "1.0.4", "@walletconnect/keyvaluestorage": "1.1.1", "@walletconnect/logger": "2.1.2", "events": "3.3.0" } }],
+
+    "@walletconnect/universal-provider": ["@walletconnect/universal-provider@https://registry.npmjs.org/@walletconnect/universal-provider/-/universal-provider-2.21.1.tgz", { "dependencies": { "@walletconnect/events": "1.0.1", "@walletconnect/jsonrpc-http-connection": "1.0.8", "@walletconnect/jsonrpc-provider": "1.0.14", "@walletconnect/jsonrpc-types": "1.0.4", "@walletconnect/jsonrpc-utils": "1.0.8", "@walletconnect/keyvaluestorage": "1.1.1", "@walletconnect/logger": "2.1.2", "@walletconnect/sign-client": "2.21.1", "@walletconnect/types": "2.21.1", "@walletconnect/utils": "2.21.1", "es-toolkit": "1.33.0", "events": "3.3.0" } }],
+
+    "@walletconnect/utils": ["@walletconnect/utils@https://registry.npmjs.org/@walletconnect/utils/-/utils-2.21.1.tgz", { "dependencies": { "@noble/ciphers": "1.2.1", "@noble/curves": "1.8.1", "@noble/hashes": "1.7.1", "@walletconnect/jsonrpc-utils": "1.0.8", "@walletconnect/keyvaluestorage": "1.1.1", "@walletconnect/relay-api": "1.0.11", "@walletconnect/relay-auth": "1.1.0", "@walletconnect/safe-json": "1.0.2", "@walletconnect/time": "1.0.2", "@walletconnect/types": "2.21.1", "@walletconnect/window-getters": "1.0.1", "@walletconnect/window-metadata": "1.0.1", "bs58": "6.0.0", "detect-browser": "5.3.0", "query-string": "7.1.3", "uint8arrays": "3.1.0", "viem": "2.23.2" } }],
+
+    "@walletconnect/window-getters": ["@walletconnect/window-getters@https://registry.npmjs.org/@walletconnect/window-getters/-/window-getters-1.0.1.tgz", { "dependencies": { "tslib": "1.14.1" } }],
+
+    "@walletconnect/window-metadata": ["@walletconnect/window-metadata@https://registry.npmjs.org/@walletconnect/window-metadata/-/window-metadata-1.0.1.tgz", { "dependencies": { "@walletconnect/window-getters": "^1.0.1", "tslib": "1.14.1" } }],
+
+    "@webgpu/types": ["@webgpu/types@https://registry.npmjs.org/@webgpu/types/-/types-0.1.68.tgz", {}],
+
+    "abitype": ["abitype@https://registry.npmjs.org/abitype/-/abitype-1.2.3.tgz", {}],
+
+    "abort-controller": ["abort-controller@https://registry.npmjs.org/abort-controller/-/abort-controller-3.0.0.tgz", { "dependencies": { "event-target-shim": "^5.0.0" } }],
+
+    "agentkeepalive": ["agentkeepalive@https://registry.npmjs.org/agentkeepalive/-/agentkeepalive-4.6.0.tgz", { "dependencies": { "humanize-ms": "^1.2.1" } }],
+
+    "ansi-regex": ["ansi-regex@https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.1.tgz", {}],
+
+    "ansi-styles": ["ansi-styles@https://registry.npmjs.org/ansi-styles/-/ansi-styles-4.3.0.tgz", { "dependencies": { "color-convert": "^2.0.1" } }],
+
+    "anymatch": ["anymatch@https://registry.npmjs.org/anymatch/-/anymatch-3.1.3.tgz", { "dependencies": { "normalize-path": "^3.0.0", "picomatch": "^2.0.4" } }],
+
+    "aria-hidden": ["aria-hidden@https://registry.npmjs.org/aria-hidden/-/aria-hidden-1.2.6.tgz", { "dependencies": { "tslib": "^2.0.0" } }],
+
+    "async-mutex": ["async-mutex@https://registry.npmjs.org/async-mutex/-/async-mutex-0.2.6.tgz", { "dependencies": { "tslib": "^2.0.0" } }],
+
+    "asynckit": ["asynckit@https://registry.npmjs.org/asynckit/-/asynckit-0.4.0.tgz", {}],
+
+    "atomic-sleep": ["atomic-sleep@https://registry.npmjs.org/atomic-sleep/-/atomic-sleep-1.0.0.tgz", {}],
+
+    "available-typed-arrays": ["available-typed-arrays@https://registry.npmjs.org/available-typed-arrays/-/available-typed-arrays-1.0.7.tgz", { "dependencies": { "possible-typed-array-names": "^1.0.0" } }],
+
+    "axios": ["axios@https://registry.npmjs.org/axios/-/axios-1.13.2.tgz", { "dependencies": { "follow-redirects": "^1.15.6", "form-data": "^4.0.4", "proxy-from-env": "^1.1.0" } }],
+
+    "axios-retry": ["axios-retry@https://registry.npmjs.org/axios-retry/-/axios-retry-4.5.0.tgz", { "dependencies": { "is-retry-allowed": "^2.2.0" } }],
+
+    "base-x": ["base-x@https://registry.npmjs.org/base-x/-/base-x-5.0.1.tgz", {}],
+
+    "base64-js": ["base64-js@https://registry.npmjs.org/base64-js/-/base64-js-1.5.1.tgz", {}],
+
+    "baseline-browser-mapping": ["baseline-browser-mapping@https://registry.npmjs.org/baseline-browser-mapping/-/baseline-browser-mapping-2.9.11.tgz", {}],
+
+    "big.js": ["big.js@https://registry.npmjs.org/big.js/-/big.js-6.2.2.tgz", {}],
+
+    "bn.js": ["bn.js@https://registry.npmjs.org/bn.js/-/bn.js-5.2.2.tgz", {}],
+
+    "borsh": ["borsh@https://registry.npmjs.org/borsh/-/borsh-0.7.0.tgz", { "dependencies": { "bn.js": "^5.2.0", "bs58": "^4.0.0", "text-encoding-utf-8": "^1.0.2" } }],
+
+    "bowser": ["bowser@https://registry.npmjs.org/bowser/-/bowser-2.13.1.tgz", {}],
+
+    "bs58": ["bs58@https://registry.npmjs.org/bs58/-/bs58-6.0.0.tgz", { "dependencies": { "base-x": "^5.0.0" } }],
+
+    "buffer": ["buffer@https://registry.npmjs.org/buffer/-/buffer-6.0.3.tgz", { "dependencies": { "base64-js": "^1.3.1", "ieee754": "^1.2.1" } }],
+
+    "bufferutil": ["bufferutil@https://registry.npmjs.org/bufferutil/-/bufferutil-4.1.0.tgz", { "dependencies": { "node-gyp-build": "^4.3.0" } }],
+
+    "call-bind": ["call-bind@https://registry.npmjs.org/call-bind/-/call-bind-1.0.8.tgz", { "dependencies": { "call-bind-apply-helpers": "^1.0.0", "es-define-property": "^1.0.0", "get-intrinsic": "^1.2.4", "set-function-length": "^1.2.2" } }],
+
+    "call-bind-apply-helpers": ["call-bind-apply-helpers@https://registry.npmjs.org/call-bind-apply-helpers/-/call-bind-apply-helpers-1.0.2.tgz", { "dependencies": { "es-errors": "^1.3.0", "function-bind": "^1.1.2" } }],
+
+    "call-bound": ["call-bound@https://registry.npmjs.org/call-bound/-/call-bound-1.0.4.tgz", { "dependencies": { "call-bind-apply-helpers": "^1.0.2", "get-intrinsic": "^1.3.0" } }],
+
+    "camelcase": ["camelcase@https://registry.npmjs.org/camelcase/-/camelcase-5.3.1.tgz", {}],
+
+    "caniuse-lite": ["caniuse-lite@https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001762.tgz", {}],
+
+    "cbw-sdk": ["@coinbase/wallet-sdk@https://registry.npmjs.org/@coinbase/wallet-sdk/-/wallet-sdk-3.9.3.tgz", { "dependencies": { "bn.js": "^5.2.1", "buffer": "^6.0.3", "clsx": "^1.2.1", "eth-block-tracker": "^7.1.0", "eth-json-rpc-filters": "^6.0.0", "eventemitter3": "^5.0.1", "keccak": "^3.0.3", "preact": "^10.16.0", "sha.js": "^2.4.11" } }],
+
+    "chalk": ["chalk@https://registry.npmjs.org/chalk/-/chalk-5.6.2.tgz", {}],
+
+    "charenc": ["charenc@https://registry.npmjs.org/charenc/-/charenc-0.0.2.tgz", {}],
+
+    "chokidar": ["chokidar@https://registry.npmjs.org/chokidar/-/chokidar-4.0.3.tgz", { "dependencies": { "readdirp": "^4.0.1" } }],
+
+    "client-only": ["client-only@https://registry.npmjs.org/client-only/-/client-only-0.0.1.tgz", {}],
+
+    "cliui": ["cliui@https://registry.npmjs.org/cliui/-/cliui-6.0.0.tgz", { "dependencies": { "string-width": "^4.2.0", "strip-ansi": "^6.0.0", "wrap-ansi": "^6.2.0" } }],
+
+    "clsx": ["clsx@https://registry.npmjs.org/clsx/-/clsx-2.1.1.tgz", {}],
+
+    "cmdk": ["cmdk@https://registry.npmjs.org/cmdk/-/cmdk-1.1.1.tgz", { "dependencies": { "@radix-ui/react-compose-refs": "^1.1.1", "@radix-ui/react-dialog": "^1.1.6", "@radix-ui/react-id": "^1.1.0", "@radix-ui/react-primitive": "^2.0.2" } }],
+
+    "color-convert": ["color-convert@https://registry.npmjs.org/color-convert/-/color-convert-2.0.1.tgz", { "dependencies": { "color-name": "~1.1.4" } }],
+
+    "color-name": ["color-name@https://registry.npmjs.org/color-name/-/color-name-1.1.4.tgz", {}],
+
+    "combined-stream": ["combined-stream@https://registry.npmjs.org/combined-stream/-/combined-stream-1.0.8.tgz", { "dependencies": { "delayed-stream": "~1.0.0" } }],
+
+    "commander": ["commander@https://registry.npmjs.org/commander/-/commander-14.0.0.tgz", {}],
+
+    "cookie-es": ["cookie-es@https://registry.npmjs.org/cookie-es/-/cookie-es-1.2.2.tgz", {}],
+
+    "core-util-is": ["core-util-is@https://registry.npmjs.org/core-util-is/-/core-util-is-1.0.3.tgz", {}],
+
+    "crc-32": ["crc-32@https://registry.npmjs.org/crc-32/-/crc-32-1.2.2.tgz", {}],
+
+    "cross-fetch": ["cross-fetch@https://registry.npmjs.org/cross-fetch/-/cross-fetch-4.1.0.tgz", { "dependencies": { "node-fetch": "^2.7.0" } }],
+
+    "crossws": ["crossws@https://registry.npmjs.org/crossws/-/crossws-0.3.5.tgz", { "dependencies": { "uncrypto": "^0.1.3" } }],
+
+    "crypt": ["crypt@https://registry.npmjs.org/crypt/-/crypt-0.0.2.tgz", {}],
+
+    "csstype": ["csstype@https://registry.npmjs.org/csstype/-/csstype-3.2.3.tgz", {}],
+
+    "d3-array": ["d3-array@https://registry.npmjs.org/d3-array/-/d3-array-3.2.4.tgz", { "dependencies": { "internmap": "1 - 2" } }],
+
+    "d3-color": ["d3-color@https://registry.npmjs.org/d3-color/-/d3-color-3.1.0.tgz", {}],
+
+    "d3-ease": ["d3-ease@https://registry.npmjs.org/d3-ease/-/d3-ease-3.0.1.tgz", {}],
+
+    "d3-format": ["d3-format@https://registry.npmjs.org/d3-format/-/d3-format-3.1.0.tgz", {}],
+
+    "d3-interpolate": ["d3-interpolate@https://registry.npmjs.org/d3-interpolate/-/d3-interpolate-3.0.1.tgz", { "dependencies": { "d3-color": "1 - 3" } }],
+
+    "d3-path": ["d3-path@https://registry.npmjs.org/d3-path/-/d3-path-3.1.0.tgz", {}],
+
+    "d3-scale": ["d3-scale@https://registry.npmjs.org/d3-scale/-/d3-scale-4.0.2.tgz", { "dependencies": { "d3-array": "2.10.0 - 3", "d3-format": "1 - 3", "d3-interpolate": "1.2.0 - 3", "d3-time": "2.1.1 - 3", "d3-time-format": "2 - 4" } }],
+
+    "d3-shape": ["d3-shape@https://registry.npmjs.org/d3-shape/-/d3-shape-3.2.0.tgz", { "dependencies": { "d3-path": "^3.1.0" } }],
+
+    "d3-time": ["d3-time@https://registry.npmjs.org/d3-time/-/d3-time-3.1.0.tgz", { "dependencies": { "d3-array": "2 - 3" } }],
+
+    "d3-time-format": ["d3-time-format@https://registry.npmjs.org/d3-time-format/-/d3-time-format-4.1.0.tgz", { "dependencies": { "d3-time": "1 - 3" } }],
+
+    "d3-timer": ["d3-timer@https://registry.npmjs.org/d3-timer/-/d3-timer-3.0.1.tgz", {}],
+
+    "date-fns": ["date-fns@https://registry.npmjs.org/date-fns/-/date-fns-4.1.0.tgz", {}],
+
+    "dayjs": ["dayjs@https://registry.npmjs.org/dayjs/-/dayjs-1.11.13.tgz", {}],
+
+    "debug": ["debug@https://registry.npmjs.org/debug/-/debug-4.3.4.tgz", { "dependencies": { "ms": "2.1.2" } }],
+
+    "decamelize": ["decamelize@https://registry.npmjs.org/decamelize/-/decamelize-1.2.0.tgz", {}],
+
+    "decimal.js-light": ["decimal.js-light@https://registry.npmjs.org/decimal.js-light/-/decimal.js-light-2.5.1.tgz", {}],
+
+    "decode-uri-component": ["decode-uri-component@https://registry.npmjs.org/decode-uri-component/-/decode-uri-component-0.2.2.tgz", {}],
+
+    "define-data-property": ["define-data-property@https://registry.npmjs.org/define-data-property/-/define-data-property-1.1.4.tgz", { "dependencies": { "es-define-property": "^1.0.0", "es-errors": "^1.3.0", "gopd": "^1.0.1" } }],
+
+    "defu": ["defu@https://registry.npmjs.org/defu/-/defu-6.1.4.tgz", {}],
+
+    "delay": ["delay@https://registry.npmjs.org/delay/-/delay-5.0.0.tgz", {}],
+
+    "delayed-stream": ["delayed-stream@https://registry.npmjs.org/delayed-stream/-/delayed-stream-1.0.0.tgz", {}],
+
+    "derive-valtio": ["derive-valtio@https://registry.npmjs.org/derive-valtio/-/derive-valtio-0.1.0.tgz", {}],
+
+    "destr": ["destr@https://registry.npmjs.org/destr/-/destr-2.0.5.tgz", {}],
+
+    "detect-browser": ["detect-browser@https://registry.npmjs.org/detect-browser/-/detect-browser-5.3.0.tgz", {}],
+
+    "detect-libc": ["detect-libc@https://registry.npmjs.org/detect-libc/-/detect-libc-2.1.2.tgz", {}],
+
+    "detect-node-es": ["detect-node-es@https://registry.npmjs.org/detect-node-es/-/detect-node-es-1.1.0.tgz", {}],
+
+    "dijkstrajs": ["dijkstrajs@https://registry.npmjs.org/dijkstrajs/-/dijkstrajs-1.0.3.tgz", {}],
+
+    "dunder-proto": ["dunder-proto@https://registry.npmjs.org/dunder-proto/-/dunder-proto-1.0.1.tgz", { "dependencies": { "call-bind-apply-helpers": "^1.0.1", "es-errors": "^1.3.0", "gopd": "^1.2.0" } }],
+
+    "duplexify": ["duplexify@https://registry.npmjs.org/duplexify/-/duplexify-4.1.3.tgz", { "dependencies": { "end-of-stream": "^1.4.1", "inherits": "^2.0.3", "readable-stream": "^3.1.1", "stream-shift": "^1.0.2" } }],
+
+    "eciesjs": ["eciesjs@https://registry.npmjs.org/eciesjs/-/eciesjs-0.4.16.tgz", { "dependencies": { "@ecies/ciphers": "^0.2.4", "@noble/ciphers": "^1.3.0", "@noble/curves": "^1.9.7", "@noble/hashes": "^1.8.0" } }],
+
+    "emoji-regex": ["emoji-regex@https://registry.npmjs.org/emoji-regex/-/emoji-regex-8.0.0.tgz", {}],
+
+    "encode-utf8": ["encode-utf8@https://registry.npmjs.org/encode-utf8/-/encode-utf8-1.0.3.tgz", {}],
+
+    "end-of-stream": ["end-of-stream@https://registry.npmjs.org/end-of-stream/-/end-of-stream-1.4.5.tgz", { "dependencies": { "once": "^1.4.0" } }],
+
+    "engine.io-client": ["engine.io-client@https://registry.npmjs.org/engine.io-client/-/engine.io-client-6.6.4.tgz", { "dependencies": { "@socket.io/component-emitter": "~3.1.0", "debug": "~4.4.1", "engine.io-parser": "~5.2.1", "ws": "~8.18.3", "xmlhttprequest-ssl": "~2.1.1" } }],
+
+    "engine.io-parser": ["engine.io-parser@https://registry.npmjs.org/engine.io-parser/-/engine.io-parser-5.2.3.tgz", {}],
+
+    "enhanced-resolve": ["enhanced-resolve@https://registry.npmjs.org/enhanced-resolve/-/enhanced-resolve-5.18.4.tgz", { "dependencies": { "graceful-fs": "^4.2.4", "tapable": "^2.2.0" } }],
+
+    "es-define-property": ["es-define-property@https://registry.npmjs.org/es-define-property/-/es-define-property-1.0.1.tgz", {}],
+
+    "es-errors": ["es-errors@https://registry.npmjs.org/es-errors/-/es-errors-1.3.0.tgz", {}],
+
+    "es-object-atoms": ["es-object-atoms@https://registry.npmjs.org/es-object-atoms/-/es-object-atoms-1.1.1.tgz", { "dependencies": { "es-errors": "^1.3.0" } }],
+
+    "es-set-tostringtag": ["es-set-tostringtag@https://registry.npmjs.org/es-set-tostringtag/-/es-set-tostringtag-2.1.0.tgz", { "dependencies": { "es-errors": "^1.3.0", "get-intrinsic": "^1.2.6", "has-tostringtag": "^1.0.2", "hasown": "^2.0.2" } }],
+
+    "es-toolkit": ["es-toolkit@https://registry.npmjs.org/es-toolkit/-/es-toolkit-1.43.0.tgz", {}],
+
+    "es6-promise": ["es6-promise@https://registry.npmjs.org/es6-promise/-/es6-promise-4.2.8.tgz", {}],
+
+    "es6-promisify": ["es6-promisify@https://registry.npmjs.org/es6-promisify/-/es6-promisify-5.0.0.tgz", { "dependencies": { "es6-promise": "^4.0.3" } }],
+
+    "eth-block-tracker": ["eth-block-tracker@https://registry.npmjs.org/eth-block-tracker/-/eth-block-tracker-7.1.0.tgz", { "dependencies": { "@metamask/eth-json-rpc-provider": "^1.0.0", "@metamask/safe-event-emitter": "^3.0.0", "@metamask/utils": "^5.0.1", "json-rpc-random-id": "^1.0.1", "pify": "^3.0.0" } }],
+
+    "eth-json-rpc-filters": ["eth-json-rpc-filters@https://registry.npmjs.org/eth-json-rpc-filters/-/eth-json-rpc-filters-6.0.1.tgz", { "dependencies": { "@metamask/safe-event-emitter": "^3.0.0", "async-mutex": "^0.2.6", "eth-query": "^2.1.2", "json-rpc-engine": "^6.1.0", "pify": "^5.0.0" } }],
+
+    "eth-query": ["eth-query@https://registry.npmjs.org/eth-query/-/eth-query-2.1.2.tgz", { "dependencies": { "json-rpc-random-id": "^1.0.0", "xtend": "^4.0.1" } }],
+
+    "eth-rpc-errors": ["eth-rpc-errors@https://registry.npmjs.org/eth-rpc-errors/-/eth-rpc-errors-4.0.3.tgz", { "dependencies": { "fast-safe-stringify": "^2.0.6" } }],
+
+    "ethereum-cryptography": ["ethereum-cryptography@https://registry.npmjs.org/ethereum-cryptography/-/ethereum-cryptography-2.2.1.tgz", { "dependencies": { "@noble/curves": "1.4.2", "@noble/hashes": "1.4.0", "@scure/bip32": "1.4.0", "@scure/bip39": "1.3.0" } }],
+
+    "event-target-shim": ["event-target-shim@https://registry.npmjs.org/event-target-shim/-/event-target-shim-5.0.1.tgz", {}],
+
+    "eventemitter2": ["eventemitter2@https://registry.npmjs.org/eventemitter2/-/eventemitter2-6.4.9.tgz", {}],
+
+    "eventemitter3": ["eventemitter3@https://registry.npmjs.org/eventemitter3/-/eventemitter3-5.0.1.tgz", {}],
+
+    "events": ["events@https://registry.npmjs.org/events/-/events-3.3.0.tgz", {}],
+
+    "extension-port-stream": ["extension-port-stream@https://registry.npmjs.org/extension-port-stream/-/extension-port-stream-3.0.0.tgz", { "dependencies": { "readable-stream": "^3.6.2 || ^4.4.2", "webextension-polyfill": ">=0.10.0 <1.0" } }],
+
+    "eyes": ["eyes@https://registry.npmjs.org/eyes/-/eyes-0.1.8.tgz", {}],
+
+    "fast-deep-equal": ["fast-deep-equal@https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz", {}],
+
+    "fast-redact": ["fast-redact@https://registry.npmjs.org/fast-redact/-/fast-redact-3.5.0.tgz", {}],
+
+    "fast-safe-stringify": ["fast-safe-stringify@https://registry.npmjs.org/fast-safe-stringify/-/fast-safe-stringify-2.1.1.tgz", {}],
+
+    "fast-stable-stringify": ["fast-stable-stringify@https://registry.npmjs.org/fast-stable-stringify/-/fast-stable-stringify-1.0.0.tgz", {}],
+
+    "fflate": ["fflate@https://registry.npmjs.org/fflate/-/fflate-0.8.2.tgz", {}],
+
+    "filter-obj": ["filter-obj@https://registry.npmjs.org/filter-obj/-/filter-obj-1.1.0.tgz", {}],
+
+    "find-up": ["find-up@https://registry.npmjs.org/find-up/-/find-up-4.1.0.tgz", { "dependencies": { "locate-path": "^5.0.0", "path-exists": "^4.0.0" } }],
+
+    "follow-redirects": ["follow-redirects@https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.15.11.tgz", {}],
+
+    "for-each": ["for-each@https://registry.npmjs.org/for-each/-/for-each-0.3.5.tgz", { "dependencies": { "is-callable": "^1.2.7" } }],
+
+    "form-data": ["form-data@https://registry.npmjs.org/form-data/-/form-data-4.0.5.tgz", { "dependencies": { "asynckit": "^0.4.0", "combined-stream": "^1.0.8", "es-set-tostringtag": "^2.1.0", "hasown": "^2.0.2", "mime-types": "^2.1.12" } }],
+
+    "framer-motion": ["framer-motion@https://registry.npmjs.org/framer-motion/-/framer-motion-12.38.0.tgz", { "dependencies": { "motion-dom": "^12.38.0", "motion-utils": "^12.36.0", "tslib": "^2.4.0" } }],
+
+    "function-bind": ["function-bind@https://registry.npmjs.org/function-bind/-/function-bind-1.1.2.tgz", {}],
+
+    "generator-function": ["generator-function@https://registry.npmjs.org/generator-function/-/generator-function-2.0.1.tgz", {}],
+
+    "get-caller-file": ["get-caller-file@https://registry.npmjs.org/get-caller-file/-/get-caller-file-2.0.5.tgz", {}],
+
+    "get-intrinsic": ["get-intrinsic@https://registry.npmjs.org/get-intrinsic/-/get-intrinsic-1.3.0.tgz", { "dependencies": { "call-bind-apply-helpers": "^1.0.2", "es-define-property": "^1.0.1", "es-errors": "^1.3.0", "es-object-atoms": "^1.1.1", "function-bind": "^1.1.2", "get-proto": "^1.0.1", "gopd": "^1.2.0", "has-symbols": "^1.1.0", "hasown": "^2.0.2", "math-intrinsics": "^1.1.0" } }],
+
+    "get-nonce": ["get-nonce@https://registry.npmjs.org/get-nonce/-/get-nonce-1.0.1.tgz", {}],
+
+    "get-proto": ["get-proto@https://registry.npmjs.org/get-proto/-/get-proto-1.0.1.tgz", { "dependencies": { "dunder-proto": "^1.0.1", "es-object-atoms": "^1.0.0" } }],
+
+    "goober": ["goober@https://registry.npmjs.org/goober/-/goober-2.1.18.tgz", {}],
+
+    "gopd": ["gopd@https://registry.npmjs.org/gopd/-/gopd-1.2.0.tgz", {}],
+
+    "graceful-fs": ["graceful-fs@https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.11.tgz", {}],
+
+    "gsap": ["gsap@https://registry.npmjs.org/gsap/-/gsap-3.14.2.tgz", {}],
+
+    "h3": ["h3@https://registry.npmjs.org/h3/-/h3-1.15.4.tgz", { "dependencies": { "cookie-es": "^1.2.2", "crossws": "^0.3.5", "defu": "^6.1.4", "destr": "^2.0.5", "iron-webcrypto": "^1.2.1", "node-mock-http": "^1.0.2", "radix3": "^1.1.2", "ufo": "^1.6.1", "uncrypto": "^0.1.3" } }],
+
+    "has-property-descriptors": ["has-property-descriptors@https://registry.npmjs.org/has-property-descriptors/-/has-property-descriptors-1.0.2.tgz", { "dependencies": { "es-define-property": "^1.0.0" } }],
+
+    "has-symbols": ["has-symbols@https://registry.npmjs.org/has-symbols/-/has-symbols-1.1.0.tgz", {}],
+
+    "has-tostringtag": ["has-tostringtag@https://registry.npmjs.org/has-tostringtag/-/has-tostringtag-1.0.2.tgz", { "dependencies": { "has-symbols": "^1.0.3" } }],
+
+    "hasown": ["hasown@https://registry.npmjs.org/hasown/-/hasown-2.0.2.tgz", { "dependencies": { "function-bind": "^1.1.2" } }],
+
+    "hono": ["hono@https://registry.npmjs.org/hono/-/hono-4.11.3.tgz", {}],
+
+    "humanize-ms": ["humanize-ms@https://registry.npmjs.org/humanize-ms/-/humanize-ms-1.2.1.tgz", { "dependencies": { "ms": "^2.0.0" } }],
+
+    "idb-keyval": ["idb-keyval@https://registry.npmjs.org/idb-keyval/-/idb-keyval-6.2.1.tgz", {}],
+
+    "ieee754": ["ieee754@https://registry.npmjs.org/ieee754/-/ieee754-1.2.1.tgz", {}],
+
+    "immer": ["immer@https://registry.npmjs.org/immer/-/immer-10.2.0.tgz", {}],
+
+    "inherits": ["inherits@https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz", {}],
+
+    "internmap": ["internmap@https://registry.npmjs.org/internmap/-/internmap-2.0.3.tgz", {}],
+
+    "iron-webcrypto": ["iron-webcrypto@https://registry.npmjs.org/iron-webcrypto/-/iron-webcrypto-1.2.1.tgz", {}],
+
+    "is-arguments": ["is-arguments@https://registry.npmjs.org/is-arguments/-/is-arguments-1.2.0.tgz", { "dependencies": { "call-bound": "^1.0.2", "has-tostringtag": "^1.0.2" } }],
+
+    "is-buffer": ["is-buffer@https://registry.npmjs.org/is-buffer/-/is-buffer-1.1.6.tgz", {}],
+
+    "is-callable": ["is-callable@https://registry.npmjs.org/is-callable/-/is-callable-1.2.7.tgz", {}],
+
+    "is-fullwidth-code-point": ["is-fullwidth-code-point@https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-3.0.0.tgz", {}],
+
+    "is-generator-function": ["is-generator-function@https://registry.npmjs.org/is-generator-function/-/is-generator-function-1.1.2.tgz", { "dependencies": { "call-bound": "^1.0.4", "generator-function": "^2.0.0", "get-proto": "^1.0.1", "has-tostringtag": "^1.0.2", "safe-regex-test": "^1.1.0" } }],
+
+    "is-regex": ["is-regex@https://registry.npmjs.org/is-regex/-/is-regex-1.2.1.tgz", { "dependencies": { "call-bound": "^1.0.2", "gopd": "^1.2.0", "has-tostringtag": "^1.0.2", "hasown": "^2.0.2" } }],
+
+    "is-retry-allowed": ["is-retry-allowed@https://registry.npmjs.org/is-retry-allowed/-/is-retry-allowed-2.2.0.tgz", {}],
+
+    "is-stream": ["is-stream@https://registry.npmjs.org/is-stream/-/is-stream-2.0.1.tgz", {}],
+
+    "is-typed-array": ["is-typed-array@https://registry.npmjs.org/is-typed-array/-/is-typed-array-1.1.15.tgz", { "dependencies": { "which-typed-array": "^1.1.16" } }],
+
+    "isarray": ["isarray@https://registry.npmjs.org/isarray/-/isarray-1.0.0.tgz", {}],
+
+    "isomorphic-ws": ["isomorphic-ws@https://registry.npmjs.org/isomorphic-ws/-/isomorphic-ws-4.0.1.tgz", {}],
+
+    "isows": ["isows@https://registry.npmjs.org/isows/-/isows-1.0.7.tgz", {}],
+
+    "jayson": ["jayson@https://registry.npmjs.org/jayson/-/jayson-4.3.0.tgz", { "dependencies": { "@types/connect": "^3.4.33", "@types/node": "^12.12.54", "@types/ws": "^7.4.4", "commander": "^2.20.3", "delay": "^5.0.0", "es6-promisify": "^5.0.0", "eyes": "^0.1.8", "isomorphic-ws": "^4.0.1", "json-stringify-safe": "^5.0.1", "stream-json": "^1.9.1", "uuid": "^8.3.2", "ws": "^7.5.10" } }],
+
+    "jiti": ["jiti@https://registry.npmjs.org/jiti/-/jiti-2.6.1.tgz", {}],
+
+    "jose": ["jose@https://registry.npmjs.org/jose/-/jose-6.1.3.tgz", {}],
+
+    "json-rpc-engine": ["json-rpc-engine@https://registry.npmjs.org/json-rpc-engine/-/json-rpc-engine-6.1.0.tgz", { "dependencies": { "@metamask/safe-event-emitter": "^2.0.0", "eth-rpc-errors": "^4.0.2" } }],
+
+    "json-rpc-random-id": ["json-rpc-random-id@https://registry.npmjs.org/json-rpc-random-id/-/json-rpc-random-id-1.0.1.tgz", {}],
+
+    "json-stringify-safe": ["json-stringify-safe@https://registry.npmjs.org/json-stringify-safe/-/json-stringify-safe-5.0.1.tgz", {}],
+
+    "keccak": ["keccak@https://registry.npmjs.org/keccak/-/keccak-3.0.4.tgz", { "dependencies": { "node-addon-api": "^2.0.0", "node-gyp-build": "^4.2.0", "readable-stream": "^3.6.0" } }],
+
+    "keyvaluestorage-interface": ["keyvaluestorage-interface@https://registry.npmjs.org/keyvaluestorage-interface/-/keyvaluestorage-interface-1.0.0.tgz", {}],
+
+    "lenis": ["lenis@https://registry.npmjs.org/lenis/-/lenis-1.3.17.tgz", {}],
+
+    "lightningcss": ["lightningcss@https://registry.npmjs.org/lightningcss/-/lightningcss-1.30.2.tgz", { "dependencies": { "detect-libc": "^2.0.3" }, "optionalDependencies": { "lightningcss-android-arm64": "1.30.2", "lightningcss-darwin-arm64": "1.30.2", "lightningcss-darwin-x64": "1.30.2", "lightningcss-freebsd-x64": "1.30.2", "lightningcss-linux-arm-gnueabihf": "1.30.2", "lightningcss-linux-arm64-gnu": "1.30.2", "lightningcss-linux-arm64-musl": "1.30.2", "lightningcss-linux-x64-gnu": "1.30.2", "lightningcss-linux-x64-musl": "1.30.2", "lightningcss-win32-arm64-msvc": "1.30.2", "lightningcss-win32-x64-msvc": "1.30.2" } }],
+
+    "lightningcss-android-arm64": ["lightningcss-android-arm64@1.30.2", "", { "os": "android", "cpu": "arm64" }, "sha512-BH9sEdOCahSgmkVhBLeU7Hc9DWeZ1Eb6wNS6Da8igvUwAe0sqROHddIlvU06q3WyXVEOYDZ6ykBZQnjTbmo4+A=="],
+
+    "lightningcss-darwin-arm64": ["lightningcss-darwin-arm64@https://registry.npmjs.org/lightningcss-darwin-arm64/-/lightningcss-darwin-arm64-1.30.2.tgz", {}],
+
+    "lightningcss-darwin-x64": ["lightningcss-darwin-x64@1.30.2", "", { "os": "darwin", "cpu": "x64" }, "sha512-oBZgKchomuDYxr7ilwLcyms6BCyLn0z8J0+ZZmfpjwg9fRVZIR5/GMXd7r9RH94iDhld3UmSjBM6nXWM2TfZTQ=="],
+
+    "lightningcss-freebsd-x64": ["lightningcss-freebsd-x64@1.30.2", "", { "os": "freebsd", "cpu": "x64" }, "sha512-c2bH6xTrf4BDpK8MoGG4Bd6zAMZDAXS569UxCAGcA7IKbHNMlhGQ89eRmvpIUGfKWNVdbhSbkQaWhEoMGmGslA=="],
+
+    "lightningcss-linux-arm-gnueabihf": ["lightningcss-linux-arm-gnueabihf@1.30.2", "", { "os": "linux", "cpu": "arm" }, "sha512-eVdpxh4wYcm0PofJIZVuYuLiqBIakQ9uFZmipf6LF/HRj5Bgm0eb3qL/mr1smyXIS1twwOxNWndd8z0E374hiA=="],
+
+    "lightningcss-linux-arm64-gnu": ["lightningcss-linux-arm64-gnu@1.30.2", "", { "os": "linux", "cpu": "arm64" }, "sha512-UK65WJAbwIJbiBFXpxrbTNArtfuznvxAJw4Q2ZGlU8kPeDIWEX1dg3rn2veBVUylA2Ezg89ktszWbaQnxD/e3A=="],
+
+    "lightningcss-linux-arm64-musl": ["lightningcss-linux-arm64-musl@1.30.2", "", { "os": "linux", "cpu": "arm64" }, "sha512-5Vh9dGeblpTxWHpOx8iauV02popZDsCYMPIgiuw97OJ5uaDsL86cnqSFs5LZkG3ghHoX5isLgWzMs+eD1YzrnA=="],
+
+    "lightningcss-linux-x64-gnu": ["lightningcss-linux-x64-gnu@1.30.2", "", { "os": "linux", "cpu": "x64" }, "sha512-Cfd46gdmj1vQ+lR6VRTTadNHu6ALuw2pKR9lYq4FnhvgBc4zWY1EtZcAc6EffShbb1MFrIPfLDXD6Xprbnni4w=="],
+
+    "lightningcss-linux-x64-musl": ["lightningcss-linux-x64-musl@1.30.2", "", { "os": "linux", "cpu": "x64" }, "sha512-XJaLUUFXb6/QG2lGIW6aIk6jKdtjtcffUT0NKvIqhSBY3hh9Ch+1LCeH80dR9q9LBjG3ewbDjnumefsLsP6aiA=="],
+
+    "lightningcss-win32-arm64-msvc": ["lightningcss-win32-arm64-msvc@1.30.2", "", { "os": "win32", "cpu": "arm64" }, "sha512-FZn+vaj7zLv//D/192WFFVA0RgHawIcHqLX9xuWiQt7P0PtdFEVaxgF9rjM/IRYHQXNnk61/H/gb2Ei+kUQ4xQ=="],
+
+    "lightningcss-win32-x64-msvc": ["lightningcss-win32-x64-msvc@1.30.2", "", { "os": "win32", "cpu": "x64" }, "sha512-5g1yc73p+iAkid5phb4oVFMB45417DkRevRbt/El/gKXJk4jid+vPFF/AXbxn05Aky8PapwzZrdJShv5C0avjw=="],
+
+    "lit": ["lit@https://registry.npmjs.org/lit/-/lit-3.3.0.tgz", { "dependencies": { "@lit/reactive-element": "^2.1.0", "lit-element": "^4.2.0", "lit-html": "^3.3.0" } }],
+
+    "lit-element": ["lit-element@https://registry.npmjs.org/lit-element/-/lit-element-4.2.2.tgz", { "dependencies": { "@lit-labs/ssr-dom-shim": "^1.5.0", "@lit/reactive-element": "^2.1.0", "lit-html": "^3.3.0" } }],
+
+    "lit-html": ["lit-html@https://registry.npmjs.org/lit-html/-/lit-html-3.3.2.tgz", { "dependencies": { "@types/trusted-types": "^2.0.2" } }],
+
+    "locate-path": ["locate-path@https://registry.npmjs.org/locate-path/-/locate-path-5.0.0.tgz", { "dependencies": { "p-locate": "^4.1.0" } }],
+
+    "lodash": ["lodash@https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz", {}],
+
+    "lru-cache": ["lru-cache@https://registry.npmjs.org/lru-cache/-/lru-cache-10.4.3.tgz", {}],
+
+    "lucide-react": ["lucide-react@https://registry.npmjs.org/lucide-react/-/lucide-react-1.7.0.tgz", {}],
+
+    "magic-string": ["magic-string@https://registry.npmjs.org/magic-string/-/magic-string-0.30.21.tgz", { "dependencies": { "@jridgewell/sourcemap-codec": "^1.5.5" } }],
+
+    "math-intrinsics": ["math-intrinsics@https://registry.npmjs.org/math-intrinsics/-/math-intrinsics-1.1.0.tgz", {}],
+
+    "md5": ["md5@https://registry.npmjs.org/md5/-/md5-2.3.0.tgz", { "dependencies": { "charenc": "0.0.2", "crypt": "0.0.2", "is-buffer": "~1.1.6" } }],
+
+    "meshoptimizer": ["meshoptimizer@https://registry.npmjs.org/meshoptimizer/-/meshoptimizer-0.22.0.tgz", {}],
+
+    "micro-ftch": ["micro-ftch@https://registry.npmjs.org/micro-ftch/-/micro-ftch-0.3.1.tgz", {}],
+
+    "mime-db": ["mime-db@https://registry.npmjs.org/mime-db/-/mime-db-1.52.0.tgz", {}],
+
+    "mime-types": ["mime-types@https://registry.npmjs.org/mime-types/-/mime-types-2.1.35.tgz", { "dependencies": { "mime-db": "1.52.0" } }],
+
+    "mipd": ["mipd@https://registry.npmjs.org/mipd/-/mipd-0.0.7.tgz", {}],
+
+    "motion": ["motion@12.42.2", "", { "dependencies": { "framer-motion": "^12.42.2", "tslib": "^2.4.0" }, "peerDependencies": { "@emotion/is-prop-valid": "*", "react": "^18.0.0 || ^19.0.0", "react-dom": "^18.0.0 || ^19.0.0" }, "optionalPeers": ["@emotion/is-prop-valid", "react", "react-dom"] }, "sha512-Atvv11yUKIid41cVrRBDVX5m8tF8kNpExRSlbpt6APClhDjtwQssgFHhQzejxw7/7YYbjHSPKBVbHo05BuJT5Q=="],
+
+    "motion-dom": ["motion-dom@https://registry.npmjs.org/motion-dom/-/motion-dom-12.38.0.tgz", { "dependencies": { "motion-utils": "^12.36.0" } }],
+
+    "motion-utils": ["motion-utils@https://registry.npmjs.org/motion-utils/-/motion-utils-12.36.0.tgz", {}],
+
+    "ms": ["ms@https://registry.npmjs.org/ms/-/ms-2.1.2.tgz", {}],
+
+    "multiformats": ["multiformats@https://registry.npmjs.org/multiformats/-/multiformats-9.9.0.tgz", {}],
+
+    "nanoid": ["nanoid@https://registry.npmjs.org/nanoid/-/nanoid-3.3.11.tgz", {}],
+
+    "next": ["next@https://registry.npmjs.org/next/-/next-16.1.1.tgz", { "dependencies": { "@next/env": "16.1.1", "@swc/helpers": "0.5.15", "baseline-browser-mapping": "^2.8.3", "caniuse-lite": "^1.0.30001579", "postcss": "8.4.31", "styled-jsx": "5.1.6" }, "optionalDependencies": { "@next/swc-darwin-arm64": "16.1.1", "@next/swc-darwin-x64": "16.1.1", "@next/swc-linux-arm64-gnu": "16.1.1", "@next/swc-linux-arm64-musl": "16.1.1", "@next/swc-linux-x64-gnu": "16.1.1", "@next/swc-linux-x64-musl": "16.1.1", "@next/swc-win32-arm64-msvc": "16.1.1", "@next/swc-win32-x64-msvc": "16.1.1", "sharp": "^0.34.4" } }],
+
+    "next-themes": ["next-themes@https://registry.npmjs.org/next-themes/-/next-themes-0.4.6.tgz", {}],
+
+    "node-addon-api": ["node-addon-api@https://registry.npmjs.org/node-addon-api/-/node-addon-api-2.0.2.tgz", {}],
+
+    "node-fetch": ["node-fetch@https://registry.npmjs.org/node-fetch/-/node-fetch-2.7.0.tgz", { "dependencies": { "whatwg-url": "^5.0.0" } }],
+
+    "node-fetch-native": ["node-fetch-native@https://registry.npmjs.org/node-fetch-native/-/node-fetch-native-1.6.7.tgz", {}],
+
+    "node-gyp-build": ["node-gyp-build@https://registry.npmjs.org/node-gyp-build/-/node-gyp-build-4.8.4.tgz", {}],
+
+    "node-mock-http": ["node-mock-http@https://registry.npmjs.org/node-mock-http/-/node-mock-http-1.0.4.tgz", {}],
+
+    "normalize-path": ["normalize-path@https://registry.npmjs.org/normalize-path/-/normalize-path-3.0.0.tgz", {}],
+
+    "obj-multiplex": ["obj-multiplex@https://registry.npmjs.org/obj-multiplex/-/obj-multiplex-1.0.0.tgz", { "dependencies": { "end-of-stream": "^1.4.0", "once": "^1.4.0", "readable-stream": "^2.3.3" } }],
+
+    "ofetch": ["ofetch@https://registry.npmjs.org/ofetch/-/ofetch-1.5.1.tgz", { "dependencies": { "destr": "^2.0.5", "node-fetch-native": "^1.6.7", "ufo": "^1.6.1" } }],
+
+    "on-exit-leak-free": ["on-exit-leak-free@https://registry.npmjs.org/on-exit-leak-free/-/on-exit-leak-free-0.2.0.tgz", {}],
+
+    "once": ["once@https://registry.npmjs.org/once/-/once-1.4.0.tgz", { "dependencies": { "wrappy": "1" } }],
+
+    "openapi-fetch": ["openapi-fetch@https://registry.npmjs.org/openapi-fetch/-/openapi-fetch-0.13.8.tgz", { "dependencies": { "openapi-typescript-helpers": "^0.0.15" } }],
+
+    "openapi-typescript-helpers": ["openapi-typescript-helpers@https://registry.npmjs.org/openapi-typescript-helpers/-/openapi-typescript-helpers-0.0.15.tgz", {}],
+
+    "ox": ["ox@https://registry.npmjs.org/ox/-/ox-0.11.1.tgz", { "dependencies": { "@adraffy/ens-normalize": "^1.11.0", "@noble/ciphers": "^1.3.0", "@noble/curves": "1.9.1", "@noble/hashes": "^1.8.0", "@scure/bip32": "^1.7.0", "@scure/bip39": "^1.6.0", "abitype": "^1.2.3", "eventemitter3": "5.0.1" } }],
+
+    "p-limit": ["p-limit@https://registry.npmjs.org/p-limit/-/p-limit-2.3.0.tgz", { "dependencies": { "p-try": "^2.0.0" } }],
+
+    "p-locate": ["p-locate@https://registry.npmjs.org/p-locate/-/p-locate-4.1.0.tgz", { "dependencies": { "p-limit": "^2.2.0" } }],
+
+    "p-try": ["p-try@https://registry.npmjs.org/p-try/-/p-try-2.2.0.tgz", {}],
+
+    "path-exists": ["path-exists@https://registry.npmjs.org/path-exists/-/path-exists-4.0.0.tgz", {}],
+
+    "picocolors": ["picocolors@https://registry.npmjs.org/picocolors/-/picocolors-1.1.1.tgz", {}],
+
+    "picomatch": ["picomatch@https://registry.npmjs.org/picomatch/-/picomatch-2.3.1.tgz", {}],
+
+    "pify": ["pify@https://registry.npmjs.org/pify/-/pify-3.0.0.tgz", {}],
+
+    "pino": ["pino@https://registry.npmjs.org/pino/-/pino-7.11.0.tgz", { "dependencies": { "atomic-sleep": "^1.0.0", "fast-redact": "^3.0.0", "on-exit-leak-free": "^0.2.0", "pino-abstract-transport": "v0.5.0", "pino-std-serializers": "^4.0.0", "process-warning": "^1.0.0", "quick-format-unescaped": "^4.0.3", "real-require": "^0.1.0", "safe-stable-stringify": "^2.1.0", "sonic-boom": "^2.2.1", "thread-stream": "^0.15.1" } }],
+
+    "pino-abstract-transport": ["pino-abstract-transport@https://registry.npmjs.org/pino-abstract-transport/-/pino-abstract-transport-0.5.0.tgz", { "dependencies": { "duplexify": "^4.1.2", "split2": "^4.0.0" } }],
+
+    "pino-std-serializers": ["pino-std-serializers@https://registry.npmjs.org/pino-std-serializers/-/pino-std-serializers-4.0.0.tgz", {}],
+
+    "pngjs": ["pngjs@https://registry.npmjs.org/pngjs/-/pngjs-5.0.0.tgz", {}],
+
+    "pony-cause": ["pony-cause@https://registry.npmjs.org/pony-cause/-/pony-cause-2.1.11.tgz", {}],
+
+    "porto": ["porto@https://registry.npmjs.org/porto/-/porto-0.2.35.tgz", { "dependencies": { "hono": "^4.10.3", "idb-keyval": "^6.2.1", "mipd": "^0.0.7", "ox": "^0.9.6", "zod": "^4.1.5", "zustand": "^5.0.1" } }],
+
+    "possible-typed-array-names": ["possible-typed-array-names@https://registry.npmjs.org/possible-typed-array-names/-/possible-typed-array-names-1.1.0.tgz", {}],
+
+    "postcss": ["postcss@https://registry.npmjs.org/postcss/-/postcss-8.5.6.tgz", { "dependencies": { "nanoid": "^3.3.11", "picocolors": "^1.1.1", "source-map-js": "^1.2.1" } }],
+
+    "preact": ["preact@https://registry.npmjs.org/preact/-/preact-10.24.2.tgz", {}],
+
+    "process": ["process@https://registry.npmjs.org/process/-/process-0.11.10.tgz", {}],
+
+    "process-nextick-args": ["process-nextick-args@https://registry.npmjs.org/process-nextick-args/-/process-nextick-args-2.0.1.tgz", {}],
+
+    "process-warning": ["process-warning@https://registry.npmjs.org/process-warning/-/process-warning-1.0.0.tgz", {}],
+
+    "proxy-compare": ["proxy-compare@https://registry.npmjs.org/proxy-compare/-/proxy-compare-2.6.0.tgz", {}],
+
+    "proxy-from-env": ["proxy-from-env@https://registry.npmjs.org/proxy-from-env/-/proxy-from-env-1.1.0.tgz", {}],
+
+    "pump": ["pump@https://registry.npmjs.org/pump/-/pump-3.0.3.tgz", { "dependencies": { "end-of-stream": "^1.1.0", "once": "^1.3.1" } }],
+
+    "qrcode": ["qrcode@https://registry.npmjs.org/qrcode/-/qrcode-1.5.3.tgz", { "dependencies": { "dijkstrajs": "^1.0.1", "encode-utf8": "^1.0.3", "pngjs": "^5.0.0", "yargs": "^15.3.1" } }],
+
+    "query-string": ["query-string@https://registry.npmjs.org/query-string/-/query-string-7.1.3.tgz", { "dependencies": { "decode-uri-component": "^0.2.2", "filter-obj": "^1.1.0", "split-on-first": "^1.0.0", "strict-uri-encode": "^2.0.0" } }],
+
+    "quick-format-unescaped": ["quick-format-unescaped@https://registry.npmjs.org/quick-format-unescaped/-/quick-format-unescaped-4.0.4.tgz", {}],
+
+    "radix3": ["radix3@https://registry.npmjs.org/radix3/-/radix3-1.1.2.tgz", {}],
+
+    "react": ["react@https://registry.npmjs.org/react/-/react-19.2.3.tgz", {}],
+
+    "react-activity-calendar": ["react-activity-calendar@https://registry.npmjs.org/react-activity-calendar/-/react-activity-calendar-3.0.5.tgz", { "dependencies": { "@floating-ui/react": "^0.27.12", "date-fns": "^4.1.0" } }],
+
+    "react-dom": ["react-dom@https://registry.npmjs.org/react-dom/-/react-dom-19.2.3.tgz", { "dependencies": { "scheduler": "^0.27.0" } }],
+
+    "react-github-calendar": ["react-github-calendar@https://registry.npmjs.org/react-github-calendar/-/react-github-calendar-5.0.4.tgz", { "dependencies": { "react-activity-calendar": "^3.0.5" } }],
+
+    "react-hot-toast": ["react-hot-toast@https://registry.npmjs.org/react-hot-toast/-/react-hot-toast-2.6.0.tgz", { "dependencies": { "csstype": "^3.1.3", "goober": "^2.1.16" } }],
+
+    "react-icons": ["react-icons@https://registry.npmjs.org/react-icons/-/react-icons-5.5.0.tgz", {}],
+
+    "react-minimal-pie-chart": ["react-minimal-pie-chart@https://registry.npmjs.org/react-minimal-pie-chart/-/react-minimal-pie-chart-9.1.2.tgz", { "dependencies": { "svg-partial-circle": "^1.0.0" } }],
+
+    "react-redux": ["react-redux@https://registry.npmjs.org/react-redux/-/react-redux-9.2.0.tgz", { "dependencies": { "@types/use-sync-external-store": "^0.0.6", "use-sync-external-store": "^1.4.0" } }],
+
+    "react-remove-scroll": ["react-remove-scroll@https://registry.npmjs.org/react-remove-scroll/-/react-remove-scroll-2.7.2.tgz", { "dependencies": { "react-remove-scroll-bar": "^2.3.7", "react-style-singleton": "^2.2.3", "tslib": "^2.1.0", "use-callback-ref": "^1.3.3", "use-sidecar": "^1.1.3" } }],
+
+    "react-remove-scroll-bar": ["react-remove-scroll-bar@https://registry.npmjs.org/react-remove-scroll-bar/-/react-remove-scroll-bar-2.3.8.tgz", { "dependencies": { "react-style-singleton": "^2.2.2", "tslib": "^2.0.0" } }],
+
+    "react-style-singleton": ["react-style-singleton@https://registry.npmjs.org/react-style-singleton/-/react-style-singleton-2.2.3.tgz", { "dependencies": { "get-nonce": "^1.0.0", "tslib": "^2.0.0" } }],
+
+    "readable-stream": ["readable-stream@https://registry.npmjs.org/readable-stream/-/readable-stream-3.6.2.tgz", { "dependencies": { "inherits": "^2.0.3", "string_decoder": "^1.1.1", "util-deprecate": "^1.0.1" } }],
+
+    "readdirp": ["readdirp@https://registry.npmjs.org/readdirp/-/readdirp-4.1.2.tgz", {}],
+
+    "real-require": ["real-require@https://registry.npmjs.org/real-require/-/real-require-0.1.0.tgz", {}],
+
+    "recharts": ["recharts@https://registry.npmjs.org/recharts/-/recharts-3.6.0.tgz", { "dependencies": { "@reduxjs/toolkit": "1.x.x || 2.x.x", "clsx": "^2.1.1", "decimal.js-light": "^2.5.1", "es-toolkit": "^1.39.3", "eventemitter3": "^5.0.1", "immer": "^10.1.1", "react-redux": "8.x.x || 9.x.x", "reselect": "5.1.1", "tiny-invariant": "^1.3.3", "use-sync-external-store": "^1.2.2", "victory-vendor": "^37.0.2" } }],
+
+    "redux": ["redux@https://registry.npmjs.org/redux/-/redux-5.0.1.tgz", {}],
+
+    "redux-thunk": ["redux-thunk@https://registry.npmjs.org/redux-thunk/-/redux-thunk-3.1.0.tgz", {}],
+
+    "require-directory": ["require-directory@https://registry.npmjs.org/require-directory/-/require-directory-2.1.1.tgz", {}],
+
+    "require-main-filename": ["require-main-filename@https://registry.npmjs.org/require-main-filename/-/require-main-filename-2.0.0.tgz", {}],
+
+    "reselect": ["reselect@https://registry.npmjs.org/reselect/-/reselect-5.1.1.tgz", {}],
+
+    "rpc-websockets": ["rpc-websockets@https://registry.npmjs.org/rpc-websockets/-/rpc-websockets-9.3.2.tgz", { "dependencies": { "@swc/helpers": "^0.5.11", "@types/uuid": "^8.3.4", "@types/ws": "^8.2.2", "buffer": "^6.0.3", "eventemitter3": "^5.0.1", "uuid": "^8.3.2", "ws": "^8.5.0" }, "optionalDependencies": { "bufferutil": "^4.0.1", "utf-8-validate": "^5.0.2" } }],
+
+    "safe-buffer": ["safe-buffer@https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.2.1.tgz", {}],
+
+    "safe-regex-test": ["safe-regex-test@https://registry.npmjs.org/safe-regex-test/-/safe-regex-test-1.1.0.tgz", { "dependencies": { "call-bound": "^1.0.2", "es-errors": "^1.3.0", "is-regex": "^1.2.1" } }],
+
+    "safe-stable-stringify": ["safe-stable-stringify@https://registry.npmjs.org/safe-stable-stringify/-/safe-stable-stringify-2.5.0.tgz", {}],
+
+    "scheduler": ["scheduler@https://registry.npmjs.org/scheduler/-/scheduler-0.27.0.tgz", {}],
+
+    "semver": ["semver@https://registry.npmjs.org/semver/-/semver-7.7.3.tgz", {}],
+
+    "set-blocking": ["set-blocking@https://registry.npmjs.org/set-blocking/-/set-blocking-2.0.0.tgz", {}],
+
+    "set-function-length": ["set-function-length@https://registry.npmjs.org/set-function-length/-/set-function-length-1.2.2.tgz", { "dependencies": { "define-data-property": "^1.1.4", "es-errors": "^1.3.0", "function-bind": "^1.1.2", "get-intrinsic": "^1.2.4", "gopd": "^1.0.1", "has-property-descriptors": "^1.0.2" } }],
+
+    "sha.js": ["sha.js@https://registry.npmjs.org/sha.js/-/sha.js-2.4.12.tgz", { "dependencies": { "inherits": "^2.0.4", "safe-buffer": "^5.2.1", "to-buffer": "^1.2.0" } }],
+
+    "sharp": ["sharp@https://registry.npmjs.org/sharp/-/sharp-0.34.5.tgz", { "dependencies": { "@img/colour": "^1.0.0", "detect-libc": "^2.1.2", "semver": "^7.7.3" }, "optionalDependencies": { "@img/sharp-darwin-arm64": "0.34.5", "@img/sharp-darwin-x64": "0.34.5", "@img/sharp-libvips-darwin-arm64": "1.2.4", "@img/sharp-libvips-darwin-x64": "1.2.4", "@img/sharp-libvips-linux-arm": "1.2.4", "@img/sharp-libvips-linux-arm64": "1.2.4", "@img/sharp-libvips-linux-ppc64": "1.2.4", "@img/sharp-libvips-linux-riscv64": "1.2.4", "@img/sharp-libvips-linux-s390x": "1.2.4", "@img/sharp-libvips-linux-x64": "1.2.4", "@img/sharp-libvips-linuxmusl-arm64": "1.2.4", "@img/sharp-libvips-linuxmusl-x64": "1.2.4", "@img/sharp-linux-arm": "0.34.5", "@img/sharp-linux-arm64": "0.34.5", "@img/sharp-linux-ppc64": "0.34.5", "@img/sharp-linux-riscv64": "0.34.5", "@img/sharp-linux-s390x": "0.34.5", "@img/sharp-linux-x64": "0.34.5", "@img/sharp-linuxmusl-arm64": "0.34.5", "@img/sharp-linuxmusl-x64": "0.34.5", "@img/sharp-wasm32": "0.34.5", "@img/sharp-win32-arm64": "0.34.5", "@img/sharp-win32-ia32": "0.34.5", "@img/sharp-win32-x64": "0.34.5" } }],
+
+    "socket.io-client": ["socket.io-client@https://registry.npmjs.org/socket.io-client/-/socket.io-client-4.8.3.tgz", { "dependencies": { "@socket.io/component-emitter": "~3.1.0", "debug": "~4.4.1", "engine.io-client": "~6.6.1", "socket.io-parser": "~4.2.4" } }],
+
+    "socket.io-parser": ["socket.io-parser@https://registry.npmjs.org/socket.io-parser/-/socket.io-parser-4.2.5.tgz", { "dependencies": { "@socket.io/component-emitter": "~3.1.0", "debug": "~4.4.1" } }],
+
+    "sonic-boom": ["sonic-boom@https://registry.npmjs.org/sonic-boom/-/sonic-boom-2.8.0.tgz", { "dependencies": { "atomic-sleep": "^1.0.0" } }],
+
+    "source-map-js": ["source-map-js@https://registry.npmjs.org/source-map-js/-/source-map-js-1.2.1.tgz", {}],
+
+    "split-on-first": ["split-on-first@https://registry.npmjs.org/split-on-first/-/split-on-first-1.1.0.tgz", {}],
+
+    "split2": ["split2@https://registry.npmjs.org/split2/-/split2-4.2.0.tgz", {}],
+
+    "stream-chain": ["stream-chain@https://registry.npmjs.org/stream-chain/-/stream-chain-2.2.5.tgz", {}],
+
+    "stream-json": ["stream-json@https://registry.npmjs.org/stream-json/-/stream-json-1.9.1.tgz", { "dependencies": { "stream-chain": "^2.2.5" } }],
+
+    "stream-shift": ["stream-shift@https://registry.npmjs.org/stream-shift/-/stream-shift-1.0.3.tgz", {}],
+
+    "strict-uri-encode": ["strict-uri-encode@https://registry.npmjs.org/strict-uri-encode/-/strict-uri-encode-2.0.0.tgz", {}],
+
+    "string-width": ["string-width@https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz", { "dependencies": { "emoji-regex": "^8.0.0", "is-fullwidth-code-point": "^3.0.0", "strip-ansi": "^6.0.1" } }],
+
+    "string_decoder": ["string_decoder@https://registry.npmjs.org/string_decoder/-/string_decoder-1.3.0.tgz", { "dependencies": { "safe-buffer": "~5.2.0" } }],
+
+    "strip-ansi": ["strip-ansi@https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz", { "dependencies": { "ansi-regex": "^5.0.1" } }],
+
+    "styled-jsx": ["styled-jsx@https://registry.npmjs.org/styled-jsx/-/styled-jsx-5.1.6.tgz", { "dependencies": { "client-only": "0.0.1" } }],
+
+    "superstruct": ["superstruct@https://registry.npmjs.org/superstruct/-/superstruct-2.0.2.tgz", {}],
+
+    "svg-partial-circle": ["svg-partial-circle@https://registry.npmjs.org/svg-partial-circle/-/svg-partial-circle-1.0.0.tgz", {}],
+
+    "tabbable": ["tabbable@https://registry.npmjs.org/tabbable/-/tabbable-6.3.0.tgz", {}],
+
+    "tailwind-merge": ["tailwind-merge@https://registry.npmjs.org/tailwind-merge/-/tailwind-merge-3.4.0.tgz", {}],
+
+    "tailwindcss": ["tailwindcss@https://registry.npmjs.org/tailwindcss/-/tailwindcss-4.1.18.tgz", {}],
+
+    "tapable": ["tapable@https://registry.npmjs.org/tapable/-/tapable-2.3.0.tgz", {}],
+
+    "text-encoding-utf-8": ["text-encoding-utf-8@https://registry.npmjs.org/text-encoding-utf-8/-/text-encoding-utf-8-1.0.2.tgz", {}],
+
+    "thread-stream": ["thread-stream@https://registry.npmjs.org/thread-stream/-/thread-stream-0.15.2.tgz", { "dependencies": { "real-require": "^0.1.0" } }],
+
+    "three": ["three@https://registry.npmjs.org/three/-/three-0.181.2.tgz", {}],
+
+    "tiny-invariant": ["tiny-invariant@https://registry.npmjs.org/tiny-invariant/-/tiny-invariant-1.3.3.tgz", {}],
+
+    "to-buffer": ["to-buffer@https://registry.npmjs.org/to-buffer/-/to-buffer-1.2.2.tgz", { "dependencies": { "isarray": "^2.0.5", "safe-buffer": "^5.2.1", "typed-array-buffer": "^1.0.3" } }],
+
+    "tr46": ["tr46@https://registry.npmjs.org/tr46/-/tr46-0.0.3.tgz", {}],
+
+    "tslib": ["tslib@https://registry.npmjs.org/tslib/-/tslib-2.8.1.tgz", {}],
+
+    "typed-array-buffer": ["typed-array-buffer@https://registry.npmjs.org/typed-array-buffer/-/typed-array-buffer-1.0.3.tgz", { "dependencies": { "call-bound": "^1.0.3", "es-errors": "^1.3.0", "is-typed-array": "^1.1.14" } }],
+
+    "typescript": ["typescript@https://registry.npmjs.org/typescript/-/typescript-5.9.3.tgz", {}],
+
+    "ufo": ["ufo@https://registry.npmjs.org/ufo/-/ufo-1.6.1.tgz", {}],
+
+    "uint8arrays": ["uint8arrays@https://registry.npmjs.org/uint8arrays/-/uint8arrays-3.1.0.tgz", { "dependencies": { "multiformats": "^9.4.2" } }],
+
+    "uncrypto": ["uncrypto@https://registry.npmjs.org/uncrypto/-/uncrypto-0.1.3.tgz", {}],
+
+    "undici-types": ["undici-types@https://registry.npmjs.org/undici-types/-/undici-types-6.21.0.tgz", {}],
+
+    "unstorage": ["unstorage@https://registry.npmjs.org/unstorage/-/unstorage-1.17.3.tgz", { "dependencies": { "anymatch": "^3.1.3", "chokidar": "^4.0.3", "destr": "^2.0.5", "h3": "^1.15.4", "lru-cache": "^10.4.3", "node-fetch-native": "^1.6.7", "ofetch": "^1.5.1", "ufo": "^1.6.1" } }],
+
+    "use-callback-ref": ["use-callback-ref@https://registry.npmjs.org/use-callback-ref/-/use-callback-ref-1.3.3.tgz", { "dependencies": { "tslib": "^2.0.0" } }],
+
+    "use-sidecar": ["use-sidecar@https://registry.npmjs.org/use-sidecar/-/use-sidecar-1.1.3.tgz", { "dependencies": { "detect-node-es": "^1.1.0", "tslib": "^2.0.0" } }],
+
+    "use-sync-external-store": ["use-sync-external-store@https://registry.npmjs.org/use-sync-external-store/-/use-sync-external-store-1.6.0.tgz", {}],
+
+    "utf-8-validate": ["utf-8-validate@https://registry.npmjs.org/utf-8-validate/-/utf-8-validate-5.0.10.tgz", { "dependencies": { "node-gyp-build": "^4.3.0" } }],
+
+    "util": ["util@https://registry.npmjs.org/util/-/util-0.12.5.tgz", { "dependencies": { "inherits": "^2.0.3", "is-arguments": "^1.0.4", "is-generator-function": "^1.0.7", "is-typed-array": "^1.1.3", "which-typed-array": "^1.1.2" } }],
+
+    "util-deprecate": ["util-deprecate@https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz", {}],
+
+    "uuid": ["uuid@https://registry.npmjs.org/uuid/-/uuid-8.3.2.tgz", {}],
+
+    "valtio": ["valtio@https://registry.npmjs.org/valtio/-/valtio-1.13.2.tgz", { "dependencies": { "derive-valtio": "0.1.0", "proxy-compare": "2.6.0", "use-sync-external-store": "1.2.0" } }],
+
+    "victory-vendor": ["victory-vendor@https://registry.npmjs.org/victory-vendor/-/victory-vendor-37.3.6.tgz", { "dependencies": { "@types/d3-array": "^3.0.3", "@types/d3-ease": "^3.0.0", "@types/d3-interpolate": "^3.0.1", "@types/d3-scale": "^4.0.2", "@types/d3-shape": "^3.1.0", "@types/d3-time": "^3.0.0", "@types/d3-timer": "^3.0.0", "d3-array": "^3.1.6", "d3-ease": "^3.0.1", "d3-interpolate": "^3.0.1", "d3-scale": "^4.0.2", "d3-shape": "^3.1.0", "d3-time": "^3.0.0", "d3-timer": "^3.0.1" } }],
+
+    "viem": ["viem@https://registry.npmjs.org/viem/-/viem-2.43.3.tgz", { "dependencies": { "@noble/curves": "1.9.1", "@noble/hashes": "1.8.0", "@scure/bip32": "1.7.0", "@scure/bip39": "1.6.0", "abitype": "1.2.3", "isows": "1.0.7", "ox": "0.11.1", "ws": "8.18.3" } }],
+
+    "wagmi": ["wagmi@https://registry.npmjs.org/wagmi/-/wagmi-2.19.5.tgz", { "dependencies": { "@wagmi/connectors": "6.2.0", "@wagmi/core": "2.22.1", "use-sync-external-store": "1.4.0" } }],
+
+    "webextension-polyfill": ["webextension-polyfill@https://registry.npmjs.org/webextension-polyfill/-/webextension-polyfill-0.10.0.tgz", {}],
+
+    "webidl-conversions": ["webidl-conversions@https://registry.npmjs.org/webidl-conversions/-/webidl-conversions-3.0.1.tgz", {}],
+
+    "whatwg-url": ["whatwg-url@https://registry.npmjs.org/whatwg-url/-/whatwg-url-5.0.0.tgz", { "dependencies": { "tr46": "~0.0.3", "webidl-conversions": "^3.0.0" } }],
+
+    "which-module": ["which-module@https://registry.npmjs.org/which-module/-/which-module-2.0.1.tgz", {}],
+
+    "which-typed-array": ["which-typed-array@https://registry.npmjs.org/which-typed-array/-/which-typed-array-1.1.19.tgz", { "dependencies": { "available-typed-arrays": "^1.0.7", "call-bind": "^1.0.8", "call-bound": "^1.0.4", "for-each": "^0.3.5", "get-proto": "^1.0.1", "gopd": "^1.2.0", "has-tostringtag": "^1.0.2" } }],
+
+    "wrap-ansi": ["wrap-ansi@https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-6.2.0.tgz", { "dependencies": { "ansi-styles": "^4.0.0", "string-width": "^4.1.0", "strip-ansi": "^6.0.0" } }],
+
+    "wrappy": ["wrappy@https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz", {}],
+
+    "ws": ["ws@https://registry.npmjs.org/ws/-/ws-8.18.3.tgz", {}],
+
+    "xmlhttprequest-ssl": ["xmlhttprequest-ssl@https://registry.npmjs.org/xmlhttprequest-ssl/-/xmlhttprequest-ssl-2.1.2.tgz", {}],
+
+    "xtend": ["xtend@https://registry.npmjs.org/xtend/-/xtend-4.0.2.tgz", {}],
+
+    "y18n": ["y18n@https://registry.npmjs.org/y18n/-/y18n-4.0.3.tgz", {}],
+
+    "yargs": ["yargs@https://registry.npmjs.org/yargs/-/yargs-15.4.1.tgz", { "dependencies": { "cliui": "^6.0.0", "decamelize": "^1.2.0", "find-up": "^4.1.0", "get-caller-file": "^2.0.1", "require-directory": "^2.1.1", "require-main-filename": "^2.0.0", "set-blocking": "^2.0.0", "string-width": "^4.2.0", "which-module": "^2.0.0", "y18n": "^4.0.0", "yargs-parser": "^18.1.2" } }],
+
+    "yargs-parser": ["yargs-parser@https://registry.npmjs.org/yargs-parser/-/yargs-parser-18.1.3.tgz", { "dependencies": { "camelcase": "^5.0.0", "decamelize": "^1.2.0" } }],
+
+    "zod": ["zod@https://registry.npmjs.org/zod/-/zod-4.2.1.tgz", {}],
+
+    "zustand": ["zustand@https://registry.npmjs.org/zustand/-/zustand-5.0.9.tgz", {}],
+
+    "@base-org/account/@noble/hashes": ["@noble/hashes@https://registry.npmjs.org/@noble/hashes/-/hashes-1.4.0.tgz", {}],
+
+    "@base-org/account/clsx": ["clsx@https://registry.npmjs.org/clsx/-/clsx-1.2.1.tgz", {}],
+
+    "@base-org/account/ox": ["ox@https://registry.npmjs.org/ox/-/ox-0.6.9.tgz", { "dependencies": { "@adraffy/ens-normalize": "^1.10.1", "@noble/curves": "^1.6.0", "@noble/hashes": "^1.5.0", "@scure/bip32": "^1.5.0", "@scure/bip39": "^1.4.0", "abitype": "^1.0.6", "eventemitter3": "5.0.1" } }],
+
+    "@base-org/account/zustand": ["zustand@https://registry.npmjs.org/zustand/-/zustand-5.0.3.tgz", {}],
+
+    "@coinbase/cdp-sdk/abitype": ["abitype@https://registry.npmjs.org/abitype/-/abitype-1.0.6.tgz", {}],
+
+    "@coinbase/cdp-sdk/zod": ["zod@https://registry.npmjs.org/zod/-/zod-3.25.76.tgz", {}],
+
+    "@coinbase/wallet-sdk/@noble/hashes": ["@noble/hashes@https://registry.npmjs.org/@noble/hashes/-/hashes-1.4.0.tgz", {}],
+
+    "@coinbase/wallet-sdk/clsx": ["clsx@https://registry.npmjs.org/clsx/-/clsx-1.2.1.tgz", {}],
+
+    "@coinbase/wallet-sdk/ox": ["ox@https://registry.npmjs.org/ox/-/ox-0.6.9.tgz", { "dependencies": { "@adraffy/ens-normalize": "^1.10.1", "@noble/curves": "^1.6.0", "@noble/hashes": "^1.5.0", "@scure/bip32": "^1.5.0", "@scure/bip39": "^1.4.0", "abitype": "^1.0.6", "eventemitter3": "5.0.1" } }],
+
+    "@coinbase/wallet-sdk/zustand": ["zustand@https://registry.npmjs.org/zustand/-/zustand-5.0.3.tgz", {}],
+
+    "@metamask/eth-json-rpc-provider/@metamask/json-rpc-engine": ["@metamask/json-rpc-engine@https://registry.npmjs.org/@metamask/json-rpc-engine/-/json-rpc-engine-7.3.3.tgz", { "dependencies": { "@metamask/rpc-errors": "^6.2.1", "@metamask/safe-event-emitter": "^3.0.0", "@metamask/utils": "^8.3.0" } }],
+
+    "@metamask/eth-json-rpc-provider/@metamask/utils": ["@metamask/utils@https://registry.npmjs.org/@metamask/utils/-/utils-5.0.2.tgz", { "dependencies": { "@ethereumjs/tx": "^4.1.2", "@types/debug": "^4.1.7", "debug": "^4.3.4", "semver": "^7.3.8", "superstruct": "^1.0.3" } }],
+
+    "@metamask/json-rpc-engine/@metamask/rpc-errors": ["@metamask/rpc-errors@https://registry.npmjs.org/@metamask/rpc-errors/-/rpc-errors-6.4.0.tgz", { "dependencies": { "@metamask/utils": "^9.0.0", "fast-safe-stringify": "^2.0.6" } }],
+
+    "@metamask/json-rpc-engine/@metamask/utils": ["@metamask/utils@https://registry.npmjs.org/@metamask/utils/-/utils-8.5.0.tgz", { "dependencies": { "@ethereumjs/tx": "^4.2.0", "@metamask/superstruct": "^3.0.0", "@noble/hashes": "^1.3.1", "@scure/base": "^1.1.3", "@types/debug": "^4.1.7", "debug": "^4.3.4", "pony-cause": "^2.1.10", "semver": "^7.5.4", "uuid": "^9.0.1" } }],
+
+    "@metamask/json-rpc-middleware-stream/@metamask/utils": ["@metamask/utils@https://registry.npmjs.org/@metamask/utils/-/utils-8.5.0.tgz", { "dependencies": { "@ethereumjs/tx": "^4.2.0", "@metamask/superstruct": "^3.0.0", "@noble/hashes": "^1.3.1", "@scure/base": "^1.1.3", "@types/debug": "^4.1.7", "debug": "^4.3.4", "pony-cause": "^2.1.10", "semver": "^7.5.4", "uuid": "^9.0.1" } }],
+
+    "@metamask/providers/@metamask/rpc-errors": ["@metamask/rpc-errors@https://registry.npmjs.org/@metamask/rpc-errors/-/rpc-errors-6.4.0.tgz", { "dependencies": { "@metamask/utils": "^9.0.0", "fast-safe-stringify": "^2.0.6" } }],
+
+    "@metamask/providers/@metamask/utils": ["@metamask/utils@https://registry.npmjs.org/@metamask/utils/-/utils-8.5.0.tgz", { "dependencies": { "@ethereumjs/tx": "^4.2.0", "@metamask/superstruct": "^3.0.0", "@noble/hashes": "^1.3.1", "@scure/base": "^1.1.3", "@types/debug": "^4.1.7", "debug": "^4.3.4", "pony-cause": "^2.1.10", "semver": "^7.5.4", "uuid": "^9.0.1" } }],
+
+    "@metamask/sdk-communication-layer/date-fns": ["date-fns@https://registry.npmjs.org/date-fns/-/date-fns-2.30.0.tgz", { "dependencies": { "@babel/runtime": "^7.21.0" } }],
+
+    "@metamask/utils/debug": ["debug@https://registry.npmjs.org/debug/-/debug-4.4.3.tgz", { "dependencies": { "ms": "^2.1.3" } }],
+
+    "@metamask/utils/uuid": ["uuid@https://registry.npmjs.org/uuid/-/uuid-9.0.1.tgz", {}],
+
+    "@reduxjs/toolkit/immer": ["immer@https://registry.npmjs.org/immer/-/immer-11.1.3.tgz", {}],
+
+    "@reown/appkit/@walletconnect/types": ["@walletconnect/types@https://registry.npmjs.org/@walletconnect/types/-/types-2.21.0.tgz", { "dependencies": { "@walletconnect/events": "1.0.1", "@walletconnect/heartbeat": "1.2.2", "@walletconnect/jsonrpc-types": "1.0.4", "@walletconnect/keyvaluestorage": "1.1.1", "@walletconnect/logger": "2.1.2", "events": "3.3.0" } }],
+
+    "@reown/appkit/@walletconnect/universal-provider": ["@walletconnect/universal-provider@https://registry.npmjs.org/@walletconnect/universal-provider/-/universal-provider-2.21.0.tgz", { "dependencies": { "@walletconnect/events": "1.0.1", "@walletconnect/jsonrpc-http-connection": "1.0.8", "@walletconnect/jsonrpc-provider": "1.0.14", "@walletconnect/jsonrpc-types": "1.0.4", "@walletconnect/jsonrpc-utils": "1.0.8", "@walletconnect/keyvaluestorage": "1.1.1", "@walletconnect/logger": "2.1.2", "@walletconnect/sign-client": "2.21.0", "@walletconnect/types": "2.21.0", "@walletconnect/utils": "2.21.0", "es-toolkit": "1.33.0", "events": "3.3.0" } }],
+
+    "@reown/appkit-controllers/@walletconnect/universal-provider": ["@walletconnect/universal-provider@https://registry.npmjs.org/@walletconnect/universal-provider/-/universal-provider-2.21.0.tgz", { "dependencies": { "@walletconnect/events": "1.0.1", "@walletconnect/jsonrpc-http-connection": "1.0.8", "@walletconnect/jsonrpc-provider": "1.0.14", "@walletconnect/jsonrpc-types": "1.0.4", "@walletconnect/jsonrpc-utils": "1.0.8", "@walletconnect/keyvaluestorage": "1.1.1", "@walletconnect/logger": "2.1.2", "@walletconnect/sign-client": "2.21.0", "@walletconnect/types": "2.21.0", "@walletconnect/utils": "2.21.0", "es-toolkit": "1.33.0", "events": "3.3.0" } }],
+
+    "@reown/appkit-utils/@walletconnect/universal-provider": ["@walletconnect/universal-provider@https://registry.npmjs.org/@walletconnect/universal-provider/-/universal-provider-2.21.0.tgz", { "dependencies": { "@walletconnect/events": "1.0.1", "@walletconnect/jsonrpc-http-connection": "1.0.8", "@walletconnect/jsonrpc-provider": "1.0.14", "@walletconnect/jsonrpc-types": "1.0.4", "@walletconnect/jsonrpc-utils": "1.0.8", "@walletconnect/keyvaluestorage": "1.1.1", "@walletconnect/logger": "2.1.2", "@walletconnect/sign-client": "2.21.0", "@walletconnect/types": "2.21.0", "@walletconnect/utils": "2.21.0", "es-toolkit": "1.33.0", "events": "3.3.0" } }],
+
+    "@reown/appkit-wallet/zod": ["zod@https://registry.npmjs.org/zod/-/zod-3.22.4.tgz", {}],
+
+    "@scure/bip32/@noble/curves": ["@noble/curves@https://registry.npmjs.org/@noble/curves/-/curves-1.9.7.tgz", { "dependencies": { "@noble/hashes": "1.8.0" } }],
+
+    "@solana/codecs/@solana/codecs-numbers": ["@solana/codecs-numbers@https://registry.npmjs.org/@solana/codecs-numbers/-/codecs-numbers-3.0.3.tgz", { "dependencies": { "@solana/codecs-core": "3.0.3", "@solana/errors": "3.0.3" } }],
+
+    "@solana/codecs-data-structures/@solana/codecs-numbers": ["@solana/codecs-numbers@https://registry.npmjs.org/@solana/codecs-numbers/-/codecs-numbers-3.0.3.tgz", { "dependencies": { "@solana/codecs-core": "3.0.3", "@solana/errors": "3.0.3" } }],
+
+    "@solana/codecs-numbers/@solana/codecs-core": ["@solana/codecs-core@https://registry.npmjs.org/@solana/codecs-core/-/codecs-core-2.3.0.tgz", { "dependencies": { "@solana/errors": "2.3.0" } }],
+
+    "@solana/codecs-numbers/@solana/errors": ["@solana/errors@https://registry.npmjs.org/@solana/errors/-/errors-2.3.0.tgz", { "dependencies": { "chalk": "^5.4.1", "commander": "^14.0.0" } }],
+
+    "@solana/codecs-strings/@solana/codecs-numbers": ["@solana/codecs-numbers@https://registry.npmjs.org/@solana/codecs-numbers/-/codecs-numbers-3.0.3.tgz", { "dependencies": { "@solana/codecs-core": "3.0.3", "@solana/errors": "3.0.3" } }],
+
+    "@solana/options/@solana/codecs-numbers": ["@solana/codecs-numbers@https://registry.npmjs.org/@solana/codecs-numbers/-/codecs-numbers-3.0.3.tgz", { "dependencies": { "@solana/codecs-core": "3.0.3", "@solana/errors": "3.0.3" } }],
+
+    "@solana/rpc-transport-http/undici-types": ["undici-types@https://registry.npmjs.org/undici-types/-/undici-types-7.16.0.tgz", {}],
+
+    "@solana/rpc-types/@solana/codecs-numbers": ["@solana/codecs-numbers@https://registry.npmjs.org/@solana/codecs-numbers/-/codecs-numbers-3.0.3.tgz", { "dependencies": { "@solana/codecs-core": "3.0.3", "@solana/errors": "3.0.3" } }],
+
+    "@solana/transaction-messages/@solana/codecs-numbers": ["@solana/codecs-numbers@https://registry.npmjs.org/@solana/codecs-numbers/-/codecs-numbers-3.0.3.tgz", { "dependencies": { "@solana/codecs-core": "3.0.3", "@solana/errors": "3.0.3" } }],
+
+    "@solana/transactions/@solana/codecs-numbers": ["@solana/codecs-numbers@https://registry.npmjs.org/@solana/codecs-numbers/-/codecs-numbers-3.0.3.tgz", { "dependencies": { "@solana/codecs-core": "3.0.3", "@solana/errors": "3.0.3" } }],
+
+    "@solana/web3.js/@noble/curves": ["@noble/curves@https://registry.npmjs.org/@noble/curves/-/curves-1.9.7.tgz", { "dependencies": { "@noble/hashes": "1.8.0" } }],
+
+    "@solana/web3.js/bs58": ["bs58@https://registry.npmjs.org/bs58/-/bs58-4.0.1.tgz", { "dependencies": { "base-x": "^3.0.2" } }],
+
+    "@types/connect/@types/node": ["@types/node@https://registry.npmjs.org/@types/node/-/node-25.0.3.tgz", { "dependencies": { "undici-types": "~7.16.0" } }],
+
+    "@types/ws/@types/node": ["@types/node@https://registry.npmjs.org/@types/node/-/node-25.0.3.tgz", { "dependencies": { "undici-types": "~7.16.0" } }],
+
+    "@wagmi/core/zustand": ["zustand@https://registry.npmjs.org/zustand/-/zustand-5.0.0.tgz", {}],
+
+    "@walletconnect/core/es-toolkit": ["es-toolkit@https://registry.npmjs.org/es-toolkit/-/es-toolkit-1.33.0.tgz", {}],
+
+    "@walletconnect/environment/tslib": ["tslib@https://registry.npmjs.org/tslib/-/tslib-1.14.1.tgz", {}],
+
+    "@walletconnect/events/tslib": ["tslib@https://registry.npmjs.org/tslib/-/tslib-1.14.1.tgz", {}],
+
+    "@walletconnect/jsonrpc-http-connection/cross-fetch": ["cross-fetch@https://registry.npmjs.org/cross-fetch/-/cross-fetch-3.2.0.tgz", { "dependencies": { "node-fetch": "^2.7.0" } }],
+
+    "@walletconnect/jsonrpc-utils/tslib": ["tslib@https://registry.npmjs.org/tslib/-/tslib-1.14.1.tgz", {}],
+
+    "@walletconnect/jsonrpc-ws-connection/ws": ["ws@https://registry.npmjs.org/ws/-/ws-7.5.10.tgz", {}],
+
+    "@walletconnect/keyvaluestorage/idb-keyval": ["idb-keyval@https://registry.npmjs.org/idb-keyval/-/idb-keyval-6.2.2.tgz", {}],
+
+    "@walletconnect/relay-auth/@noble/curves": ["@noble/curves@https://registry.npmjs.org/@noble/curves/-/curves-1.8.0.tgz", { "dependencies": { "@noble/hashes": "1.7.0" } }],
+
+    "@walletconnect/relay-auth/@noble/hashes": ["@noble/hashes@https://registry.npmjs.org/@noble/hashes/-/hashes-1.7.0.tgz", {}],
+
+    "@walletconnect/relay-auth/uint8arrays": ["uint8arrays@https://registry.npmjs.org/uint8arrays/-/uint8arrays-3.1.1.tgz", { "dependencies": { "multiformats": "^9.4.2" } }],
+
+    "@walletconnect/safe-json/tslib": ["tslib@https://registry.npmjs.org/tslib/-/tslib-1.14.1.tgz", {}],
+
+    "@walletconnect/time/tslib": ["tslib@https://registry.npmjs.org/tslib/-/tslib-1.14.1.tgz", {}],
+
+    "@walletconnect/universal-provider/es-toolkit": ["es-toolkit@https://registry.npmjs.org/es-toolkit/-/es-toolkit-1.33.0.tgz", {}],
+
+    "@walletconnect/utils/@noble/ciphers": ["@noble/ciphers@https://registry.npmjs.org/@noble/ciphers/-/ciphers-1.2.1.tgz", {}],
+
+    "@walletconnect/utils/@noble/curves": ["@noble/curves@https://registry.npmjs.org/@noble/curves/-/curves-1.8.1.tgz", { "dependencies": { "@noble/hashes": "1.7.1" } }],
+
+    "@walletconnect/utils/@noble/hashes": ["@noble/hashes@https://registry.npmjs.org/@noble/hashes/-/hashes-1.7.1.tgz", {}],
+
+    "@walletconnect/utils/viem": ["viem@https://registry.npmjs.org/viem/-/viem-2.23.2.tgz", { "dependencies": { "@noble/curves": "1.8.1", "@noble/hashes": "1.7.1", "@scure/bip32": "1.6.2", "@scure/bip39": "1.5.4", "abitype": "1.0.8", "isows": "1.0.6", "ox": "0.6.7", "ws": "8.18.0" } }],
+
+    "@walletconnect/window-getters/tslib": ["tslib@https://registry.npmjs.org/tslib/-/tslib-1.14.1.tgz", {}],
+
+    "@walletconnect/window-metadata/tslib": ["tslib@https://registry.npmjs.org/tslib/-/tslib-1.14.1.tgz", {}],
+
+    "borsh/bs58": ["bs58@https://registry.npmjs.org/bs58/-/bs58-4.0.1.tgz", { "dependencies": { "base-x": "^3.0.2" } }],
+
+    "cbw-sdk/clsx": ["clsx@https://registry.npmjs.org/clsx/-/clsx-1.2.1.tgz", {}],
+
+    "cbw-sdk/preact": ["preact@https://registry.npmjs.org/preact/-/preact-10.28.1.tgz", {}],
+
+    "eciesjs/@noble/curves": ["@noble/curves@https://registry.npmjs.org/@noble/curves/-/curves-1.9.7.tgz", { "dependencies": { "@noble/hashes": "1.8.0" } }],
+
+    "engine.io-client/debug": ["debug@https://registry.npmjs.org/debug/-/debug-4.4.3.tgz", { "dependencies": { "ms": "^2.1.3" } }],
+
+    "eth-block-tracker/@metamask/utils": ["@metamask/utils@https://registry.npmjs.org/@metamask/utils/-/utils-5.0.2.tgz", { "dependencies": { "@ethereumjs/tx": "^4.1.2", "@types/debug": "^4.1.7", "debug": "^4.3.4", "semver": "^7.3.8", "superstruct": "^1.0.3" } }],
+
+    "eth-json-rpc-filters/pify": ["pify@https://registry.npmjs.org/pify/-/pify-5.0.0.tgz", {}],
+
+    "ethereum-cryptography/@noble/curves": ["@noble/curves@https://registry.npmjs.org/@noble/curves/-/curves-1.4.2.tgz", { "dependencies": { "@noble/hashes": "1.4.0" } }],
+
+    "ethereum-cryptography/@noble/hashes": ["@noble/hashes@https://registry.npmjs.org/@noble/hashes/-/hashes-1.4.0.tgz", {}],
+
+    "ethereum-cryptography/@scure/bip32": ["@scure/bip32@https://registry.npmjs.org/@scure/bip32/-/bip32-1.4.0.tgz", { "dependencies": { "@noble/curves": "~1.4.0", "@noble/hashes": "~1.4.0", "@scure/base": "~1.1.6" } }],
+
+    "ethereum-cryptography/@scure/bip39": ["@scure/bip39@https://registry.npmjs.org/@scure/bip39/-/bip39-1.3.0.tgz", { "dependencies": { "@noble/hashes": "~1.4.0", "@scure/base": "~1.1.6" } }],
+
+    "extension-port-stream/readable-stream": ["readable-stream@https://registry.npmjs.org/readable-stream/-/readable-stream-4.7.0.tgz", { "dependencies": { "abort-controller": "^3.0.0", "buffer": "^6.0.3", "events": "^3.3.0", "process": "^0.11.10", "string_decoder": "^1.3.0" } }],
+
+    "extension-port-stream/webextension-polyfill": ["webextension-polyfill@https://registry.npmjs.org/webextension-polyfill/-/webextension-polyfill-0.12.0.tgz", {}],
+
+    "humanize-ms/ms": ["ms@https://registry.npmjs.org/ms/-/ms-2.1.3.tgz", {}],
+
+    "jayson/@types/node": ["@types/node@https://registry.npmjs.org/@types/node/-/node-12.20.55.tgz", {}],
+
+    "jayson/commander": ["commander@https://registry.npmjs.org/commander/-/commander-2.20.3.tgz", {}],
+
+    "jayson/ws": ["ws@https://registry.npmjs.org/ws/-/ws-7.5.10.tgz", {}],
+
+    "json-rpc-engine/@metamask/safe-event-emitter": ["@metamask/safe-event-emitter@https://registry.npmjs.org/@metamask/safe-event-emitter/-/safe-event-emitter-2.0.0.tgz", {}],
+
+    "motion/framer-motion": ["framer-motion@12.42.2", "", { "dependencies": { "motion-dom": "^12.42.2", "motion-utils": "^12.39.0", "tslib": "^2.4.0" }, "peerDependencies": { "@emotion/is-prop-valid": "*", "react": "^18.0.0 || ^19.0.0", "react-dom": "^18.0.0 || ^19.0.0" }, "optionalPeers": ["@emotion/is-prop-valid", "react", "react-dom"] }, "sha512-5XY9luDiu0oHfHBjpDthFMh0ES+122w6p/papSJBweMkO8Sn+PW2QaEgRblQBpWFnuvZS5qvarpt/hO2pjGmnw=="],
+
+    "motion/tslib": ["tslib@2.8.1", "", {}, "sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w=="],
+
+    "next/postcss": ["postcss@https://registry.npmjs.org/postcss/-/postcss-8.4.31.tgz", { "dependencies": { "nanoid": "^3.3.6", "picocolors": "^1.0.0", "source-map-js": "^1.0.2" } }],
+
+    "obj-multiplex/readable-stream": ["readable-stream@https://registry.npmjs.org/readable-stream/-/readable-stream-2.3.8.tgz", { "dependencies": { "core-util-is": "~1.0.0", "inherits": "~2.0.3", "isarray": "~1.0.0", "process-nextick-args": "~2.0.0", "safe-buffer": "~5.1.1", "string_decoder": "~1.1.1", "util-deprecate": "~1.0.1" } }],
+
+    "porto/idb-keyval": ["idb-keyval@https://registry.npmjs.org/idb-keyval/-/idb-keyval-6.2.2.tgz", {}],
+
+    "porto/ox": ["ox@https://registry.npmjs.org/ox/-/ox-0.9.17.tgz", { "dependencies": { "@adraffy/ens-normalize": "^1.11.0", "@noble/ciphers": "^1.3.0", "@noble/curves": "1.9.1", "@noble/hashes": "^1.8.0", "@scure/bip32": "^1.7.0", "@scure/bip39": "^1.6.0", "abitype": "^1.0.9", "eventemitter3": "5.0.1" } }],
+
+    "rpc-websockets/@swc/helpers": ["@swc/helpers@https://registry.npmjs.org/@swc/helpers/-/helpers-0.5.18.tgz", { "dependencies": { "tslib": "^2.8.0" } }],
+
+    "rpc-websockets/@types/ws": ["@types/ws@https://registry.npmjs.org/@types/ws/-/ws-8.18.1.tgz", { "dependencies": { "@types/node": "*" } }],
+
+    "socket.io-client/debug": ["debug@https://registry.npmjs.org/debug/-/debug-4.4.3.tgz", { "dependencies": { "ms": "^2.1.3" } }],
+
+    "socket.io-parser/debug": ["debug@https://registry.npmjs.org/debug/-/debug-4.4.3.tgz", { "dependencies": { "ms": "^2.1.3" } }],
+
+    "to-buffer/isarray": ["isarray@https://registry.npmjs.org/isarray/-/isarray-2.0.5.tgz", {}],
+
+    "valtio/use-sync-external-store": ["use-sync-external-store@https://registry.npmjs.org/use-sync-external-store/-/use-sync-external-store-1.2.0.tgz", {}],
+
+    "wagmi/use-sync-external-store": ["use-sync-external-store@https://registry.npmjs.org/use-sync-external-store/-/use-sync-external-store-1.4.0.tgz", {}],
+
+    "@base-org/account/ox/@noble/curves": ["@noble/curves@https://registry.npmjs.org/@noble/curves/-/curves-1.9.7.tgz", { "dependencies": { "@noble/hashes": "1.8.0" } }],
+
+    "@base-org/account/ox/@noble/hashes": ["@noble/hashes@https://registry.npmjs.org/@noble/hashes/-/hashes-1.8.0.tgz", {}],
+
+    "@coinbase/wallet-sdk/ox/@noble/curves": ["@noble/curves@https://registry.npmjs.org/@noble/curves/-/curves-1.9.7.tgz", { "dependencies": { "@noble/hashes": "1.8.0" } }],
+
+    "@coinbase/wallet-sdk/ox/@noble/hashes": ["@noble/hashes@https://registry.npmjs.org/@noble/hashes/-/hashes-1.8.0.tgz", {}],
+
+    "@metamask/eth-json-rpc-provider/@metamask/json-rpc-engine/@metamask/rpc-errors": ["@metamask/rpc-errors@https://registry.npmjs.org/@metamask/rpc-errors/-/rpc-errors-6.4.0.tgz", { "dependencies": { "@metamask/utils": "^9.0.0", "fast-safe-stringify": "^2.0.6" } }],
+
+    "@metamask/eth-json-rpc-provider/@metamask/json-rpc-engine/@metamask/utils": ["@metamask/utils@https://registry.npmjs.org/@metamask/utils/-/utils-8.5.0.tgz", { "dependencies": { "@ethereumjs/tx": "^4.2.0", "@metamask/superstruct": "^3.0.0", "@noble/hashes": "^1.3.1", "@scure/base": "^1.1.3", "@types/debug": "^4.1.7", "debug": "^4.3.4", "pony-cause": "^2.1.10", "semver": "^7.5.4", "uuid": "^9.0.1" } }],
+
+    "@metamask/eth-json-rpc-provider/@metamask/utils/debug": ["debug@https://registry.npmjs.org/debug/-/debug-4.4.3.tgz", { "dependencies": { "ms": "^2.1.3" } }],
+
+    "@metamask/eth-json-rpc-provider/@metamask/utils/superstruct": ["superstruct@https://registry.npmjs.org/superstruct/-/superstruct-1.0.4.tgz", {}],
+
+    "@metamask/json-rpc-engine/@metamask/rpc-errors/@metamask/utils": ["@metamask/utils@https://registry.npmjs.org/@metamask/utils/-/utils-9.3.0.tgz", { "dependencies": { "@ethereumjs/tx": "^4.2.0", "@metamask/superstruct": "^3.1.0", "@noble/hashes": "^1.3.1", "@scure/base": "^1.1.3", "@types/debug": "^4.1.7", "debug": "^4.3.4", "pony-cause": "^2.1.10", "semver": "^7.5.4", "uuid": "^9.0.1" } }],
+
+    "@metamask/json-rpc-engine/@metamask/utils/debug": ["debug@https://registry.npmjs.org/debug/-/debug-4.4.3.tgz", { "dependencies": { "ms": "^2.1.3" } }],
+
+    "@metamask/json-rpc-engine/@metamask/utils/uuid": ["uuid@https://registry.npmjs.org/uuid/-/uuid-9.0.1.tgz", {}],
+
+    "@metamask/json-rpc-middleware-stream/@metamask/utils/debug": ["debug@https://registry.npmjs.org/debug/-/debug-4.4.3.tgz", { "dependencies": { "ms": "^2.1.3" } }],
+
+    "@metamask/json-rpc-middleware-stream/@metamask/utils/uuid": ["uuid@https://registry.npmjs.org/uuid/-/uuid-9.0.1.tgz", {}],
+
+    "@metamask/providers/@metamask/rpc-errors/@metamask/utils": ["@metamask/utils@https://registry.npmjs.org/@metamask/utils/-/utils-9.3.0.tgz", { "dependencies": { "@ethereumjs/tx": "^4.2.0", "@metamask/superstruct": "^3.1.0", "@noble/hashes": "^1.3.1", "@scure/base": "^1.1.3", "@types/debug": "^4.1.7", "debug": "^4.3.4", "pony-cause": "^2.1.10", "semver": "^7.5.4", "uuid": "^9.0.1" } }],
+
+    "@metamask/providers/@metamask/utils/debug": ["debug@https://registry.npmjs.org/debug/-/debug-4.4.3.tgz", { "dependencies": { "ms": "^2.1.3" } }],
+
+    "@metamask/providers/@metamask/utils/uuid": ["uuid@https://registry.npmjs.org/uuid/-/uuid-9.0.1.tgz", {}],
+
+    "@metamask/utils/debug/ms": ["ms@https://registry.npmjs.org/ms/-/ms-2.1.3.tgz", {}],
+
+    "@reown/appkit-controllers/@walletconnect/universal-provider/@walletconnect/sign-client": ["@walletconnect/sign-client@https://registry.npmjs.org/@walletconnect/sign-client/-/sign-client-2.21.0.tgz", { "dependencies": { "@walletconnect/core": "2.21.0", "@walletconnect/events": "1.0.1", "@walletconnect/heartbeat": "1.2.2", "@walletconnect/jsonrpc-utils": "1.0.8", "@walletconnect/logger": "2.1.2", "@walletconnect/time": "1.0.2", "@walletconnect/types": "2.21.0", "@walletconnect/utils": "2.21.0", "events": "3.3.0" } }],
+
+    "@reown/appkit-controllers/@walletconnect/universal-provider/@walletconnect/types": ["@walletconnect/types@https://registry.npmjs.org/@walletconnect/types/-/types-2.21.0.tgz", { "dependencies": { "@walletconnect/events": "1.0.1", "@walletconnect/heartbeat": "1.2.2", "@walletconnect/jsonrpc-types": "1.0.4", "@walletconnect/keyvaluestorage": "1.1.1", "@walletconnect/logger": "2.1.2", "events": "3.3.0" } }],
+
+    "@reown/appkit-controllers/@walletconnect/universal-provider/@walletconnect/utils": ["@walletconnect/utils@https://registry.npmjs.org/@walletconnect/utils/-/utils-2.21.0.tgz", { "dependencies": { "@noble/ciphers": "1.2.1", "@noble/curves": "1.8.1", "@noble/hashes": "1.7.1", "@walletconnect/jsonrpc-utils": "1.0.8", "@walletconnect/keyvaluestorage": "1.1.1", "@walletconnect/relay-api": "1.0.11", "@walletconnect/relay-auth": "1.1.0", "@walletconnect/safe-json": "1.0.2", "@walletconnect/time": "1.0.2", "@walletconnect/types": "2.21.0", "@walletconnect/window-getters": "1.0.1", "@walletconnect/window-metadata": "1.0.1", "bs58": "6.0.0", "detect-browser": "5.3.0", "query-string": "7.1.3", "uint8arrays": "3.1.0", "viem": "2.23.2" } }],
+
+    "@reown/appkit-controllers/@walletconnect/universal-provider/es-toolkit": ["es-toolkit@https://registry.npmjs.org/es-toolkit/-/es-toolkit-1.33.0.tgz", {}],
+
+    "@reown/appkit-utils/@walletconnect/universal-provider/@walletconnect/sign-client": ["@walletconnect/sign-client@https://registry.npmjs.org/@walletconnect/sign-client/-/sign-client-2.21.0.tgz", { "dependencies": { "@walletconnect/core": "2.21.0", "@walletconnect/events": "1.0.1", "@walletconnect/heartbeat": "1.2.2", "@walletconnect/jsonrpc-utils": "1.0.8", "@walletconnect/logger": "2.1.2", "@walletconnect/time": "1.0.2", "@walletconnect/types": "2.21.0", "@walletconnect/utils": "2.21.0", "events": "3.3.0" } }],
+
+    "@reown/appkit-utils/@walletconnect/universal-provider/@walletconnect/types": ["@walletconnect/types@https://registry.npmjs.org/@walletconnect/types/-/types-2.21.0.tgz", { "dependencies": { "@walletconnect/events": "1.0.1", "@walletconnect/heartbeat": "1.2.2", "@walletconnect/jsonrpc-types": "1.0.4", "@walletconnect/keyvaluestorage": "1.1.1", "@walletconnect/logger": "2.1.2", "events": "3.3.0" } }],
+
+    "@reown/appkit-utils/@walletconnect/universal-provider/@walletconnect/utils": ["@walletconnect/utils@https://registry.npmjs.org/@walletconnect/utils/-/utils-2.21.0.tgz", { "dependencies": { "@noble/ciphers": "1.2.1", "@noble/curves": "1.8.1", "@noble/hashes": "1.7.1", "@walletconnect/jsonrpc-utils": "1.0.8", "@walletconnect/keyvaluestorage": "1.1.1", "@walletconnect/relay-api": "1.0.11", "@walletconnect/relay-auth": "1.1.0", "@walletconnect/safe-json": "1.0.2", "@walletconnect/time": "1.0.2", "@walletconnect/types": "2.21.0", "@walletconnect/window-getters": "1.0.1", "@walletconnect/window-metadata": "1.0.1", "bs58": "6.0.0", "detect-browser": "5.3.0", "query-string": "7.1.3", "uint8arrays": "3.1.0", "viem": "2.23.2" } }],
+
+    "@reown/appkit-utils/@walletconnect/universal-provider/es-toolkit": ["es-toolkit@https://registry.npmjs.org/es-toolkit/-/es-toolkit-1.33.0.tgz", {}],
+
+    "@reown/appkit/@walletconnect/universal-provider/@walletconnect/sign-client": ["@walletconnect/sign-client@https://registry.npmjs.org/@walletconnect/sign-client/-/sign-client-2.21.0.tgz", { "dependencies": { "@walletconnect/core": "2.21.0", "@walletconnect/events": "1.0.1", "@walletconnect/heartbeat": "1.2.2", "@walletconnect/jsonrpc-utils": "1.0.8", "@walletconnect/logger": "2.1.2", "@walletconnect/time": "1.0.2", "@walletconnect/types": "2.21.0", "@walletconnect/utils": "2.21.0", "events": "3.3.0" } }],
+
+    "@reown/appkit/@walletconnect/universal-provider/@walletconnect/utils": ["@walletconnect/utils@https://registry.npmjs.org/@walletconnect/utils/-/utils-2.21.0.tgz", { "dependencies": { "@noble/ciphers": "1.2.1", "@noble/curves": "1.8.1", "@noble/hashes": "1.7.1", "@walletconnect/jsonrpc-utils": "1.0.8", "@walletconnect/keyvaluestorage": "1.1.1", "@walletconnect/relay-api": "1.0.11", "@walletconnect/relay-auth": "1.1.0", "@walletconnect/safe-json": "1.0.2", "@walletconnect/time": "1.0.2", "@walletconnect/types": "2.21.0", "@walletconnect/window-getters": "1.0.1", "@walletconnect/window-metadata": "1.0.1", "bs58": "6.0.0", "detect-browser": "5.3.0", "query-string": "7.1.3", "uint8arrays": "3.1.0", "viem": "2.23.2" } }],
+
+    "@reown/appkit/@walletconnect/universal-provider/es-toolkit": ["es-toolkit@https://registry.npmjs.org/es-toolkit/-/es-toolkit-1.33.0.tgz", {}],
+
+    "@solana/codecs-numbers/@solana/errors/commander": ["commander@https://registry.npmjs.org/commander/-/commander-14.0.2.tgz", {}],
+
+    "@solana/web3.js/bs58/base-x": ["base-x@https://registry.npmjs.org/base-x/-/base-x-3.0.11.tgz", { "dependencies": { "safe-buffer": "^5.0.1" } }],
+
+    "@types/connect/@types/node/undici-types": ["undici-types@https://registry.npmjs.org/undici-types/-/undici-types-7.16.0.tgz", {}],
+
+    "@types/ws/@types/node/undici-types": ["undici-types@https://registry.npmjs.org/undici-types/-/undici-types-7.16.0.tgz", {}],
+
+    "@walletconnect/utils/viem/@scure/bip32": ["@scure/bip32@https://registry.npmjs.org/@scure/bip32/-/bip32-1.6.2.tgz", { "dependencies": { "@noble/curves": "~1.8.1", "@noble/hashes": "~1.7.1", "@scure/base": "~1.2.2" } }],
+
+    "@walletconnect/utils/viem/@scure/bip39": ["@scure/bip39@https://registry.npmjs.org/@scure/bip39/-/bip39-1.5.4.tgz", { "dependencies": { "@noble/hashes": "~1.7.1", "@scure/base": "~1.2.4" } }],
+
+    "@walletconnect/utils/viem/abitype": ["abitype@https://registry.npmjs.org/abitype/-/abitype-1.0.8.tgz", {}],
+
+    "@walletconnect/utils/viem/isows": ["isows@https://registry.npmjs.org/isows/-/isows-1.0.6.tgz", {}],
+
+    "@walletconnect/utils/viem/ox": ["ox@https://registry.npmjs.org/ox/-/ox-0.6.7.tgz", { "dependencies": { "@adraffy/ens-normalize": "^1.10.1", "@noble/curves": "^1.6.0", "@noble/hashes": "^1.5.0", "@scure/bip32": "^1.5.0", "@scure/bip39": "^1.4.0", "abitype": "^1.0.6", "eventemitter3": "5.0.1" } }],
+
+    "@walletconnect/utils/viem/ws": ["ws@https://registry.npmjs.org/ws/-/ws-8.18.0.tgz", {}],
+
+    "borsh/bs58/base-x": ["base-x@https://registry.npmjs.org/base-x/-/base-x-3.0.11.tgz", { "dependencies": { "safe-buffer": "^5.0.1" } }],
+
+    "engine.io-client/debug/ms": ["ms@https://registry.npmjs.org/ms/-/ms-2.1.3.tgz", {}],
+
+    "eth-block-tracker/@metamask/utils/debug": ["debug@https://registry.npmjs.org/debug/-/debug-4.4.3.tgz", { "dependencies": { "ms": "^2.1.3" } }],
+
+    "eth-block-tracker/@metamask/utils/superstruct": ["superstruct@https://registry.npmjs.org/superstruct/-/superstruct-1.0.4.tgz", {}],
+
+    "ethereum-cryptography/@scure/bip32/@scure/base": ["@scure/base@https://registry.npmjs.org/@scure/base/-/base-1.1.9.tgz", {}],
+
+    "ethereum-cryptography/@scure/bip39/@scure/base": ["@scure/base@https://registry.npmjs.org/@scure/base/-/base-1.1.9.tgz", {}],
+
+    "motion/framer-motion/motion-dom": ["motion-dom@12.42.2", "", { "dependencies": { "motion-utils": "^12.39.0" } }, "sha512-5gIMWLp/PycBtJRJWRgjxke5n8dlvkSn2DrYW+tr3XcqAZY1xZh6BJyooJXCM8wdfM7wfMjkBJNLge1CKPUIRA=="],
+
+    "motion/framer-motion/motion-utils": ["motion-utils@12.39.0", "", {}, "sha512-8nadJAJjTtqRkmRF36FoJTrywK9nnFmnPwnSMyxaOCU7GDjN9RTMJIxx9De8ErM+vpPhMccr/6fo5WciyQLnMQ=="],
+
+    "obj-multiplex/readable-stream/safe-buffer": ["safe-buffer@https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.1.2.tgz", {}],
+
+    "obj-multiplex/readable-stream/string_decoder": ["string_decoder@https://registry.npmjs.org/string_decoder/-/string_decoder-1.1.1.tgz", { "dependencies": { "safe-buffer": "~5.1.0" } }],
+
+    "rpc-websockets/@types/ws/@types/node": ["@types/node@https://registry.npmjs.org/@types/node/-/node-25.0.3.tgz", { "dependencies": { "undici-types": "~7.16.0" } }],
+
+    "socket.io-client/debug/ms": ["ms@https://registry.npmjs.org/ms/-/ms-2.1.3.tgz", {}],
+
+    "socket.io-parser/debug/ms": ["ms@https://registry.npmjs.org/ms/-/ms-2.1.3.tgz", {}],
+
+    "@metamask/eth-json-rpc-provider/@metamask/json-rpc-engine/@metamask/rpc-errors/@metamask/utils": ["@metamask/utils@https://registry.npmjs.org/@metamask/utils/-/utils-9.3.0.tgz", { "dependencies": { "@ethereumjs/tx": "^4.2.0", "@metamask/superstruct": "^3.1.0", "@noble/hashes": "^1.3.1", "@scure/base": "^1.1.3", "@types/debug": "^4.1.7", "debug": "^4.3.4", "pony-cause": "^2.1.10", "semver": "^7.5.4", "uuid": "^9.0.1" } }],
+
+    "@metamask/eth-json-rpc-provider/@metamask/json-rpc-engine/@metamask/utils/debug": ["debug@https://registry.npmjs.org/debug/-/debug-4.4.3.tgz", { "dependencies": { "ms": "^2.1.3" } }],
+
+    "@metamask/eth-json-rpc-provider/@metamask/json-rpc-engine/@metamask/utils/uuid": ["uuid@https://registry.npmjs.org/uuid/-/uuid-9.0.1.tgz", {}],
+
+    "@metamask/eth-json-rpc-provider/@metamask/utils/debug/ms": ["ms@https://registry.npmjs.org/ms/-/ms-2.1.3.tgz", {}],
+
+    "@metamask/json-rpc-engine/@metamask/rpc-errors/@metamask/utils/debug": ["debug@https://registry.npmjs.org/debug/-/debug-4.4.3.tgz", { "dependencies": { "ms": "^2.1.3" } }],
+
+    "@metamask/json-rpc-engine/@metamask/rpc-errors/@metamask/utils/uuid": ["uuid@https://registry.npmjs.org/uuid/-/uuid-9.0.1.tgz", {}],
+
+    "@metamask/json-rpc-engine/@metamask/utils/debug/ms": ["ms@https://registry.npmjs.org/ms/-/ms-2.1.3.tgz", {}],
+
+    "@metamask/json-rpc-middleware-stream/@metamask/utils/debug/ms": ["ms@https://registry.npmjs.org/ms/-/ms-2.1.3.tgz", {}],
+
+    "@metamask/providers/@metamask/rpc-errors/@metamask/utils/debug": ["debug@https://registry.npmjs.org/debug/-/debug-4.4.3.tgz", { "dependencies": { "ms": "^2.1.3" } }],
+
+    "@metamask/providers/@metamask/rpc-errors/@metamask/utils/uuid": ["uuid@https://registry.npmjs.org/uuid/-/uuid-9.0.1.tgz", {}],
+
+    "@metamask/providers/@metamask/utils/debug/ms": ["ms@https://registry.npmjs.org/ms/-/ms-2.1.3.tgz", {}],
+
+    "@reown/appkit-controllers/@walletconnect/universal-provider/@walletconnect/sign-client/@walletconnect/core": ["@walletconnect/core@https://registry.npmjs.org/@walletconnect/core/-/core-2.21.0.tgz", { "dependencies": { "@walletconnect/heartbeat": "1.2.2", "@walletconnect/jsonrpc-provider": "1.0.14", "@walletconnect/jsonrpc-types": "1.0.4", "@walletconnect/jsonrpc-utils": "1.0.8", "@walletconnect/jsonrpc-ws-connection": "1.0.16", "@walletconnect/keyvaluestorage": "1.1.1", "@walletconnect/logger": "2.1.2", "@walletconnect/relay-api": "1.0.11", "@walletconnect/relay-auth": "1.1.0", "@walletconnect/safe-json": "1.0.2", "@walletconnect/time": "1.0.2", "@walletconnect/types": "2.21.0", "@walletconnect/utils": "2.21.0", "@walletconnect/window-getters": "1.0.1", "es-toolkit": "1.33.0", "events": "3.3.0", "uint8arrays": "3.1.0" } }],
+
+    "@reown/appkit-controllers/@walletconnect/universal-provider/@walletconnect/utils/@noble/ciphers": ["@noble/ciphers@https://registry.npmjs.org/@noble/ciphers/-/ciphers-1.2.1.tgz", {}],
+
+    "@reown/appkit-controllers/@walletconnect/universal-provider/@walletconnect/utils/@noble/curves": ["@noble/curves@https://registry.npmjs.org/@noble/curves/-/curves-1.8.1.tgz", { "dependencies": { "@noble/hashes": "1.7.1" } }],
+
+    "@reown/appkit-controllers/@walletconnect/universal-provider/@walletconnect/utils/@noble/hashes": ["@noble/hashes@https://registry.npmjs.org/@noble/hashes/-/hashes-1.7.1.tgz", {}],
+
+    "@reown/appkit-controllers/@walletconnect/universal-provider/@walletconnect/utils/viem": ["viem@https://registry.npmjs.org/viem/-/viem-2.23.2.tgz", { "dependencies": { "@noble/curves": "1.8.1", "@noble/hashes": "1.7.1", "@scure/bip32": "1.6.2", "@scure/bip39": "1.5.4", "abitype": "1.0.8", "isows": "1.0.6", "ox": "0.6.7", "ws": "8.18.0" } }],
+
+    "@reown/appkit-utils/@walletconnect/universal-provider/@walletconnect/sign-client/@walletconnect/core": ["@walletconnect/core@https://registry.npmjs.org/@walletconnect/core/-/core-2.21.0.tgz", { "dependencies": { "@walletconnect/heartbeat": "1.2.2", "@walletconnect/jsonrpc-provider": "1.0.14", "@walletconnect/jsonrpc-types": "1.0.4", "@walletconnect/jsonrpc-utils": "1.0.8", "@walletconnect/jsonrpc-ws-connection": "1.0.16", "@walletconnect/keyvaluestorage": "1.1.1", "@walletconnect/logger": "2.1.2", "@walletconnect/relay-api": "1.0.11", "@walletconnect/relay-auth": "1.1.0", "@walletconnect/safe-json": "1.0.2", "@walletconnect/time": "1.0.2", "@walletconnect/types": "2.21.0", "@walletconnect/utils": "2.21.0", "@walletconnect/window-getters": "1.0.1", "es-toolkit": "1.33.0", "events": "3.3.0", "uint8arrays": "3.1.0" } }],
+
+    "@reown/appkit-utils/@walletconnect/universal-provider/@walletconnect/utils/@noble/ciphers": ["@noble/ciphers@https://registry.npmjs.org/@noble/ciphers/-/ciphers-1.2.1.tgz", {}],
+
+    "@reown/appkit-utils/@walletconnect/universal-provider/@walletconnect/utils/@noble/curves": ["@noble/curves@https://registry.npmjs.org/@noble/curves/-/curves-1.8.1.tgz", { "dependencies": { "@noble/hashes": "1.7.1" } }],
+
+    "@reown/appkit-utils/@walletconnect/universal-provider/@walletconnect/utils/@noble/hashes": ["@noble/hashes@https://registry.npmjs.org/@noble/hashes/-/hashes-1.7.1.tgz", {}],
+
+    "@reown/appkit-utils/@walletconnect/universal-provider/@walletconnect/utils/viem": ["viem@https://registry.npmjs.org/viem/-/viem-2.23.2.tgz", { "dependencies": { "@noble/curves": "1.8.1", "@noble/hashes": "1.7.1", "@scure/bip32": "1.6.2", "@scure/bip39": "1.5.4", "abitype": "1.0.8", "isows": "1.0.6", "ox": "0.6.7", "ws": "8.18.0" } }],
+
+    "@reown/appkit/@walletconnect/universal-provider/@walletconnect/sign-client/@walletconnect/core": ["@walletconnect/core@https://registry.npmjs.org/@walletconnect/core/-/core-2.21.0.tgz", { "dependencies": { "@walletconnect/heartbeat": "1.2.2", "@walletconnect/jsonrpc-provider": "1.0.14", "@walletconnect/jsonrpc-types": "1.0.4", "@walletconnect/jsonrpc-utils": "1.0.8", "@walletconnect/jsonrpc-ws-connection": "1.0.16", "@walletconnect/keyvaluestorage": "1.1.1", "@walletconnect/logger": "2.1.2", "@walletconnect/relay-api": "1.0.11", "@walletconnect/relay-auth": "1.1.0", "@walletconnect/safe-json": "1.0.2", "@walletconnect/time": "1.0.2", "@walletconnect/types": "2.21.0", "@walletconnect/utils": "2.21.0", "@walletconnect/window-getters": "1.0.1", "es-toolkit": "1.33.0", "events": "3.3.0", "uint8arrays": "3.1.0" } }],
+
+    "@reown/appkit/@walletconnect/universal-provider/@walletconnect/utils/@noble/ciphers": ["@noble/ciphers@https://registry.npmjs.org/@noble/ciphers/-/ciphers-1.2.1.tgz", {}],
+
+    "@reown/appkit/@walletconnect/universal-provider/@walletconnect/utils/@noble/curves": ["@noble/curves@https://registry.npmjs.org/@noble/curves/-/curves-1.8.1.tgz", { "dependencies": { "@noble/hashes": "1.7.1" } }],
+
+    "@reown/appkit/@walletconnect/universal-provider/@walletconnect/utils/@noble/hashes": ["@noble/hashes@https://registry.npmjs.org/@noble/hashes/-/hashes-1.7.1.tgz", {}],
+
+    "@reown/appkit/@walletconnect/universal-provider/@walletconnect/utils/viem": ["viem@https://registry.npmjs.org/viem/-/viem-2.23.2.tgz", { "dependencies": { "@noble/curves": "1.8.1", "@noble/hashes": "1.7.1", "@scure/bip32": "1.6.2", "@scure/bip39": "1.5.4", "abitype": "1.0.8", "isows": "1.0.6", "ox": "0.6.7", "ws": "8.18.0" } }],
+
+    "@walletconnect/utils/viem/@scure/bip32/@noble/curves": ["@noble/curves@https://registry.npmjs.org/@noble/curves/-/curves-1.8.2.tgz", { "dependencies": { "@noble/hashes": "1.7.2" } }],
+
+    "@walletconnect/utils/viem/@scure/bip32/@noble/hashes": ["@noble/hashes@https://registry.npmjs.org/@noble/hashes/-/hashes-1.7.2.tgz", {}],
+
+    "@walletconnect/utils/viem/@scure/bip39/@noble/hashes": ["@noble/hashes@https://registry.npmjs.org/@noble/hashes/-/hashes-1.7.2.tgz", {}],
+
+    "@walletconnect/utils/viem/ox/@noble/curves": ["@noble/curves@https://registry.npmjs.org/@noble/curves/-/curves-1.9.7.tgz", { "dependencies": { "@noble/hashes": "1.8.0" } }],
+
+    "@walletconnect/utils/viem/ox/@noble/hashes": ["@noble/hashes@https://registry.npmjs.org/@noble/hashes/-/hashes-1.8.0.tgz", {}],
+
+    "@walletconnect/utils/viem/ox/@scure/bip32": ["@scure/bip32@https://registry.npmjs.org/@scure/bip32/-/bip32-1.7.0.tgz", { "dependencies": { "@noble/curves": "~1.9.0", "@noble/hashes": "~1.8.0", "@scure/base": "~1.2.5" } }],
+
+    "@walletconnect/utils/viem/ox/@scure/bip39": ["@scure/bip39@https://registry.npmjs.org/@scure/bip39/-/bip39-1.6.0.tgz", { "dependencies": { "@noble/hashes": "~1.8.0", "@scure/base": "~1.2.5" } }],
+
+    "@walletconnect/utils/viem/ox/abitype": ["abitype@https://registry.npmjs.org/abitype/-/abitype-1.2.3.tgz", {}],
+
+    "eth-block-tracker/@metamask/utils/debug/ms": ["ms@https://registry.npmjs.org/ms/-/ms-2.1.3.tgz", {}],
+
+    "rpc-websockets/@types/ws/@types/node/undici-types": ["undici-types@https://registry.npmjs.org/undici-types/-/undici-types-7.16.0.tgz", {}],
+
+    "@metamask/eth-json-rpc-provider/@metamask/json-rpc-engine/@metamask/rpc-errors/@metamask/utils/debug": ["debug@https://registry.npmjs.org/debug/-/debug-4.4.3.tgz", { "dependencies": { "ms": "^2.1.3" } }],
+
+    "@metamask/eth-json-rpc-provider/@metamask/json-rpc-engine/@metamask/rpc-errors/@metamask/utils/uuid": ["uuid@https://registry.npmjs.org/uuid/-/uuid-9.0.1.tgz", {}],
+
+    "@metamask/eth-json-rpc-provider/@metamask/json-rpc-engine/@metamask/utils/debug/ms": ["ms@https://registry.npmjs.org/ms/-/ms-2.1.3.tgz", {}],
+
+    "@metamask/json-rpc-engine/@metamask/rpc-errors/@metamask/utils/debug/ms": ["ms@https://registry.npmjs.org/ms/-/ms-2.1.3.tgz", {}],
+
+    "@metamask/providers/@metamask/rpc-errors/@metamask/utils/debug/ms": ["ms@https://registry.npmjs.org/ms/-/ms-2.1.3.tgz", {}],
+
+    "@reown/appkit-controllers/@walletconnect/universal-provider/@walletconnect/utils/viem/@scure/bip32": ["@scure/bip32@https://registry.npmjs.org/@scure/bip32/-/bip32-1.6.2.tgz", { "dependencies": { "@noble/curves": "~1.8.1", "@noble/hashes": "~1.7.1", "@scure/base": "~1.2.2" } }],
+
+    "@reown/appkit-controllers/@walletconnect/universal-provider/@walletconnect/utils/viem/@scure/bip39": ["@scure/bip39@https://registry.npmjs.org/@scure/bip39/-/bip39-1.5.4.tgz", { "dependencies": { "@noble/hashes": "~1.7.1", "@scure/base": "~1.2.4" } }],
+
+    "@reown/appkit-controllers/@walletconnect/universal-provider/@walletconnect/utils/viem/abitype": ["abitype@https://registry.npmjs.org/abitype/-/abitype-1.0.8.tgz", {}],
+
+    "@reown/appkit-controllers/@walletconnect/universal-provider/@walletconnect/utils/viem/isows": ["isows@https://registry.npmjs.org/isows/-/isows-1.0.6.tgz", {}],
+
+    "@reown/appkit-controllers/@walletconnect/universal-provider/@walletconnect/utils/viem/ox": ["ox@https://registry.npmjs.org/ox/-/ox-0.6.7.tgz", { "dependencies": { "@adraffy/ens-normalize": "^1.10.1", "@noble/curves": "^1.6.0", "@noble/hashes": "^1.5.0", "@scure/bip32": "^1.5.0", "@scure/bip39": "^1.4.0", "abitype": "^1.0.6", "eventemitter3": "5.0.1" } }],
+
+    "@reown/appkit-controllers/@walletconnect/universal-provider/@walletconnect/utils/viem/ws": ["ws@https://registry.npmjs.org/ws/-/ws-8.18.0.tgz", {}],
+
+    "@reown/appkit-utils/@walletconnect/universal-provider/@walletconnect/utils/viem/@scure/bip32": ["@scure/bip32@https://registry.npmjs.org/@scure/bip32/-/bip32-1.6.2.tgz", { "dependencies": { "@noble/curves": "~1.8.1", "@noble/hashes": "~1.7.1", "@scure/base": "~1.2.2" } }],
+
+    "@reown/appkit-utils/@walletconnect/universal-provider/@walletconnect/utils/viem/@scure/bip39": ["@scure/bip39@https://registry.npmjs.org/@scure/bip39/-/bip39-1.5.4.tgz", { "dependencies": { "@noble/hashes": "~1.7.1", "@scure/base": "~1.2.4" } }],
+
+    "@reown/appkit-utils/@walletconnect/universal-provider/@walletconnect/utils/viem/abitype": ["abitype@https://registry.npmjs.org/abitype/-/abitype-1.0.8.tgz", {}],
+
+    "@reown/appkit-utils/@walletconnect/universal-provider/@walletconnect/utils/viem/isows": ["isows@https://registry.npmjs.org/isows/-/isows-1.0.6.tgz", {}],
+
+    "@reown/appkit-utils/@walletconnect/universal-provider/@walletconnect/utils/viem/ox": ["ox@https://registry.npmjs.org/ox/-/ox-0.6.7.tgz", { "dependencies": { "@adraffy/ens-normalize": "^1.10.1", "@noble/curves": "^1.6.0", "@noble/hashes": "^1.5.0", "@scure/bip32": "^1.5.0", "@scure/bip39": "^1.4.0", "abitype": "^1.0.6", "eventemitter3": "5.0.1" } }],
+
+    "@reown/appkit-utils/@walletconnect/universal-provider/@walletconnect/utils/viem/ws": ["ws@https://registry.npmjs.org/ws/-/ws-8.18.0.tgz", {}],
+
+    "@reown/appkit/@walletconnect/universal-provider/@walletconnect/utils/viem/@scure/bip32": ["@scure/bip32@https://registry.npmjs.org/@scure/bip32/-/bip32-1.6.2.tgz", { "dependencies": { "@noble/curves": "~1.8.1", "@noble/hashes": "~1.7.1", "@scure/base": "~1.2.2" } }],
+
+    "@reown/appkit/@walletconnect/universal-provider/@walletconnect/utils/viem/@scure/bip39": ["@scure/bip39@https://registry.npmjs.org/@scure/bip39/-/bip39-1.5.4.tgz", { "dependencies": { "@noble/hashes": "~1.7.1", "@scure/base": "~1.2.4" } }],
+
+    "@reown/appkit/@walletconnect/universal-provider/@walletconnect/utils/viem/abitype": ["abitype@https://registry.npmjs.org/abitype/-/abitype-1.0.8.tgz", {}],
+
+    "@reown/appkit/@walletconnect/universal-provider/@walletconnect/utils/viem/isows": ["isows@https://registry.npmjs.org/isows/-/isows-1.0.6.tgz", {}],
+
+    "@reown/appkit/@walletconnect/universal-provider/@walletconnect/utils/viem/ox": ["ox@https://registry.npmjs.org/ox/-/ox-0.6.7.tgz", { "dependencies": { "@adraffy/ens-normalize": "^1.10.1", "@noble/curves": "^1.6.0", "@noble/hashes": "^1.5.0", "@scure/bip32": "^1.5.0", "@scure/bip39": "^1.4.0", "abitype": "^1.0.6", "eventemitter3": "5.0.1" } }],
+
+    "@reown/appkit/@walletconnect/universal-provider/@walletconnect/utils/viem/ws": ["ws@https://registry.npmjs.org/ws/-/ws-8.18.0.tgz", {}],
+
+    "@metamask/eth-json-rpc-provider/@metamask/json-rpc-engine/@metamask/rpc-errors/@metamask/utils/debug/ms": ["ms@https://registry.npmjs.org/ms/-/ms-2.1.3.tgz", {}],
+
+    "@reown/appkit-controllers/@walletconnect/universal-provider/@walletconnect/utils/viem/@scure/bip32/@noble/curves": ["@noble/curves@https://registry.npmjs.org/@noble/curves/-/curves-1.8.2.tgz", { "dependencies": { "@noble/hashes": "1.7.2" } }],
+
+    "@reown/appkit-controllers/@walletconnect/universal-provider/@walletconnect/utils/viem/@scure/bip32/@noble/hashes": ["@noble/hashes@https://registry.npmjs.org/@noble/hashes/-/hashes-1.7.2.tgz", {}],
+
+    "@reown/appkit-controllers/@walletconnect/universal-provider/@walletconnect/utils/viem/@scure/bip39/@noble/hashes": ["@noble/hashes@https://registry.npmjs.org/@noble/hashes/-/hashes-1.7.2.tgz", {}],
+
+    "@reown/appkit-controllers/@walletconnect/universal-provider/@walletconnect/utils/viem/ox/@noble/curves": ["@noble/curves@https://registry.npmjs.org/@noble/curves/-/curves-1.9.7.tgz", { "dependencies": { "@noble/hashes": "1.8.0" } }],
+
+    "@reown/appkit-controllers/@walletconnect/universal-provider/@walletconnect/utils/viem/ox/@noble/hashes": ["@noble/hashes@https://registry.npmjs.org/@noble/hashes/-/hashes-1.8.0.tgz", {}],
+
+    "@reown/appkit-controllers/@walletconnect/universal-provider/@walletconnect/utils/viem/ox/@scure/bip32": ["@scure/bip32@https://registry.npmjs.org/@scure/bip32/-/bip32-1.7.0.tgz", { "dependencies": { "@noble/curves": "~1.9.0", "@noble/hashes": "~1.8.0", "@scure/base": "~1.2.5" } }],
+
+    "@reown/appkit-controllers/@walletconnect/universal-provider/@walletconnect/utils/viem/ox/@scure/bip39": ["@scure/bip39@https://registry.npmjs.org/@scure/bip39/-/bip39-1.6.0.tgz", { "dependencies": { "@noble/hashes": "~1.8.0", "@scure/base": "~1.2.5" } }],
+
+    "@reown/appkit-controllers/@walletconnect/universal-provider/@walletconnect/utils/viem/ox/abitype": ["abitype@https://registry.npmjs.org/abitype/-/abitype-1.2.3.tgz", {}],
+
+    "@reown/appkit-utils/@walletconnect/universal-provider/@walletconnect/utils/viem/@scure/bip32/@noble/curves": ["@noble/curves@https://registry.npmjs.org/@noble/curves/-/curves-1.8.2.tgz", { "dependencies": { "@noble/hashes": "1.7.2" } }],
+
+    "@reown/appkit-utils/@walletconnect/universal-provider/@walletconnect/utils/viem/@scure/bip32/@noble/hashes": ["@noble/hashes@https://registry.npmjs.org/@noble/hashes/-/hashes-1.7.2.tgz", {}],
+
+    "@reown/appkit-utils/@walletconnect/universal-provider/@walletconnect/utils/viem/@scure/bip39/@noble/hashes": ["@noble/hashes@https://registry.npmjs.org/@noble/hashes/-/hashes-1.7.2.tgz", {}],
+
+    "@reown/appkit-utils/@walletconnect/universal-provider/@walletconnect/utils/viem/ox/@noble/curves": ["@noble/curves@https://registry.npmjs.org/@noble/curves/-/curves-1.9.7.tgz", { "dependencies": { "@noble/hashes": "1.8.0" } }],
+
+    "@reown/appkit-utils/@walletconnect/universal-provider/@walletconnect/utils/viem/ox/@noble/hashes": ["@noble/hashes@https://registry.npmjs.org/@noble/hashes/-/hashes-1.8.0.tgz", {}],
+
+    "@reown/appkit-utils/@walletconnect/universal-provider/@walletconnect/utils/viem/ox/@scure/bip32": ["@scure/bip32@https://registry.npmjs.org/@scure/bip32/-/bip32-1.7.0.tgz", { "dependencies": { "@noble/curves": "~1.9.0", "@noble/hashes": "~1.8.0", "@scure/base": "~1.2.5" } }],
+
+    "@reown/appkit-utils/@walletconnect/universal-provider/@walletconnect/utils/viem/ox/@scure/bip39": ["@scure/bip39@https://registry.npmjs.org/@scure/bip39/-/bip39-1.6.0.tgz", { "dependencies": { "@noble/hashes": "~1.8.0", "@scure/base": "~1.2.5" } }],
+
+    "@reown/appkit-utils/@walletconnect/universal-provider/@walletconnect/utils/viem/ox/abitype": ["abitype@https://registry.npmjs.org/abitype/-/abitype-1.2.3.tgz", {}],
+
+    "@reown/appkit/@walletconnect/universal-provider/@walletconnect/utils/viem/@scure/bip32/@noble/curves": ["@noble/curves@https://registry.npmjs.org/@noble/curves/-/curves-1.8.2.tgz", { "dependencies": { "@noble/hashes": "1.7.2" } }],
+
+    "@reown/appkit/@walletconnect/universal-provider/@walletconnect/utils/viem/@scure/bip32/@noble/hashes": ["@noble/hashes@https://registry.npmjs.org/@noble/hashes/-/hashes-1.7.2.tgz", {}],
+
+    "@reown/appkit/@walletconnect/universal-provider/@walletconnect/utils/viem/@scure/bip39/@noble/hashes": ["@noble/hashes@https://registry.npmjs.org/@noble/hashes/-/hashes-1.7.2.tgz", {}],
+
+    "@reown/appkit/@walletconnect/universal-provider/@walletconnect/utils/viem/ox/@noble/curves": ["@noble/curves@https://registry.npmjs.org/@noble/curves/-/curves-1.9.7.tgz", { "dependencies": { "@noble/hashes": "1.8.0" } }],
+
+    "@reown/appkit/@walletconnect/universal-provider/@walletconnect/utils/viem/ox/@noble/hashes": ["@noble/hashes@https://registry.npmjs.org/@noble/hashes/-/hashes-1.8.0.tgz", {}],
+
+    "@reown/appkit/@walletconnect/universal-provider/@walletconnect/utils/viem/ox/@scure/bip32": ["@scure/bip32@https://registry.npmjs.org/@scure/bip32/-/bip32-1.7.0.tgz", { "dependencies": { "@noble/curves": "~1.9.0", "@noble/hashes": "~1.8.0", "@scure/base": "~1.2.5" } }],
+
+    "@reown/appkit/@walletconnect/universal-provider/@walletconnect/utils/viem/ox/@scure/bip39": ["@scure/bip39@https://registry.npmjs.org/@scure/bip39/-/bip39-1.6.0.tgz", { "dependencies": { "@noble/hashes": "~1.8.0", "@scure/base": "~1.2.5" } }],
+
+    "@reown/appkit/@walletconnect/universal-provider/@walletconnect/utils/viem/ox/abitype": ["abitype@https://registry.npmjs.org/abitype/-/abitype-1.2.3.tgz", {}],
+  }
+}

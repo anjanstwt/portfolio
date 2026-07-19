@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, DM_Serif_Display } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 import LenisProvider from "@/components/ui/LenisProvider";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/base/Navbar";

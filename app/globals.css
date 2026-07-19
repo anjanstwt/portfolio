@@ -2,13 +2,6 @@
 @custom-variant dark (&:is(.dark *));
 @import "./theme.css";
 
-:root {
-    --color-primary-light: #e4e4e4;
-    --color-primary-dark: #1c1c1e;
-    --color-secondary-dark: #09090B;
-    --color-secondary-light: #09090B;
-}
-
 @keyframes blink {
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
