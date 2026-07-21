@@ -5,11 +5,17 @@
     --color-secondary-light: #09090B;
     --color-ink: #0a0a0a;
     --color-cement: #0f0f10;
+
+    --color-grub: #1C1D21;
+    --color-night: #121214;
+    --color-stale: #131416;
+    --color-champagne: #D0CABC90;
 }
 
 .layout-width {
     width: 100%;
-    max-width: 48rem; /* max-w-2xl */
+    max-width: 48rem;
+    /* max-w-2xl */
     margin: 0 auto;
 }
 
@@ -25,6 +31,7 @@
 .layout-double-padding {
     padding: 10px 30px;
 }
+
 .reveal-image {
     z-index: 10;
 
@@ -32,17 +39,13 @@
     --y: 50%;
 
     /* DEFAULT: no reveal */
-    mask-image: radial-gradient(
-        circle 0px at var(--x) var(--y),
-        transparent 0%,
-        black 60%
-    );
+    mask-image: radial-gradient(circle 0px at var(--x) var(--y),
+            transparent 0%,
+            black 60%);
 
-    -webkit-mask-image: radial-gradient(
-        circle 0px at var(--x) var(--y),
-        transparent 0%,
-        black 60%
-    );
+    -webkit-mask-image: radial-gradient(circle 0px at var(--x) var(--y),
+            transparent 0%,
+            black 60%);
 
     transition:
         mask-image 0.25s ease,
@@ -50,22 +53,19 @@
 }
 
 .group:hover .reveal-image {
-    mask-image: radial-gradient(
-        circle 140px at var(--x) var(--y),
-        transparent 0%,
-        black 65%
-    );
+    mask-image: radial-gradient(circle 140px at var(--x) var(--y),
+            transparent 0%,
+            black 65%);
 
-    -webkit-mask-image: radial-gradient(
-        circle 140px at var(--x) var(--y),
-        transparent 0%,
-        black 65%
-    );
+    -webkit-mask-image: radial-gradient(circle 140px at var(--x) var(--y),
+            transparent 0%,
+            black 65%);
 }
 
 .bg-stripe-pattern {
     background-image: repeating-linear-gradient(315deg, #000000 0, #000000 1px, transparent 0, transparent 50%);
 }
+
 .dark .bg-stripe-pattern {
     background-image: repeating-linear-gradient(315deg, #ffffff 0, #ffffff 1px, transparent 0, transparent 50%);
 }
