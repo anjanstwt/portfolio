@@ -81,6 +81,7 @@ export default function Circle() {
                 style={{
                     WebkitMaskImage: "radial-gradient(circle farthest-side, transparent calc(100% - 1px), #000 calc(100% - 1px))",
                     maskImage: "radial-gradient(circle farthest-side, transparent calc(100% - 1px), #000 calc(100% - 1px))",
+                    willChange: "transform",
                 }}
                 initial={{ opacity: 0, rotate: 0 }}
                 animate={{ opacity: arcActive ? 1 : 0, rotate: arcActive ? 360 : 0 }}

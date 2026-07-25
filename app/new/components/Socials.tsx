@@ -56,7 +56,7 @@ export default function Socials({ endReached, delay, className }: SocialsProps) 
                 initial={{ opacity: 0 }}
                 animate={{ opacity: endReached ? 1 : 0 }}
                 transition={{ delay: delay ? delay + 1.3 : 1.3 }}
-                className={cn("h-px w-full bg-linear-to-b from-transparent to-primary-light/10 backdrop-blur-lg ")}
+                className={cn("h-px w-full bg-linear-to-b from-transparent to-primary-light/10 ")}
             />
             <motion.div
                 initial={{ opacity: 0 }}

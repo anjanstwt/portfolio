@@ -34,8 +34,8 @@ export default function FadingLine({ endReached, delay }: FadingLineProps) {
                     d="M0,20 Q500,0 1000,20 Q500,40 0,20 Z"
                     fill="url(#fading-line-gradient)"
                     className={cn(
-                        "drop-shadow-[0_0_60px_rgba(228,228,228,0.8),0_0_10px_rgba(228,228,228,0.8),0_0_30px_rgba(228,228,228,0.8)]",
-                        "blur-[3px] "
+                        "drop-shadow-[0_0_20px_rgba(228,228,228,0.8)]",
+                        "blur-[3px]"
                     )}
                 />
             </motion.svg>
@@ -53,8 +53,8 @@ export default function FadingLine({ endReached, delay }: FadingLineProps) {
                     d={`M0,${coreHeight / 2} Q${coreWidth / 2},0 ${coreWidth},${coreHeight / 2} Q${coreWidth / 2},${coreHeight} 0,${coreHeight / 2} Z`}
                     fill="url(#fading-line-gradient)"
                     className={cn(
-                        "drop-shadow-[0_0_60px_rgba(228,228,228,0.8),0_0_10px_rgba(228,228,228,0.8),0_0_30px_rgba(228,228,228,0.8)]",
-                        "blur-[3px] "
+                        "drop-shadow-[0_0_20px_rgba(228,228,228,0.8)]",
+                        "blur-[3px]"
                     )}
                 />
             </motion.svg>

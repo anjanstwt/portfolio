@@ -5,7 +5,7 @@ interface EngravedIconProps {
     d: string;
     viewBox?: string;
     size?: number;
-    strokeWidth?: number;
+    fill?: string;
     className?: string;
 }
 
@@ -13,7 +13,7 @@ export default function EngravedIcon({
     d,
     viewBox = "0 0 24 24",
     size = 26,
-    strokeWidth = 0.9,
+    fill = "#26282e",
     className,
 }: EngravedIconProps) {
     const filterId = useId();
@@ -23,7 +23,6 @@ export default function EngravedIcon({
             width={size}
             height={size}
             viewBox={viewBox}
-            fill="none"
             className={cn("shrink-0 overflow-visible", className)}
         >
             <defs>
@@ -32,13 +31,7 @@ export default function EngravedIcon({
                     <feDropShadow dx="0.4" dy="0.5" stdDeviation="0.25" floodColor="#ffffff" floodOpacity="0.55" />
                 </filter>
             </defs>
-            <path
-                d={d}
-                stroke="#3a3d44"
-                strokeWidth={strokeWidth}
-                strokeLinejoin="round"
-                filter={`url(#${filterId})`}
-            />
+            <path d={d} fill={fill} filter={`url(#${filterId})`} />
         </svg>
     );
 }

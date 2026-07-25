@@ -69,3 +69,17 @@
 .dark .bg-stripe-pattern {
     background-image: repeating-linear-gradient(315deg, #ffffff 0, #ffffff 1px, transparent 0, transparent 50%);
 }
+
+/* pressed into the surface: dark inset shadow top-left, faint inset highlight bottom-right */
+.surface-engraved {
+    box-shadow:
+        inset 2px 2px 4px rgba(0, 0, 0, 0.55),
+        inset -1.5px -1.5px 3px rgba(255, 255, 255, 0.06);
+}
+
+/* opposite of engraved: bulging off the surface, light top-left, shadow cast bottom-right */
+.surface-pebble {
+    box-shadow:
+        -3px -3px 6px rgba(255, 255, 255, 0.06),
+        4px 4px 10px rgba(0, 0, 0, 0.55);
+}
