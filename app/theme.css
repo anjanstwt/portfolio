@@ -70,6 +70,26 @@
     background-image: repeating-linear-gradient(315deg, #ffffff 0, #ffffff 1px, transparent 0, transparent 50%);
 }
 
+/* grain texture: an SVG feTurbulence filter whose alpha channel is scaled
+   down via feColorMatrix, so the low opacity is baked into the image
+   itself. That means it's a plain background-image — no pseudo-element,
+   no positioning requirement — safe to drop on any element, including one
+   with real content like <body>, without dimming that content. */
+@utility bg-noise {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch' result='noise'/%3E%3CfeColorMatrix in='noise' type='matrix' values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* same feTurbulence trick as .bg-noise, but at full strength (no alpha
+   scaling) and clipped to the text's own glyph shapes via
+   background-clip: text, with the real text color made transparent so
+   only the noise texture shows through the letterforms. */
+.text-noise {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='tn'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23tn)'/%3E%3C/svg%3E");
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
 /* pressed into the surface: dark inset shadow top-left, faint inset highlight bottom-right */
 .surface-engraved {
     box-shadow:
