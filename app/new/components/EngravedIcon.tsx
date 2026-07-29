@@ -1,4 +1,3 @@
-import { useId } from "react";
 import { cn } from "@/lib/utils";
 
 interface EngravedIconProps {
@@ -16,22 +15,18 @@ export default function EngravedIcon({
     fill = "#26282e",
     className,
 }: EngravedIconProps) {
-    const filterId = useId();
-
     return (
         <svg
             width={size}
             height={size}
             viewBox={viewBox}
             className={cn("shrink-0 overflow-visible", className)}
+            style={{
+                filter:
+                    "drop-shadow(0.6px 0.7px 0.5px rgba(0,0,0,0.8)) drop-shadow(-0.6px -0.7px 0.4px rgba(255,255,255,0.35))",
+            }}
         >
-            <defs>
-                <filter id={filterId} x="-60%" y="-60%" width="220%" height="220%" colorInterpolationFilters="sRGB">
-                    <feDropShadow dx="-0.4" dy="-0.5" stdDeviation="0.3" floodColor="#000000" floodOpacity="0.9" />
-                    <feDropShadow dx="0.4" dy="0.5" stdDeviation="0.25" floodColor="#ffffff" floodOpacity="0.55" />
-                </filter>
-            </defs>
-            <path d={d} fill={fill} filter={`url(#${filterId})`} />
+            <path d={d} fill={fill} />
         </svg>
     );
 }
