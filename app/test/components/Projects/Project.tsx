@@ -4,14 +4,17 @@ import { useEffect, useRef, useState } from "react";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { ProjectType } from "../../types/project.type";
 import Link from "next/link";
+import SVG from "../../ui/Arrow";
+import Frame from "./Frame";
 
 export default function Project({
     name,
     summary,
     color,
     logo,
+    isActive,
     onRef,
-}: ProjectType & { onRef: (el: HTMLDivElement | null) => void }) {
+}: ProjectType & { isActive: boolean; onRef: (el: HTMLDivElement | null) => void }) {
 
     const projectRef = useRef<HTMLDivElement>(null);
 
@@ -46,7 +49,7 @@ export default function Project({
 
     const hoverEnabled = useTransform(
         scrollYProgress,
-        [0.40, 0.4001, 0.60, 0.6001],
+        [0.44, 0.4401, 0.65, 0.6501],
         ["none", "auto", "auto", "none"]
     );
 
@@ -80,7 +83,7 @@ export default function Project({
                     "bg-transparent transition-colors duration-500 ease-in-out",
                     "select-none cursor-pointer "
                 )}
-                style={{ pointerEvents: hoverEnabled }}
+                style={{ pointerEvents: isActive ? hoverEnabled : "none" }}
             >
                 {/* Top Border */}
                 <div className="absolute top-0 left-0 right-0 h-px overflow-hidden opacity-0 transition-opacity duration-300 group-hover:opacity-100">
@@ -168,6 +171,42 @@ export default function Project({
                 >
                     {summary}
                 </motion.div>
+                <SVG
+                    className={cn(
+                        "absolute z-10 -top-17 -left-10 -rotate-z-10 ",
+                        "transform -scale-x-100 ",
+                        "opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in delay-300",
+                    )}
+                    size={140}
+                    color={"#ffffff"}
+                />
+                <SVG
+                    className={cn(
+                        "absolute z-10 -bottom-18 left-70 -rotate-z-30 ",
+                        "transform -scale-y-100 ",
+                        "opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in delay-300",
+                    )}
+                    size={140}
+                    color={"#6c44fc"}
+                />
+                <SVG
+                    className={cn(
+                        "absolute z-10 top-4 -right-30 rotate-z-75 ",
+                        "transform -scale-y-100 ",
+                        "opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in delay-300",
+                    )}
+                    size={140}
+                    color={"#ff8fab"}
+                />
+                <Frame
+                    className={cn(
+                        "absolute z-10 -bottom-54 left-110 ",
+                        "opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in delay-300",
+                    )}
+                    src={logo}
+                    alt={name}
+                    size={200}
+                />
             </motion.div>
         </Link>
     );

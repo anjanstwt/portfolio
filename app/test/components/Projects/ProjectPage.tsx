@@ -11,11 +11,13 @@ import Projects from "../../data/project.data";
 const MIN_SPEED_FACTOR = 0.19; // how slow scrolling gets right as a name crosses center
 const CENTER_CAPTURE_RADIUS = 330; // px from viewport center where the slowdown starts to kick in
 const SPEED_SMOOTHING = 0.36; // how gradually the multiplier eases toward its target each frame
+const HOVER_HANDOFF_MS = 10; // how long the outgoing name stays hoverable after the next one takes over
 
 export default function ProjectPage() {
 
     const projectRefs = useRef<(HTMLDivElement | null)[]>([]);
     const activeIndex = useCenterMagnetism(projectRefs);
+    const hoverHandoffIndex = useHoverHandoff(activeIndex);
     const lenis = useLenis();
 
     const scrollToProject = (index: number) => {
@@ -36,6 +38,7 @@ export default function ProjectPage() {
                         summary={project.summary}
                         color={project.color}
                         logo={project.logo}
+                        isActive={i === activeIndex || i === hoverHandoffIndex}
                         onRef={(el) => { projectRefs.current[i] = el; }}
                     />
                 ))}
@@ -99,4 +102,27 @@ function useCenterMagnetism(refs: React.RefObject<(HTMLDivElement | null)[]>) {
     }, []);
 
     return activeIndex;
+}
+
+// Keeps the outgoing project's name hoverable for a brief moment after the
+// next project's name takes over as the active/nearest-center one, so hover
+// switches off just after the next one's hover comes on — not before.
+function useHoverHandoff(activeIndex: number) {
+    const [outgoingIndex, setOutgoingIndex] = useState<number | null>(null);
+    const prevActiveIndex = useRef(activeIndex);
+
+    useEffect(() => {
+        if (activeIndex === prevActiveIndex.current) return;
+        const outgoing = prevActiveIndex.current;
+        prevActiveIndex.current = activeIndex;
+        setOutgoingIndex(outgoing);
+
+        const timer = setTimeout(() => {
+            setOutgoingIndex((current) => (current === outgoing ? null : current));
+        }, HOVER_HANDOFF_MS);
+
+        return () => clearTimeout(timer);
+    }, [activeIndex]);
+
+    return outgoingIndex;
 }

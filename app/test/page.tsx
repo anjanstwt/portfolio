@@ -1,7 +1,8 @@
+import Experience from "./components/Experience/Experience";
 import ProjectPage from "./components/Projects/ProjectPage";
 import SideScroll from "./components/SideScroll";
 import Skills from "./components/Skills/Skills";
-import SVG from "./components/SVG";
+import Hands from "./ui/Hands";
 
 
 export default function Page() {
@@ -10,10 +11,11 @@ export default function Page() {
             <SideScroll />
             <ProjectPage />
             <Skills />
-            <div className="h-screen bg-ink ">
-                <SVG
-                    size={200}
-                    color={"#ff4000"}
+            <Experience />
+            <div className="h-screen flex justify-center items-center ">
+                <Hands
+                    size={800}
+                    color={"#0f0f1030"}
                 />
             </div>
         </div>
