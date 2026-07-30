@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils"
 import Image from "next/image";
+import Safari from "../../ui/Safari";
 
 
 export default function Experience() {
@@ -22,11 +23,11 @@ export default function Experience() {
                         className={cn("h-[70%] w-full rounded-[36px] rounded-b-xl overflow-hidden ")}
                         variant={"gradient"}
                     >
-                        <Image
-                            src={"/experience/wallpaper-heaven/landing2.png"}
-                            alt={"winterfell"}
-                            fill
-                            className="object-cover "
+                        <Safari
+                            src={"/experience/wallpaper-heaven/landing.png"}
+                            alt={"Wallpaper Heaven"}
+                            size={"400"}
+                            className="absolute -bottom-14 hover:-bottom-4 transition-all duration-300 "
                         />
                     </Block>
                     <Block

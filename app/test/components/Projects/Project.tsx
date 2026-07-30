@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { ProjectType } from "../../types/project.type";
 import Link from "next/link";
-import SVG from "../../ui/Arrow";
+import SVG from "../../ui/icons/Arrow";
 import Frame from "./Frame";
 
 export default function Project({
