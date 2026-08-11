@@ -33,8 +33,8 @@ export default function Safari({ src, alt, url, size, className }: SafariProps) 
     return (
         <div
             className={cn(
-                "aspect-3/2 overflow-hidden",
-                "bg-ink  rounded-md border border-neutral-700  ",
+                "aspect-3/2 overflow-hidden select-none",
+                "bg-ink rounded-md border border-neutral-700  ",
                 className,
             )}
             style={{
@@ -77,7 +77,7 @@ export default function Safari({ src, alt, url, size, className }: SafariProps) 
                     </div>
                     <div>
                         <FaShieldAlt
-                            size={12 * scale}
+                            size={11 * scale}
                             color="#e4e4e490"
                         />
                     </div>
