@@ -6,6 +6,7 @@ export default interface ExperienceType {
     role: string,
     period: string,
     link: string,
+    github: string,
     description: string,
     skills: string[],
 }

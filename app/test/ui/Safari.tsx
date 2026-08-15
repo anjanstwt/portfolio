@@ -1,3 +1,4 @@
+'use client';
 import { cn } from "@/lib/utils";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { FaShieldAlt } from "react-icons/fa";
@@ -8,6 +9,7 @@ import { FiPlus } from "react-icons/fi";
 import { IoCopyOutline } from "react-icons/io5";
 import { IoLockClosed } from "react-icons/io5";
 import Image from "next/image";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import AppleSideBarIcon from "./icons/AppleSideBarIcon";
 
 const navigation = [
@@ -16,19 +18,46 @@ const navigation = [
     "#34B855",
 ]
 
-interface SafariProps {
-    src: string,
-    alt: string,
+interface SafariBaseProps {
     url?: string,
     size?: string,
     className?: string,
 }
 
+interface SafariImageProps extends SafariBaseProps {
+    src: string,
+    alt: string,
+    children?: never,
+}
+
+interface SafariChildrenProps extends SafariBaseProps {
+    children: ReactNode,
+}
+
+type SafariProps = SafariImageProps | SafariChildrenProps;
+
 const BASE_SIZE = 480;
 
-export default function Safari({ src, alt, url, size, className }: SafariProps) {
+export default function Safari({ url, size, className, ...contentProps }: SafariProps) {
     const numericSize = size ? parseFloat(size) : BASE_SIZE;
     const scale = numericSize / BASE_SIZE;
+    const hasChildren = "children" in contentProps;
+
+    const contentRef = useRef<HTMLDivElement>(null);
+    const [contentScale, setContentScale] = useState(1);
+
+    useEffect(() => {
+        if (!hasChildren) return;
+
+        const updateContentScale = () => {
+            if (!contentRef.current) return;
+            setContentScale(contentRef.current.offsetWidth / window.innerWidth);
+        };
+
+        updateContentScale();
+        window.addEventListener("resize", updateContentScale);
+        return () => window.removeEventListener("resize", updateContentScale);
+    }, [hasChildren, numericSize]);
 
     return (
         <div
@@ -109,13 +138,27 @@ export default function Safari({ src, alt, url, size, className }: SafariProps) 
                 </div>
             </div>
 
-            <div className="relative h-[93%] flex-1 ">
-                <Image
-                    src={src}
-                    alt={alt}
-                    fill
-                    className="object-cover "
-                />
+            <div ref={contentRef} className="relative h-[93%] flex-1 overflow-hidden ">
+                {"src" in contentProps ? (
+                    <Image
+                        src={contentProps.src}
+                        alt={contentProps.alt}
+                        fill
+                        className="object-cover "
+                    />
+                ) : (
+                    <div
+                        className="absolute top-0 left-0 "
+                        style={{
+                            width: "100vw",
+                            height: "100vh",
+                            transform: `scale(${contentScale})`,
+                            transformOrigin: "top left",
+                        }}
+                    >
+                        {contentProps.children}
+                    </div>
+                )}
             </div>
 
         </div>

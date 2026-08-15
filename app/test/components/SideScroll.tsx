@@ -89,8 +89,10 @@ function Card({
     );
 }
 
-export default function SideScroll() {
-    const targetRef = useRef<HTMLDivElement>(null);
+// Drives the card row from an external 0->1 progress value instead of
+// owning its own scroll target, so the track can be embedded inside
+// another section's scroll timeline (see HeroSection).
+export function useSideScrollTrack(progress: MotionValue<number>) {
     const [viewportWidth, setViewportWidth] = useState(0);
 
     useEffect(() => {
@@ -100,13 +102,12 @@ export default function SideScroll() {
         return () => window.removeEventListener("resize", updateWidth);
     }, []);
 
-    const { scrollY, scrollYProgress } = useScroll({ target: targetRef });
-
     // Move from first item centered to last item centered
     const totalDistance = (ITEM_COUNT - 1) * (ITEM_WIDTH + GAP);
     const startX = viewportWidth / 2 - ITEM_WIDTH / 2;
-    const x = useTransform(scrollYProgress, [0, 1], [startX, startX - totalDistance]);
+    const x = useTransform(progress, [0, 1], [startX, startX - totalDistance]);
 
+    const { scrollY } = useScroll();
     const scrollVelocity = useVelocity(scrollY);
     const smoothVelocity = useSpring(scrollVelocity, {
         damping: 50,
@@ -123,30 +124,46 @@ export default function SideScroll() {
     // Gates each card's scale/color effect so they only show up while moving.
     const speedFactor = useTransform(smoothVelocity, (v) => Math.min(Math.abs(v) / 3000, 1));
 
+    return { x, viewportWidth, rotateSignal, speedFactor };
+}
+
+export function CardTrack({
+    x,
+    viewportWidth,
+    rotateSignal,
+    speedFactor,
+}: {
+    x: MotionValue<number>;
+    viewportWidth: number;
+    rotateSignal: MotionValue<number>;
+    speedFactor: MotionValue<number>;
+}) {
     return (
-        <section ref={targetRef} className="relative h-[500vh]">
+        <motion.div style={{ x, gap: "0px 12px" }} className="transform-3d flex">
+            {Array.from({ length: ITEM_COUNT }).map((_v, i) => (
+                <Card
+                    key={i}
+                    index={i}
+                    x={x}
+                    viewportWidth={viewportWidth}
+                    rotateSignal={rotateSignal}
+                    speedFactor={speedFactor}
+                />
+            ))}
+        </motion.div>
+    );
+}
+
+export default function SideScroll() {
+    const targetRef = useRef<HTMLDivElement>(null);
+    const { scrollYProgress } = useScroll({ target: targetRef });
+    const { x, viewportWidth, rotateSignal, speedFactor } = useSideScrollTrack(scrollYProgress);
+
+    return (
+        <section ref={targetRef} className="relative h-[250vh]">
             <div className="perspective-[1000px] transform-3d sticky top-0 h-screen overflow-hidden flex flex-col items-center">
-                <div className="pt-20 text-center">
-                    <h1 className="text-primary-light text-7xl font-semibold tracking-tight">
-                        It's not a Portfolio
-                    </h1>
-                    <p className="text-primary-light/50">
-                        It's a story. It's a journey.
-                    </p>
-                </div>
                 <div className="transform-3d flex-1 w-full min-h-0 flex items-center">
-                    <motion.div style={{ x, gap: "0px 12px" }} className="transform-3d flex">
-                        {Array.from({ length: ITEM_COUNT }).map((_v, i) => (
-                            <Card
-                                key={i}
-                                index={i}
-                                x={x}
-                                viewportWidth={viewportWidth}
-                                rotateSignal={rotateSignal}
-                                speedFactor={speedFactor}
-                            />
-                        ))}
-                    </motion.div>
+                    <CardTrack x={x} viewportWidth={viewportWidth} rotateSignal={rotateSignal} speedFactor={speedFactor} />
                 </div>
             </div>
         </section>

@@ -4,9 +4,10 @@ interface BlockProps {
     variant?: "default" | "gradient";
     className?: string;
     children?: React.ReactNode;
+    shineY?: number;
 }
 
-export default function Block({ variant, className, children }: BlockProps) {
+export default function Block({ variant, className, children, shineY }: BlockProps) {
     return (
         <div
             className={cn(
@@ -17,7 +18,13 @@ export default function Block({ variant, className, children }: BlockProps) {
                 className,
             )}
         >
-            <span className="absolute inset-x-8 top-0 h-[0.5px] bg-linear-to-r from-transparent via-primary-light/70 to-transparent " />
+            <span className={cn(
+                "absolute inset-x-8 top-0 h-[0.5px] bg-linear-to-r from-transparent via-primary-light/70 to-transparent ",
+            )}
+                style={{
+                    top: shineY
+                }}
+            />
             {children}
         </div>
     )

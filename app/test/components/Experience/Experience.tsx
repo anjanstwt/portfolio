@@ -38,12 +38,12 @@ export default function Experience({ isShifted }: ExperienceProps) {
                     )}>
                         {experience.company}
                     </div>
-                    <div className="absolute top-22 flex flex-col gap-y-2 ">
+                    <div className="absolute top-22 w-150 flex flex-col gap-y-2 ">
                         <Safari
                             src={experience.image}
                             alt={experience.company}
                             size={"400"}
-                            url={!isShifted ? "spiderskill.com" : ""}
+                            url={experience.link}
                         />
                         <div className="flex justify-between px-2 ">
                             <div className="text-xl py-2 font-semibold text-primary-light/90 flex-1 ">
@@ -59,7 +59,7 @@ export default function Experience({ isShifted }: ExperienceProps) {
                                     {experience.period}
                                 </Block>
                                 <Link
-                                    href={experience.link}
+                                    href={experience.link ?? experience.github}
                                     className="contents"
                                 >
                                     <Block
@@ -73,6 +73,9 @@ export default function Experience({ isShifted }: ExperienceProps) {
                                     </Block>
                                 </Link>
                             </div>
+                        </div>
+                        <div className="w-full px-2 text-[13px] text-justify text-primary-light/40 ">
+                            {experience.description}
                         </div>
                     </div>
                 </Block>

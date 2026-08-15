@@ -38,8 +38,17 @@ export default function ExperienceSection() {
                         "text-cement/70 text-8xl font-black "
                     )}
                 >
-                    <div className="w-[50%] flex justify-center items-cente text-shadow-lg ">Work</div>
-                    <div className="w-[50%] flex justify-center items-center text-shadow-lg ">Experience</div>
+                    {Array.from(["Work", "Experience"]).map((e) => (
+                        <div
+                            key={e}
+                            className={cn(
+                                "w-[50%] flex justify-center items-cente text-shadow-md ",
+                                "bg-linear-to-b from-primary-light/20 to-transparent bg-clip-text text-transparent ",
+                            )}
+                        >
+                            {e}
+                        </div>
+                    ))}
                 </div>
                 <Experience
                     isShifted={isShifted}
