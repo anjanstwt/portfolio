@@ -1,19 +1,13 @@
 'use client';
 
 import { cn } from "@/lib/utils";
+import SkillsSection from "./SkillsSection";
+
 export default function Skills() {
     return (
         <section className="bg-ink min-h-screen w-full ">
-            <div
-                className={cn(
-                    "transform-3d h-full w-full flex justify-center items-center",
-                    "bg-linear-to-b from-ink via-transparent to-ink "
-                )}
-            >
-                <DottedBorder />
-            </div>
-
-
+            <DottedBorder />
+            <SkillsSection />
         </section>
     );
 }
