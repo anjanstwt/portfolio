@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Skills from "../../data/skills.data";
+import Block from "../../ui/Block";
 
 export default function SkillsSection() {
     return (
@@ -14,7 +15,13 @@ export default function SkillsSection() {
                     "py-32 px-10"
                 )}
             >
-                <div className="mb-16 text-center">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    viewport={{ once: true }}
+                    className="mb-16 text-center"
+                >
                     <h2
                         className={cn(
                             "text-6xl font-black bg-linear-to-b from-primary-light/60 to-transparent bg-clip-text text-transparent"
@@ -25,15 +32,20 @@ export default function SkillsSection() {
                     <p className="text-primary-light/40 text-lg mt-4">
                         Technologies I work with
                     </p>
-                </div>
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-4xl w-full">
+                </motion.div>
+
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 max-w-3xl w-full">
                     {Skills.map((skill, index) => (
                         <motion.div
                             key={skill.name}
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 16 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: index * 0.1, duration: 0.5 }}
-                            viewport={{ once: true }}
+                            transition={{
+                                delay: index * 0.06,
+                                duration: 0.4,
+                                ease: [0.25, 0.46, 0.45, 0.94],
+                            }}
+                            viewport={{ once: true, margin: "-50px" }}
                         >
                             <SkillCard skill={skill} />
                         </motion.div>
@@ -46,15 +58,14 @@ export default function SkillsSection() {
 
 function SkillCard({ skill }: { skill: { name: string; logo: string } }) {
     return (
-        <div
+        <Block
             className={cn(
-                "flex flex-col items-center justify-center gap-3 p-6 rounded-2xl",
-                "bg-cement/10 backdrop-blur-md border border-primary-light/10",
-                "hover:bg-cement/20 hover:border-primary-light/20 transition-all duration-300",
-                "group"
+                "flex flex-col items-center justify-center gap-3 p-6",
+                "hover:bg-cement/20 transition-all duration-300",
+                "group cursor-default"
             )}
         >
-            <div className="relative w-12 h-12">
+            <div className="relative w-10 h-10 opacity-70 group-hover:opacity-100 transition-opacity duration-300">
                 <Image
                     src={skill.logo}
                     alt={skill.name}
@@ -62,9 +73,9 @@ function SkillCard({ skill }: { skill: { name: string; logo: string } }) {
                     className="object-contain"
                 />
             </div>
-            <span className="text-primary-light/70 text-sm font-medium">
+            <span className="text-primary-light/60 group-hover:text-primary-light/90 text-sm font-medium transition-colors duration-300">
                 {skill.name}
             </span>
-        </div>
+        </Block>
     );
 }
