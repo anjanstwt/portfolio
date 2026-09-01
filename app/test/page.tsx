@@ -1,7 +1,7 @@
 import ExperienceSection from "./components/Experience/ExperienceSection";
 import HeroSection from "./components/Hero/HeroSection";
 import ProjectPage from "./components/Projects/ProjectPage";
-import Skills from "./components/Skills/Skills";
+import SkillsSection from "./components/Skills/Skills";
 import Hands from "./ui/icons/Hands";
 import Clock from "./ui/icons/Clock";
 import Footer from "./components/Footer/Footer";
@@ -12,7 +12,7 @@ export default function Page() {
         <div className=" ">
             <HeroSection />
             <ProjectPage />
-            <Skills />
+            <SkillsSection />
             <ExperienceSection />
             <Footer />
             {/* <div className="h-screen flex justify-center items-center ">
