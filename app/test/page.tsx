@@ -9,11 +9,19 @@ import Footer from "./components/Footer/Footer";
 
 export default function Page() {
     return (
-        <div className=" ">
-            <HeroSection />
-            <ProjectPage />
-            <SkillsSection />
-            <ExperienceSection />
+        <div className="">
+            <section id="home">
+                <HeroSection />
+            </section>
+            <section id="projects">
+                <ProjectPage />
+            </section>
+            <section id="skills">
+                <SkillsSection />
+            </section>
+            <section id="experience">
+                <ExperienceSection />
+            </section>
             <Footer />
             {/* <div className="h-screen flex justify-center items-center ">
                 <Hands
