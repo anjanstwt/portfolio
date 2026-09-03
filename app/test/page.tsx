@@ -1,4 +1,5 @@
 import ExperienceSection from "./components/Experience/ExperienceSection";
+import Hero from "./components/Hero/Hero";
 import HeroSection from "./components/Hero/HeroSection";
 import ProjectPage from "./components/Projects/ProjectPage";
 import SkillsSection from "./components/Skills/Skills";
@@ -10,6 +11,7 @@ import Footer from "./components/Footer/Footer";
 export default function Page() {
     return (
         <div className=" ">
+            <Hero />
             <HeroSection />
             <ProjectPage />
             <SkillsSection />
