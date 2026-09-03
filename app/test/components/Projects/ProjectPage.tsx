@@ -28,7 +28,7 @@ export default function ProjectPage() {
     };
 
     return (
-        <section className="relative min-h-screen">
+        <section id="projects" className="relative min-h-screen">
             <SideCapsule activeIndex={activeIndex} onSelect={scrollToProject} />
             <div className="h-full w-full flex flex-col justify-center items-center pt-60 pb-90 ">
                 {Projects.map((project, i) => (
