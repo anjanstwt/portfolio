@@ -34,7 +34,7 @@ export default function HeroSection() {
                         <div className={cn(
                             "text-[160px] font-semibold bg-linear-to-b from-primary-light/20 to-transparent bg-clip-text text-transparent text-shadow-xs ",
                         )}>
-                            {"Meet " + user.name}
+                            {user.name}
                         </div>
                         <Block className="absolute left-1/2 -translate-x-1/2 top-40 h-40 w-40 p-1 rounded-xl overflow-hidden drop-shadow-2xl " >
                             <div className="relative h-full w-full">

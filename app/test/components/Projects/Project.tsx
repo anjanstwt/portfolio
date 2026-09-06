@@ -4,14 +4,13 @@ import { useEffect, useRef, useState } from "react";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { ProjectType } from "../../types/project.type";
 import Link from "next/link";
-import SVG from "../../ui/icons/Arrow";
-import Frame from "./Frame";
 
 export default function Project({
     name,
+    slug,
     summary,
     color,
-    logo,
+    hero,
     isActive,
     onRef,
 }: ProjectType & { isActive: boolean; onRef: (el: HTMLDivElement | null) => void }) {
@@ -69,8 +68,11 @@ export default function Project({
         return () => clearTimeout(timer);
     }, [hovered]);
 
+    // Only projects with a hero page get a link; the rest render as plain cards.
+    const Wrapper = hero ? Link : "div";
+
     return (
-        <Link href={`/${name.toLowerCase()}`}>
+        <Wrapper href={`/projects/${slug}`}>
             <motion.div
                 ref={(el) => {
                     projectRef.current = el;
@@ -171,43 +173,7 @@ export default function Project({
                 >
                     {summary}
                 </motion.div>
-                <SVG
-                    className={cn(
-                        "absolute z-10 -top-17 -left-10 -rotate-z-10 ",
-                        "transform -scale-x-100 ",
-                        "opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in delay-300",
-                    )}
-                    size={140}
-                    color={"#ffffff"}
-                />
-                <SVG
-                    className={cn(
-                        "absolute z-10 -bottom-18 left-70 -rotate-z-30 ",
-                        "transform -scale-y-100 ",
-                        "opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in delay-300",
-                    )}
-                    size={140}
-                    color={"#6c44fc"}
-                />
-                <SVG
-                    className={cn(
-                        "absolute z-10 top-4 -right-30 rotate-z-75 ",
-                        "transform -scale-y-100 ",
-                        "opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in delay-300",
-                    )}
-                    size={140}
-                    color={"#ff8fab"}
-                />
-                <Frame
-                    className={cn(
-                        "absolute z-10 -bottom-54 left-110 ",
-                        "opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in delay-300",
-                    )}
-                    src={logo}
-                    alt={name}
-                    size={200}
-                />
             </motion.div>
-        </Link>
+        </Wrapper>
     );
 }

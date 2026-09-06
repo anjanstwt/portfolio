@@ -1,101 +1,150 @@
 import { cn } from "@/lib/utils";
 
-export type LogoVariant = "hourglass" | "grid-a" | "slab-a" | "as";
+export type LogoVariant =
+    | "tilde"
+    | "maze"
+    | "split"
+    | "window"
+    | "brackets"
+    | "stairs"
+    | "spiral"
+    | "arch";
 
 interface LogoProps {
     variant?: LogoVariant;
     className?: string;
+    /** any CSS colour; defaults to the parent's text colour */
     color?: string;
     /** rendered width in px; height follows the mark's own aspect ratio */
     size?: number;
 }
 
-// Each mark lives on a whole-number grid (see public/logo/*.svg for the standalone files).
-const MARKS: Record<LogoVariant, { viewBox: [number, number]; crisp: boolean; body: React.ReactNode }> = {
-    // The site mark: an hourglass on an 11x13 grid. Top chamber hollow, bottom chamber full.
-    "hourglass": {
-        viewBox: [1100, 1300],
-        crisp: true,
+// Standalone files for each mark live in public/logo/*.svg.
+// Skewed marks use skewY(-30): verticals stay vertical, horizontals rise to the right.
+const MARKS: Record<LogoVariant, { viewBox: [number, number, number, number]; body: React.ReactNode }> = {
+    // "~" — home. One cubic wave of constant width with butt terminals.
+    tilde: {
+        viewBox: [0, 0, 1000, 600],
+        body: (
+            <path
+                d="M110 360 C330 -80 670 680 890 240"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={140}
+                strokeLinecap="butt"
+            />
+        ),
+    },
+    // A square spiral, skewed.
+    maze: {
+        viewBox: [0, 0, 700, 1104],
+        body: (
+            <path
+                d="M50 650 V50 H650 V650 H250 V250 H450 V450"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={100}
+                strokeLinecap="butt"
+                strokeLinejoin="miter"
+                transform="translate(0 404) skewY(-30)"
+            />
+        ),
+    },
+    // A disc cut on the slab angle, the halves slipped along the cut.
+    split: {
+        viewBox: [0, 0, 1000, 800],
         body: (
             <>
-                <rect x="0" y="0" width="1100" height="200" />
-                <rect x="100" y="200" width="200" height="100" />
-                <rect x="800" y="200" width="200" height="100" />
-                <rect x="200" y="300" width="200" height="100" />
-                <rect x="700" y="300" width="200" height="100" />
-                <rect x="300" y="400" width="200" height="100" />
-                <rect x="600" y="400" width="200" height="100" />
-                <rect x="400" y="500" width="300" height="100" />
-                <rect x="500" y="600" width="100" height="100" />
-                <rect x="400" y="700" width="300" height="100" />
-                <rect x="300" y="800" width="500" height="100" />
-                <rect x="200" y="900" width="700" height="100" />
-                <rect x="100" y="1000" width="900" height="100" />
-                <rect x="0" y="1100" width="1100" height="200" />
+                <defs>
+                    <clipPath id="logo-split-upper">
+                        <rect x="-1000" y="-2000" width="3000" height="2262" transform="rotate(-34 500 400)" />
+                    </clipPath>
+                    <clipPath id="logo-split-lower">
+                        <rect x="-1000" y="438" width="3000" height="3000" transform="rotate(-34 500 400)" />
+                    </clipPath>
+                </defs>
+                <g clipPath="url(#logo-split-upper)"><circle cx="522" cy="385" r="270" fill="currentColor" /></g>
+                <g clipPath="url(#logo-split-lower)"><circle cx="478" cy="415" r="270" fill="currentColor" /></g>
             </>
         ),
     },
-    // "A" on a 10x9 grid, 2-cell stroke, feet step 1 cell outward
-    "grid-a": {
-        viewBox: [1000, 900],
-        crisp: true,
+    // A square frame with a block floating inside, skewed.
+    window: {
+        viewBox: [0, 0, 600, 946],
         body: (
-            <>
-                <rect x="300" y="0" width="400" height="100" />
-                <rect x="200" y="100" width="200" height="200" />
-                <rect x="600" y="100" width="200" height="200" />
-                <rect x="200" y="300" width="600" height="200" />
-                <rect x="200" y="500" width="200" height="200" />
-                <rect x="600" y="500" width="200" height="200" />
-                <rect x="100" y="700" width="300" height="200" />
-                <rect x="600" y="700" width="300" height="200" />
-            </>
+            <g fill="currentColor" transform="translate(0 346) skewY(-30)">
+                <path fillRule="evenodd" d="M0 0 H600 V600 H0 Z M100 100 V500 H500 V100 Z" />
+                <rect x="250" y="250" width="200" height="200" />
+            </g>
         ),
     },
-    // "A" from two slanted slabs with vertical ends and one flat crossbar
-    "slab-a": {
-        viewBox: [1000, 800],
-        crisp: false,
+    // Two viewfinder corners, skewed.
+    brackets: {
+        viewBox: [0, 0, 700, 1104],
         body: (
-            <>
-                <path d="M60 480 L500 180 L940 480 L940 720 L500 420 L60 720 Z" />
-                <rect x="295" y="560" width="410" height="100" />
-            </>
+            <g
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={100}
+                strokeLinecap="butt"
+                strokeLinejoin="miter"
+                transform="translate(0 404) skewY(-30)"
+            >
+                <path d="M50 350 V50 H350" />
+                <path d="M350 650 H650 V350" />
+            </g>
         ),
     },
-    // "AS" monogram on a 13x8 grid, 2-cell stroke
-    "as": {
-        viewBox: [1300, 800],
-        crisp: true,
+    // A stepped band, skewed.
+    stairs: {
+        viewBox: [0, 0, 500, 889],
         body: (
-            <>
-                <rect x="100" y="0" width="400" height="100" />
-                <rect x="0" y="100" width="200" height="200" />
-                <rect x="400" y="100" width="200" height="200" />
-                <rect x="0" y="300" width="600" height="200" />
-                <rect x="0" y="500" width="200" height="300" />
-                <rect x="400" y="500" width="200" height="300" />
-                <rect x="800" y="0" width="500" height="100" />
-                <rect x="700" y="100" width="200" height="200" />
-                <rect x="700" y="300" width="500" height="100" />
-                <rect x="800" y="400" width="500" height="100" />
-                <rect x="1100" y="500" width="200" height="200" />
-                <rect x="700" y="700" width="500" height="100" />
-            </>
+            <path
+                d="M50 600 V400 H250 V200 H450 V0"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={100}
+                strokeLinecap="butt"
+                strokeLinejoin="miter"
+                transform="translate(0 289) skewY(-30)"
+            />
+        ),
+    },
+    // Two-centre spiral, equal band and gap.
+    spiral: {
+        viewBox: [50, 0, 1000, 900],
+        body: (
+            <path
+                d="M550 400 A100 100 0 0 0 350 400 A200 200 0 0 0 750 400 A300 300 0 0 0 150 400 A400 400 0 0 0 950 400"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={100}
+                strokeLinecap="butt"
+            />
+        ),
+    },
+    // A heavy arch with its feet cut on the 30deg slope.
+    arch: {
+        viewBox: [0, 0, 1000, 760],
+        body: (
+            <path
+                d="M130 700 V400 A370 370 0 0 1 870 400 V619 L730 700 V400 A230 230 0 0 0 270 400 V619 Z"
+                fill="currentColor"
+            />
         ),
     },
 };
 
-export default function Logo({ variant = "hourglass", className, color = "currentColor", size = 120 }: LogoProps) {
-    const { viewBox: [w, h], crisp, body } = MARKS[variant];
+export default function Logo({ variant = "tilde", className, color, size = 120 }: LogoProps) {
+    const { viewBox, body } = MARKS[variant];
+    const [, , w, h] = viewBox;
 
     return (
         <svg
             width={size}
             height={size * (h / w)}
-            viewBox={`0 0 ${w} ${h}`}
-            fill={color}
-            shapeRendering={crisp ? "crispEdges" : "auto"}
+            viewBox={viewBox.join(" ")}
+            color={color}
             xmlns="http://www.w3.org/2000/svg"
             className={cn(className)}
             role="img"

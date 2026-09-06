@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils"
 import Image from "next/image"
 import Projects from "../../data/project.data"
 import ToolTipComponent from "@/components/ui/TooltipComponent"
+import ProjectGlyph from "./Hero/ProjectGlyph"
 
 export default function SideCapsule({
     activeIndex = 0,
@@ -16,7 +17,7 @@ export default function SideCapsule({
                 <div className="border border-cement p-1.5 rounded-lg flex flex-col gap-2.5 bg-cement/10 backdrop-blur-md">
                     {Projects.map((project, i) => (
                         <ToolTipComponent
-                            key={project.name}
+                            key={project.slug}
                             side="left"
                             className="bg-cement/10 border border-cement "
                             content={project.name.toLowerCase()}
@@ -31,12 +32,20 @@ export default function SideCapsule({
                                     "cursor-pointer",
                                 )}
                             >
-                                <Image
-                                    src={project.logo ?? ""}
-                                    alt={project.name}
-                                    fill
-                                    className="object-contain p-1"
-                                />
+                                {project.logo ? (
+                                    <Image
+                                        src={project.logo}
+                                        alt={project.name}
+                                        fill
+                                        className="object-contain p-1"
+                                    />
+                                ) : project.hero?.glyph ? (
+                                    <ProjectGlyph
+                                        glyph={project.hero.glyph}
+                                        colored={project.hero.fill === "flat"}
+                                        className="absolute inset-0 h-full w-full p-1 text-white"
+                                    />
+                                ) : null}
                             </button>
                         </ToolTipComponent>
                     ))}

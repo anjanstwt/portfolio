@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import SideCapsule from "./SideCapsule";
 import Project from "./Project";
 import Projects from "../../data/project.data";
+import { useIslandStore } from "../../store/island.store";
 
 
 const MIN_SPEED_FACTOR = 0.19; // how slow scrolling gets right as a name crosses center
@@ -20,6 +21,10 @@ export default function ProjectPage() {
     const hoverHandoffIndex = useHoverHandoff(activeIndex);
     const lenis = useLenis();
 
+    // Let the dynamic island show the project nearest the viewport center.
+    const setProjectIndex = useIslandStore((s) => s.setProjectIndex);
+    useEffect(() => { setProjectIndex(activeIndex); }, [activeIndex, setProjectIndex]);
+
     const scrollToProject = (index: number) => {
         const el = projectRefs.current[index];
         if (!el || !lenis) return;
@@ -33,11 +38,8 @@ export default function ProjectPage() {
             <div className="h-full w-full flex flex-col justify-center items-center pt-60 pb-90 ">
                 {Projects.map((project, i) => (
                     <Project
-                        key={project.name}
-                        name={project.name}
-                        summary={project.summary}
-                        color={project.color}
-                        logo={project.logo}
+                        key={project.slug}
+                        {...project}
                         isActive={i === activeIndex || i === hoverHandoffIndex}
                         onRef={(el) => { projectRefs.current[i] = el; }}
                     />

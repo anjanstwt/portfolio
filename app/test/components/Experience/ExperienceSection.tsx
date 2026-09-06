@@ -3,9 +3,10 @@
 import { cn } from "@/lib/utils"
 import Safari from "../../ui/Safari";
 import { motion, useMotionValueEvent, useScroll, type Transition } from "framer-motion";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Block from "../../ui/Block";
 import Experience from "./Experience";
+import { useIslandStore } from "../../store/island.store";
 
 const SNAP_TRANSITION: Transition = {
     type: "spring",
@@ -26,6 +27,10 @@ export default function ExperienceSection() {
     useMotionValueEvent(scrollYProgress, "change", (latest) => {
         setIsShifted(latest > 0.5);
     });
+
+    // Let the dynamic island show the company currently on screen.
+    const setExperienceIndex = useIslandStore((s) => s.setExperienceIndex);
+    useEffect(() => { setExperienceIndex(isShifted ? 1 : 0); }, [isShifted, setExperienceIndex]);
 
     return (
         <section ref={sectionRef} className="relative h-[200vh]">

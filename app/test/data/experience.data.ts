@@ -4,7 +4,7 @@ import ExperienceType from "../types/experience.type";
 const Experiences: ExperienceType[] = [
     {
         company: "SpiderSkill",
-        image: "/projects/winterfell/page2.png",
+        image: "/experience/spiderskill/landing.png",
         role: "Full-Stack Developer Intern",
         period: "June, 2026 to Present",
         link: "spiderskill.com",

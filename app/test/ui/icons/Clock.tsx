@@ -14,7 +14,7 @@ export default function Clock({ size = BASE_SIZE, className }: ClockProps) {
     const scale = size / BASE_SIZE;
 
     return (
-        <div style={{ width: size, height: size }} className={className}>
+        <div style={{ width: size, height: size }} className={cn("relative", className)}>
             <div
                 style={{ transform: `scale(${scale})`, transformOrigin: "top left" }}
                 className="size-32 border-5 border-white rounded-full flex flex-col justify-center items-center bg-ink "
