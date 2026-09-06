@@ -7,17 +7,13 @@ const nextConfig: NextConfig = {
         root: projectRoot,
     },
     outputFileTracingRoot: projectRoot,
-    images: {
-        remotePatterns: [
+    async rewrites() {
+        return [
             {
-                protocol: "https",
-                hostname: "img.icons8.com",
+                source: "/",
+                destination: "/test",
             },
-            {
-                protocol: "https",
-                hostname: "cdn.simpleicons.org",
-            },
-        ],
+        ];
     },
 };
 

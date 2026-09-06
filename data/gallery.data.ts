@@ -1,0 +1,25 @@
+const Gallery: string[] = [
+    "/gallery/img1.jpg",
+    "/gallery/img2.jpg",
+    "/gallery/img3.jpg",
+    "/gallery/img4.jpg",
+    "/gallery/img5.jpg",
+    "/gallery/img6.jpg",
+    "/gallery/img7.jpg",
+    "/gallery/img8.jpg",
+    "/gallery/img9.jpg",
+    "/gallery/img10.jpg",
+    "/gallery/img11.jpg",
+    "/gallery/img12.jpg",
+    "/gallery/img13.jpeg",
+    "/gallery/img14.jpeg",
+    "/gallery/img15.jpeg",
+    "/gallery/img16.jpeg",
+    "/gallery/img17.jpeg",
+    "/gallery/img18.jpeg",
+    "/gallery/img19.jpeg",
+    "/gallery/img20.jpeg",
+    "/gallery/img21.jpeg",
+];
+
+export default Gallery;

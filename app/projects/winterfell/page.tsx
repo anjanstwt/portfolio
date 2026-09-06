@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
-import GlassHero from "@/app/test/components/Projects/Hero/GlassHero";
-import { getHeroProject } from "@/app/test/data/project.data";
+import GlassHero from "@/components/Projects/Hero/GlassHero";
+import { getHeroProject } from "@/data/project.data";
 
 const project = getHeroProject("winterfell");
 

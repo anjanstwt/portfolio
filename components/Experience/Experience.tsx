@@ -1,157 +1,85 @@
+import { motion, Transition } from "framer-motion";
+import Block from "../ui/Block";
+import { cn } from "@/lib/utils";
+import Safari from "../ui/Safari";
+import Experiences from "../../data/experience.data";
+import Link from "next/link";
+import { IoIosGlobe } from "react-icons/io";
 
-
-import { IconChevronCompactLeft, IconChevronCompactRight } from "@tabler/icons-react";
-import { Gmail } from "../SVGs/Gmail";
-import { HireMe } from "../SVGs/HireMe";
-import { ExperienceCard } from "./ExperienceCard"
-import { ExperienceDetails } from "./ExperienceDetails"
-import { useRef, useState } from "react";
-import gsap from "gsap";
-
-interface ExperienceProps {
-    ref?: React.Ref<HTMLDivElement>,
-    className?: string
-}
-
-export const Experience = ({ ref, className }: ExperienceProps) => {
-
-    const scrollRef = useRef<HTMLDivElement>(null);
-    const scrollLeftButtonRef = useRef<HTMLDivElement>(null);
-    const scrollRightButtonRef = useRef<HTMLDivElement>(null);
-
-
-    const allExperiences = ExperienceDetails.map((c) => c.company);
-
-    const scrollLeft = () => {
-        if (!scrollRef.current) return;
-        scrollRef.current.scrollBy({
-            left: -scrollRef.current.offsetWidth,
-            behavior: "smooth"
-        });
-    }
-
-    const scrollRight = () => {
-        if (!scrollRef.current) return;
-        scrollRef.current.scrollBy({
-            left: scrollRef.current.offsetLeft,
-            behavior: "smooth"
-        });
-    }
-
-    const handleActiveAnimation = () => {
-        const left = scrollLeftButtonRef.current;
-        const right = scrollRightButtonRef.current;
-
-        if (!left || !right) return;
-
-        gsap.set([right, left], {
-            y: 60,
-            opacity: 0
-        });
-
-        gsap.to(right, {
-            y: 0,
-            opacity: 1,
-            duration: 0.2,
-            ease: "power2.out"
-        });
-
-        gsap.to(left, {
-            y: 0,
-            opacity: 1,
-            duration: 0.1,
-            ease: "power2.out",
-            delay: 0.1
-        });
-    }
-
-    const handleDeactiveAnimation = () => {
-        const left = scrollLeftButtonRef.current;
-        const right = scrollRightButtonRef.current;
-
-        if (!left || !right) return;
-
-        gsap.to(left, {
-            y: 60,
-            opacity: 0,
-            duration: 0.2,
-            ease: "power2.out"
-        });
-
-        gsap.to(right, {
-            y: 60,
-            opacity: 0,
-            duration: 0.1,
-            ease: "power2.out",
-            delay: 0.1
-        });
-    }
-
-    return <div
-        className={`relative bg-[#D8CFBC] rounded overflow-hidden p-4 2xl:p-5 flex flex-col gap-y-3 ${className} `}
-        ref={ref}
-        onMouseEnter={handleActiveAnimation}
-        onMouseLeave={handleDeactiveAnimation}
-    >
-        <div className="text-2xl w-full border-b-2 border-[#0f0f0f] flex justify-between items-center pb-1 ">
-            <div>
-                Experience
-            </div>
-            <a
-                className="flex items-center justify-center gap-x-1 py-1 px-2 transition-colors duration-200 ease-in-out cursor-pointer rounded hover:bg-[#ada592] "
-                href={""}
-            >
-                <Gmail />
-                <div className="text-[16px]  ">
-                    Hire me
-                </div>
-            </a>
-        </div>
-        <div
-            className="w-full h-full flex overflow-x-auto overflow-y-hidden gap-x-4 px-1 [::-webkit-scrollbar]:hidden [scrollbar-width:none] scroll-smooth snap-x snap-mandatory"
-            ref={scrollRef}
-        >
-            {
-                allExperiences.map((company, index) => (
-                    <ExperienceCard
-                        company={company}
-                        key={index}
-                        className="flex-shrink-0 snap-start "
-                    />
-                ))
-            }
-        </div>
-        <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-4">
-            <ScrollButton
-                type="left"
-                onClick={scrollLeft}
-                ref={scrollLeftButtonRef}
-            />
-            <ScrollButton
-                type="right"
-                onClick={scrollRight}
-                ref={scrollRightButtonRef}
-            />
-        </div>
-
-    </div>
-}
-
-interface ScrollButtonProps {
-    type: "left" | "right",
-    onClick?: () => void,
-    ref?: React.Ref<HTMLDivElement>
-}
-
-const ScrollButton = ({ type, onClick, ref }: ScrollButtonProps) => {
-    return (
-        <div
-            className="p-2 rounded bg-[#0f0f0f] text-[#D8CFBC] border border-[#D8CFBC] cursor-pointer opacity-0 "
-            onClick={onClick}
-            ref={ref}
-        >
-            {type === "left" ? <IconChevronCompactLeft /> : <IconChevronCompactRight />}
-        </div>
-    );
+const SNAP_TRANSITION: Transition = {
+    type: "spring",
+    stiffness: 120,
+    damping: 20,
+    mass: 0.6,
 };
 
+interface ExperienceProps {
+    isShifted: boolean;
+}
+
+export default function Experience({ isShifted }: ExperienceProps) {
+
+    const experience = isShifted ? Experiences[1] : Experiences[0];
+
+    return (
+        <motion.div
+            className="absolute top-10 bottom-10 left-10 w-[calc(50%-2.5rem)] z-10 "
+            animate={{ x: isShifted ? "0%" : "100%" }}
+            transition={SNAP_TRANSITION}
+        >
+            <Block className={"h-full w-full p-2 flex flex-col gap-y-2 "}>
+                <Block
+                    className={cn("h-full w-full rounded-[36px] overflow-hidden ")}
+                    variant={"gradient"}
+                >
+                    <div className={cn(
+                        "absolute top-9 ",
+                        "text-6xl font-extrabold bg-linear-to-b from-primary-light/60 to-transparent bg-clip-text text-transparent ",
+                    )}>
+                        {experience.company}
+                    </div>
+                    <div className="absolute top-22 w-150 flex flex-col gap-y-2 ">
+                        <Safari
+                            src={experience.image}
+                            alt={experience.company}
+                            size={"400"}
+                            url={experience.link}
+                        />
+                        <div className="flex justify-between px-2 ">
+                            <div className="text-xl py-2 font-semibold text-primary-light/90 flex-1 ">
+                                {experience.role}
+                            </div>
+                            <div className="flex flex-1 justify-end gap-x-2 ">
+                                <Block
+                                    className={cn(
+                                        "bg-ink px-5 py-2 rounded-full text-primary-light/60 text-sm",
+                                        "shadow-lg "
+                                    )}
+                                >
+                                    {experience.period}
+                                </Block>
+                                <Link
+                                    href={experience.link ?? experience.github}
+                                    className="contents"
+                                >
+                                    <Block
+                                        className={cn(
+                                            "bg-ink p-2 aspect-square rounded-full text-primary-light/60 text-sm shadow-lg ",
+                                        )}
+                                    >
+                                        <IoIosGlobe size={20} />
+
+                                        {/* <CiLink size={20} /> */}
+                                    </Block>
+                                </Link>
+                            </div>
+                        </div>
+                        <div className="w-full px-2 text-[13px] text-justify text-primary-light/40 ">
+                            {experience.description}
+                        </div>
+                    </div>
+                </Block>
+            </Block>
+        </motion.div>
+    )
+}
