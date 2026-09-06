@@ -1,5 +1,6 @@
 'use client';
 import { cn } from "@/lib/utils";
+import Gallery from "@/data/gallery.data";
 import {
     motion,
     useScroll,
@@ -8,6 +9,7 @@ import {
     useVelocity,
     type MotionValue,
 } from "framer-motion";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 const ITEM_COUNT = 30;
@@ -74,6 +76,8 @@ function Card({
         ([r, c]) => (r as number) * (c as number)
     );
 
+    const src = Gallery[index % Gallery.length];
+
     return (
         <motion.div
             style={{
@@ -84,8 +88,16 @@ function Card({
                 marginLeft: extraMargin,
                 marginRight: extraMargin,
             }}
-            className={cn("h-64 shrink-0 ")}
-        />
+            className={cn("group relative h-64 shrink-0 overflow-hidden")}
+        >
+            <Image
+                src={src}
+                alt=""
+                fill
+                sizes="70px"
+                className="object-cover grayscale transition-all duration-500 ease-out group-hover:scale-110 group-hover:grayscale-0"
+            />
+        </motion.div>
     );
 }
 

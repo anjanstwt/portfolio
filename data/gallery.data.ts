@@ -20,6 +20,11 @@ const Gallery: string[] = [
     "/gallery/img19.jpeg",
     "/gallery/img20.jpeg",
     "/gallery/img21.jpeg",
+    "/gallery/img22.jpeg",
+    "/gallery/img23.jpeg",
+    "/gallery/img24.jpeg",
+    "/gallery/img25.jpeg",
+    "/gallery/img26.jpeg",
 ];
 
 export default Gallery;
