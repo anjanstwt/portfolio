@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800" fill="currentColor">
+  <!-- Anjan Suman — a disc cut on the slab angle, halves slipped along the cut -->
+  <defs>
+    <clipPath id="upper"><rect x="-1000" y="-2000" width="3000" height="2262" transform="rotate(-34 500 400)"/></clipPath>
+    <clipPath id="lower"><rect x="-1000" y="438" width="3000" height="3000" transform="rotate(-34 500 400)"/></clipPath>
+  </defs>
+  <g clip-path="url(#upper)"><circle cx="522" cy="385" r="270"/></g>
+  <g clip-path="url(#lower)"><circle cx="478" cy="415" r="270"/></g>
+</svg>

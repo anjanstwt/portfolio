@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 946" fill="currentColor">
+  <!-- a square frame with a block floating inside, skewed 30deg -->
+  <g transform="translate(0 346) skewY(-30)">
+    <path fill-rule="evenodd" d="M0 0 H600 V600 H0 Z M100 100 V500 H500 V100 Z"/>
+    <rect x="250" y="250" width="200" height="200"/>
+  </g>
+</svg>

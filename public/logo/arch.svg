@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 760" fill="currentColor">
+  <!-- a heavy arch, 140u band, feet cut on the 30deg slope -->
+  <path d="M130 700 V400 A370 370 0 0 1 870 400 V619 L730 700 V400 A230 230 0 0 0 270 400 V619 Z"/>
+</svg>

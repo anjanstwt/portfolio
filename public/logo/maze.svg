@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 1104" fill="none">
+  <!-- Anjan Suman — a square spiral, 100u band and 100u gaps, skewed 30deg so verticals stay vertical -->
+  <path d="M50 650 V50 H650 V650 H250 V250 H450 V450" stroke="currentColor" stroke-width="100" stroke-linecap="butt" stroke-linejoin="miter" transform="translate(0 404) skewY(-30)"/>
+</svg>

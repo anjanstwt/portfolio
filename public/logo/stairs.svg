@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 889" fill="none">
+  <!-- a stepped band, 100u wide, skewed 30deg -->
+  <path d="M50 600 V400 H250 V200 H450 V0" stroke="currentColor" stroke-width="100" stroke-linecap="butt" stroke-linejoin="miter" transform="translate(0 289) skewY(-30)"/>
+</svg>
