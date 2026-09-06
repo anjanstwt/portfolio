@@ -1,5 +1,6 @@
 'use client';
 
+import Contacts from "@/components/base/Contacts";
 import Experience from "@/components/base/Experience";
 import Footer from "@/components/base/Footer";
 import GithubContributions from "@/components/base/GithubContributions";
@@ -27,6 +28,9 @@ export default function Page() {
                 </div>
                 <div id="tech">
                     <Tech />
+                </div>
+                <div id="contact">
+                    <Contacts />
                 </div>
                 <div id="interested">
                     <Interested />
