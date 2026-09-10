@@ -13,8 +13,8 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 const ITEM_COUNT = 30;
-const ITEM_WIDTH = 70; // w-24
-const GAP = 4; // gap-x-1
+const ITEM_WIDTH = 70; // px, applied inline on each card
+const GAP = 12; // px between cards; CardTrack's flex gap and the position math both read this
 const EFFECT_RADIUS = 220; // px either side of center that still feels some effect
 const SCALE_MAX = 1.5; // peak scale multiplier for the dead-center card
 const GAP_EXTRA_MAX = 16; // px of extra margin added per side at full effect
@@ -151,7 +151,7 @@ export function CardTrack({
     speedFactor: MotionValue<number>;
 }) {
     return (
-        <motion.div style={{ x, gap: "0px 12px" }} className="transform-3d flex">
+        <motion.div style={{ x, gap: `0px ${GAP}px` }} className="transform-3d flex">
             {Array.from({ length: ITEM_COUNT }).map((_v, i) => (
                 <Card
                     key={i}
