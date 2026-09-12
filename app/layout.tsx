@@ -14,7 +14,7 @@ export default function ScrollTestLayout({
 }>) {
     return (
         <html lang="en" suppressHydrationWarning>
-            <body className="bg-ink">
+            <body className="bg-ink bg-noise">
                 <LenisProvider>
                     {children}
                 </LenisProvider>

@@ -13,12 +13,14 @@ type Props = {
     className?: string;
 };
 
-// Mild spring: ~0.45s to settle with a small overshoot. Tune `bounce`
-// (0 = no overshoot) and `visualDuration` (seconds) to taste.
+// Mild spring: damping ratio ≈ 0.63, so size changes overshoot by a few
+// percent and settle in ~0.5s. Raise `damping` toward 35 for less bounce,
+// lower `stiffness` for a slower, softer move.
 const spring = {
     type: "spring" as const,
-    visualDuration: 0.45,
-    bounce: 0.22,
+    stiffness: 300,
+    damping: 22,
+    mass: 1,
 };
 
 export default function DynamicIsland({ state, onClose, className }: Props) {

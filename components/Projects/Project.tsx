@@ -156,7 +156,7 @@ export default function Project({
                 </div>
 
                 <motion.div
-                    className="text-white text-9xl font-black"
+                    className="text-neutral-50 text-8xl font-black "
                     style={{
                         opacity: headingOpacityContent,
                         scale: headingSizeContent,
@@ -165,7 +165,7 @@ export default function Project({
                     {name}
                 </motion.div>
                 <motion.div
-                    className="text-white/70 text-lg"
+                    className="text-neutral-100 text-lg"
                     style={{
                         opacity: summaryOpacityContent,
                         scale: summarySizeContent,

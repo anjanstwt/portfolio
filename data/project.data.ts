@@ -124,4 +124,12 @@ export function getHeroProject(slug: string): HeroProject {
     return project as HeroProject;
 }
 
+// The hero project after this one, wrapping around — used for the "next"
+// card at the end of a project story.
+export function getNextHeroProject(slug: string): HeroProject {
+    const heroes = Projects.filter((entry) => entry.hero) as HeroProject[];
+    const index = heroes.findIndex((entry) => entry.slug === slug);
+    return heroes[(index + 1) % heroes.length];
+}
+
 export default Projects;

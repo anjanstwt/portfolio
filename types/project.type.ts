@@ -29,6 +29,27 @@ export interface ProjectLink {
     href: string;
 }
 
+export interface ProjectStoryChapter {
+    /** Short chapter heading, e.g. "The idea". */
+    title: string;
+    /** One mild paragraph. */
+    text: string;
+    /** Image shown beside the text. */
+    image: string;
+    alt?: string;
+}
+
+export interface ProjectFact {
+    label: string;
+    value: string;
+}
+
+export interface ProjectStoryData {
+    /** Short metadata shown beside the lede: role, stack, year… */
+    facts?: ProjectFact[];
+    chapters: ProjectStoryChapter[];
+}
+
 export interface ProjectType {
     name: string;
     /** Route segment under /projects. */

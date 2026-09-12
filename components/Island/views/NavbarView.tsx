@@ -9,6 +9,7 @@ import type { SectionId } from "../../../types/island.type";
 export default function NavbarView() {
     const lenis = useLenis();
     const section = useIslandStore((s) => s.section);
+    const setTray = useIslandStore((s) => s.setTray);
 
     const go = (id: SectionId) => {
         const target = id === "intro" ? 0 : `#${id}`;
@@ -23,6 +24,8 @@ export default function NavbarView() {
                     key={id}
                     type="button"
                     onClick={() => go(id)}
+                    // hovering projects / experience opens the gooey tray under the island
+                    onMouseEnter={() => setTray(id === "projects" || id === "experience" || id === "contact" ? id : null)}
                     className={cn(
                         "rounded-full px-2.5 py-1 text-[11px] font-medium tracking-tight transition-colors",
                         section === id

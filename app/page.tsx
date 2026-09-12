@@ -7,6 +7,8 @@ import OrbitSection from "@/components/Orbit/OrbitSection";
 import ContactSection from "@/components/Contact/ContactSection";
 import IslandBar from "@/components/Island/IslandBar";
 import IslandSection from "@/components/Island/IslandSection";
+import TempleSection from "@/components/Temple/TempleSection";
+import MarkSection from "@/components/Mark/MarkSection";
 
 import { Satisfy } from "next/font/google";
 
@@ -26,14 +28,16 @@ export default function Page() {
             <IslandSection id="experience" state="experience">
                 <ExperienceSection />
             </IslandSection>
-            <IslandSection id="orbit" state="navbar">
+            {/*<IslandSection id="orbit" state="navbar">
                 <OrbitSection />
-            </IslandSection>
+            </IslandSection>*/}
             <IslandSection id="contact" state="contact">
                 <ContactSection />
             </IslandSection>
             <IslandSection id="end" state="navbar">
-                <Footer />
+                {/*<Footer />
+                <MarkSection />*/}
+                <TempleSection />
             </IslandSection>
         </div>
     )
