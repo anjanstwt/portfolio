@@ -1,31 +1,45 @@
-import HeroSection from "./components/Hero/HeroSection";
-import IntroGrid from "./components/sections/IntroGrid";
-import LinksGrid from "./components/sections/LinksGrid";
-import AboutGrid from "./components/sections/AboutGrid";
-import SetLenisSpeed from "./components/SetLenisSpeed";
-import WhatIDoGrid from "./components/sections/WhatIDoGrid";
-import WhatIUseGrid from "./components/sections/WhatIUseGrid";
-import ToolsIUseGrid from "./components/sections/ToolsIUseGrid";
-import HobbyGrid from "./components/sections/HobbyGrid";
-import ContactsGrid from "./components/sections/ContactsGrid";
-import PagesGrid from "./components/sections/PagesGrid";
+import ExperienceSection from "@/components/Experience/ExperienceSection";
+import HeroSection from "@/components/Hero/HeroSection";
+import ProjectPage from "@/components/Projects/ProjectPage";
+import Skills from "@/components/Skills/Skills";
+import ContactSection from "@/components/Contact/ContactSection";
+import IslandBar from "@/components/Island/IslandBar";
+import IslandSection from "@/components/Island/IslandSection";
+import TempleSection from "@/components/Temple/TempleSection";
+import SkylineSection from "@/components/Skyline/SkylineSection";
+import RingSection from "@/components/Ring/RingSection";
+
+import { Satisfy } from "next/font/google";
 
 export default function Page() {
     return (
-        <div className="bg-blade min-h-screen w-full select-none ">
-            <SetLenisSpeed factor={1} />
-            <div className="w-208 mx-auto py-10 text-steel text-sm flex flex-col gap-y-4 font-light tracking-wide ">
+        <div className=" ">
+            <IslandBar />
+            <IslandSection id="intro" state="navbar">
                 <HeroSection />
-                <IntroGrid />
-                <LinksGrid />
-                <AboutGrid />
-                <WhatIDoGrid />
-                <WhatIUseGrid />
-                <ToolsIUseGrid />
-                <HobbyGrid />
-                <ContactsGrid />
-                <PagesGrid />
-            </div>
+            </IslandSection>
+            <IslandSection id="projects" state="project">
+                <ProjectPage />
+            </IslandSection>
+            <IslandSection id="skills" state="navbar">
+                <Skills />
+            </IslandSection>
+            <IslandSection id="experience" state="experience">
+                <ExperienceSection />
+            </IslandSection>
+            {/*<IslandSection id="orbit" state="navbar">
+                <OrbitSection />
+            </IslandSection>*/}
+            <IslandSection id="contact" state="contact">
+                <ContactSection />
+            </IslandSection>
+            <IslandSection id="end" state="navbar">
+                {/*<Footer />
+                <MarkSection />*/}
+                <TempleSection />
+                <SkylineSection className="h-screen w-full" />
+                <RingSection className="h-[80vh] w-full" />
+            </IslandSection>
         </div>
-    );
+    )
 }

@@ -5,12 +5,14 @@ import Block from "../Block/Block";
 import { Globe } from "../ui/globe";
 import India from "../../icons/India";
 import CopyIconButton from "../CopyIconButton";
-import { RiTwitterXLine } from "react-icons/ri";
+import { RiArchiveDrawerFill, RiDraftFill, RiTwitterXLine } from "react-icons/ri";
 import { FiArrowUpRight } from "react-icons/fi";
 import { FaLinkedinIn } from "react-icons/fa";
 import { satisfy } from "@/lib/fonts";
 import { cn } from "cn";
 import ExpandableBlock from "../ExpandableBlock";
+import { RiQuillPenFill } from "react-icons/ri";
+import { PiLampPendantFill } from "react-icons/pi";
 
 export default function PagesGrid() {
     return (
@@ -26,14 +28,13 @@ export default function PagesGrid() {
                 </Block>
             </ExpandableBlock>
             <a
-                href="https://x.com/anjanstwt"
-                target="_blank"
+                href="/assets"
                 rel="noopener noreferrer"
                 className="contents"
             >
                 <Block
                     left={
-                        <RiTwitterXLine className="size-4.5 p-0.75 bg-blade text-neutral-100 rounded-[3px]" />
+                        <PiLampPendantFill className="size-4.5 p-0.75 bg-neutral-100 text-blade rounded-[3px]" />
                     }
                     right={<FiArrowUpRight />}
                 >
@@ -46,14 +47,13 @@ export default function PagesGrid() {
             </a>
 
             <a
-                href="https://linkedin.com/in/anjanstwt"
-                target="_blank"
+                href="/blogs"
                 rel="noopener noreferrer"
                 className="contents"
             >
                 <Block
                     left={
-                        <FaLinkedinIn className="size-4.5 p-0.75 bg-[#0A66C2] text-neutral-100 rounded-[3px] " />
+                        <RiQuillPenFill className="size-4.5 p-0.75 bg-neutral-100 text-blade rounded-[3px] " />
                     }
                     right={<FiArrowUpRight />}
                 >
