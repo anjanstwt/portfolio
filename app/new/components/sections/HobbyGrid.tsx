@@ -3,7 +3,6 @@ import { FiArrowUpRight } from "react-icons/fi";
 import Block from "../Block/Block";
 import SVG from "../../icons/SVG";
 import RingSection from "@/components/Ring/RingSection";
-import HalftoneSection from "@/components/Halftone/HalftoneSection";
 import { HiArrowSmallDown, HiArrowSmallRight } from "react-icons/hi2";
 
 export default function HobbyGrid() {
