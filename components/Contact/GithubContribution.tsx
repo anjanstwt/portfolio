@@ -26,13 +26,13 @@ export default function GithubContribution({
                 {mounted ? (
                     <GitHubCalendar
                         username={"anjanstwt"}
-                        blockSize={10}
-                        blockMargin={4}
-                        fontSize={11}
+                        blockSize={8}
+                        blockMargin={3}
+                        fontSize={0}
                         colorScheme="dark"
                         theme={{
                             dark: [
-                                "#161b22",
+                                "#171717",
                                 "#0e4429",
                                 "#006d32",
                                 "#26a641",

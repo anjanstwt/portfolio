@@ -10,6 +10,13 @@
     --color-night: #121214;
     --color-stale: #131416;
     --color-champagne: #D0CABC90;
+
+    --color-board-black: #0D0D0D;
+    --color-board-white: #ffffff;
+    --color-steel: #8f8f8f;
+
+    --color-blade: #0C0C0C;
+
 }
 
 .layout-width {
