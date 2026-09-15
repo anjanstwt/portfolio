@@ -12,12 +12,16 @@ import { BsWindowStack } from "react-icons/bs";
 import { LuAppWindowMac } from "react-icons/lu";
 import { Claude } from "@thesvg/react";
 import { MdCandlestickChart } from "react-icons/md";
+import { PiTerminalBold } from "react-icons/pi";
+import ExpandableBlock from "../ExpandableBlock";
 
 export default function ToolsIUseGrid() {
     return (
         <div className="grid grid-cols-4 grid-rows-2 gap-4 ">
             <Block
-                left={<SiBetterstack className="size-4.5" />}
+                left={
+                    <SiBetterstack className="size-4.5 bg-[#6AFF38] p-0.75 text-blade rounded-[4px] " />
+                }
                 right={<FiArrowUpRight />}
                 className="h-50"
             >
@@ -38,7 +42,9 @@ export default function ToolsIUseGrid() {
             </Block>
 
             <Block
-                left={<LuAppWindowMac className="size-4.5" />}
+                left={
+                    <PiTerminalBold className="size-4.5 bg-neutral-100 p-0.75 text-blade rounded-[4px] " />
+                }
                 right={<FiArrowUpRight />}
                 className="h-50"
             >
@@ -47,18 +53,21 @@ export default function ToolsIUseGrid() {
                         <div className="text-neutral-100 ">Application</div>
                         <div className="text-xs">2 tools</div>
                     </div>
-                    <Claude className="size-25 relative -right-20 p-3" />
+                    <Claude className="size-25 relative -right-20 top-2 p-3 group-hover:-translate-y-1 duration-300" />
                 </div>
             </Block>
 
-            <Block className="col-span-2 row-span-2">
-                <Image
-                    src="/gallery/img33.jpeg"
-                    alt="landscape"
-                    fill
-                    className="rounded-3xl object-cover"
-                />
-            </Block>
+            <ExpandableBlock className="col-span-2 row-span-2">
+                <Block>
+                    <Image
+                        src="/gallery/img33.jpeg"
+                        alt="landscape"
+                        fill
+                        className="rounded-3xl object-cover"
+                        unoptimized
+                    />
+                </Block>
+            </ExpandableBlock>
 
             <Block
                 left={

@@ -9,7 +9,7 @@ const user: UserType = {
         { kind: "x", label: "x", href: "https://x.com/anjanstwt" },
         { kind: "linkedin", label: "linkedin", href: "https://linkedin.com/in/anjanstwt" },
         { kind: "github", label: "github", href: "https://github.com/anjanstwt" },
-        { kind: "resume", label: "resume", href: "https://drive.google.com/file/d/1Xy5XBI6Uzfof4Ok88rIVUZsnCPF2NtB4/view?usp=sharing" },
+        { kind: "resume", label: "resume", href: "https://drive.google.com/file/d/1E4ruHWchwqjlg63OgijGlWbj_6y0MLOZ/view?usp=drive_link" },
     ],
 };
 

@@ -5,6 +5,9 @@ import ParticleTemple from "@/components/Temple/ParticleTemple";
 import SVG from "../../icons/SVG";
 import Safari from "@/components/ui/Safari";
 import { HiArrowSmallDown } from "react-icons/hi2";
+import GithubActivityLine from "../github/GithubActivityLine";
+import { cn } from "cn";
+import { satisfy } from "@/lib/fonts";
 
 export default function LinksGrid() {
     
@@ -45,13 +48,13 @@ export default function LinksGrid() {
                 }
                 className="col-span-2 h-50"
             >
-                <div className="px-3.5 py-3 ">
+                {/*<div className="px-3.5 py-3 ">
                     <div className="text-neutral-100 flex justify-center items-center gap-x-1 text-xs ">
                         <span>Projects</span>
                         <HiArrowSmallDown className="size-3.5 transition-transform group-hover:translate-y-1 "/>
                     </div>
-                </div>
-                <Safari
+                </div>*/}
+                {/*<Safari
                     size="210"
                     className="absolute -bottom-9 -right-8 border-[0.5px] transition-transform group-hover:-translate-y-1 group-hover:-translate-x-1 "
                     url={"anjan.site"}
@@ -59,7 +62,14 @@ export default function LinksGrid() {
                     <div className="flex justify-center items-baseline ">
                         <ParticleTemple className="size-180 " />
                     </div>
-                </Safari>
+                </Safari>*/}
+                {/*<GithubActivityLine username="anjanstwt" className="absolute bottom-10 -right-50 " />*/}
+                <div className="px-3.5 pb-3 w-full flex justify-end items-end ">
+                    <div className={cn("text-neutral-100 text-[40px] flex justify-center items-center gap-x-2 ", satisfy.className)}>
+                        <span>Projects</span>
+                        <HiArrowSmallDown className="size-6 transition-transform group-hover:translate-y-1 "/>
+                    </div>
+                </div>
             </Block>
         </div>
     );

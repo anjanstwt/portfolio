@@ -4,16 +4,19 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { MdVerified } from "react-icons/md";
-import { FaXTwitter, FaThreads, FaTiktok } from "react-icons/fa6";
-import { FiInstagram, FiYoutube } from "react-icons/fi";
+import { FaXTwitter } from "react-icons/fa6";
+import { FiMail, FiGithub, FiLinkedin, FiFileText } from "react-icons/fi";
+import type { IconType } from "react-icons";
+import user from "@/data/user.data";
+import type { ContactKind } from "@/types/user.type";
 
-const SOCIALS = [
-    { icon: FaXTwitter, href: "https://x.com/anjanstwt" },
-    { icon: FaThreads, href: "#" },
-    { icon: FiInstagram, href: "#" },
-    { icon: FaTiktok, href: "#" },
-    { icon: FiYoutube, href: "#" },
-];
+const CONTACT_ICONS: Record<ContactKind, IconType> = {
+    email: FiMail,
+    x: FaXTwitter,
+    linkedin: FiLinkedin,
+    github: FiGithub,
+    resume: FiFileText,
+};
 
 function formatClock(date: Date) {
     const day = date.toLocaleDateString("en-US", { weekday: "short" }).toUpperCase();
@@ -68,23 +71,28 @@ export default function HeroSection() {
             </div>
 
             <div className="mt-10 flex items-center gap-3">
-                {SOCIALS.map(({ icon: Icon, href }, i) => (
-                    <a
-                        key={i}
-                        href={href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={cn(
-                            "flex items-center justify-center",
-                            "size-14 rounded-full",
-                            "bg-white/[0.04] border border-white/5",
-                            "text-steel hover:text-neutral-100 hover:bg-white/[0.08]",
-                            "transition-colors",
-                        )}
-                    >
-                        <Icon className="size-5" />
-                    </a>
-                ))}
+                {user.contacts.map((contact) => {
+                    const Icon = CONTACT_ICONS[contact.kind];
+                    const isExternal = contact.href.startsWith("http");
+                    return (
+                        <a
+                            key={contact.kind}
+                            href={contact.href}
+                            aria-label={contact.label}
+                            target={isExternal ? "_blank" : undefined}
+                            rel={isExternal ? "noopener noreferrer" : undefined}
+                            className={cn(
+                                "flex items-center justify-center",
+                                "size-14 rounded-full",
+                                "bg-white/[0.04] border border-white/5",
+                                "text-steel hover:text-neutral-100 hover:bg-white/[0.08]",
+                                "transition-colors",
+                            )}
+                        >
+                            <Icon className="size-5" />
+                        </a>
+                    );
+                })}
             </div>
         </section>
     );

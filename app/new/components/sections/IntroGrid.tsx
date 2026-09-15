@@ -6,6 +6,7 @@ import { Globe } from "../ui/globe";
 import India from "../../icons/India";
 import CopyIconButton from "../CopyIconButton";
 import { FiMail } from "react-icons/fi";
+import ExpandableBlock from "../ExpandableBlock";
 
 export default function IntroGrid() {
     return (
@@ -24,12 +25,14 @@ export default function IntroGrid() {
                 }
             >
                 <div className="px-3.5 pb-3 text-neutral-100">
-                    Designer turned creator, based in Vienna, Austria. Currently building my
-                    next solo venture.
+                    Engineer by trade, builder by obsession.
                 </div>
             </Block>
 
-            <Block left={<TbLocationFilled />} right={<India className="size-4 " />}>
+            <Block
+                left={<TbLocationFilled />}
+                right={<India className="size-4 " />}
+            >
                 <Globe className="top-40 left-1/2 -translate-x-1/2 -translate-y-1/2 w-70 h-70 z-0" />
                 <div
                     className={[
@@ -44,25 +47,32 @@ export default function IntroGrid() {
                 </div>
             </Block>
 
-            <Block className="col-span-2 row-span-2">
-                <Image
-                    src="/gallery/img16.jpeg"
-                    alt="landscape"
-                    fill
-                    className="rounded-3xl object-cover"
-                />
-            </Block>
+            <ExpandableBlock className="col-span-2 row-span-2">
+                <Block>
+                    <Image
+                        src="/gallery/img16.jpeg"
+                        alt="landscape"
+                        fill
+                        className="rounded-3xl object-cover"
+                    />
+                </Block>
+            </ExpandableBlock>
 
-            <Block>
-                <Image
-                    src="/gallery/img29.jpg"
-                    alt="landscape"
-                    fill
-                    className="rounded-3xl object-cover"
-                />
-            </Block>
+            <ExpandableBlock>
+                <Block>
+                    <Image
+                        src="/gallery/img29.jpg"
+                        alt="landscape"
+                        fill
+                        className="rounded-3xl object-cover "
+                    />
+                </Block>
+            </ExpandableBlock>
 
-            <Block left={<FiMail className="size-4" />} right={<CopyIconButton text="@anjanstwt" />}>
+            <Block
+                left={<FiMail className="size-4" />}
+                right={<CopyIconButton text="@anjanstwt" />}
+            >
                 <div className="px-3.5 pb-3 text-xs ">
                     <div className="text-steel">anjansuman80</div>
                     <div className="text-neutral-100">@gmail.com</div>

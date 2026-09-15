@@ -36,17 +36,23 @@ export default function HobbyGrid() {
                         fill
                         unoptimized
                     />
-                    {/*<HalftoneSection className="relative h-150 w-100 " />*/}
                 </div>
             </Block>
 
-            <a href="https://spiderskill.com" target="_blank" className="contents">
+            <a
+                href="https://spiderskill.com"
+                target="_blank"
+                className="contents"
+            >
                 <Block
                     left={
-                        <SVG
-                            type="winterfell"
-                            className="size-4 bg-[#6c44fc] rounded-xs p-px "
-                            color="white"
+                        <Image
+                            src={"/experience/spiderskill/logo.png"}
+                            alt={"spiderskill"}
+                            width={16}
+                            height={16}
+                            unoptimized
+                            className="bg-neutral-100 rounded-[4px] "
                         />
                     }
                     right={<FiArrowUpRight className="text-neutral-100" />}
@@ -65,31 +71,29 @@ export default function HobbyGrid() {
                     />
                 </Block>
             </a>
-            <a href="" className="contents">
-                <Block
-                    left={
-                        <SVG
-                            type="winterfell"
-                            className="size-4 bg-[#6c44fc] rounded-xs p-px "
-                            color="white"
-                        />
-                    }
-                    right={<FiArrowUpRight className="text-neutral-100" />}
-                >
-                    <div className="absolute bottom-0 px-3.5 py-3 text-xs">
-                        <div className="text-neutral-100">Wallpaper Heaven</div>
-                        <div>swe intern</div>
-                    </div>
-                    <Image
-                        src="/experience/wallpaper-heaven/imac.png"
-                        alt="Winterfell"
-                        className="relative -right-20 -top-3"
-                        width={300}
-                        height={300}
-                        unoptimized
+            <Block
+                left={
+                    <SVG
+                        type="winterfell"
+                        className="size-4 bg-[#6c44fc] rounded-xs p-px "
+                        color="white"
                     />
-                </Block>
-            </a>
+                }
+                right={<FiArrowUpRight className="text-neutral-100" />}
+            >
+                <div className="absolute bottom-0 px-3.5 py-3 text-xs">
+                    <div className="text-neutral-100">Wallpaper Heaven</div>
+                    <div>swe intern</div>
+                </div>
+                <Image
+                    src="/experience/wallpaper-heaven/imac.png"
+                    alt="Winterfell"
+                    className="relative -right-20 -top-3"
+                    width={300}
+                    height={300}
+                    unoptimized
+                />
+            </Block>
         </div>
     );
 }

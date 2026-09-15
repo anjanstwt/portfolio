@@ -1,17 +1,15 @@
 import Image from "next/image";
 import { FiArrowUpRight } from "react-icons/fi";
 import Block from "../Block/Block";
-import Cal from "../../icons/Cal";
-import ParticleTemple from "@/components/Temple/ParticleTemple";
-import { FaSpotify, FaStar } from "react-icons/fa";
-import { LuMonitor } from "react-icons/lu";
+import { FaStar } from "react-icons/fa";
 import { GiThreeFriends } from "react-icons/gi";
+import { PiMonitorFill } from "react-icons/pi";
 
 export default function WhatIUseGrid() {
     return (
         <div className="grid grid-cols-4 gap-4 ">
             <Block
-                left={<LuMonitor className="size-4.5" />}
+                left={<PiMonitorFill className="size-4.5 bg-[#FF5900] p-0.75 text-blade rounded-[4px] " />}
                 right={<FiArrowUpRight />}
                 className="h-50"
             >
@@ -30,7 +28,7 @@ export default function WhatIUseGrid() {
             </Block>
 
             <Block
-                left={<GiThreeFriends className="size-4.5" />}
+                left={<GiThreeFriends className="size-4.5 bg-[#0119E1] p-0.75 text-neutral-100 rounded-[4px] " />}
                 right={<FiArrowUpRight />}
                 className="h-50"
             >
