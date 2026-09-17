@@ -1,17 +1,24 @@
+"use client";
+
 import Image from "next/image";
 import { FiArrowUpRight } from "react-icons/fi";
 import Block from "../Block/Block";
 import { FaStar } from "react-icons/fa";
 import { GiThreeFriends } from "react-icons/gi";
 import { PiMonitorFill } from "react-icons/pi";
+import { useDetailsStore } from "@/store/details.store";
+import { DetailPanel } from "@/types/detail.type";
 
 export default function WhatIUseGrid() {
+    const open = useDetailsStore((s) => s.open);
+
     return (
         <div className="grid grid-cols-4 gap-4 ">
             <Block
                 left={<PiMonitorFill className="size-4.5 bg-[#FF5900] p-0.75 text-blade rounded-[4px] " />}
                 right={<FiArrowUpRight />}
-                className="h-50"
+                className="h-50 cursor-pointer"
+                onClick={() => open(DetailPanel.Workspace)}
             >
                 <div className="bottom-0 px-3.5 pb-3 ">
                     <div className="text-neutral-100 ">Workspace</div>
@@ -30,7 +37,8 @@ export default function WhatIUseGrid() {
             <Block
                 left={<GiThreeFriends className="size-4.5 bg-[#0119E1] p-0.75 text-neutral-100 rounded-[4px] " />}
                 right={<FiArrowUpRight />}
-                className="h-50"
+                className="h-50 cursor-pointer"
+                onClick={() => open(DetailPanel.Teammates)}
             >
                 <div className="bottom-0 px-3.5 pb-3 ">
                     <div className="relative -top-2.5">
@@ -78,7 +86,7 @@ export default function WhatIUseGrid() {
                 <video
                     src="/video/odyssey.mp4"
                     poster="/gallery/img24.jpeg"
-                    className="w-full h-full object-contain scale-[1.15]"
+                    className="w-full h-full object-cover"
                     autoPlay
                     muted
                     loop

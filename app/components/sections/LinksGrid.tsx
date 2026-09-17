@@ -14,7 +14,7 @@ export default function LinksGrid() {
     return (
         <div className="grid grid-cols-4 gap-4 ">
             <a
-                href="cal.com/anjanstwt"
+                href="https://cal.com/anjanstwt"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="contents"

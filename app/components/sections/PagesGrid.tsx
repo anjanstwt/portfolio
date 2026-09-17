@@ -5,7 +5,11 @@ import Block from "../Block/Block";
 import { Globe } from "../ui/globe";
 import India from "../../icons/India";
 import CopyIconButton from "../CopyIconButton";
-import { RiArchiveDrawerFill, RiDraftFill, RiTwitterXLine } from "react-icons/ri";
+import {
+    RiArchiveDrawerFill,
+    RiDraftFill,
+    RiTwitterXLine,
+} from "react-icons/ri";
 import { FiArrowUpRight } from "react-icons/fi";
 import { FaLinkedinIn } from "react-icons/fa";
 import { satisfy } from "@/lib/fonts";
@@ -27,11 +31,7 @@ export default function PagesGrid() {
                     />
                 </Block>
             </ExpandableBlock>
-            <a
-                href="/assets"
-                rel="noopener noreferrer"
-                className="contents"
-            >
+            <a href="/assets" rel="noopener noreferrer" className="contents">
                 <Block
                     left={
                         <PiLampPendantFill className="size-4.5 p-0.75 bg-neutral-100 text-blade rounded-[3px]" />
@@ -39,18 +39,19 @@ export default function PagesGrid() {
                     right={<FiArrowUpRight />}
                 >
                     <div className="px-3.5 pb-3 w-full flex justify-end items-end ">
-                        <div className={cn("text-neutral-100 text-[40px] ", satisfy.className)}>
+                        <div
+                            className={cn(
+                                "text-neutral-100 text-[40px] ",
+                                satisfy.className,
+                            )}
+                        >
                             Assets
                         </div>
                     </div>
                 </Block>
             </a>
 
-            <a
-                href="/blogs"
-                rel="noopener noreferrer"
-                className="contents"
-            >
+            <a href="/blogs" rel="noopener noreferrer" className="contents">
                 <Block
                     left={
                         <RiQuillPenFill className="size-4.5 p-0.75 bg-neutral-100 text-blade rounded-[3px] " />
@@ -58,21 +59,28 @@ export default function PagesGrid() {
                     right={<FiArrowUpRight />}
                 >
                     <div className="px-3.5 pb-3 w-full flex justify-end items-end ">
-                        <div className={cn("text-neutral-100 text-[40px] ", satisfy.className)}>
+                        <div
+                            className={cn(
+                                "text-neutral-100 text-[40px] ",
+                                satisfy.className,
+                            )}
+                        >
                             Blogs
                         </div>
                     </div>
                 </Block>
             </a>
 
-            <Block>
-                <Image
-                    src="/gallery/xdcat.jpeg"
-                    alt="landscape"
-                    fill
-                    className="rounded-3xl object-cover"
-                />
-            </Block>
+            <ExpandableBlock>
+                <Block>
+                    <Image
+                        src="/gallery/xdcat.jpeg"
+                        alt="landscape"
+                        fill
+                        className="rounded-3xl object-cover"
+                    />
+                </Block>
+            </ExpandableBlock>
 
             <Block
                 left={<CgMenuGridO />}

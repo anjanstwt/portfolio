@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { CgMenuGridO } from "react-icons/cg";
 import { TbLocationFilled } from "react-icons/tb";
@@ -14,8 +16,12 @@ import { Claude } from "@thesvg/react";
 import { MdCandlestickChart } from "react-icons/md";
 import { PiTerminalBold } from "react-icons/pi";
 import ExpandableBlock from "../ExpandableBlock";
+import { useDetailsStore } from "@/store/details.store";
+import { DetailPanel } from "@/types/detail.type";
 
 export default function ToolsIUseGrid() {
+    const open = useDetailsStore((s) => s.open);
+
     return (
         <div className="grid grid-cols-4 grid-rows-2 gap-4 ">
             <Block
@@ -23,11 +29,12 @@ export default function ToolsIUseGrid() {
                     <SiBetterstack className="size-4.5 bg-[#6AFF38] p-0.75 text-blade rounded-[4px] " />
                 }
                 right={<FiArrowUpRight />}
-                className="h-50"
+                className="h-50 cursor-pointer"
+                onClick={() => open(DetailPanel.Stack)}
             >
                 <div className="absolute top-7.5 px-3.5 py-3 ">
                     <div className="text-neutral-100 ">Stack</div>
-                    <div className="text-xs">2 tools</div>
+                    <div className="text-xs">2 tech</div>
                 </div>
                 <div className="bottom-0 px-3.5 pb-3 ">
                     <Image
@@ -46,12 +53,13 @@ export default function ToolsIUseGrid() {
                     <PiTerminalBold className="size-4.5 bg-neutral-100 p-0.75 text-blade rounded-[4px] " />
                 }
                 right={<FiArrowUpRight />}
-                className="h-50"
+                className="h-50 cursor-pointer"
+                onClick={() => open(DetailPanel.Application)}
             >
                 <div className="px-3.5 pb-3 ">
                     <div className="relative -top-2.5 ">
                         <div className="text-neutral-100 ">Application</div>
-                        <div className="text-xs">2 tools</div>
+                        <div className="text-xs">5 tools</div>
                     </div>
                     <Claude className="size-25 relative -right-20 top-2 p-3 group-hover:-translate-y-1 duration-300" />
                 </div>

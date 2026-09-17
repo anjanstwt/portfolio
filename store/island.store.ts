@@ -2,15 +2,10 @@ import { create } from "zustand";
 import type { IslandState, SectionId } from "../types/island.type";
 
 interface IslandStore {
-    /** What the island is currently showing. */
     state: IslandState;
-    /** Section currently under the viewport center. */
     section: SectionId | null;
-    /** Index into project.data — the project nearest the viewport center. */
     projectIndex: number;
-    /** Index into experience.data — the company the experience section is showing. */
     experienceIndex: number;
-    /** Which gooey tray the navbar is showing under the island, if any. */
     tray: IslandTray;
     activate: (section: SectionId, state: IslandState) => void;
     setState: (state: IslandState) => void;

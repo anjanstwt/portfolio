@@ -5,18 +5,10 @@ import { ReactNode, useEffect, useId, useState } from "react";
 import { createPortal } from "react-dom";
 
 interface ExpandableBlockProps {
-    /** The block's own content — rendered both collapsed (in the grid) and expanded (centered overlay). */
     children: ReactNode;
-    /** Grid placement classes (e.g. "col-span-2 row-span-2") for the collapsed slot. */
     className?: string;
 }
 
-// Wraps a grid block so clicking it expands it into a centered overlay via
-// a shared `layoutId`, and clicking outside (or Escape) collapses it back
-// to its original grid position. The collapsed slot stays mounted (just
-// `visibility: hidden` while open) so the grid never reflows behind it;
-// the expanded version is portaled to <body> so it isn't clipped by any
-// ancestor's overflow/stacking context.
 export default function ExpandableBlock({ children, className }: ExpandableBlockProps) {
     const id = useId();
     const [open, setOpen] = useState(false);
