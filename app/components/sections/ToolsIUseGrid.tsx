@@ -23,18 +23,18 @@ export default function ToolsIUseGrid() {
     const open = useDetailsStore((s) => s.open);
 
     return (
-        <div className="grid grid-cols-4 grid-rows-2 gap-4 ">
+        <div className="grid grid-cols-4 max-[894px]:grid-cols-2 gap-4 ">
             <Block
                 left={
                     <SiBetterstack className="size-4.5 bg-[#6AFF38] p-0.75 text-blade rounded-[4px] " />
                 }
                 right={<FiArrowUpRight />}
-                className="h-50 cursor-pointer"
+                className="cursor-pointer"
                 onClick={() => open(DetailPanel.Stack)}
             >
                 <div className="absolute top-7.5 px-3.5 py-3 ">
                     <div className="text-neutral-100 ">Stack</div>
-                    <div className="text-xs">2 tech</div>
+                    <div className="text-xs max-[894px]:text-base">2 tech</div>
                 </div>
                 <div className="bottom-0 px-3.5 pb-3 ">
                     <Image
@@ -53,13 +53,13 @@ export default function ToolsIUseGrid() {
                     <PiTerminalBold className="size-4.5 bg-neutral-100 p-0.75 text-blade rounded-[4px] " />
                 }
                 right={<FiArrowUpRight />}
-                className="h-50 cursor-pointer"
+                className="cursor-pointer"
                 onClick={() => open(DetailPanel.Application)}
             >
                 <div className="px-3.5 pb-3 ">
                     <div className="relative -top-2.5 ">
                         <div className="text-neutral-100 ">Application</div>
-                        <div className="text-xs">5 tools</div>
+                        <div className="text-xs max-[894px]:text-base">5 tools</div>
                     </div>
                     <Claude className="size-25 relative -right-20 top-2 p-3 group-hover:-translate-y-1 duration-300" />
                 </div>
@@ -81,9 +81,9 @@ export default function ToolsIUseGrid() {
                 left={
                     <MdCandlestickChart className="size-4.5 p-.75 bg-neutral-100 text-blade rounded-[4px] " />
                 }
-                className="col-span-2"
+                className="col-span-2 w-full aspect-[2/1]"
             >
-                <div className="px-3.5 py-3 text-xs">
+                <div className="px-3.5 py-3 text-xs max-[894px]:text-base">
                     <div className="text-neutral-100 ">Architecture</div>
                     <div>used at scale</div>
                 </div>

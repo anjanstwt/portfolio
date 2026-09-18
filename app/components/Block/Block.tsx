@@ -26,7 +26,7 @@ export default function Block({
             {...props}
             className={cn(
                 "group",
-                "min-h-50 w-full h-full",
+                "w-full aspect-square",
                 "box-border flex flex-col",
                 "justify-between items-start",
                 "relative overflow-hidden",

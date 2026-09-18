@@ -13,16 +13,16 @@ export default function WhatIUseGrid() {
     const open = useDetailsStore((s) => s.open);
 
     return (
-        <div className="grid grid-cols-4 gap-4 ">
+        <div className="grid grid-cols-4 max-[894px]:grid-cols-2 gap-4 ">
             <Block
                 left={<PiMonitorFill className="size-4.5 bg-[#FF5900] p-0.75 text-blade rounded-[4px] " />}
                 right={<FiArrowUpRight />}
-                className="h-50 cursor-pointer"
+                className="cursor-pointer"
                 onClick={() => open(DetailPanel.Workspace)}
             >
                 <div className="bottom-0 px-3.5 pb-3 ">
                     <div className="text-neutral-100 ">Workspace</div>
-                    <div className="text-xs">2 accessories</div>
+                    <div className="text-xs max-[894px]:text-base">2 accessories</div>
                     <Image
                         src="/gallery/macbook.webp"
                         alt="anjan"
@@ -37,13 +37,13 @@ export default function WhatIUseGrid() {
             <Block
                 left={<GiThreeFriends className="size-4.5 bg-[#0119E1] p-0.75 text-neutral-100 rounded-[4px] " />}
                 right={<FiArrowUpRight />}
-                className="h-50 cursor-pointer"
+                className="cursor-pointer"
                 onClick={() => open(DetailPanel.Teammates)}
             >
                 <div className="bottom-0 px-3.5 pb-3 ">
                     <div className="relative -top-2.5">
                         <div className="text-neutral-100 ">Teammates</div>
-                        <div className="text-xs">3 bros</div>
+                        <div className="text-xs max-[894px]:text-base">3 bros</div>
                     </div>
                     <div className="relative -right-23 -top-1 h-[100px] w-[100px] overflow-hidden rounded-xs group-hover:-translate-y-1 duration-300 ">
                         <Image
@@ -57,7 +57,7 @@ export default function WhatIUseGrid() {
                 </div>
             </Block>
 
-            <Block className="col-span-2 h-50">
+            <Block className="col-span-2 w-full aspect-[2/1]">
                 <div className="absolute z-10 w-full h-full px-3.5 py-3 ">
                     <div className="w-full flex justify-between items-start">
                         <Image
@@ -78,7 +78,7 @@ export default function WhatIUseGrid() {
                             <FaStar className="text-steel " />
                         </div>
                         <div className="space-y-0">
-                            <div className="text-xs">Recent Watch</div>
+                            <div className="text-xs max-[894px]:text-base">Recent Watch</div>
                             <div className="text-neutral-100 ">The Odyssey</div>
                         </div>
                     </div>

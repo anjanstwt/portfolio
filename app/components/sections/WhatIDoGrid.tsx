@@ -21,7 +21,7 @@ export default function WhatIDoGrid() {
     const { audioRef, onMouseEnter, onMouseLeave } = useHoverAudio();
 
     return (
-        <div className="grid grid-cols-4 grid-rows-2 gap-4 ">
+        <div className="grid grid-cols-4 max-[894px]:grid-cols-2 gap-4 ">
             <audio ref={audioRef} src={NOW_PLAYING_SRC} preload="none" loop />
 
             <ExpandableBlock className="col-span-2 row-span-2">
@@ -108,7 +108,7 @@ export default function WhatIDoGrid() {
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
             >
-                <div className="absolute top-10 px-3.5 pb-3 text-xs ">
+                <div className="absolute top-10 px-3.5 pb-3 text-xs max-[894px]:text-base ">
                     <div className="text-steel">The Living Tombstone</div>
                     <div className="text-neutral-100">My Ordinary Life</div>
                 </div>
@@ -126,7 +126,7 @@ export default function WhatIDoGrid() {
                 </div>
             </Block>
 
-            <Block className="h-50 flex justify-center items-center ">
+            <Block className="flex justify-center items-center ">
                 <SkylineSection className="size-90 scale-150 relative top-6 " />
             </Block>
         </div>

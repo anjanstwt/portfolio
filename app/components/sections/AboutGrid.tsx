@@ -6,7 +6,7 @@ import { MdCandlestickChart } from "react-icons/md";
 
 export default function AboutGrid() {
     return (
-        <div className="grid grid-cols-4 grid-rows-1 gap-4 ">
+        <div className="grid grid-cols-4 max-[894px]:grid-cols-2 gap-4 ">
             <Block
                 left={
                     <Image
@@ -18,9 +18,9 @@ export default function AboutGrid() {
                         unoptimized
                     />
                 }
-                className="col-span-2"
+                className="col-span-2 w-full aspect-[2/1]"
             >
-                <div className="px-3.5 py-3 text-xs">
+                <div className="px-3.5 py-3 text-xs max-[894px]:text-base">
                     <div className="text-neutral-100 ">Malshej Ghat</div>
                     <div>Pune, India</div>
                 </div>
@@ -63,7 +63,7 @@ export default function AboutGrid() {
                     ].join(" ")}
                 >
                     <div className="text-neutral-100 ">Darwin</div>
-                    <div className="text-steel text-xs">
+                    <div className="text-steel text-xs max-[894px]:text-base">
                         agent collaborated kanban
                     </div>
                 </div>
@@ -91,7 +91,7 @@ export default function AboutGrid() {
                         ].join(" ")}
                     >
                         <div className="text-blade ">OrderBook</div>
-                        <div className="text-steel text-xs">
+                        <div className="text-steel text-xs max-[894px]:text-base">
                             low latency engine in rust
                         </div>
                     </div>

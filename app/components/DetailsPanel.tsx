@@ -31,7 +31,7 @@ export default function DetailsPanel({
                     <RxCross2 className="text-steel size-4" />
                 </div>
             </div>
-            <Block className="rounded-md min-h-10 min-w-60 ">{children}</Block>
+            <Block className="rounded-md min-h-0 min-w-60 ">{children}</Block>
         </div>
     );
 }

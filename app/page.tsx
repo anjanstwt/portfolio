@@ -22,7 +22,7 @@ export default function Page() {
         <div className={inter.className} style={{ fontFamily: FONT_STACK }}>
             <div className="bg-blade min-h-screen w-full select-none ">
                 <SetLenisSpeed factor={1} />
-                <div className="w-212 mx-auto py-10 text-steel text-sm flex flex-col gap-y-4 font-light tracking-wide ">
+                <div className="w-full max-w-212 mx-auto px-4 py-10 text-steel text-sm max-[894px]:text-base flex flex-col gap-y-4 font-light tracking-wide ">
                     <HeroSection />
                     <IntroGrid />
                     <LinksGrid />

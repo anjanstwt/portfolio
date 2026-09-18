@@ -12,7 +12,7 @@ import { satisfy } from "@/lib/fonts";
 export default function LinksGrid() {
     
     return (
-        <div className="grid grid-cols-4 gap-4 ">
+        <div className="grid grid-cols-4 max-[894px]:grid-cols-2 gap-4 ">
             <a
                 href="https://cal.com/anjanstwt"
                 target="_blank"
@@ -46,10 +46,10 @@ export default function LinksGrid() {
                         unoptimized
                     />
                 }
-                className="col-span-2 h-50"
+                className="col-span-2 w-full aspect-[2/1]"
             >
                 {/*<div className="px-3.5 py-3 ">
-                    <div className="text-neutral-100 flex justify-center items-center gap-x-1 text-xs ">
+                    <div className="text-neutral-100 flex justify-center items-center gap-x-1 text-xs max-[894px]:text-base ">
                         <span>Projects</span>
                         <HiArrowSmallDown className="size-3.5 transition-transform group-hover:translate-y-1 "/>
                     </div>
@@ -65,7 +65,7 @@ export default function LinksGrid() {
                 </Safari>*/}
                 {/*<GithubActivityLine username="anjanstwt" className="absolute bottom-10 -right-50 " />*/}
                 <div className="px-3.5 pb-3 w-full flex justify-end items-end ">
-                    <div className={cn("text-neutral-100 text-[40px] flex justify-center items-center gap-x-2 ", satisfy.className)}>
+                    <div className={cn("text-neutral-100 text-[40px] max-[894px]:text-[64px] flex justify-center items-center gap-x-2 ", satisfy.className)}>
                         <span>Projects</span>
                         <HiArrowSmallDown className="size-6 transition-transform group-hover:translate-y-1 "/>
                     </div>
