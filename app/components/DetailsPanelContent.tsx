@@ -201,10 +201,10 @@ function ContentList({ content }: { content: ContentType[] }) {
                                 {image}
                             </div>
                             <div className="flex flex-col justify-center items-start gap-y-0.5 ">
-                                <div className="text-xs text-steel ">
+                                <div className="text-[10px] sm:text-xs text-steel ">
                                     {title}
                                 </div>
-                                <div className="text-sm text-neutral-100 ">
+                                <div className="text-xs sm:text-sm text-neutral-100 ">
                                     {name}
                                 </div>
                             </div>

@@ -30,7 +30,7 @@ export default function Block({
                 "box-border flex flex-col",
                 "justify-between items-start",
                 "relative overflow-hidden",
-                "rounded-3xl",
+                "rounded-3xl max-[480px]:rounded-xl",
                 "border-t-[0.5px] border-t-[#292929]",
                 "bg-[#171717]",
                 "shadow-[0_0_0_1px_rgba(41,41,41,0),0_1px_2px_0_rgba(0,0,0,0.1)]",

@@ -7,7 +7,7 @@ import { HiArrowSmallDown, HiArrowSmallRight } from "react-icons/hi2";
 
 export default function HobbyGrid() {
     return (
-        <div className="grid grid-cols-4 max-[894px]:grid-cols-2 gap-4 ">
+        <div className="grid grid-cols-4 max-md:grid-cols-2 gap-4 ">
             <Block
                 left={
                     <Image
@@ -21,12 +21,12 @@ export default function HobbyGrid() {
                 }
                 className="col-span-2 w-full aspect-[2/1]"
             >
-                <div className="px-3.5 py-3 text-xs max-[894px]:text-base">
-                    <div className="text-neutral-100 flex justify-center items-center gap-x-1 text-xs max-[894px]:text-base ">
+                <div className="px-3.5 py-3 text-xs min-[480px]:max-md:text-base">
+                    <div className="text-neutral-100 flex justify-center items-center gap-x-1 text-xs min-[480px]:max-md:text-base ">
                         <span>Experience</span>
                         <HiArrowSmallRight className="size-3.5 transition-transform group-hover:translate-x-1 " />
                     </div>
-                    <div className="text-xs max-[894px]:text-base">I have</div>
+                    <div className="text-xs min-[480px]:max-md:text-base">I have</div>
                 </div>
                 <div className="absolute -right-3 -bottom-6 h-44 w-44 rounded-tl-sm overflow-hidden">
                     <Image
@@ -57,7 +57,7 @@ export default function HobbyGrid() {
                     }
                     right={<FiArrowUpRight className="text-neutral-100" />}
                 >
-                    <div className="absolute bottom-0 px-3.5 py-3 text-xs max-[894px]:text-base">
+                    <div className="absolute bottom-0 px-3.5 py-3 text-xs min-[480px]:max-md:text-base">
                         <div className="text-neutral-100">SpiderSkill</div>
                         <div>founding engineer</div>
                     </div>
@@ -81,7 +81,7 @@ export default function HobbyGrid() {
                 }
                 right={<FiArrowUpRight className="text-neutral-100" />}
             >
-                <div className="absolute bottom-0 px-3.5 py-3 text-xs max-[894px]:text-base">
+                <div className="absolute bottom-0 px-3.5 py-3 text-xs min-[480px]:max-md:text-base">
                     <div className="text-neutral-100">Wallpaper Heaven</div>
                     <div>swe intern</div>
                 </div>

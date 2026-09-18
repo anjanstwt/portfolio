@@ -40,7 +40,7 @@ export default function DetailsPanelOverlay() {
                             exit={{ opacity: 0, y: 24 }}
                             transition={{ duration: 0.25, ease: "easeOut" }}
                         >
-                            <DetailsPanel heading={DetailPanel[type]} onClose={close} className="h-full w-full font-extralight select-none ">
+                            <DetailsPanel heading={DetailPanel[type]} onClose={close} className="font-extralight select-none ">
                                 <DetailsPanelContent type={type} />
                             </DetailsPanel>
                         </motion.div>

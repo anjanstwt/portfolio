@@ -23,7 +23,7 @@ export default function ToolsIUseGrid() {
     const open = useDetailsStore((s) => s.open);
 
     return (
-        <div className="grid grid-cols-4 max-[894px]:grid-cols-2 gap-4 ">
+        <div className="grid grid-cols-4 max-md:grid-cols-2 gap-4 ">
             <Block
                 left={
                     <SiBetterstack className="size-4.5 bg-[#6AFF38] p-0.75 text-blade rounded-[4px] " />
@@ -34,7 +34,7 @@ export default function ToolsIUseGrid() {
             >
                 <div className="absolute top-7.5 px-3.5 py-3 ">
                     <div className="text-neutral-100 ">Stack</div>
-                    <div className="text-xs max-[894px]:text-base">2 tech</div>
+                    <div className="text-xs min-[480px]:max-md:text-base">2 tech</div>
                 </div>
                 <div className="bottom-0 px-3.5 pb-3 ">
                     <Image
@@ -59,7 +59,7 @@ export default function ToolsIUseGrid() {
                 <div className="px-3.5 pb-3 ">
                     <div className="relative -top-2.5 ">
                         <div className="text-neutral-100 ">Application</div>
-                        <div className="text-xs max-[894px]:text-base">5 tools</div>
+                        <div className="text-xs min-[480px]:max-md:text-base">5 tools</div>
                     </div>
                     <Claude className="size-25 relative -right-20 top-2 p-3 group-hover:-translate-y-1 duration-300" />
                 </div>
@@ -83,7 +83,7 @@ export default function ToolsIUseGrid() {
                 }
                 className="col-span-2 w-full aspect-[2/1]"
             >
-                <div className="px-3.5 py-3 text-xs max-[894px]:text-base">
+                <div className="px-3.5 py-3 text-xs min-[480px]:max-md:text-base">
                     <div className="text-neutral-100 ">Architecture</div>
                     <div>used at scale</div>
                 </div>

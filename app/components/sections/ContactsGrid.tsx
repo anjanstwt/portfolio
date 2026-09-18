@@ -10,7 +10,7 @@ import { RiTwitterXLine } from "react-icons/ri";
 
 export default function ContactsGrid() {
     return (
-        <div className="grid grid-cols-4 max-[894px]:grid-cols-2 gap-4 ">
+        <div className="grid grid-cols-4 max-md:grid-cols-2 gap-4 ">
             <a
                 href="https://x.com/anjanstwt"
                 target="_blank"
@@ -24,7 +24,7 @@ export default function ContactsGrid() {
                     right={<FiArrowUpRight />}
                 >
                     <div className="px-3.5 pb-3">
-                        <div className="text-steel text-xs max-[894px]:text-base ">Twitter / X</div>
+                        <div className="text-steel text-xs min-[480px]:max-md:text-base ">Twitter / X</div>
                         <div className="text-neutral-100">@anjanstwt</div>
                     </div>
                 </Block>
@@ -43,7 +43,7 @@ export default function ContactsGrid() {
                     right={<FiArrowUpRight />}
                 >
                     <div className="px-3.5 pb-3">
-                        <div className="text-steel text-xs max-[894px]:text-base ">Linkedin</div>
+                        <div className="text-steel text-xs min-[480px]:max-md:text-base ">Linkedin</div>
                         <div className="text-neutral-100">@anjanstwt</div>
                     </div>
                 </Block>
@@ -65,7 +65,7 @@ export default function ContactsGrid() {
                     <div className="px-3.5 py-3 ">
                         <GithubContribution className="relative -right-20" />
                         <div className="text-neutral-100">
-                            <span className="text-steel text-xs max-[894px]:text-base">github.com/</span>
+                            <span className="text-steel text-xs min-[480px]:max-md:text-base">github.com/</span>
                             anjanstwt
                         </div>
                     </div>

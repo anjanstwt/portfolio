@@ -20,7 +20,7 @@ import { PiLampPendantFill } from "react-icons/pi";
 
 export default function PagesGrid() {
     return (
-        <div className="grid grid-cols-4 max-[894px]:grid-cols-2 gap-4 ">
+        <div className="grid grid-cols-4 max-md:grid-cols-2 gap-4 ">
             <ExpandableBlock className="col-span-2 row-span-2">
                 <Block>
                     <Image
@@ -41,7 +41,7 @@ export default function PagesGrid() {
                     <div className="px-3.5 pb-3 w-full flex justify-end items-end ">
                         <div
                             className={cn(
-                                "text-neutral-100 text-[40px] max-[894px]:text-[64px] ",
+                                "text-neutral-100 text-[40px] min-[480px]:max-md:text-[64px] ",
                                 satisfy.className,
                             )}
                         >
@@ -61,7 +61,7 @@ export default function PagesGrid() {
                     <div className="px-3.5 pb-3 w-full flex justify-end items-end ">
                         <div
                             className={cn(
-                                "text-neutral-100 text-[40px] max-[894px]:text-[64px] ",
+                                "text-neutral-100 text-[40px] min-[480px]:max-md:text-[64px] ",
                                 satisfy.className,
                             )}
                         >

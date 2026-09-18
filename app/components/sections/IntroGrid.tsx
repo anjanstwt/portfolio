@@ -10,7 +10,7 @@ import ExpandableBlock from "../ExpandableBlock";
 
 export default function IntroGrid() {
     return (
-        <div className="grid grid-cols-4 max-[894px]:grid-cols-2 gap-4 ">
+        <div className="grid grid-cols-4 max-md:grid-cols-2 gap-4 ">
             <Block
                 left={<CgMenuGridO />}
                 right={
@@ -73,7 +73,7 @@ export default function IntroGrid() {
                 left={<FiMail className="size-4" />}
                 right={<CopyIconButton text="@anjanstwt" />}
             >
-                <div className="px-3.5 pb-3 text-xs max-[894px]:text-base ">
+                <div className="px-3.5 pb-3 text-xs min-[480px]:max-md:text-base ">
                     <div className="text-steel">anjansuman80</div>
                     <div className="text-neutral-100">@gmail.com</div>
                 </div>
