@@ -16,6 +16,7 @@ import { Claude } from "@thesvg/react";
 import { MdCandlestickChart } from "react-icons/md";
 import { PiTerminalBold } from "react-icons/pi";
 import ExpandableBlock from "../ExpandableBlock";
+import ExpandableImage from "../ExpandableImage";
 import { useDetailsStore } from "@/store/details.store";
 import { DetailPanel } from "@/types/detail.type";
 
@@ -87,15 +88,14 @@ export default function ToolsIUseGrid() {
                     <div className="text-neutral-100 ">Architecture</div>
                     <div>used at scale</div>
                 </div>
-                <div className="absolute -right-12 bottom-0 h-44 w-80 rounded-tl-sm overflow-hidden">
-                    <Image
-                        src="/gallery/infrastructure.png"
-                        alt={"infrastructure"}
-                        className="w-full h-full object-cover -translate-x-3 "
-                        fill
-                        unoptimized
-                    />
-                </div>
+                <ExpandableImage
+                    src="/gallery/infrastructure.png"
+                    alt="infrastructure"
+                    width={2940}
+                    height={1846}
+                    className="absolute -right-12 bottom-0 h-44 w-80 rounded-tl-sm overflow-hidden"
+                    imageClassName="object-cover -translate-x-3 "
+                />
             </Block>
         </div>
     );
