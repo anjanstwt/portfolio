@@ -1,4 +1,4 @@
-import LenisProvider from "@/components/ui/LenisProvider";
+import LenisProvider from "@/components/providers/LenisProvider";
 
 export default function Layout({
     children,

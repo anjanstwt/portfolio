@@ -1,7 +1,7 @@
 import type { AssetType } from "../types/asset.type";
 
 // Every piece listed here needs a matching entry in
-// components/Assets/views.tsx, which supplies its preview and stage.
+// components/assets/views.tsx, which supplies its preview and stage.
 const Assets: AssetType[] = [
     {
         name: "Particle Temple",

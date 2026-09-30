@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-import AssetHeader from "@/components/Assets/AssetHeader";
-import AssetStage from "@/components/Assets/AssetStage";
+import AssetHeader from "@/components/assets/AssetHeader";
+import AssetStage from "@/components/assets/AssetStage";
 import Assets, { getAsset, kindLabels } from "@/data/assets.data";
 import { satisfy } from "@/lib/fonts";
 

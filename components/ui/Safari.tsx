@@ -10,7 +10,7 @@ import { IoCopyOutline } from "react-icons/io5";
 import { IoLockClosed } from "react-icons/io5";
 import Image from "next/image";
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import AppleSideBarIcon from "./icons/AppleSideBarIcon";
+import AppleSideBarIcon from "@/components/icons/AppleSideBarIcon";
 
 const navigation = [
     "#EA595B",

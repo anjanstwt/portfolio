@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
-import AssetGrid from "@/components/Assets/AssetGrid";
-import AssetHeader from "@/components/Assets/AssetHeader";
+import AssetGrid from "@/components/assets/AssetGrid";
+import AssetHeader from "@/components/assets/AssetHeader";
 import Assets from "@/data/assets.data";
 import { satisfy } from "@/lib/fonts";
 

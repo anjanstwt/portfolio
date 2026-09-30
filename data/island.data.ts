@@ -1,7 +1,7 @@
 import type { IslandDimensions, IslandState, SectionId } from "../types/island.type";
 
 // Add a new state here (and to IslandState), then register its view in
-// components/Island/views/index.ts.
+// components/showcase/dynamic-island/views/index.ts.
 
 /** Navbar entries, in order. Each id is a section wrapped by IslandSection on the page. */
 export const navItems: { id: SectionId; label: string }[] = [

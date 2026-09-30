@@ -1,16 +1,16 @@
 import { Inter } from "next/font/google";
-import HeroSection from "./components/Hero/HeroSection";
-import IntroGrid from "./components/sections/IntroGrid";
-import LinksGrid from "./components/sections/LinksGrid";
-import AboutGrid from "./components/sections/AboutGrid";
-import SetLenisSpeed from "./components/SetLenisSpeed";
-import WhatIDoGrid from "./components/sections/WhatIDoGrid";
-import WhatIUseGrid from "./components/sections/WhatIUseGrid";
-import ToolsIUseGrid from "./components/sections/ToolsIUseGrid";
-import HobbyGrid from "./components/sections/HobbyGrid";
-import ContactsGrid from "./components/sections/ContactsGrid";
-import PagesGrid from "./components/sections/PagesGrid";
-import DetailsPanelOverlay from "./components/DetailsPanelOverlay";
+import HeroSection from "@/components/home/HeroSection";
+import IntroGrid from "@/components/home/sections/IntroGrid";
+import LinksGrid from "@/components/home/sections/LinksGrid";
+import AboutGrid from "@/components/home/sections/AboutGrid";
+import SetLenisSpeed from "@/components/providers/SetLenisSpeed";
+import WhatIDoGrid from "@/components/home/sections/WhatIDoGrid";
+import WhatIUseGrid from "@/components/home/sections/WhatIUseGrid";
+import ToolsIUseGrid from "@/components/home/sections/ToolsIUseGrid";
+import HobbyGrid from "@/components/home/sections/HobbyGrid";
+import ContactsGrid from "@/components/home/sections/ContactsGrid";
+import PagesGrid from "@/components/home/sections/PagesGrid";
+import DetailsPanelOverlay from "@/components/home/details-panel/DetailsPanelOverlay";
 
 const inter = Inter({ subsets: ["latin"] });
 

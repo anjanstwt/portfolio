@@ -116,8 +116,12 @@ const Projects: ProjectType[] = [
 
 export type HeroProject = ProjectType & { hero: ProjectHero };
 
-// Looks up a project that has a hero page. Throws at build time if a route
-// folder points at a slug that has no hero config.
+// Every project that has a hero page — one /projects/[slug] route each.
+export function getHeroProjects(): HeroProject[] {
+    return Projects.filter((entry) => entry.hero) as HeroProject[];
+}
+
+// Looks up a project that has a hero page. Throws if the slug has no hero config.
 export function getHeroProject(slug: string): HeroProject {
     const project = Projects.find((entry) => entry.slug === slug);
     if (!project?.hero) throw new Error(`No hero project with slug "${slug}"`);
@@ -127,7 +131,7 @@ export function getHeroProject(slug: string): HeroProject {
 // The hero project after this one, wrapping around — used for the "next"
 // card at the end of a project story.
 export function getNextHeroProject(slug: string): HeroProject {
-    const heroes = Projects.filter((entry) => entry.hero) as HeroProject[];
+    const heroes = getHeroProjects();
     const index = heroes.findIndex((entry) => entry.slug === slug);
     return heroes[(index + 1) % heroes.length];
 }
