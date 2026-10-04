@@ -13,7 +13,7 @@ export default function WhatIUseGrid() {
     const open = useDetailsStore((s) => s.open);
 
     return (
-        <div className="grid grid-cols-4 max-md:grid-cols-2 gap-4 ">
+        <div className="@container grid grid-cols-4 max-md:grid-cols-2 gap-4 ">
             <Block
                 left={<PiMonitorFill className="size-4.5 bg-[#FF5900] p-0.75 text-blade rounded-[4px] " />}
                 right={<FiArrowUpRight />}
@@ -57,7 +57,7 @@ export default function WhatIUseGrid() {
                 </div>
             </Block>
 
-            <Block className="col-span-2 w-full aspect-[2/1] max-md:order-1">
+            <Block className="col-span-2 w-full aspect-auto h-[calc(25cqw-0.75rem)] max-md:h-[calc(50cqw-0.5rem)] max-md:order-1">
                 <div className="absolute z-10 w-full h-full px-3.5 py-3 ">
                     <div className="w-full flex justify-between items-start">
                         <Image

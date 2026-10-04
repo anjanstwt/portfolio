@@ -4,10 +4,11 @@ import Block from "@/components/home/block/Block";
 import SVG from "@/components/icons/SVG";
 import RingSection from "@/components/showcase/particles/RingSection";
 import { HiArrowSmallDown, HiArrowSmallRight } from "react-icons/hi2";
+import MarginNote from "@/components/home/annotations/MarginNote";
 
 export default function HobbyGrid() {
     return (
-        <div className="grid grid-cols-4 max-md:grid-cols-2 gap-4 ">
+        <div className="@container relative grid grid-cols-4 max-md:grid-cols-2 gap-4 ">
             <Block
                 left={
                     <Image
@@ -19,7 +20,7 @@ export default function HobbyGrid() {
                         unoptimized
                     />
                 }
-                className="col-span-2 w-full aspect-[2/1]"
+                className="col-span-2 w-full aspect-auto h-[calc(25cqw-0.75rem)] max-md:h-[calc(50cqw-0.5rem)]"
             >
                 <div className="px-3.5 py-3 text-xs min-[480px]:max-md:text-base">
                     <div className="text-neutral-100 flex justify-center items-center gap-x-1 text-xs min-[480px]:max-md:text-base ">
@@ -94,6 +95,7 @@ export default function HobbyGrid() {
                     unoptimized
                 />
             </Block>
+            <MarginNote label="work experience" className="h-full" />
         </div>
     );
 }

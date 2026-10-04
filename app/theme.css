@@ -17,6 +17,8 @@
 
     --color-blade: #0C0C0C;
 
+    --font-handwriting: var(--font-caveat), "Caveat", cursive;
+
 }
 
 .layout-width {

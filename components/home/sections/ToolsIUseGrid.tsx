@@ -24,7 +24,7 @@ export default function ToolsIUseGrid() {
     const open = useDetailsStore((s) => s.open);
 
     return (
-        <div className="grid grid-cols-4 max-md:grid-cols-2 gap-4 ">
+        <div className="@container grid grid-cols-4 max-md:grid-cols-2 gap-4 ">
             <Block
                 left={
                     <SiBetterstack className="size-4.5 bg-[#6AFF38] p-0.75 text-blade rounded-[4px] " />
@@ -82,7 +82,7 @@ export default function ToolsIUseGrid() {
                 left={
                     <MdCandlestickChart className="size-4.5 p-.75 bg-neutral-100 text-blade rounded-[4px] " />
                 }
-                className="col-span-2 w-full aspect-[2/1]"
+                className="col-span-2 w-full aspect-auto h-[calc(25cqw-0.75rem)] max-md:h-[calc(50cqw-0.5rem)]"
             >
                 <div className="px-3.5 py-3 text-xs min-[480px]:max-md:text-base">
                     <div className="text-neutral-100 ">Architecture</div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { useLenis } from "lenis/react";
 import { AnimatePresence, motion } from "motion/react";
 import { useDetailsStore } from "@/store/details.store";
 import { DetailPanel } from "@/types/detail.type";
@@ -9,6 +10,18 @@ import DetailsPanelContent from "./DetailsPanelContent";
 
 export default function DetailsPanelOverlay() {
     const { type, close } = useDetailsStore();
+    const lenis = useLenis();
+
+    useEffect(() => {
+        if (type === null || !lenis) return;
+        lenis.stop();
+        const previous = document.body.style.overflow;
+        document.body.style.overflow = "hidden";
+        return () => {
+            lenis.start();
+            document.body.style.overflow = previous;
+        };
+    }, [type, lenis]);
 
     useEffect(() => {
         if (type === null) return;

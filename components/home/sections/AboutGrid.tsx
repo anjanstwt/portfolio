@@ -6,10 +6,11 @@ import { MdCandlestickChart } from "react-icons/md";
 import { HiArrowSmallDown } from "react-icons/hi2";
 import { cn } from "cn";
 import { satisfy } from "@/lib/fonts";
+import MarginNote from "@/components/home/annotations/MarginNote";
 
 export default function AboutGrid() {
     return (
-        <div className="grid grid-cols-4 max-md:grid-cols-2 gap-4 ">
+        <div className="@container relative grid grid-cols-4 max-md:grid-cols-2 gap-4 ">
             <Block
                 left={
                     <Image
@@ -21,7 +22,7 @@ export default function AboutGrid() {
                         unoptimized
                     />
                 }
-                className="col-span-2 w-full aspect-[2/1]"
+                className="col-span-2 w-full aspect-auto h-[calc(25cqw-0.75rem)] max-md:h-[calc(50cqw-0.5rem)]"
             >
                 {/* Desktop: Malshej Ghat. Swaps with LinksGrid's Projects block below md. */}
                 <div className="max-md:hidden contents">
@@ -113,6 +114,7 @@ export default function AboutGrid() {
                     </div>
                 </Block>
             </a>
+            <MarginNote label="shipped projects" className="h-[calc(200%+1rem)]" />
         </div>
     );
 }

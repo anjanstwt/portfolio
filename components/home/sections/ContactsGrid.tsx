@@ -10,7 +10,7 @@ import { RiTwitterXLine } from "react-icons/ri";
 
 export default function ContactsGrid() {
     return (
-        <div className="grid grid-cols-4 max-md:grid-cols-2 gap-4 ">
+        <div className="@container grid grid-cols-4 max-md:grid-cols-2 gap-4 ">
             <a
                 href="https://x.com/anjanstwt"
                 target="_blank"
@@ -60,7 +60,7 @@ export default function ContactsGrid() {
                         <FaGithub className="size-4.5 text-blade bg-neutral-100 p-0.75 rounded-[4px] " />
                     }
                     right={<FiArrowUpRight />}
-                    className="col-span-2 w-full aspect-[2/1]"
+                    className="col-span-2 w-full aspect-auto h-[calc(25cqw-0.75rem)] max-md:h-[calc(50cqw-0.5rem)]"
                 >
                     <div className="px-3.5 py-3 ">
                         <GithubContribution className="relative -right-20" />
