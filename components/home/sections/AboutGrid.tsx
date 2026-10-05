@@ -3,10 +3,10 @@ import { FiArrowUpRight } from "react-icons/fi";
 import Block from "@/components/home/block/Block";
 import SVG from "@/components/icons/SVG";
 import { MdCandlestickChart } from "react-icons/md";
-import { HiArrowSmallDown } from "react-icons/hi2";
-import { cn } from "cn";
-import { satisfy } from "@/lib/fonts";
 import MarginNote from "@/components/home/annotations/MarginNote";
+import CapsuleStack from "@/components/showcase/capsule-stack/CapsuleStack";
+import FloatingDiscs from "@/components/showcase/floating-discs/FloatingDiscs";
+import { satisfy } from "@/lib/fonts";
 
 export default function AboutGrid() {
     return (
@@ -24,10 +24,9 @@ export default function AboutGrid() {
                 }
                 className="col-span-2 w-full aspect-auto h-[calc(25cqw-0.75rem)] max-md:h-[calc(50cqw-0.5rem)]"
             >
-                {/* Desktop: Malshej Ghat. Swaps with LinksGrid's Projects block below md. */}
                 <div className="max-md:hidden contents">
                     <div className="px-3.5 py-3 text-xs min-[480px]:max-md:text-base">
-                        <div className="text-neutral-100 ">Malshej Ghat</div>
+                        <div className="text-fg ">Malshej Ghat</div>
                         <div>Pune, India</div>
                     </div>
                     <div className="absolute -right-12 bottom-0 h-44 w-80 rounded-tl-sm overflow-hidden">
@@ -46,12 +45,7 @@ export default function AboutGrid() {
 
                 {/* Below md: Projects swaps in here instead. */}
                 <div className="hidden max-md:contents">
-                    <div className="px-3.5 pb-3 w-full flex justify-end items-end ">
-                        <div className={cn("text-neutral-100 text-[40px] min-[480px]:max-md:text-[64px] flex justify-center items-center gap-x-2 ", satisfy.className)}>
-                            <span>Projects</span>
-                            <HiArrowSmallDown className="size-6 transition-transform group-hover:translate-y-1 "/>
-                        </div>
-                    </div>
+                    <CapsuleStack label="Darwin" labelClassName={satisfy.className} />
                 </div>
             </Block>
 
@@ -92,13 +86,9 @@ export default function AboutGrid() {
                         <MdCandlestickChart className="size-4.5 p-.75 bg-[#FF5900] text-neutral-100 rounded-[4px] " />
                     }
                     right={<FiArrowUpRight className="text-blade " />}
+                    className="bg-[#e6e6e6]"
                 >
-                    <Image
-                        src="/gallery/swimmingcat.jpeg"
-                        alt="Winterfell"
-                        fill
-                        className="rounded-3xl object-cover object-[center_5%]"
-                    />
+                    <FloatingDiscs />
                     <div
                         className={[
                             "relative z-10 min-w-full px-3.5 pb-3 ",
@@ -114,7 +104,7 @@ export default function AboutGrid() {
                     </div>
                 </Block>
             </a>
-            <MarginNote label="shipped projects" className="h-[calc(200%+1rem)]" />
+            <MarginNote label="shipped projects" className="-top-[calc(100%+1rem)] h-[calc(300%+2rem)]" />
         </div>
     );
 }

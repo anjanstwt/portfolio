@@ -17,8 +17,38 @@
 
     --color-blade: #0C0C0C;
 
-    --font-handwriting: var(--font-caveat), "Caveat", cursive;
+    --font-handwriting: var(--font-handwriting-src), "Gochi Hand", cursive;
 
+}
+
+:root {
+    --t-page: #0c0c0c;
+    --t-block: #171717;
+    --t-edge: #292929;
+    --t-fg: #f5f5f5;
+    --t-mute: #8f8f8f;
+    --t-ring: rgba(41, 41, 41, 0);
+    --t-shadow: rgba(0, 0, 0, 0.1);
+    --t-float: rgba(0, 0, 0, 0.6);
+}
+
+.light {
+    --t-page: #f4f3f0;
+    --t-block: #ffffff;
+    --t-edge: #e4e2dd;
+    --t-fg: #121212;
+    --t-mute: #6f6f6f;
+    --t-ring: rgba(0, 0, 0, 0);
+    --t-shadow: rgba(0, 0, 0, 0.05);
+    --t-float: rgba(0, 0, 0, 0.18);
+}
+
+@theme inline {
+    --color-page: var(--t-page);
+    --color-block: var(--t-block);
+    --color-edge: var(--t-edge);
+    --color-fg: var(--t-fg);
+    --color-mute: var(--t-mute);
 }
 
 .layout-width {

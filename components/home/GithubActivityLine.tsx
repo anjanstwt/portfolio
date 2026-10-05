@@ -113,7 +113,7 @@ export default function GithubActivityLine({
 
             {hovered && (
                 <div
-                    className="pointer-events-none absolute -translate-x-1/2 -translate-y-full rounded-md bg-black/80 px-2 py-1 text-[10px] text-neutral-100 whitespace-nowrap"
+                    className="pointer-events-none absolute -translate-x-1/2 -translate-y-full rounded-md bg-black/80 px-2 py-1 text-[10px] text-fg whitespace-nowrap"
                     style={{
                         left: hovered.x,
                         top: `${(hovered.y / HEIGHT) * 100}%`,

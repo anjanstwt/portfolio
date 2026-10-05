@@ -195,21 +195,21 @@ function ContentList({ content }: { content: ContentType[] }) {
                     target={"_blank"}
                     className="contents"
                 >
-                    <div className="w-full h-12 flex justify-between items-center pl-1 pr-2 hover:bg-blade/30 transition-colors duration-200 ease-in-out rounded-sm ">
+                    <div className="w-full h-12 flex justify-between items-center pl-1 pr-2 hover:bg-page/30 transition-colors duration-200 ease-in-out rounded-sm ">
                         <div className="flex justify-start items-center gap-x-1 ">
                             <div className="w-15 flex justify-center items-center ">
                                 {image}
                             </div>
                             <div className="flex flex-col justify-center items-start gap-y-0.5 ">
-                                <div className="text-[10px] sm:text-xs text-steel ">
+                                <div className="text-[10px] sm:text-xs text-mute ">
                                     {title}
                                 </div>
-                                <div className="text-xs sm:text-sm text-neutral-100 ">
+                                <div className="text-xs sm:text-sm text-fg ">
                                     {name}
                                 </div>
                             </div>
                         </div>
-                        <FiArrowUpRight className="text-neutral-100 " />
+                        <FiArrowUpRight className="text-fg " />
                     </div>
                 </a>
             ))}

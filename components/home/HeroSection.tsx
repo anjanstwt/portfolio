@@ -44,15 +44,15 @@ export default function HeroSection() {
 
     return (
         <section className="relative w-full flex flex-col items-center pt-10 pb-16">
-            <div className="font-mono text-sm tracking-widest text-steel">
+            <div className="font-mono text-sm tracking-widest text-mute">
                 {now ? formatClock(now) : " "}
             </div>
 
             <div className="relative mt-6 flex flex-col items-center leading-[0.95]">
-                <div className="text-[84px] font-semibold text-white/[0.06] select-none">
+                <div className="text-[84px] font-semibold text-fg/[0.06] select-none">
                     Anjan
                 </div>
-                <div className="text-[84px] font-semibold text-white/[0.06] select-none">
+                <div className="text-[84px] font-semibold text-fg/[0.06] select-none">
                     Suman
                 </div>
 
@@ -84,8 +84,8 @@ export default function HeroSection() {
                             className={cn(
                                 "flex items-center justify-center",
                                 "size-14 rounded-full",
-                                "bg-white/[0.04] border border-white/5",
-                                "text-steel hover:text-neutral-100 hover:bg-white/[0.08]",
+                                "bg-fg/[0.04] border border-fg/5",
+                                "text-mute hover:text-fg hover:bg-fg/[0.08]",
                                 "transition-colors",
                             )}
                         >

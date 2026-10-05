@@ -34,14 +34,14 @@ export default function PagesGrid() {
             <a href="/assets" rel="noopener noreferrer" className="contents">
                 <Block
                     left={
-                        <PiLampPendantFill className="size-4.5 p-0.75 bg-neutral-100 text-blade rounded-[3px]" />
+                        <PiLampPendantFill className="size-4.5 p-0.75 bg-fg text-page rounded-[3px]" />
                     }
                     right={<FiArrowUpRight />}
                 >
                     <div className="px-3.5 pb-3 w-full flex justify-end items-end ">
                         <div
                             className={cn(
-                                "text-neutral-100 text-[40px] min-[480px]:max-md:text-[64px] ",
+                                "text-fg text-[40px] min-[480px]:max-md:text-[64px] ",
                                 satisfy.className,
                             )}
                         >
@@ -54,14 +54,14 @@ export default function PagesGrid() {
             <a href="/blogs" rel="noopener noreferrer" className="contents">
                 <Block
                     left={
-                        <RiQuillPenFill className="size-4.5 p-0.75 bg-neutral-100 text-blade rounded-[3px] " />
+                        <RiQuillPenFill className="size-4.5 p-0.75 bg-fg text-page rounded-[3px] " />
                     }
                     right={<FiArrowUpRight />}
                 >
                     <div className="px-3.5 pb-3 w-full flex justify-end items-end ">
                         <div
                             className={cn(
-                                "text-neutral-100 text-[40px] min-[480px]:max-md:text-[64px] ",
+                                "text-fg text-[40px] min-[480px]:max-md:text-[64px] ",
                                 satisfy.className,
                             )}
                         >
@@ -87,8 +87,8 @@ export default function PagesGrid() {
                 right={<CopyIconButton text="@anjanstwt" />}
             >
                 <div className="px-3.5 pb-3">
-                    <div className="text-steel">Twitter / X</div>
-                    <div className="text-neutral-100">@anjanstwt</div>
+                    <div className="text-mute">Twitter / X</div>
+                    <div className="text-fg">@anjanstwt</div>
                 </div>
             </Block>
         </div>

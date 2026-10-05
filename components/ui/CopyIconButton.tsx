@@ -21,7 +21,7 @@ export default function CopyIconButton({ text }: { text: string }) {
             type="button"
             onClick={handleCopy}
             aria-label="Copy"
-            className="text-steel hover:text-neutral-100 transition-colors"
+            className="text-mute hover:text-fg transition-colors"
         >
             {copied ? <FiCheck /> : <FiCopy />}
         </button>

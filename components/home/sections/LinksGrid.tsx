@@ -4,9 +4,8 @@ import Block from "@/components/home/block/Block";
 import ParticleTemple from "@/components/showcase/particles/ParticleTemple";
 import SVG from "@/components/icons/SVG";
 import Safari from "@/components/ui/Safari";
-import { HiArrowSmallDown } from "react-icons/hi2";
 import GithubActivityLine from "@/components/home/GithubActivityLine";
-import { cn } from "cn";
+import CapsuleStack from "@/components/showcase/capsule-stack/CapsuleStack";
 import { satisfy } from "@/lib/fonts";
 
 export default function LinksGrid() {
@@ -25,14 +24,14 @@ export default function LinksGrid() {
                     }
                     right={<FiArrowUpRight />}
                 >
-                    <div className="px-3.5 pb-3 text-neutral-100">
-                        <span className="text-steel">cal.com/</span>anjanstwt
+                    <div className="px-3.5 pb-3 text-fg">
+                        <span className="text-mute">cal.com/</span>anjanstwt
                     </div>
                 </Block>
             </a>
 
             <Block>
-                <ParticleTemple className="size-full " />
+                <ParticleTemple className="size-full light:invert" />
             </Block>
 
             <Block
@@ -48,37 +47,14 @@ export default function LinksGrid() {
                 }
                 className="col-span-2 w-full aspect-auto h-[calc(25cqw-0.75rem)] max-md:h-[calc(50cqw-0.5rem)]"
             >
-                {/*<div className="px-3.5 py-3 ">
-                    <div className="text-neutral-100 flex justify-center items-center gap-x-1 text-xs min-[480px]:max-md:text-base ">
-                        <span>Projects</span>
-                        <HiArrowSmallDown className="size-3.5 transition-transform group-hover:translate-y-1 "/>
-                    </div>
-                </div>*/}
-                {/*<Safari
-                    size="210"
-                    className="absolute -bottom-9 -right-8 border-[0.5px] transition-transform group-hover:-translate-y-1 group-hover:-translate-x-1 "
-                    url={"anjan.site"}
-                >
-                    <div className="flex justify-center items-baseline ">
-                        <ParticleTemple className="size-180 " />
-                    </div>
-                </Safari>*/}
-                {/*<GithubActivityLine username="anjanstwt" className="absolute bottom-10 -right-50 " />*/}
-
-                {/* Desktop: Projects. Swaps with AboutGrid's Malshej Ghat block below md. */}
                 <div className="max-md:hidden contents">
-                    <div className="px-3.5 pb-3 w-full flex justify-end items-end ">
-                        <div className={cn("text-neutral-100 text-[40px] min-[480px]:max-md:text-[64px] flex justify-center items-center gap-x-2 ", satisfy.className)}>
-                            <span>Projects</span>
-                            <HiArrowSmallDown className="size-6 transition-transform group-hover:translate-y-1 "/>
-                        </div>
-                    </div>
+                    <CapsuleStack label="Darwin" labelClassName={satisfy.className} />
                 </div>
 
                 {/* Below md: Malshej Ghat swaps in here instead. */}
                 <div className="hidden max-md:contents">
                     <div className="px-3.5 py-3 text-xs min-[480px]:max-md:text-base">
-                        <div className="text-neutral-100 ">Malshej Ghat</div>
+                        <div className="text-fg ">Malshej Ghat</div>
                         <div>Pune, India</div>
                     </div>
                     <div className="absolute -right-12 bottom-0 h-44 w-80 rounded-tl-sm overflow-hidden">

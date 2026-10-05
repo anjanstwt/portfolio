@@ -19,13 +19,13 @@ export default function ContactsGrid() {
             >
                 <Block
                     left={
-                        <RiTwitterXLine className="size-4.5 p-0.75 bg-blade text-neutral-100 rounded-[3px]" />
+                        <RiTwitterXLine className="size-4.5 p-0.75 bg-fg text-page rounded-[3px]" />
                     }
                     right={<FiArrowUpRight />}
                 >
                     <div className="px-3.5 pb-3">
-                        <div className="text-steel text-xs min-[480px]:max-md:text-base ">Twitter / X</div>
-                        <div className="text-neutral-100">@anjanstwt</div>
+                        <div className="text-mute text-xs min-[480px]:max-md:text-base ">Twitter / X</div>
+                        <div className="text-fg">@anjanstwt</div>
                     </div>
                 </Block>
             </a>
@@ -43,8 +43,8 @@ export default function ContactsGrid() {
                     right={<FiArrowUpRight />}
                 >
                     <div className="px-3.5 pb-3">
-                        <div className="text-steel text-xs min-[480px]:max-md:text-base ">Linkedin</div>
-                        <div className="text-neutral-100">@anjanstwt</div>
+                        <div className="text-mute text-xs min-[480px]:max-md:text-base ">Linkedin</div>
+                        <div className="text-fg">@anjanstwt</div>
                     </div>
                 </Block>
             </a>
@@ -57,15 +57,15 @@ export default function ContactsGrid() {
             >
                 <Block
                     left={
-                        <FaGithub className="size-4.5 text-blade bg-neutral-100 p-0.75 rounded-[4px] " />
+                        <FaGithub className="size-4.5 text-page bg-fg p-0.75 rounded-[4px] " />
                     }
                     right={<FiArrowUpRight />}
                     className="col-span-2 w-full aspect-auto h-[calc(25cqw-0.75rem)] max-md:h-[calc(50cqw-0.5rem)]"
                 >
                     <div className="px-3.5 py-3 ">
                         <GithubContribution className="relative -right-20" />
-                        <div className="text-neutral-100">
-                            <span className="text-steel text-xs min-[480px]:max-md:text-base">github.com/</span>
+                        <div className="text-fg">
+                            <span className="text-mute text-xs min-[480px]:max-md:text-base">github.com/</span>
                             anjanstwt
                         </div>
                     </div>

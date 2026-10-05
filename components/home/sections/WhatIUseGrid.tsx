@@ -8,6 +8,7 @@ import { GiThreeFriends } from "react-icons/gi";
 import { PiMonitorFill } from "react-icons/pi";
 import { useDetailsStore } from "@/store/details.store";
 import { DetailPanel } from "@/types/detail.type";
+import HeightNote from "@/components/home/annotations/HeightNote";
 
 export default function WhatIUseGrid() {
     const open = useDetailsStore((s) => s.open);
@@ -21,7 +22,7 @@ export default function WhatIUseGrid() {
                 onClick={() => open(DetailPanel.Workspace)}
             >
                 <div className="bottom-0 px-3.5 pb-3 ">
-                    <div className="text-neutral-100 ">Workspace</div>
+                    <div className="text-fg ">Workspace</div>
                     <div className="text-xs min-[480px]:max-md:text-base">2 accessories</div>
                     <Image
                         src="/gallery/macbook.webp"
@@ -42,7 +43,7 @@ export default function WhatIUseGrid() {
             >
                 <div className="bottom-0 px-3.5 pb-3 ">
                     <div className="relative -top-2.5">
-                        <div className="text-neutral-100 ">Teammates</div>
+                        <div className="text-fg ">Teammates</div>
                         <div className="text-xs min-[480px]:max-md:text-base">3 bros</div>
                     </div>
                     <div className="relative -right-23 -top-1 h-[100px] w-[100px] overflow-hidden rounded-xs group-hover:-translate-y-1 duration-300 ">
@@ -57,42 +58,44 @@ export default function WhatIUseGrid() {
                 </div>
             </Block>
 
-            <Block className="col-span-2 w-full aspect-auto h-[calc(25cqw-0.75rem)] max-md:h-[calc(50cqw-0.5rem)] max-md:order-1">
-                <div className="absolute z-10 w-full h-full px-3.5 py-3 ">
-                    <div className="w-full flex justify-between items-start">
-                        <Image
-                            src="/gallery/odyssey.jpeg"
-                            alt="anjan"
-                            width={42}
-                            height={42}
-                            className="rounded-xs"
-                            unoptimized
-                        />
-                        <FiArrowUpRight className="text-neutral-100 " />
-                    </div>
-                    <div className="absolute bottom-3 left-3.5 space-y-2">
-                        <div className="flex justify-center items-center gap-x-1">
-                            {Array.from({ length: 4 }).map((_i, i) => (
-                                <FaStar key={i} className="text-[#F5C518] " />
-                            ))}
-                            <FaStar className="text-steel " />
+            <HeightNote side="right" className="col-span-2 max-md:order-1">
+                <Block className="w-full aspect-auto h-[calc(25cqw-0.75rem)] max-md:h-[calc(50cqw-0.5rem)]">
+                    <div className="absolute z-10 w-full h-full px-3.5 py-3 ">
+                        <div className="w-full flex justify-between items-start">
+                            <Image
+                                src="/gallery/odyssey.jpeg"
+                                alt="anjan"
+                                width={42}
+                                height={42}
+                                className="rounded-xs"
+                                unoptimized
+                            />
+                            <FiArrowUpRight className="text-neutral-100 " />
                         </div>
-                        <div className="space-y-0">
-                            <div className="text-xs min-[480px]:max-md:text-base">Recent Watch</div>
-                            <div className="text-neutral-100 ">The Odyssey</div>
+                        <div className="absolute bottom-3 left-3.5 space-y-2">
+                            <div className="flex justify-center items-center gap-x-1">
+                                {Array.from({ length: 4 }).map((_i, i) => (
+                                    <FaStar key={i} className="text-[#F5C518] " />
+                                ))}
+                                <FaStar className="text-neutral-500 " />
+                            </div>
+                            <div className="space-y-0">
+                                <div className="text-steel text-xs min-[480px]:max-md:text-base">Recent Watch</div>
+                                <div className="text-neutral-100 ">The Odyssey</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <video
-                    src="/video/odyssey.mp4"
-                    poster="/gallery/img24.jpeg"
-                    className="w-full h-full object-cover"
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                />
-            </Block>
+                    <video
+                        src="/video/odyssey.mp4"
+                        poster="/gallery/img24.jpeg"
+                        className="w-full h-full object-cover"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                    />
+                </Block>
+            </HeightNote>
         </div>
     );
 }

@@ -7,33 +7,36 @@ import India from "@/components/icons/India";
 import CopyIconButton from "@/components/ui/CopyIconButton";
 import { FiMail } from "react-icons/fi";
 import ExpandableBlock from "@/components/ui/ExpandableBlock";
+import HeightNote from "@/components/home/annotations/HeightNote";
 
 export default function IntroGrid() {
     return (
         <div className="grid grid-cols-4 max-md:grid-cols-2 gap-4 ">
-            <Block
-                left={<CgMenuGridO />}
-                right={
-                    <Image
-                        src="/images/pfp.png"
-                        alt="anjan"
-                        width={24}
-                        height={24}
-                        className="rounded-full"
-                        unoptimized
-                    />
-                }
-            >
-                <div className="px-3.5 pb-3 text-neutral-100">
-                    Engineer by trade, builder by obsession.
-                </div>
-            </Block>
+            <HeightNote>
+                <Block
+                    left={<CgMenuGridO />}
+                    right={
+                        <Image
+                            src="/images/pfp.png"
+                            alt="anjan"
+                            width={24}
+                            height={24}
+                            className="rounded-full"
+                            unoptimized
+                        />
+                    }
+                >
+                    <div className="px-3.5 pb-3 text-fg">
+                        Engineer by trade, builder by obsession.
+                    </div>
+                </Block>
+            </HeightNote>
 
             <Block
                 left={<TbLocationFilled />}
                 right={<India className="size-4 " />}
             >
-                <Globe className="top-40 left-1/2 -translate-x-1/2 -translate-y-1/2 w-70 h-70 z-0" />
+                <Globe className="top-40 left-1/2 -translate-x-1/2 -translate-y-1/2 w-70 h-70 z-0 light:invert" />
                 <div
                     className={[
                         "relative z-10 min-w-full px-3.5 pb-3",
@@ -42,7 +45,7 @@ export default function IntroGrid() {
                         "[-webkit-mask-image:linear-gradient(to_top,black_0%,black_35%,transparent_100%)]",
                     ].join(" ")}
                 >
-                    <div className="text-neutral-100">Kolkata, India</div>
+                    <div className="text-fg">Kolkata, India</div>
                     <div>15° Patchy rain nearby</div>
                 </div>
             </Block>
@@ -74,8 +77,8 @@ export default function IntroGrid() {
                 right={<CopyIconButton text="@anjanstwt" />}
             >
                 <div className="px-3.5 pb-3 text-xs min-[480px]:max-md:text-base ">
-                    <div className="text-steel">anjansuman80</div>
-                    <div className="text-neutral-100">@gmail.com</div>
+                    <div className="text-mute">anjansuman80</div>
+                    <div className="text-fg">@gmail.com</div>
                 </div>
             </Block>
         </div>

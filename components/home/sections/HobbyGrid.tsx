@@ -23,7 +23,7 @@ export default function HobbyGrid() {
                 className="col-span-2 w-full aspect-auto h-[calc(25cqw-0.75rem)] max-md:h-[calc(50cqw-0.5rem)]"
             >
                 <div className="px-3.5 py-3 text-xs min-[480px]:max-md:text-base">
-                    <div className="text-neutral-100 flex justify-center items-center gap-x-1 text-xs min-[480px]:max-md:text-base ">
+                    <div className="text-fg flex justify-center items-center gap-x-1 text-xs min-[480px]:max-md:text-base ">
                         <span>Experience</span>
                         <HiArrowSmallRight className="size-3.5 transition-transform group-hover:translate-x-1 " />
                     </div>
@@ -56,10 +56,10 @@ export default function HobbyGrid() {
                             className="bg-neutral-100 rounded-[4px] "
                         />
                     }
-                    right={<FiArrowUpRight className="text-neutral-100" />}
+                    right={<FiArrowUpRight className="text-fg" />}
                 >
                     <div className="absolute bottom-0 px-3.5 py-3 text-xs min-[480px]:max-md:text-base">
-                        <div className="text-neutral-100">SpiderSkill</div>
+                        <div className="text-fg">SpiderSkill</div>
                         <div>founding engineer</div>
                     </div>
                     <Image
@@ -80,10 +80,10 @@ export default function HobbyGrid() {
                         color="white"
                     />
                 }
-                right={<FiArrowUpRight className="text-neutral-100" />}
+                right={<FiArrowUpRight className="text-fg" />}
             >
                 <div className="absolute bottom-0 px-3.5 py-3 text-xs min-[480px]:max-md:text-base">
-                    <div className="text-neutral-100">Wallpaper Heaven</div>
+                    <div className="text-fg">Wallpaper Heaven</div>
                     <div>swe intern</div>
                 </div>
                 <Image
@@ -95,7 +95,7 @@ export default function HobbyGrid() {
                     unoptimized
                 />
             </Block>
-            <MarginNote label="work experience" className="h-full" />
+            <MarginNote label="work experience" className="top-0 h-full" />
         </div>
     );
 }

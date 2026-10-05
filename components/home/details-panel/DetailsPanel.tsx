@@ -21,18 +21,18 @@ export default function DetailsPanel({
     return (
         <div
             className={cn(
-                "bg-blade p-1 rounded-lg h-fit",
+                "bg-page p-1 rounded-lg h-fit",
                 "w-[min(90vw,25rem)] sm:w-fit sm:min-w-100",
                 className,
             )}
         >
-            <div className="px-2.5 py-1.75 text-[11px] sm:text-xs text-neutral-100 flex justify-between items-center">
+            <div className="px-2.5 py-1.75 text-[11px] sm:text-xs text-fg flex justify-between items-center">
                 <div>{heading}</div>
                 <div
-                    className="hover:bg-steel/10 p-1 transition-colors duration-300 ease-in-out rounded-[4px] cursor-pointer "
+                    className="hover:bg-mute/10 p-1 transition-colors duration-300 ease-in-out rounded-[4px] cursor-pointer "
                     onClick={onClose}
                 >
-                    <RxCross2 className="text-steel size-4" />
+                    <RxCross2 className="text-mute size-4" />
                 </div>
             </div>
             <Block className="rounded-md min-h-0 min-w-60 w-full aspect-auto h-fit max-[480px]:rounded-md ">{children}</Block>

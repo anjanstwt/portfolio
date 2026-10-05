@@ -14,6 +14,8 @@ import SkylineSection from "@/components/showcase/particles/SkylineSection";
 import ExpandableBlock from "@/components/ui/ExpandableBlock";
 import SVG from "@/components/icons/SVG";
 import { FiArrowUpRight } from "react-icons/fi";
+import HeightNote from "@/components/home/annotations/HeightNote";
+import CircleSlash from "@/components/showcase/circle-slash/CircleSlash";
 
 const NOW_PLAYING_SRC = "/audio/my-ordinary-life.mp3";
 
@@ -24,16 +26,18 @@ export default function WhatIDoGrid() {
         <div className="grid grid-cols-4 max-md:grid-cols-2 gap-4 ">
             <audio ref={audioRef} src={NOW_PLAYING_SRC} preload="none" loop />
 
-            <ExpandableBlock className="col-span-2 row-span-2 max-md:order-3">
-                <Block>
-                    <Image
-                        src="/gallery/cow.jpeg"
-                        alt="landscape"
-                        fill
-                        className="rounded-3xl object-cover"
-                    />
-                </Block>
-            </ExpandableBlock>
+            <HeightNote className="col-span-2 row-span-2 max-md:order-3">
+                <ExpandableBlock className="h-full">
+                    <Block>
+                        <Image
+                            src="/gallery/cow.jpeg"
+                            alt="landscape"
+                            fill
+                            className="rounded-3xl object-cover"
+                        />
+                    </Block>
+                </ExpandableBlock>
+            </HeightNote>
 
             <a href="https://winterfell.dev" className="contents">
                 <Block
@@ -44,15 +48,10 @@ export default function WhatIDoGrid() {
                             color="white"
                         />
                     }
-                    right={<FiArrowUpRight className="text-blade " />}
+                    right={<FiArrowUpRight className="text-fg " />}
                     className="max-md:order-1"
                 >
-                    <Image
-                        src="/gallery/headphonecat.jpeg"
-                        alt="Winterfell"
-                        fill
-                        className="rounded-3xl object-cover"
-                    />
+                    <CircleSlash />
                     <div
                         className={[
                             "relative z-10 min-w-full px-3.5 pb-3 ",
@@ -61,8 +60,8 @@ export default function WhatIDoGrid() {
                             "[-webkit-mask-image:linear-gradient(to_top,black_0%,black_45%,transparent_100%)]",
                         ].join(" ")}
                     >
-                        <div className="text-blade ">Winterfell</div>
-                        <div className="text-steel">
+                        <div className="text-fg ">Winterfell</div>
+                        <div className="text-steel text-xs ">
                             AI-built Solana contracts
                         </div>
                     </div>
@@ -95,7 +94,7 @@ export default function WhatIDoGrid() {
                         ].join(" ")}
                     >
                         <div className="text-blade ">Nocturn</div>
-                        <div className="text-steel">
+                        <div className="text-steel text-xs ">
                             zero trust quiz platform
                         </div>
                     </div>
@@ -112,8 +111,8 @@ export default function WhatIDoGrid() {
                 className="max-md:order-4"
             >
                 <div className="absolute top-10 px-3.5 pb-3 text-xs min-[480px]:max-md:text-base ">
-                    <div className="text-steel">The Living Tombstone</div>
-                    <div className="text-neutral-100">My Ordinary Life</div>
+                    <div className="text-mute">The Living Tombstone</div>
+                    <div className="text-fg">My Ordinary Life</div>
                 </div>
                 <div className="absolute -bottom-24">
                     <Image
@@ -130,7 +129,7 @@ export default function WhatIDoGrid() {
             </Block>
 
             <Block className="flex justify-center items-center max-md:order-5">
-                <SkylineSection className="size-90 scale-150 relative top-6 " />
+                <SkylineSection className="size-90 scale-150 relative top-6 light:invert" />
             </Block>
         </div>
     );

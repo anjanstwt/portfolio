@@ -34,7 +34,7 @@ export default function ToolsIUseGrid() {
                 onClick={() => open(DetailPanel.Stack)}
             >
                 <div className="absolute top-7.5 px-3.5 py-3 ">
-                    <div className="text-neutral-100 ">Stack</div>
+                    <div className="text-fg ">Stack</div>
                     <div className="text-xs min-[480px]:max-md:text-base">2 tech</div>
                 </div>
                 <div className="bottom-0 px-3.5 pb-3 ">
@@ -51,7 +51,7 @@ export default function ToolsIUseGrid() {
 
             <Block
                 left={
-                    <PiTerminalBold className="size-4.5 bg-neutral-100 p-0.75 text-blade rounded-[4px] " />
+                    <PiTerminalBold className="size-4.5 bg-fg p-0.75 text-page rounded-[4px] " />
                 }
                 right={<FiArrowUpRight />}
                 className="cursor-pointer"
@@ -59,7 +59,7 @@ export default function ToolsIUseGrid() {
             >
                 <div className="px-3.5 pb-3 ">
                     <div className="relative -top-2.5 ">
-                        <div className="text-neutral-100 ">Application</div>
+                        <div className="text-fg ">Application</div>
                         <div className="text-xs min-[480px]:max-md:text-base">5 tools</div>
                     </div>
                     <Claude className="size-25 relative -right-20 top-2 p-3 group-hover:-translate-y-1 duration-300" />
@@ -80,12 +80,12 @@ export default function ToolsIUseGrid() {
 
             <Block
                 left={
-                    <MdCandlestickChart className="size-4.5 p-.75 bg-neutral-100 text-blade rounded-[4px] " />
+                    <MdCandlestickChart className="size-4.5 p-.75 bg-fg text-page rounded-[4px] " />
                 }
                 className="col-span-2 w-full aspect-auto h-[calc(25cqw-0.75rem)] max-md:h-[calc(50cqw-0.5rem)]"
             >
                 <div className="px-3.5 py-3 text-xs min-[480px]:max-md:text-base">
-                    <div className="text-neutral-100 ">Architecture</div>
+                    <div className="text-fg ">Architecture</div>
                     <div>used at scale</div>
                 </div>
                 <ExpandableImage

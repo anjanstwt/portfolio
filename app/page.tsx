@@ -11,6 +11,7 @@ import HobbyGrid from "@/components/home/sections/HobbyGrid";
 import ContactsGrid from "@/components/home/sections/ContactsGrid";
 import PagesGrid from "@/components/home/sections/PagesGrid";
 import DetailsPanelOverlay from "@/components/home/details-panel/DetailsPanelOverlay";
+import ThemeToggle from "@/components/home/ThemeToggle";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,9 +21,9 @@ const FONT_STACK =
 export default function Page() {
     return (
         <div className={inter.className} style={{ fontFamily: FONT_STACK }}>
-            <div className="bg-blade min-h-screen w-full select-none ">
+            <div className="bg-page min-h-screen w-full select-none ">
                 <SetLenisSpeed factor={1} />
-                <div className="w-full max-w-212 max-md:max-w-[520px] mx-auto px-4 py-10 text-steel text-sm min-[480px]:max-md:text-base flex flex-col gap-y-4 font-light tracking-wide ">
+                <div className="w-full max-w-212 max-md:max-w-[520px] mx-auto px-4 py-10 text-mute text-sm min-[480px]:max-md:text-base flex flex-col gap-y-4 font-light tracking-wide ">
                     <HeroSection />
                     <IntroGrid />
                     <LinksGrid />
@@ -36,6 +37,7 @@ export default function Page() {
                 </div>
             </div>
             <DetailsPanelOverlay />
+            <ThemeToggle />
         </div>
     );
 }
