@@ -9,6 +9,7 @@ import { FiMail, FiGithub, FiLinkedin, FiFileText } from "react-icons/fi";
 import type { IconType } from "react-icons";
 import user from "@/data/user.data";
 import type { ContactKind } from "@/types/user.type";
+import useClock from "@/hooks/useClock";
 
 const CONTACT_ICONS: Record<ContactKind, IconType> = {
     email: FiMail,
@@ -18,34 +19,15 @@ const CONTACT_ICONS: Record<ContactKind, IconType> = {
     resume: FiFileText,
 };
 
-function formatClock(date: Date) {
-    const day = date.toLocaleDateString("en-US", { weekday: "short" }).toUpperCase();
-    const month = date.toLocaleDateString("en-US", { month: "short" }).toUpperCase();
-    const time = date
-        .toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", hour12: true })
-        .toUpperCase();
-    return `${day}, ${month} ${date.getDate()}, ${time}`;
-}
-
-function useClock() {
-    const [now, setNow] = useState<Date | null>(null);
-
-    useEffect(() => {
-        setNow(new Date());
-        const id = setInterval(() => setNow(new Date()), 30_000);
-        return () => clearInterval(id);
-    }, []);
-
-    return now;
-}
-
 export default function HeroSection() {
-    const now = useClock();
+    const { day, month, time } = useClock();
 
     return (
-        <section className="relative w-full flex flex-col items-center pt-10 pb-16">
-            <div className="font-mono text-sm tracking-widest text-mute">
-                {now ? formatClock(now) : " "}
+        <section className="relative w-full flex flex-col items-center pt-10 pb-6">
+            <div className="text-xs tracking-widest text-mute w-full flex justify-between items-center ">
+                <div>{day + ", " + month}</div>
+                <div>{time}</div>
+
             </div>
 
             <div className="relative mt-6 flex flex-col items-center leading-[0.95]">
@@ -70,29 +52,21 @@ export default function HeroSection() {
                 </div>
             </div>
 
-            <div className="mt-10 flex items-center gap-3">
-                {user.contacts.map((contact) => {
-                    const Icon = CONTACT_ICONS[contact.kind];
-                    const isExternal = contact.href.startsWith("http");
-                    return (
-                        <a
-                            key={contact.kind}
-                            href={contact.href}
-                            aria-label={contact.label}
-                            target={isExternal ? "_blank" : undefined}
-                            rel={isExternal ? "noopener noreferrer" : undefined}
-                            className={cn(
-                                "flex items-center justify-center",
-                                "size-14 rounded-full",
-                                "bg-fg/[0.04] border border-fg/5",
-                                "text-mute hover:text-fg hover:bg-fg/[0.08]",
-                                "transition-colors",
-                            )}
-                        >
-                            <Icon className="size-5" />
-                        </a>
-                    );
-                })}
+            <div className="flex justify-center items-center gap-1 mt-6 ">
+                {user.contacts.map((contact, i) => (
+                    <a
+                        key={contact.kind}
+                        href={contact.href}
+                        target={"_blank"}
+                        className={cn(
+                            "w-22 h-8 flex justify-center items-center rounded-sm bg-block shadow-xs ",
+                            i === 0 && "rounded-r-sm rounded-l-full ",
+                            i === user.contacts.length - 1 && "rounded-l-sm rounded-r-full",
+                        )}
+                    >
+                        {contact.kind}
+                    </a>
+                ))}
             </div>
         </section>
     );
