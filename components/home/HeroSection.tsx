@@ -1,23 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { MdVerified } from "react-icons/md";
-import { FaXTwitter } from "react-icons/fa6";
-import { FiMail, FiGithub, FiLinkedin, FiFileText } from "react-icons/fi";
-import type { IconType } from "react-icons";
 import user from "@/data/user.data";
-import type { ContactKind } from "@/types/user.type";
 import useClock from "@/hooks/useClock";
-
-const CONTACT_ICONS: Record<ContactKind, IconType> = {
-    email: FiMail,
-    x: FaXTwitter,
-    linkedin: FiLinkedin,
-    github: FiGithub,
-    resume: FiFileText,
-};
 
 export default function HeroSection() {
     const { day, month, time } = useClock();
@@ -59,7 +46,7 @@ export default function HeroSection() {
                         href={contact.href}
                         target={"_blank"}
                         className={cn(
-                            "w-22 h-8 flex justify-center items-center rounded-sm bg-block shadow-xs ",
+                            "max-[480px]:w-14 max-[480px]:text-[10px] max-[480px]:h-6 w-22 h-8 flex justify-center items-center rounded-sm bg-block shadow-xs text-xs ",
                             i === 0 && "rounded-r-sm rounded-l-full ",
                             i === user.contacts.length - 1 && "rounded-l-sm rounded-r-full",
                         )}

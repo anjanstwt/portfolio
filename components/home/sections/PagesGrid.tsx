@@ -1,17 +1,7 @@
 import Image from "next/image";
 import { CgMenuGridO } from "react-icons/cg";
-import { TbLocationFilled } from "react-icons/tb";
 import Block from "@/components/home/block/Block";
-import { Globe } from "@/components/ui/globe";
-import India from "@/components/icons/India";
-import CopyIconButton from "@/components/ui/CopyIconButton";
-import {
-    RiArchiveDrawerFill,
-    RiDraftFill,
-    RiTwitterXLine,
-} from "react-icons/ri";
 import { FiArrowUpRight } from "react-icons/fi";
-import { FaLinkedinIn } from "react-icons/fa";
 import { satisfy } from "@/lib/fonts";
 import { cn } from "cn";
 import ExpandableBlock from "@/components/ui/ExpandableBlock";
@@ -24,7 +14,7 @@ export default function PagesGrid() {
             <ExpandableBlock className="col-span-2 row-span-2">
                 <Block>
                     <Image
-                        src="/gallery/scratchingcat.jpeg"
+                        src="/gallery/butterfly.jpeg"
                         alt="landscape"
                         fill
                         className="rounded-3xl object-cover"
@@ -84,7 +74,7 @@ export default function PagesGrid() {
 
             <Block
                 left={<CgMenuGridO />}
-                right={<CopyIconButton text="@anjanstwt" />}
+                // right={<CopyIconButton text="@anjanstwt" />}
             >
                 <div className="px-3.5 pb-3">
                     <div className="text-mute">Twitter / X</div>

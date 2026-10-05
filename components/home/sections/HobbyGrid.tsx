@@ -95,7 +95,7 @@ export default function HobbyGrid() {
                     unoptimized
                 />
             </Block>
-            <MarginNote label="work experience" className="top-0 h-full" />
+            <MarginNote first="work " second="experience" className="top-0 h-full" />
         </div>
     );
 }

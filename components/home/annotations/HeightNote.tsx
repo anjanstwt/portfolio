@@ -29,7 +29,7 @@ export default function HeightNote({ children, className, side = "left" }: Heigh
             <div
                 aria-hidden
                 className={cn(
-                    "pointer-events-none max-[1199px]:hidden absolute inset-y-0 flex items-center gap-2 text-mute",
+                    "pointer-events-none max-[1105px]:hidden absolute inset-y-0 flex items-center gap-2 text-mute",
                     side === "left" ? "right-full mr-3" : "left-full ml-3 flex-row-reverse",
                 )}
             >

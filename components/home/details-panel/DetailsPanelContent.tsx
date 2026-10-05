@@ -131,7 +131,7 @@ const stackContent: ContentType[] = [
         link: "https://www.typescriptlang.org",
     },
     {
-        image: <Rust className="size-7" />,
+        image: <Rust className="size-7 text-[#D34516] " />,
         name: "Rust",
         link: "https://www.rust-lang.org",
     },

@@ -104,7 +104,7 @@ export default function AboutGrid() {
                     </div>
                 </Block>
             </a>
-            <MarginNote label="shipped projects" className="-top-[calc(100%+1rem)] h-[calc(300%+2rem)]" />
+            <MarginNote first="shipped " second="projects" className="-top-[calc(100%+1rem)] h-[calc(300%+2rem)]" />
         </div>
     );
 }

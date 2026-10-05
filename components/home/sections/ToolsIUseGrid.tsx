@@ -6,7 +6,6 @@ import { TbLocationFilled } from "react-icons/tb";
 import Block from "@/components/home/block/Block";
 import { Globe } from "@/components/ui/globe";
 import India from "@/components/icons/India";
-import CopyIconButton from "@/components/ui/CopyIconButton";
 import { LuMonitor } from "react-icons/lu";
 import { FiArrowUpRight } from "react-icons/fi";
 import { SiBetterstack } from "react-icons/si";
@@ -35,7 +34,7 @@ export default function ToolsIUseGrid() {
             >
                 <div className="absolute top-7.5 px-3.5 py-3 ">
                     <div className="text-fg ">Stack</div>
-                    <div className="text-xs min-[480px]:max-md:text-base">2 tech</div>
+                    <div className="text-xs min-[480px]:max-md:text-base">6 tech</div>
                 </div>
                 <div className="bottom-0 px-3.5 pb-3 ">
                     <Image

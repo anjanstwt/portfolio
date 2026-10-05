@@ -1,15 +1,29 @@
+"use client"
+
 import Image from "next/image";
 import { CgMenuGridO } from "react-icons/cg";
 import { TbLocationFilled } from "react-icons/tb";
 import Block from "@/components/home/block/Block";
 import { Globe } from "@/components/ui/globe";
 import India from "@/components/icons/India";
-import CopyIconButton from "@/components/ui/CopyIconButton";
-import { FiMail } from "react-icons/fi";
+import { FiCheck, FiCopy, FiMail } from "react-icons/fi";
 import ExpandableBlock from "@/components/ui/ExpandableBlock";
 import HeightNote from "@/components/home/annotations/HeightNote";
+import user from "@/data/user.data";
+import { useState } from "react";
 
 export default function IntroGrid() {
+
+    const [copied, setCopied] = useState<boolean>(false);
+
+    async function handleCopy() {
+        try {
+            await navigator.clipboard.writeText(user.contacts[0].href.split(":")[1]);
+            setCopied(true);
+            setTimeout(() => setCopied(false), 1500);
+        } catch { }
+    }
+
     return (
         <div className="grid grid-cols-4 max-md:grid-cols-2 gap-4 ">
             <HeightNote>
@@ -73,12 +87,14 @@ export default function IntroGrid() {
             </ExpandableBlock>
 
             <Block
-                left={<FiMail className="size-4" />}
-                right={<CopyIconButton text="@anjanstwt" />}
+                left={<FiMail className="size-4 " />}
+                right={copied ? <FiCheck /> : <FiCopy />}
+                onClick={handleCopy}
+                className="cursor-pointer "
             >
                 <div className="px-3.5 pb-3 text-xs min-[480px]:max-md:text-base ">
                     <div className="text-mute">anjansuman80</div>
-                    <div className="text-fg">@gmail.com</div>
+                    <div className="text-fg ">@gmail.com</div>
                 </div>
             </Block>
         </div>
