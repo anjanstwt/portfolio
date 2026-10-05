@@ -74,7 +74,7 @@ export default function PagesGrid() {
 
             <Block
                 left={<CgMenuGridO />}
-                // right={<CopyIconButton text="@anjanstwt" />}
+            // right={<CopyIconButton text="@anjanstwt" />}
             >
                 <div className="px-3.5 pb-3">
                     <div className="text-mute">Twitter / X</div>

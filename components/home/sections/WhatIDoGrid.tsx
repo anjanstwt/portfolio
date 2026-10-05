@@ -1,12 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { CgMenuGridO } from "react-icons/cg";
-import { TbLocationFilled } from "react-icons/tb";
 import Block from "@/components/home/block/Block";
-import { Globe } from "@/components/ui/globe";
-import India from "@/components/icons/India";
-import CopyIconButton from "@/components/ui/CopyIconButton";
 import EqualizerBars from "@/components/ui/EqualizerBars";
 import { FaSpotify } from "react-icons/fa";
 import { useHoverAudio } from "@/hooks/useHoverAudio";
