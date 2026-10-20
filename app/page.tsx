@@ -12,6 +12,7 @@ import ContactsGrid from "@/components/home/sections/ContactsGrid";
 import PagesGrid from "@/components/home/sections/PagesGrid";
 import DetailsPanelOverlay from "@/components/home/details-panel/DetailsPanelOverlay";
 import ThemeToggle from "@/components/home/ThemeToggle";
+import Footer from "@/components/home/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,6 +36,7 @@ export default function Page() {
                     <ContactsGrid />
                     <PagesGrid />
                 </div>
+                <Footer />
             </div>
             <DetailsPanelOverlay />
             <ThemeToggle />
