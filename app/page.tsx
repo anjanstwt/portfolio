@@ -10,6 +10,7 @@ import ToolsIUseGrid from "@/components/home/sections/ToolsIUseGrid";
 import HobbyGrid from "@/components/home/sections/HobbyGrid";
 import ContactsGrid from "@/components/home/sections/ContactsGrid";
 import PagesGrid from "@/components/home/sections/PagesGrid";
+import FooterGrid from "@/components/home/sections/FooterGrid";
 import DetailsPanelOverlay from "@/components/home/details-panel/DetailsPanelOverlay";
 import ThemeToggle from "@/components/home/ThemeToggle";
 
@@ -34,6 +35,7 @@ export default function Page() {
                     <HobbyGrid />
                     <ContactsGrid />
                     <PagesGrid />
+                    <FooterGrid />
                 </div>
             </div>
             <DetailsPanelOverlay />
