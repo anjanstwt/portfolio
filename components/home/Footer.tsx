@@ -38,9 +38,17 @@ export default function Footer() {
                     <span className="text-mute text-xs">Engineer by trade, builder by obsession.</span>
                 </div>
 
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-edge">
-                    {cells.map((cell) => (
-                        <div key={cell.label} className="bg-block px-4 py-3 flex min-w-0 flex-col gap-1">
+                <div className="grid grid-cols-2 md:grid-cols-4 border-t-[0.5px] border-t-edge">
+                    {cells.map((cell, i) => (
+                        <div
+                            key={cell.label}
+                            className={[
+                                "bg-block px-4 py-3 flex min-w-0 flex-col gap-1",
+                                i === 1 && "border-l-[0.5px] border-l-edge",
+                                i === 2 && "border-t-[0.5px] border-t-edge md:border-t-0 md:border-l-[0.5px] md:border-l-edge",
+                                i === 3 && "border-t-[0.5px] border-t-edge border-l-[0.5px] border-l-edge md:border-t-0",
+                            ].filter(Boolean).join(" ")}
+                        >
                             <dt className="text-[0.625rem] leading-4 font-medium tracking-wider text-mute uppercase">{cell.label}</dt>
                             <dd className="text-sm text-fg">
                                 <a
