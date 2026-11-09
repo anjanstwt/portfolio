@@ -385,6 +385,54 @@ export function HomeProjects() {
 }
 
 /* ------------------------------------------------------------------ *
+ * HomeFooter
+ * ------------------------------------------------------------------ */
+
+export function HomeFooter() {
+    return (
+        <footer className="mt-24 border border-black/10 text-[13px] leading-6 dark:border-white/10">
+            <div
+                aria-hidden="true"
+                className="border-b border-black/10 dark:border-white/10"
+            >
+                <div className="bg-stripe-pattern h-3 [background-size:6px_6px] opacity-15" />
+            </div>
+
+            <div className="px-5 py-6">
+                <h2 className="text-ink text-[15px] font-medium">Piyush Raj</h2>
+                <p className="text-mute">Designer &amp; Developer</p>
+            </div>
+
+            <nav
+                aria-label="Footer contact links"
+                className="grid divide-y divide-black/10 border-y border-black/10 md:grid-cols-3 md:divide-x md:divide-y-0 dark:divide-white/10 dark:border-white/10"
+            >
+                {[
+                    { label: "Email", href: `mailto:${EMAIL}` },
+                    { label: "GitHub", href: "https://github.com/piyush-rj" },
+                    { label: "X", href: "https://x.com/PiyushC2P" },
+                ].map((item) => (
+                    <a
+                        key={item.label}
+                        href={item.href}
+                        className="text-ink flex min-h-14 items-center justify-between px-5 py-3 hover:bg-black/5 focus-visible:outline-2 focus-visible:-outline-offset-4 focus-visible:outline-current dark:hover:bg-white/5"
+                    >
+                        {item.label}
+                        <span aria-hidden="true" className="text-mute">
+                            ↗
+                        </span>
+                    </a>
+                ))}
+            </nav>
+
+            <p className="text-mute px-5 py-4 font-mono text-xs">
+                © {new Date().getFullYear()} Piyush Raj
+            </p>
+        </footer>
+    );
+}
+
+/* ------------------------------------------------------------------ *
  * BottomBar
  * ------------------------------------------------------------------ */
 
@@ -601,7 +649,7 @@ export function BottomBar() {
 export default function Home() {
     return (
         <div className="bg-board-white flex min-h-screen w-full justify-center">
-            <div className="w-full max-w-[700px] px-6 pt-14 pb-24 md:px-8">
+            <div className="w-full max-w-[700px] px-6 pt-14 pb-40 md:px-8">
                 <BlurFade>
                     <HomeHero />
                 </BlurFade>
@@ -611,6 +659,7 @@ export default function Home() {
                 <BlurFade delay={0.15}>
                     <HomeProjects />
                 </BlurFade>
+                <HomeFooter />
             </div>
 
             <EdgeBlur />
