@@ -8,12 +8,14 @@ const nextConfig: NextConfig = {
     },
     outputFileTracingRoot: projectRoot,
     async rewrites() {
-        return [
-            {
-                source: "/",
-                destination: "/test",
-            },
-        ];
+        return {
+            beforeFiles: [
+                {
+                    source: "/",
+                    destination: "/test",
+                },
+            ],
+        };
     },
 };
 
